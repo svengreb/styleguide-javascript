@@ -102,7 +102,7 @@ The [question][gh-issues-label-question] issue label is a good place to find ong
 
 ## Styleguides
 
-Every major open source project has its own style guide, a set of standards and conventions for the writing and design of code, documentations and Git commit messages. It is much easier to understand a large codebase when all the code in it is in a consistent style.
+Every major open source project has its own style guide, a set of standards and conventions for the writing and design of code, documentations and assets. It is much easier to understand a large codebase when all the code in it is in a consistent style.
 
 A style guide establishes and enforces style to improve the intelligibility and communication within the project community. It ensures consistency and enforces best practice in usage and language composition.
 
