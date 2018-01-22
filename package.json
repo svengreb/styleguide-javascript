@@ -1,0 +1,38 @@
+{
+  "name": "styleguide-javascript",
+  "title": "Styleguide JavaScript",
+  "version": "0.0.0",
+  "description": "The Arctic Ice Studio JavaScript Code Style.",
+  "author": {
+    "name": "Arctic Ice Studio",
+    "email": "development@arcticicestudio.com",
+    "url": "http://arcticicestudio.com"
+  },
+  "homepage": "https://arcticicestudio.github.io/styleguide-javascript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcticicestudio/styleguide-javascript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arcticicestudio/styleguide-javascript/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "styleguide",
+    "javascript",
+    "codestyle",
+    "ecmascript",
+    "eslint",
+    "eslintconfig"
+  ],
+  "private": true,
+  "scripts": {
+    "clean": "del build",
+    "docs:build": "gitbook install src && gitbook build src build/docs",
+    "docs:dev": "npm run docs:build && gitbook serve src build/docs"
+  },
+  "devDependencies": {
+    "del-cli": "1.1.0",
+    "gitbook-cli": "2.3.2"
+  }
+}
