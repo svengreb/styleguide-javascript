@@ -2,7 +2,7 @@
 
 Use `===` and `!==` instead of `==` and `!=`.
 
-> ESLint: [eqeqeq][eslint-eqeqeq]
+> ESLint: [eqeqeq][eslint/eqeqeq]
 
 ###### References
 
@@ -99,7 +99,7 @@ if (snowflakes.length > 0) {
 
 Use braces to create blocks in `case` and `default` clauses that contain lexical declarations like e.g. `let`, `const`, `function`, and `class`. Lexical declarations are visible in the entire `switch` block but only get initialized when assigned, which only happens when its `case` is reached. This causes problems when multiple `case` clauses attempt to define the same thing.
 
-> ESLint: [no-case-declarations][eslint-no-case-declarations]
+> ESLint: [no-case-declarations][eslint/no-case-declarations]
 
 ###### Examples
 
@@ -154,7 +154,7 @@ switch (winter) {
 
 Ternaries should not be nested and generally be single line expressions.
 
-> ESLint: [no-nested-ternary][eslint-no-nested-ternary]
+> ESLint: [no-nested-ternary][eslint/no-nested-ternary]
 
 ###### Examples
 
@@ -189,7 +189,7 @@ const winter = snow > frost ? "snow" : maybeIce;
 
 Avoid unneeded ternary statements.
 
-> ESLint: [no-unneeded-ternary][eslint-no-unneeded-ternary]
+> ESLint: [no-unneeded-ternary][eslint/no-unneeded-ternary]
 
 ###### Examples
 
@@ -213,7 +213,7 @@ const snow = !negativeTemperature;
 
 When mixing operators, enclose them in parentheses. The only exception is the standard arithmetic operators (`+`, `-`, `*`, `/`) since their precedence is broadly understood. This improves readability and clarifies the developer's intention.
 
-> ESLint: [no-mixed-operators][eslint-no-mixed-operators]
+> ESLint: [no-mixed-operators][eslint/no-mixed-operators]
 
 ###### Examples
 
@@ -254,9 +254,9 @@ if (winter || (frost && snow)) {
 const season = winter + frost / snow * ice;
 ```
 
-[eslint-eqeqeq]: https://eslint.org/docs/rules/eqeqeq
-[eslint-no-case-declarations]: https://eslint.org/docs/rules/no-case-declarations
-[eslint-no-mixed-operators]: https://eslint.org/docs/rules/no-mixed-operators
-[eslint-no-nested-ternary]: https://eslint.org/docs/rules/no-nested-ternary
-[eslint-no-unneeded-ternary]: https://eslint.org/docs/rules/no-unneeded-ternary
+[eslint/eqeqeq]: https://eslint.org/docs/rules/eqeqeq
+[eslint/no-case-declarations]: https://eslint.org/docs/rules/no-case-declarations
+[eslint/no-mixed-operators]: https://eslint.org/docs/rules/no-mixed-operators
+[eslint/no-nested-ternary]: https://eslint.org/docs/rules/no-nested-ternary
+[eslint/no-unneeded-ternary]: https://eslint.org/docs/rules/no-unneeded-ternary
 [ref-truth_equality_and_javascript]: https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108

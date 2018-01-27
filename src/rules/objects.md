@@ -2,7 +2,7 @@
 
 Use the literal syntax for object creation.
 
-> ESLint: [no-new-object][eslint-no-new-object]
+> ESLint: [no-new-object][eslint/no-new-object]
 
 ###### Examples
 
@@ -56,7 +56,7 @@ const obj = {
 
 Use object method shorthand.
 
-> ESLint: [object-shorthand][eslint-object-shorthand]
+> ESLint: [object-shorthand][eslint/object-shorthand]
 
 ###### Examples
 
@@ -88,7 +88,7 @@ const snow = {
 
 Use property value shorthand. It is shorter to write and descriptive.
 
-> ESLint: [object-shorthand][eslint-object-shorthand]
+> ESLint: [object-shorthand][eslint/object-shorthand]
 
 ###### Examples
 
@@ -150,7 +150,7 @@ const obj = {
 
 Only quote properties that are invalid identifiers. In general we consider it subjectively easier to read. It improves syntax highlighting and is also more easily optimized by many JS engines.
 
-> ESLint: [quote-props][eslint-quote-props]
+> ESLint: [quote-props][eslint/quote-props]
 
 ###### Examples
 
@@ -263,8 +263,8 @@ import has from "has";
 console.log(has.call(object, key));
 ```
 
-[eslint-no-new-object]: https://eslint.org/docs/rules/no-new-object
-[eslint-object-shorthand]: https://eslint.org/docs/rules/object-shorthand
-[eslint-quote-props]: https://eslint.org/docs/rules/quote-props
+[eslint/no-new-object]: https://eslint.org/docs/rules/no-new-object
+[eslint/object-shorthand]: https://eslint.org/docs/rules/object-shorthand
+[eslint/quote-props]: https://eslint.org/docs/rules/quote-props
 [mdn-object-assign]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
 [npm-pkg-has]: https://www.npmjs.com/package/has

@@ -85,7 +85,7 @@ function getWinterElement() {
 
 Start all comments with a space to make it easier to read.
 
-> ESLint: [spaced-comment][eslint-spaced-comment]
+> ESLint: [spaced-comment][eslint/spaced-comment]
 
 ###### Examples
 
@@ -131,4 +131,4 @@ function getElement(season) {
 
 ## 
 
-[eslint-spaced-comment]: https://eslint.org/docs/rules/spaced-comment
+[eslint/spaced-comment]: https://eslint.org/docs/rules/spaced-comment

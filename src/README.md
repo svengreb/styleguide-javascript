@@ -16,7 +16,7 @@ A style guide establishes and enforces style to improve the intelligibility and 
 
 ### Getting Started
 
-This style guide provides the [comprehensive base rule set][rules] including [ECMAScript +6 (ES 2015+) styles][rules-ecmascript_6+_styles].
+This style guide provides the [comprehensive base rule set][rules] including [ECMAScript +6 (ES 2015+)][rules-ecmascript_6+_styles] and [React][rules-react] specific styles like e.g. [Higher-Order Components][rules-react-hoc], the [component methods & properties ordering][rules-react-ordering-methods_and_properties] and [props][rules-react-props].
 
 The development chapters contain information about the [requirements][dev-requirements] and [how to build][dev-building] this style guide documentation.
 
@@ -44,5 +44,9 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [dev-contributing-styleguides]: development/contributing.md#styleguides
 [dev-contributing-versioning]: development/contributing.md#versioning
 [dev-requirements]: development/requirements.md
-[rules]: rules/types.md
+[rules]: rules/index.md
 [rules-ecmascript_6+_styles]: rules/ecmascript_6+_styles.md
+[rules-react]: rules/react/index.md
+[rules-react-hoc]: rules/react/higher_order_components.md
+[rules-react-ordering-methods_and_properties]: rules/react/ordering.md#component-methods-and-properties
+[rules-react-props]: rules/react/props.md

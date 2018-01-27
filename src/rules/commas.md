@@ -12,7 +12,7 @@ function snow(...flakes,) {} // SyntaxError: parameter after rest parameter
 (...flakes,) => {} // SyntaxError: expected closing parenthesis, got ','
 ```
 
-> ESLint: [comma-style][eslint-comma-style] and [comma-dangle][eslint-comma-dangle]
+> ESLint: [comma-style][eslint/comma-style] and [comma-dangle][eslint/comma-dangle]
 
 ###### Examples
 
@@ -72,8 +72,8 @@ const winter = {
 ```
 
 
-[eslint-comma-dangle]: https://eslint.org/docs/rules/comma-dangle
-[eslint-comma-style]: https://eslint.org/docs/rules/comma-style
+[eslint/comma-dangle]: https://eslint.org/docs/rules/comma-dangle
+[eslint/comma-style]: https://eslint.org/docs/rules/comma-style
 [json-notation]: https://www.json.org
 [mdn-trailing_commas]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas
 [mdn-trailing_commas-illegal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Illegal_trailing_commas

@@ -4,7 +4,7 @@ Perform type coercion at the beginning of the statement.
 
 ## No Primitive Wrapper Instances
 
-> ESlint: [no-new-wrappers][eslint-no-new-wrappers]
+> ESlint: [no-new-wrappers][eslint/no-new-wrappers]
 
 ### Strings
 
@@ -44,7 +44,7 @@ const snow = String(this.snowflakes);
 
 Use `Number` for type casting and `parseInt` always with a radix for parsing strings.
 
-> ESLint: [radix][eslint-radix] and [no-new-wrappers][eslint-no-new-wrappers]
+> ESLint: [radix][eslint/radix] and [no-new-wrappers][eslint/no-new-wrappers]
 
 ###### Examples
 
@@ -84,7 +84,7 @@ const snow = parseInt(snowflakes, 10);
 
 ## Booleans
 
-> ESLint: [no-new-wrappers][eslint-no-new-wrappers]
+> ESLint: [no-new-wrappers][eslint/no-new-wrappers]
 
 ###### Examples
 
@@ -134,8 +134,8 @@ const snow = snowflakes >> 0;
 
 * [StackOverflow: "Bitshift in JavaScript"][ref-stackoverflow-bitshift]
 
-[eslint-no-new-wrappers]: https://eslint.org/docs/rules/no-new-wrappers
-[eslint-radix]: https://eslint.org/docs/rules/radix
+[eslint/no-new-wrappers]: https://eslint.org/docs/rules/no-new-wrappers
+[eslint/radix]: https://eslint.org/docs/rules/radix
 [ref-bitshift-coercion_vs_casting]: https://jsperf.com/coercion-vs-casting/3
 [ref-es5-bitshift]: https://es5.github.io/#x11.7
 [ref-es5-numbers_64_bit]: https://es5.github.io/#x4.3.19

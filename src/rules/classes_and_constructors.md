@@ -134,7 +134,7 @@ class Snow {
 
 Classes have a default constructor if one is not specified. An empty constructor function or one that just delegates to a parent class is unnecessary.
 
-> ESLint: [no-useless-constructor][eslint-no-useless-constructor]
+> ESLint: [no-useless-constructor][eslint/no-useless-constructor]
 
 ###### Examples
 
@@ -173,7 +173,7 @@ class Snowball extends Snow {
 
 Avoid duplicate class members. Duplicate class member declarations will silently prefer the last one - having duplicates is almost certainly a bug.
 
-> ESLint: [no-dupe-class-members][eslint-no-dupe-class-members]
+> ESLint: [no-dupe-class-members][eslint/no-dupe-class-members]
 
 ###### Examples
 
@@ -200,5 +200,5 @@ class Snow {
 }
 ```
 
-[eslint-no-dupe-class-members]: https://eslint.org/docs/rules/no-dupe-class-members
-[eslint-no-useless-constructor]: https://eslint.org/docs/rules/no-useless-constructor
+[eslint/no-dupe-class-members]: https://eslint.org/docs/rules/no-dupe-class-members
+[eslint/no-useless-constructor]: https://eslint.org/docs/rules/no-useless-constructor

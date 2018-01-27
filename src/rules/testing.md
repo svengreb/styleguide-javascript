@@ -17,8 +17,8 @@
 
 * [JavaScript Unit Testing Guide][ref-gh-js_unit_testing_guide]
 
-[ref-gh-js_unit_testing_guide]: https://github.com/mawrkus/js-unit-testing-guide
 [mocha]: https://mochajs.org
 [jasmine]: https://jasmine.github.io
 [jest]: http://facebook.github.io/jest
+[ref-gh-js_unit_testing_guide]: https://github.com/mawrkus/js-unit-testing-guide
 [sinon.js]: http://sinonjs.org

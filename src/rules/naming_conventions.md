@@ -2,7 +2,7 @@
 
 Avoid single letter names. Be descriptive with naming.
 
-> ESLint: [id-length][eslint-id-length]
+> ESLint: [id-length][eslint/id-length]
 
 ###### Examples
 
@@ -26,7 +26,7 @@ function snow() {
 
 Use [camelCase][wikipedia-camel_case] when naming objects, functions, and instances.
 
-> ESLint: [camelcase][eslint-camelcase]
+> ESLint: [camelcase][eslint/camelcase]
 
 ###### Examples
 
@@ -50,7 +50,7 @@ function snow() {}
 
 Use [PascalCase][wikipedia-pascal_case] when naming constructors and classes.
 
-> ESLint: [new-cap][eslint-new-cap]
+> ESLint: [new-cap][eslint/new-cap]
 
 ###### Examples
 
@@ -84,7 +84,7 @@ const snowball = new Snow({
 
 Do not use trailing or leading underscores. JavaScript does not have the concept of privacy in terms of properties or methods. Although a leading underscore is a common convention to mean *private*, in fact, these properties are fully public, and as such, are part of the public API contract. This convention might lead developers to wrongly think that a change won't count as breaking, or that tests aren't needed.
 
-> ESLint: [no-underscore-dangle][eslint-no-underscore-dangle]
+> ESLint: [no-underscore-dangle][eslint/no-underscore-dangle]
 
 ###### Examples
 
@@ -298,10 +298,10 @@ const requests = [
 [camelcase]: #camelcase
 [pascalcase]: #pascalcase
 
-[eslint-camelcase]: https://eslint.org/docs/rules/camelcase
-[eslint-id-length]: https://eslint.org/docs/rules/id-length
-[eslint-new-cap]: https://eslint.org/docs/rules/new-cap
-[eslint-no-underscore-dangle]: https://eslint.org/docs/rules/no-underscore-dangle
+[eslint/camelcase]: https://eslint.org/docs/rules/camelcase
+[eslint/id-length]: https://eslint.org/docs/rules/id-length
+[eslint/new-cap]: https://eslint.org/docs/rules/new-cap
+[eslint/no-underscore-dangle]: https://eslint.org/docs/rules/no-underscore-dangle
 [mdn-function-bind]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 [wikipedia-acronym]: https://en.wikipedia.org/wiki/Acronym
 [wikipedia-camel_case]: https://en.wikipedia.org/wiki/Camel_case

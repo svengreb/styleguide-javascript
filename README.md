@@ -15,7 +15,9 @@ A style guide establishes and enforces style to improve the intelligibility and 
 ### Getting Started
 
 The [project documentation][docs] contains chapters to learn about
-the [comprehensive base rule set][docs-rules] including [ECMAScript +6 (ES 2015+) styles][docs-rules-ecmascript_6+_styles], the development [requirements][docs-dev-requirements] and [how to build][docs-dev-building] the style guide documentation.
+the [comprehensive base rule set][docs-rules] including [ECMAScript +6 (ES 2015+)][docs-rules-ecmascript_6+_styles] and [React][docs-rules-react] specific styles like e.g. [Higher-Order Components][docs-rules-react-hoc], the [component methods & properties ordering][docs-rules-react-ordering-methods_and_properties] and [props][docs-rules-react-props].
+
+The development chapters contain information about the [requirements][docs-dev-requirements] and [how to build][docs-dev-building] the style guide documentation.
 
 ### Contributing
 
@@ -42,5 +44,9 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [docs-dev-contributing-styleguides]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#styleguides
 [docs-dev-contributing-versioning]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#versioning
 [docs-dev-requirements]: https://arcticicestudio.github.io/styleguide-javascript/development/requirements.html
-[docs-rules]: https://arcticicestudio.github.io/styleguide-javascript/rules/types.html
+[docs-rules]: https://arcticicestudio.github.io/styleguide-javascript/rules/index.html
 [docs-rules-ecmascript_6+_styles]: https://arcticicestudio.github.io/styleguide-javascript/rules/ecmascript_6+_styles.html
+[docs-rules-react]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/index.html
+[docs-rules-react-hoc]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/higher_order_components.html
+[docs-rules-react-ordering-methods_and_properties]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/ordering.html#component-methods-and-properties
+[docs-rules-react-props]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/props.html

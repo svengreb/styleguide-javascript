@@ -68,7 +68,7 @@ export default snow;
 
 Only import from a path in one place. The code maintainability is more difficult when having multiple lines that import from the same path.
 
-> ESlint: [no-duplicate-imports][eslint-no-duplicate-imports]
+> ESlint: [no-duplicate-imports][eslint/no-duplicate-imports]
 
 ###### Examples
 
@@ -97,7 +97,7 @@ import winter, {
 
 Do not export mutable bindings. Mutation should be avoided in general, but in particular when exporting mutable bindings. While this technique may be needed for some special cases, in general, only constant references should be exported.
 
-> ESLint: [import/no-mutable-exports][eslint-plugin-import-no-mutable-exports]
+> ESLint: [import/no-mutable-exports][eslint-plugin-import/no-mutable-exports]
 
 ###### Examples
 
@@ -119,7 +119,7 @@ export { season };
 
 Prefer default export over named export for modules with a single export to increase the code readability and maintainability.
 
-> ESLint: [import/prefer-default-export][eslint-plugin-import-prefer-default-export]
+> ESLint: [import/prefer-default-export][eslint-plugin-import/prefer-default-export]
 
 ###### Examples
 
@@ -139,7 +139,7 @@ export default function snow() {}
 
 Put all `import` above non-import statements. Since `import` statements are hoisted, keeping them all at the top prevents surprising behavior.
 
-> ESLint: [import/first][eslint-plugin-import-first]
+> ESLint: [import/first][eslint-plugin-import/import-first]
 
 ###### Examples
 
@@ -189,7 +189,7 @@ import {
 
 Disallow Webpack loader syntax in module import statements. Using Webpack syntax in the imports couples the code to a module bundler. Prefer using the loader syntax in the Webpack configuration `webpack.config.js`.
 
-> ESlint: [import/no-webpack-loader-syntax][eslint-plugin-import-no-webpack-loader-syntax]
+> ESlint: [import/no-webpack-loader-syntax][eslint-plugin-import/no-webpack-loader-syntax]
 
 ###### Examples
 
@@ -207,8 +207,8 @@ import snow from "snow.scss";
 import frost from "frost.css";
 ```
 
-[eslint-no-duplicate-imports]: https://eslint.org/docs/rules/no-duplicate-imports
-[eslint-plugin-import-first]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
-[eslint-plugin-import-no-mutable-exports]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
-[eslint-plugin-import-no-webpack-loader-syntax]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
-[eslint-plugin-import-prefer-default-export]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
+[eslint/no-duplicate-imports]: https://eslint.org/docs/rules/no-duplicate-imports
+[eslint-plugin-import/import-first]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
+[eslint-plugin-import/no-mutable-exports]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
+[eslint-plugin-import/no-webpack-loader-syntax]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
+[eslint-plugin-import/prefer-default-export]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md

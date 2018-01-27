@@ -2,7 +2,7 @@
 
 Always use spaces characters where two (2) spaces are used for indentation. The usage of tab characters is disallowed. A tab could be a different number of columns depending on the environment, but a space is always one column. Adhering to this rule increases the code readability and maintainability significantly.
 
-> ESLint: [indent][eslint-indent]
+> ESLint: [indent][eslint/indent]
 
 ###### Examples
 
@@ -38,7 +38,7 @@ function winter() {
 
 Place one (1) space before the leading brace.
 
-> ESLint: [space-before-blocks][eslint-space-before-blocks]
+> ESLint: [space-before-blocks][eslint/space-before-blocks]
 
 ###### Examples
 
@@ -76,7 +76,7 @@ winter.set("snow", {
 
 Place one (1) space before the opening parenthesis in control statements (`if`, `while` etc.). Place no space between the argument list and the function name in function calls and declarations.
 
-> ESLint: [keyword-spacing][eslint-keyword-spacing]
+> ESLint: [keyword-spacing][eslint/keyword-spacing]
 
 ###### Examples
 
@@ -112,7 +112,7 @@ function snow() {
 
 Set off operators with spaces.
 
-> ESLint: [space-infix-ops][eslint-space-infix-ops]
+> ESLint: [space-infix-ops][eslint/space-infix-ops]
 
 ###### Examples
 
@@ -132,7 +132,7 @@ const snowflakes = snow + 5;
 
 End files with a single [newline][ref-wikipedia-newline] character. Prefer the *LF* [control character][ref-wikipedia-control_character] (\*nix based OS) and avoid the usage of *CRLF* characters (mostly Microsoft Windows based OS).
 
-> ESlint: [eol-last][eslint-eol-last]
+> ESlint: [eol-last][eslint/eol-last]
 
 ###### Examples
 
@@ -160,7 +160,7 @@ export default snow;¬
 
 Use indentation when making long method chains. Use a leading dot, which emphasizes that the line is a method call, not a new statement.
 
-> ESLint: [newline-per-chained-call][eslint-newline-per-chained-call] and [no-whitespace-before-property][eslint-no-whitespace-before-property]
+> ESLint: [newline-per-chained-call][eslint/newline-per-chained-call] and [no-whitespace-before-property][eslint/no-whitespace-before-property]
 
 ###### Examples
 
@@ -271,7 +271,7 @@ return winter;
 
 Do not pad blocks with blank lines.
 
-> ESLint: [padded-blocks][eslint-padded-blocks]
+> ESLint: [padded-blocks][eslint/padded-blocks]
 
 ###### Examples
 
@@ -332,7 +332,7 @@ class Winter {
 
 Do not add spaces inside parentheses.
 
-> ESLint: [space-in-parens][eslint-space-in-parens]
+> ESLint: [space-in-parens][eslint/space-in-parens]
 
 ###### Examples
 
@@ -368,7 +368,7 @@ if (winter) {
 
 Do not add spaces inside brackets.
 
-> ESLint: [array-bracket-spacing][eslint-array-bracket-spacing]
+> ESLint: [array-bracket-spacing][eslint/array-bracket-spacing]
 
 ###### Examples
 
@@ -390,7 +390,7 @@ console.log(winter[0]);
 
 Add spaces inside curly braces.
 
-> ESlint: [object-curly-spacing][eslint-object-curly-spacing]
+> ESlint: [object-curly-spacing][eslint/object-curly-spacing]
 
 ###### Examples
 
@@ -412,7 +412,7 @@ Avoid having lines of code that are longer than 100 characters including whitesp
 
 Note that the [rule for long strings][strings-line_length] is exempt from this rule, and should not be broken up.
 
-> ESLint: [max-len][eslint-max-len]
+> ESLint: [max-len][eslint/max-len]
 
 ###### Examples
 
@@ -448,17 +448,17 @@ season({
 
 [strings-line_length]: strings.md#line-length
 
-[eslint-array-bracket-spacing]: https://eslint.org/docs/rules/array-bracket-spacing
-[eslint-eol-last]: https://eslint.org/docs/rules/eol-last
-[eslint-indent]: https://eslint.org/docs/rules/indent
-[eslint-keyword-spacing]: https://eslint.org/docs/rules/keyword-spacing
-[eslint-max-len]: https://eslint.org/docs/rules/max-len
-[eslint-newline-per-chained-call]: https://eslint.org/docs/rules/newline-per-chained-call
-[eslint-no-whitespace-before-property]: https://eslint.org/docs/rules/no-whitespace-before-property
-[eslint-object-curly-spacing]: https://eslint.org/docs/rules/object-curly-spacing
-[eslint-padded-blocks]: https://eslint.org/docs/rules/padded-blocks
-[eslint-space-before-blocks]: https://eslint.org/docs/rules/space-before-blocks
-[eslint-space-in-parens]: https://eslint.org/docs/rules/space-in-parens
-[eslint-space-infix-ops]: https://eslint.org/docs/rules/space-infix-ops
-[ref-wikipedia-newline]: https://en.wikipedia.org/wiki/Newline
+[eslint/array-bracket-spacing]: https://eslint.org/docs/rules/array-bracket-spacing
+[eslint/eol-last]: https://eslint.org/docs/rules/eol-last
+[eslint/indent]: https://eslint.org/docs/rules/indent
+[eslint/keyword-spacing]: https://eslint.org/docs/rules/keyword-spacing
+[eslint/max-len]: https://eslint.org/docs/rules/max-len
+[eslint/newline-per-chained-call]: https://eslint.org/docs/rules/newline-per-chained-call
+[eslint/no-whitespace-before-property]: https://eslint.org/docs/rules/no-whitespace-before-property
+[eslint/object-curly-spacing]: https://eslint.org/docs/rules/object-curly-spacing
+[eslint/padded-blocks]: https://eslint.org/docs/rules/padded-blocks
+[eslint/space-before-blocks]: https://eslint.org/docs/rules/space-before-blocks
+[eslint/space-in-parens]: https://eslint.org/docs/rules/space-in-parens
+[eslint/space-infix-ops]: https://eslint.org/docs/rules/space-infix-ops
 [ref-wikipedia-control_character]: https://en.wikipedia.org/wiki/Control_character
+[ref-wikipedia-newline]: https://en.wikipedia.org/wiki/Newline

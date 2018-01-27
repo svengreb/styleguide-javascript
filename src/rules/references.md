@@ -2,7 +2,7 @@
 
 Use `const` for all references and avoid using `var`.
 
-> ESLint: [prefer-const][eslint-prefer-const] and [no-const-assign][eslint-no-const-assign]
+> ESLint: [prefer-const][eslint/prefer-const] and [no-const-assign][eslint/no-const-assign]
 
 This ensures that references are not reassigned, which can lead to bugs and difficult to comprehend code.
 
@@ -26,7 +26,7 @@ const ice = 2;
 
 Use `let` instead of `var` to reassign references.
 
-> ESLint: [no-var][eslint-no-var]
+> ESLint: [no-var][eslint/no-var]
 
 `let` is block-scoped rather than function-scoped like `var`.
 
@@ -65,6 +65,6 @@ console.log(snow); // ReferenceError: snow is not defined
 console.log(ice); // ReferenceError: ice is not defined
 ```
 
-[eslint-no-const-assign]: https://eslint.org/docs/rules/no-const-assign
-[eslint-no-var]: https://eslint.org/docs/rules/no-var
-[eslint-prefer-const]: https://eslint.org/docs/rules/prefer-const
+[eslint/no-const-assign]: https://eslint.org/docs/rules/no-const-assign
+[eslint/no-var]: https://eslint.org/docs/rules/no-var
+[eslint/prefer-const]: https://eslint.org/docs/rules/prefer-const
