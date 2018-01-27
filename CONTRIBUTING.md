@@ -1,4 +1,5 @@
 # Contributing to Styleguide JavaScript
+
 Thanks for contributing to Styleguide JavaScript!
 
 This is a set of guidelines for contributing to Styleguide JavaScript. Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved.
