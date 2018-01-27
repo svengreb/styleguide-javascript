@@ -10,7 +10,7 @@ Use double quotes `""` for strings:
 
 Some users argument that single quotes can be used for inline HTML without the need to escape characters. We don't agree to this statement because inline HTML is normally a anti-pattern and templates should be used instead.
 
-> ESLint: [quotes][eslint-quotes]
+> ESLint: [quotes][eslint/quotes]
 
 ###### Examples
 
@@ -61,7 +61,7 @@ const message = "Cupcake ipsum candy pudding soufflé chocolate. Croissant muffi
 
 When programmatically building up strings, use [template literals][mdn-template-literals] (previoudly called *template strings* in ES2015 specification) instead of concatenation. Template literals provide a readable, concise syntax with support for embedded expressions. They allow the usage of features like multi-line strings and string interpolation.
 
-> ESLint: [prefer-template][eslint-prefer-template] and [template-curly-spacing][eslint-template-curly-spacing]
+> ESLint: [prefer-template][eslint/prefer-template] and [template-curly-spacing][eslint/template-curly-spacing]
 
 ###### Examples
 
@@ -97,13 +97,13 @@ function printSeason(name) {
 
 Never use [`eval()`][mdn-eval] on a string, it opens too many vulnerabilities.
 
-> ESLint: [no-eval][eslint-no-eval]
+> ESLint: [no-eval][eslint/no-eval]
 
 ## Escaping
 
 Do not unnecessarily escape characters in strings. Backslashes harm readability and should only be used when necessary.
 
-> ESLint: [no-useless-escape][eslint-no-useless-escape]
+> ESLint: [no-useless-escape][eslint/no-useless-escape]
 
 ###### Examples
 
@@ -124,11 +124,11 @@ const winter = `snowy and '${state}'`;
 const winter = `I'm in love with the '${seasonName}' season!`;
 ```
 
-[eslint-no-eval]: https://eslint.org/docs/rules/no-eval
-[eslint-no-useless-escape]: https://eslint.org/docs/rules/no-useless-escape
-[eslint-prefer-template]: https://eslint.org/docs/rules/prefer-template
-[eslint-quotes]: https://eslint.org/docs/rules/quotes
-[eslint-template-curly-spacing]: https://eslint.org/docs/rules/template-curly-spacing
+[eslint/no-eval]: https://eslint.org/docs/rules/no-eval
+[eslint/no-useless-escape]: https://eslint.org/docs/rules/no-useless-escape
+[eslint/prefer-template]: https://eslint.org/docs/rules/prefer-template
+[eslint/quotes]: https://eslint.org/docs/rules/quotes
+[eslint/template-curly-spacing]: https://eslint.org/docs/rules/template-curly-spacing
 [json]: https://www.json.org
 [mdn-eval]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
 [mdn-template-literals]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals

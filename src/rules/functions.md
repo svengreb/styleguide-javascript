@@ -4,7 +4,7 @@ Use named function expressions instead of function declarations. Function declar
 
 Functions which definition is too large or complex should be extracted into a own module. Make sure to explicitly name the expression, regardless of whether or not the name is inferred from the containing variable which is often the case in modern browsers or when using compilers such as [Babel][babel]. This eliminates any assumptions made about the call stack of errors.
 
-> ESLint: [func-style][eslint-func-style]
+> ESLint: [func-style][eslint/func-style]
 
 ###### Examples
 
@@ -35,7 +35,7 @@ const winter = function longUniqueMoreDescriptiveLexicalWinter() {
 
 Wrap immediately invoked function expressions ([IIFE][mdn-iife]) in parentheses. An immediately invoked function expression is a single unit - wrapping both it, and its invocation parens, in parens, cleanly expresses this. Note that in a world with modules everywhere, an IIFE is almost never needed.
 
-> ESLint: [wrap-iife][eslint-wrap-iife]
+> ESLint: [wrap-iife][eslint/wrap-iife]
 
 ###### Examples
 
@@ -53,7 +53,7 @@ Never declare a function in a non-function block (`if`, `while`, etc). Assign th
 
 **Note:** *ECMA-262* defines a block as a list of statements. A function declaration is not a statement!
 
-> ESLint: [no-loop-func][eslint-no-loop-func]
+> ESLint: [no-loop-func][eslint/no-loop-func]
 
 ###### Examples
 
@@ -104,7 +104,7 @@ function season(name, elements, args) {
 
 Never use `arguments` and use rest syntax `...` instead. The rest `...` operator is explicit about which arguments to pull. Also rest arguments are a real Array, and not merely Array-like like `arguments`.
 
-> ESLint: [prefer-rest-params][eslint-prefer-rest-params]
+> ESLint: [prefer-rest-params][eslint/prefer-rest-params]
 
 ###### Examples
 
@@ -209,7 +209,7 @@ function winter(name, elements = {}) {
 
 Never use the `Function` constructor to create a new function. Creating a function in this way evaluates a string similarly to [`eval()`][mdn-eval], which opens vulnerabilities.
 
-> ESLint: [no-new-func][eslint-no-new-func]
+> ESLint: [no-new-func][eslint/no-new-func]
 
 ###### Examples
 
@@ -227,7 +227,7 @@ const subtract = Function("snow", "frost", "return snow - frost");
 
 Use spacing in a function signature.
 
-> ESLint: [space-before-function-paren][eslint-space-before-function-paren] and [space-before-blocks][eslint-space-before-blocks]
+> ESLint: [space-before-function-paren][eslint/space-before-function-paren] and [space-before-blocks][eslint/space-before-blocks]
 
 ###### Examples
 
@@ -259,7 +259,7 @@ const snow = function flake() {};
 
 Never mutate parameters. Manipulating objects passed in as parameters can cause unwanted variable side effects in the original caller.
 
-> ESLint: [no-param-reassign][eslint-no-param-reassign]
+> ESLint: [no-param-reassign][eslint/no-param-reassign]
 
 ###### Examples
 
@@ -283,7 +283,7 @@ function snow(flake) {
 
 Never reassign parameters. It can lead to unexpected behavior, especially when accessing the `arguments` object. It can also cause optimization issues, especially in [V8][v8].
 
-> ESLint: [no-param-reassign][eslint-no-param-reassign]
+> ESLint: [no-param-reassign][eslint/no-param-reassign]
 
 ###### Examples
 
@@ -322,7 +322,7 @@ function snow(flake = 1) {
 
 Use of the spread operator `...` to call variadic functions. It's cleaner, avoids the supply of a context and also prevents the compose of `new` with `apply`.
 
-> ESLint: [prefer-spread][eslint-prefer-spread]
+> ESLint: [prefer-spread][eslint/prefer-spread]
 
 ###### Examples
 
@@ -391,15 +391,15 @@ console.log(
 ```
 
 [babel]: https://babeljs.io
-[eslint-func-style]: https://eslint.org/docs/rules/func-style
-[eslint-no-loop-func]: https://eslint.org/docs/rules/no-loop-func
-[eslint-no-new-func]: https://eslint.org/docs/rules/no-new-func
-[eslint-no-param-reassign]: https://eslint.org/docs/rules/no-param-reassign
-[eslint-prefer-rest-params]: https://eslint.org/docs/rules/prefer-rest-params
-[eslint-prefer-spread]: https://eslint.org/docs/rules/prefer-spread
-[eslint-space-before-blocks]: https://eslint.org/docs/rules/space-before-blocks
-[eslint-space-before-function-paren]: https://eslint.org/docs/rules/space-before-function-paren
-[eslint-wrap-iife]: https://eslint.org/docs/rules/wrap-iife
+[eslint/func-style]: https://eslint.org/docs/rules/func-style
+[eslint/no-loop-func]: https://eslint.org/docs/rules/no-loop-func
+[eslint/no-new-func]: https://eslint.org/docs/rules/no-new-func
+[eslint/no-param-reassign]: https://eslint.org/docs/rules/no-param-reassign
+[eslint/prefer-rest-params]: https://eslint.org/docs/rules/prefer-rest-params
+[eslint/prefer-spread]: https://eslint.org/docs/rules/prefer-spread
+[eslint/space-before-blocks]: https://eslint.org/docs/rules/space-before-blocks
+[eslint/space-before-function-paren]: https://eslint.org/docs/rules/space-before-function-paren
+[eslint/wrap-iife]: https://eslint.org/docs/rules/wrap-iife
 [mdn-eval]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
 [mdn-iife]: https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 [v8]: https://developers.google.com/v8

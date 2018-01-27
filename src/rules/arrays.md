@@ -88,7 +88,7 @@ const winter = ["snow", "frost"];
 const nodes = [...winter];
 ```
 
-## Prefer `from` over spreads for mapping of iterables
+## Mapping Over Iterables
 
 Use [`Array.from`][mdn-array-from] instead of spread `...` for mapping over iterables. This avoids creating an intermediate array.
 

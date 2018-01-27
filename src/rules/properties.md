@@ -2,7 +2,7 @@
 
 Use [dot notation][mdn-property_accessors-dot_notation] when accessing properties.
 
-> ESLint: [dot-notation][eslint-dot-notation]
+> ESLint: [dot-notation][eslint/dot-notation]
 
 ###### Examples
 
@@ -53,7 +53,7 @@ const isFalling = getProp("falling");
 
 Use exponentiation operator `**` when calculating exponentiations.
 
-> ESLint: [no-restricted-properties][eslint-no-restricted-properties]
+> ESLint: [no-restricted-properties][eslint/no-restricted-properties]
 
 ###### Examples
 
@@ -69,7 +69,7 @@ const binary = Math.pow(2, 10);
 const binary = 2 ** 10;
 ```
 
-[eslint-dot-notation]: https://eslint.org/docs/rules/dot-notation
-[eslint-no-restricted-properties]: https://eslint.org/docs/rules/no-restricted-properties
+[eslint/dot-notation]: https://eslint.org/docs/rules/dot-notation
+[eslint/no-restricted-properties]: https://eslint.org/docs/rules/no-restricted-properties
 [mdn-property_accessors-dot_notation]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#Dot_notation
 [mdn-property_accessors-bracket_notation]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#Bracket_notation

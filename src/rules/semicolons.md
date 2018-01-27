@@ -5,7 +5,7 @@ Always use semicolons! When JavaScript encounters a line break without a semicol
 * [ECMAScript 2018 Specification][ref-ecma262-automatic_semicolon_insertion]
 * [StackOverflow: "Semicolon before self-invoking function?"][ref-stackoverflow-self-invoking-function]
 
-> ESLint: [semi][eslint-semi]
+> ESLint: [semi][eslint/semi]
 
 ###### Examples
 
@@ -57,7 +57,7 @@ function winter() {
 }
 ```
 
-[eslint-semi]: https://eslint.org/docs/rules/semi
+[eslint/semi]: https://eslint.org/docs/rules/semi
 [mdn-lexical_grammar-automatic_semicolon_insertion]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion
 [ref-ecma262-automatic_semicolon_insertion]: https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion
 [ref-stackoverflow-self-invoking-function]: https://stackoverflow.com/questions/7365172/semicolon-before-self-invoking-function/7365214#7365214

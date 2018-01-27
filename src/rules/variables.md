@@ -2,7 +2,7 @@
 
 Always use `const` or `let` to declare variables to avoid polluting the global namespace, otherwise this will result in global variables.
 
-> ESLint: [no-undef][eslint-no-undef] and [prefer-const][eslint-prefer-const]
+> ESLint: [no-undef][eslint/no-undef] and [prefer-const][eslint/prefer-const]
 
 ###### Examples
 
@@ -22,7 +22,7 @@ const snow = new Snow();
 
 Use one `const` or `let` declaration per variable. It simplifies the addition of new variable declarations and increases the code readability and maintainability. This also allows to step through each declaration with the debugger, instead of jumping through all of them at once.
 
-> ESLint: [one-var][eslint-one-var]
+> ESLint: [one-var][eslint/one-var]
 
 ###### Examples
 
@@ -123,7 +123,7 @@ function checkWinterSeason(season) {
 
 Don't chain variable assignments. Chaining variable assignments creates implicit global variables.
 
-> ESLint: [no-multi-assign][eslint-no-multi-assign]
+> ESLint: [no-multi-assign][eslint/no-multi-assign]
 
 ###### Examples
 
@@ -169,7 +169,7 @@ Avoid using unary increments and decrements (`++`, `--`). Per ESLint documentati
 
 Exceptions are final expression in `for` loops which can be configured for ESLint by enabling the `allowForLoopAfterthoughts` option.
 
-> ESLint: [no-plusplus][eslint-no-plusplus]
+> ESLint: [no-plusplus][eslint/no-plusplus]
 
 ###### Examples
 
@@ -204,8 +204,8 @@ const total = snowflakes.reduce((a, b) => a + b, 0);
 const allFlakes = snowflakes.filter(Boolean).length;
 ```
 
-[eslint-no-multi-assign]: https://eslint.org/docs/rules/no-multi-assign
-[eslint-no-plusplus]: https://eslint.org/docs/rules/no-plusplus
-[eslint-no-undef]: https://eslint.org/docs/rules/no-undef
-[eslint-one-var]: https://eslint.org/docs/rules/one-var
-[eslint-prefer-const]: https://eslint.org/docs/rules/prefer-const
+[eslint/no-multi-assign]: https://eslint.org/docs/rules/no-multi-assign
+[eslint/no-plusplus]: https://eslint.org/docs/rules/no-plusplus
+[eslint/no-undef]: https://eslint.org/docs/rules/no-undef
+[eslint/one-var]: https://eslint.org/docs/rules/one-var
+[eslint/prefer-const]: https://eslint.org/docs/rules/prefer-const

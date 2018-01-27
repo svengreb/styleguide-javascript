@@ -2,7 +2,7 @@
 
 Use braces with all multi-line blocks.
 
-> ESLint: [nonblock-statement-body-position][eslint-nonblock-statement-body-position]
+> ESLint: [nonblock-statement-body-position][eslint/nonblock-statement-body-position]
 
 ###### Examples
 
@@ -39,7 +39,7 @@ function snow() {
 
 When using multi-line blocks with `if` and `else`, put the `else` on the same line as the `if` block's closing brace.
 
-> ESLint: [brace-style][eslint-brace-style]
+> ESLint: [brace-style][eslint/brace-style]
 
 ###### Examples
 
@@ -70,7 +70,7 @@ if (winter) {
 
 If an `if` block always executes a `return` statement, the subsequent `else` block is unnecessary. A `return` in an `else if` block following an `if` block that contains a `return` can be separated into multiple `if` blocks.
 
-> ESLint: [no-else-return][eslint-no-else-return]
+> ESLint: [no-else-return][eslint/no-else-return]
 
 ###### Examples
 
@@ -144,6 +144,6 @@ function winter(snow) {
 }
 ```
 
-[eslint-brace-style]: https://eslint.org/docs/rules/brace-style
-[eslint-no-else-return]: https://eslint.org/docs/rules/no-else-return
-[eslint-nonblock-statement-body-position]: https://eslint.org/docs/rules/nonblock-statement-body-position
+[eslint/brace-style]: https://eslint.org/docs/rules/brace-style
+[eslint/no-else-return]: https://eslint.org/docs/rules/no-else-return
+[eslint/nonblock-statement-body-position]: https://eslint.org/docs/rules/nonblock-statement-body-position

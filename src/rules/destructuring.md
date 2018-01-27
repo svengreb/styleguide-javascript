@@ -2,7 +2,7 @@
 
 Use object destructuring when accessing and using multiple properties of an object. Destructuring avoids the usage of temporary references for those properties.
 
-> ESLint: [prefer-destructuring][eslint-prefer-destructuring]
+> ESLint: [prefer-destructuring][eslint/prefer-destructuring]
 
 ###### Examples
 
@@ -38,7 +38,7 @@ function getSeasonElement({ name, element }) {
 
 Use array destructuring.
 
-> ESLint: [prefer-destructuring][eslint-prefer-destructuring]
+> ESLint: [prefer-destructuring][eslint/prefer-destructuring]
 
 ###### Examples
 
@@ -59,7 +59,7 @@ const winter = ["snow", "frost", "ice"];
 const [snow, frost] = winter;
 ```
 
-## Prefer object destructuring over array for multiple return values
+## Multiple Return Values
 
 Use object destructuring for multiple return values instead of array destructuring. New properties can not be added over time or the order of item can not be changed without breaking call sites.
 
@@ -89,4 +89,4 @@ function processElements(elements) {
 const { snow, ice } = processElements(elements);
 ```
 
-[eslint-prefer-destructuring]: https://eslint.org/docs/rules/prefer-destructuring
+[eslint/prefer-destructuring]: https://eslint.org/docs/rules/prefer-destructuring

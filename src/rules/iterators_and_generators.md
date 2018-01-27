@@ -21,7 +21,7 @@ to iterate over arrays, and
 
 to produce arrays to iterate over objects.
 
-> ESLint: [no-iterator][eslint-no-iterator] and [no-restricted-syntax][eslint-no-restricted-syntax]
+> ESLint: [no-iterator][eslint/no-iterator] and [no-restricted-syntax][eslint/no-restricted-syntax]
 
 ###### Examples
 
@@ -148,5 +148,5 @@ const snow = function* () {}
 
 [no-generators]: #no-generators
 
-[eslint-no-iterator]: https://eslint.org/docs/rules/no-iterator
-[eslint-no-restricted-syntax]: https://eslint.org/docs/rules/no-restricted-syntax
+[eslint/no-iterator]: https://eslint.org/docs/rules/no-iterator
+[eslint/no-restricted-syntax]: https://eslint.org/docs/rules/no-restricted-syntax

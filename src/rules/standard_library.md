@@ -4,7 +4,7 @@ The [Standard Library][mdn-global_objects] contains utilities that are functiona
 
 Use `Number.isNaN` instead of global `isNaN`. The global `isNaN` coerces non-numbers to numbers, returning true for anything that coerces to `NaN`. If this behavior is desired, make it explicit.
 
-> ESLint: [no-restricted-globals][eslint-no-restricted-globals]
+> ESLint: [no-restricted-globals][eslint/no-restricted-globals]
 
 ###### Examples
 
@@ -26,7 +26,7 @@ Number.isNaN(Number("1.2.3")); // true
 
 Use `Number.isFinite` instead of global `isFinite`. The global `isFinite` coerces non-numbers to numbers, returning true for anything that coerces to a finite number. If this behavior is desired, make it explicit.
 
-> ESLint: [no-restricted-globals][eslint-no-restricted-globals]
+> ESLint: [no-restricted-globals][eslint/no-restricted-globals]
 
 ###### Examples
 
@@ -43,5 +43,5 @@ Number.isFinite("2e3"); // false
 Number.isFinite(parseInt("2e3", 10)); // true
 ```
 
-[eslint-no-restricted-globals]: https://eslint.org/docs/rules/no-restricted-globals
+[eslint/no-restricted-globals]: https://eslint.org/docs/rules/no-restricted-globals
 [mdn-global_objects]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects

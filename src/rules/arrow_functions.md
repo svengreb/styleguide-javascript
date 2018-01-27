@@ -4,7 +4,7 @@ Use arrow function notation for anonymous functions e.g. when passing an inline 
 
 When dealing with a fairly complicated function, it is recommended to move that logic out into its own named function expression.
 
-> ESLint: [prefer-arrow-callback][eslint-prefer-arrow-callback] and [arrow-spacing][eslint-arrow-spacing]
+> ESLint: [prefer-arrow-callback][eslint/prefer-arrow-callback] and [arrow-spacing][eslint/arrow-spacing]
 
 ###### Examples
 
@@ -30,7 +30,7 @@ When dealing with a fairly complicated function, it is recommended to move that 
 
 If the function body consists of a single statement returning an [expression][mdn-expressions_and_operators] without side effects, omit the braces and use the implicit return. Otherwise use a `return` statement. This rule is syntactic sugar and significantly increases the readability when multiple functions are chained together.
 
-> ESLint: [arrow-parens][eslint-arrow-parens] and [arrow-body-style][eslint-arrow-body-style]
+> ESLint: [arrow-parens][eslint/arrow-parens] and [arrow-body-style][eslint/arrow-body-style]
 
 ###### Examples
 
@@ -117,7 +117,7 @@ In case the expression spans over multiple lines, wrap it in parentheses for bet
 
 If a function takes a single argument and doesn't use braces, omit the parentheses. Otherwise, always include parentheses around arguments for clarity and consistency.
 
-> ESLint: [arrow-parens][eslint-arrow-parens]
+> ESLint: [arrow-parens][eslint/arrow-parens]
 
 ###### Examples
 
@@ -150,7 +150,7 @@ If a function takes a single argument and doesn't use braces, omit the parenthes
 
 Avoid confusing arrow function syntax `=>` with comparison operators (`<=`, `>=`).
 
-> ESLint: [no-confusing-arrow][eslint-no-confusing-arrow]
+> ESLint: [no-confusing-arrow][eslint/no-confusing-arrow]
 
 ###### Examples
 
@@ -177,9 +177,9 @@ const elementDensity = element => {
 };
 ```
 
-[eslint-arrow-body-style]: https://eslint.org/docs/rules/arrow-body-style
-[eslint-arrow-parens]: https://eslint.org/docs/rules/arrow-parens
-[eslint-arrow-spacing]: https://eslint.org/docs/rules/arrow-spacing
-[eslint-no-confusing-arrow]: https://eslint.org/docs/rules/no-confusing-arrow
-[eslint-prefer-arrow-callback]: https://eslint.org/docs/rules/prefer-arrow-callback
+[eslint/arrow-body-style]: https://eslint.org/docs/rules/arrow-body-style
+[eslint/arrow-parens]: https://eslint.org/docs/rules/arrow-parens
+[eslint/arrow-spacing]: https://eslint.org/docs/rules/arrow-spacing
+[eslint/no-confusing-arrow]: https://eslint.org/docs/rules/no-confusing-arrow
+[eslint/prefer-arrow-callback]: https://eslint.org/docs/rules/prefer-arrow-callback
 [mdn-expressions_and_operators]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions
