@@ -2,7 +2,11 @@
 
 <p align="center"><img src="https://assets-cdn.github.com/favicon.ico" width=24 height=24/> <a href="https://github.com/arcticicestudio/styleguide-javascript/releases/latest"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-javascript.svg?style=flat-square"/></a></p>
 
-<p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CHANGELOG.md"><img src="https://img.shields.io/badge/Changelog----5E81AC.svg?style=flat-square"/></a></p>
+<p align="center"><img src="https://www.npmjs.com/static/images/touch-icons/favicon-32x32.png" width=24 height=24/> <a href="https://www.npmjs.com/package/eslint-config-arcticicestudio"><img src="https://img.shields.io/npm/v/eslint-config-arcticicestudio.svg?style=flat-square&label=eslint-config-arcticicestudio"/></a> <a href="https://www.npmjs.com/package/eslint-config-arcticicestudio-base"><img src="https://img.shields.io/npm/v/eslint-config-arcticicestudio-base.svg?style=flat-square&label=eslint-config-arcticicestudio-base"/></a></p>
+
+<p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CHANGELOG.md#010"><img src="https://img.shields.io/badge/Changelog-0.1.0-5E81AC.svg?style=flat-square"/></a></p>
+
+<p align="center"><img src="https://circleci.com/favicon.ico" width=24 height=24/> <a href="https://circleci.com/gh/arcticicestudio/styleguide-javascript"><img src="https://img.shields.io/circleci/project/github/arcticicestudio/styleguide-javascript/develop.svg?style=flat-square"/></a></p>
 
 <p align="center">The Arctic Ice Studio JavaScript Code Style based on the <a href="https://github.com/airbnb/javascript">Airbnb JavaScript Style Guide</a>.</p>
 
@@ -19,6 +23,8 @@ A style guide establishes and enforces style to improve the intelligibility and 
 This style guide provides the [comprehensive base rule set][rules] including [ECMAScript +6 (ES 2015+)][rules-ecmascript_6+_styles] and [React][rules-react] specific styles like e.g. [Higher-Order Components][rules-react-hoc], the [component methods & properties ordering][rules-react-ordering-methods_and_properties] and [props][rules-react-props].
 
 The development chapters contain information about the [requirements][dev-requirements], [how to build][dev-building] this style guide documentation and [run the tests][dev-testing].
+
+To make sure your code matches this style guide use the official [eslint-config-arcticicestudio-base][eslint-config-arcticicestudio-base-ghio] extensible code linter configuration for [ESLint][eslint]. Use the advanced [eslint-config-arcticicestudio][eslint-config-arcticicestudio-ghio] package to also get support for the [React][react] and [JSX A11Y][npm-eslint-plugin-jsx-a11y] specific rules.
 
 ### Contributing
 
@@ -51,3 +57,9 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [rules-react-hoc]: rules/react/higher_order_components.md
 [rules-react-ordering-methods_and_properties]: rules/react/ordering.md#component-methods-and-properties
 [rules-react-props]: rules/react/props.md
+
+[eslint]: https://eslint.org
+[eslint-config-arcticicestudio-base-ghio]: https://arcticicestudio.github.io/eslint-config-arcticicestudio-base
+[eslint-config-arcticicestudio-ghio]: https://arcticicestudio.github.io/eslint-config-arcticicestudio
+[npm-eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y
+[react]: https://reactjs.org
