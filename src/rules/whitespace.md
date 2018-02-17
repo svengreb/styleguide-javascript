@@ -6,11 +6,13 @@ Always use spaces characters where two (2) spaces are used for indentation. The 
 
 ###### Examples
 
+Note: The `»` character represents a tab.
+
 ⇣ **Incorrect** code for this rule:
 
 ```js
 function winter() {
-	let snow;
+ » let snow;
 }
 ```
 

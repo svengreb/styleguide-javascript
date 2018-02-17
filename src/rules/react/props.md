@@ -135,7 +135,7 @@ Avoid using an array index as `key` prop, always use a unique ID.
 ))}
 ```
 
-###### References:
+###### References
 
 * [Index as a key is an anti-pattern][ref-medium-index_key_anti_pattern]
 
@@ -279,6 +279,7 @@ If it is necessary to use [refs][react-docs-refs_and:dom], always use ref callba
 ```
 
 [higher_order_components]: higher_order_components.md
+[rules-base-whitespace-maxlen]: ../whitespace.md#maximum-line-length
 
 [eslint-react/no-string-refs]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
 [eslint-react/jsx-boolean-value]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md

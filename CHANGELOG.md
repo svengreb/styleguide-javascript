@@ -4,9 +4,8 @@
 
 <p align="center">The Arctic Ice Studio JavaScript Code Style based on the <a href="https://github.com/airbnb/javascript">Airbnb JavaScript Style Guide</a>.</p>
 
----
-
 # 0.1.0
+
 ![Release Date: 2018-01-27](https://img.shields.io/badge/Release_Date-2018--01--28-88C0D0.svg?style=flat-square) [![Project Board](https://img.shields.io/badge/Project_Board-0.1.0-88C0D0.svg?style=flat-square)](https://github.com/arcticicestudio/styleguide-javascript/projects/2) [![Milestone](https://img.shields.io/badge/Milestone-0.1.0-88C0D0.svg?style=flat-square)](https://github.com/arcticicestudio/styleguide-javascript/milestone/1)
 
 > Detailed information can be found in the [project documentation][docs].
@@ -25,7 +24,6 @@
 
 <p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascriptscript/blob/develop/LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-5E81AC.svg?style=flat-square"/></a></p>
 
-[airbnb-javascript-style-guide]: https://github.com/airbnb/javascript
 [docs]: https://arcticicestudio.github.io/styleguide-javascript
 [docs-rules]: https://arcticicestudio.github.io/styleguide-javascript/rules/index.html
 [docs-rules-react]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/index.html

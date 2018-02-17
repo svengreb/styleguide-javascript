@@ -8,7 +8,7 @@
 
 ---
 
-<p align="center"><img src="https://cdn.rawgit.com/arcticicestudio/styleguide-javascript/develop/assets/styleguide-javascript-banner-typography-badge.svg"/></p>
+<p align="center"><img src="https://cdn.rawgit.com/arcticicestudio/styleguide-javascript/develop/assets/styleguide-javascript-banner-typography-badge.svg" width="40%" /></p>
 
 Every major open source project has its own style guide, a set of standards and conventions for the writing and design of code, documentations and assets. It is much easier to understand a large codebase when all the code in it is in a consistent style.
 
@@ -19,7 +19,7 @@ A style guide establishes and enforces style to improve the intelligibility and 
 The [project documentation][docs] contains chapters to learn about
 the [comprehensive base rule set][docs-rules] including [ECMAScript +6 (ES 2015+)][docs-rules-ecmascript_6+_styles] and [React][docs-rules-react] specific styles like e.g. [Higher-Order Components][docs-rules-react-hoc], the [component methods & properties ordering][docs-rules-react-ordering-methods_and_properties] and [props][docs-rules-react-props].
 
-The development chapters contain information about the [requirements][docs-dev-requirements] and [how to build][docs-dev-building] the style guide documentation.
+The development chapters contain information about the [requirements][docs-dev-requirements], [how to build][docs-dev-building] this style guide documentation and [run the tests][docs-dev-testing].
 
 ### Contributing
 
@@ -52,3 +52,4 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [docs-rules-react-hoc]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/higher_order_components.html
 [docs-rules-react-ordering-methods_and_properties]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/ordering.html#component-methods-and-properties
 [docs-rules-react-props]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/props.html
+[docs-dev-testing]: https://arcticicestudio.github.io/styleguide-javascript/development/testing.html

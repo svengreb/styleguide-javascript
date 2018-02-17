@@ -22,6 +22,9 @@ jobs:
           name: preprocess-npm-install
           command: npm install
       - run:
+          name: lint
+          command: npm run lint
+      - run:
           name: generate-docs
           command: npm run docs:build
       - store_artifacts:

@@ -71,7 +71,6 @@ const winter = {
 };
 ```
 
-
 [eslint/comma-dangle]: https://eslint.org/docs/rules/comma-dangle
 [eslint/comma-style]: https://eslint.org/docs/rules/comma-style
 [json-notation]: https://www.json.org
