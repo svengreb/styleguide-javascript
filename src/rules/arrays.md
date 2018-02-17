@@ -4,8 +4,6 @@ Use the literal syntax for array creation.
 
 > ESLint: [no-array-constructor][eslint-no-array-constructor]
 
-[eslint-no-array-constructor]: https://eslint.org/docs/rules/no-array-constructor
-
 ###### Examples
 
 ⇣ **Incorrect** code for this rule:
@@ -222,5 +220,6 @@ const numberInArray = [
 ```
 
 [eslint-array-callback-return]: https://eslint.org/docs/rules/array-callback-return
+[eslint-no-array-constructor]: https://eslint.org/docs/rules/no-array-constructor
 [mdn-array-from]: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from
 [mdn-array-push]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push

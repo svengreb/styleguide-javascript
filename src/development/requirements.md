@@ -1,6 +1,6 @@
 ## Node.js
 
-Styleguide JavaScript is build with [Node.js](https://nodejs.org) which is required to build some of the file formats.
+Styleguide JavaScript is build with [Node.js][nodejs] which is required to build some of the file formats.
 
 ### npm
 
