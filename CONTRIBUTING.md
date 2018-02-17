@@ -107,6 +107,12 @@ Every major open source project has its own style guide, a set of standards and 
 
 A style guide establishes and enforces style to improve the intelligibility and communication within the project community. It ensures consistency and enforces best practice in usage and language composition.
 
+### Markdown Code Style
+
+All Markdown sources and documentations adhere to the [Arctic Ice Studio Markdown Style Guide][styleguide-markdown-github-ghdocs].
+
+<a href="https://github.com/arcticicestudio/styleguide-markdown"><img src="https://rawgit.com/arcticicestudio/styleguide-markdown/develop/assets/styleguide-markdown-banner-typography-badge.svg" width="40%"/></a>
+
 ### Git Commit Messages
 
 A well-crafted Git commit message is the best way to communicate *context* about a change to the maintainers. The code will tell what changed, but only the commit message can properly tell why. Re-establishing the context of a piece of code is wasteful. We can't avoid it completely, so our efforts should go to reducing it as much as possible.
@@ -186,6 +192,7 @@ Thanks for the inspirations and attributions to GitHub's [Open Source Guides](ht
 [stackoverflow-mcve]: https://stackoverflow.com/help/mcve
 [styleguide-git-badge]: https://rawgit.com/arcticicestudio/styleguide-git/develop/src/assets/styleguide-git-banner-typography-badge.svg
 [styleguide-git-github]: https://github.com/arcticicestudio/styleguide-git
+[styleguide-markdown-github-ghdocs]: https://arcticicestudio.github.io/styleguide-markdown
 [sscce]: http://sscce.org
 [template-issue]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/.github/ISSUE_TEMPLATE.md
 [template-pr]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/.github/PULL_REQUEST_TEMPLATE.md
