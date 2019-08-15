@@ -1,5 +1,8 @@
-# +---------+
-# + Node.js +
-# +---------+
-src/node_modules/*
-node_modules/*
+# Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2018-present Sven Greb <development@svengreb.de>
+#
+# Project:    Styleguide JavaScript
+# Repository: https://github.com/arcticicestudio/styleguide-javascript
+# License:    MIT
+
+**/node_modules/*
