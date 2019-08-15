@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 The [Standard Library][mdn-global_objects] contains utilities that are functionally broken but remain for legacy reasons.
 
 ## Number `isNaN`

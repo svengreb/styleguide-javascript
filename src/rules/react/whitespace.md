@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Self-Closing Tags
 
 Always include a single space in self-closing tags.

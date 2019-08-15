@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Declaration
 
 Use named function expressions instead of function declarations. Function declarations are hoisted, which means that it is (too) easy to reference the function before it is defined in the file. This harms readability and maintainability.

@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Ignore Properties
 
 Accessor functions for properties are not required.

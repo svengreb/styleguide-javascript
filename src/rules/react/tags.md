@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Self-Closing
 
 Always self-close tags that have no children.

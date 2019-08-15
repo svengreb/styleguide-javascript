@@ -1,5 +1,5 @@
 > Please make sure to complete the [requirement][requirements] steps first in order to test the project!
-
+>
 > Continuous integration builds are running at [Circle CI][ci-circle].
 
 ## Linting

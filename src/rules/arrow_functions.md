@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Anonymous Functions
 
 Use arrow function notation for anonymous functions e.g. when passing an inline callback. It creates a version of the function that executes in the context of this which is usually the desired functionality, and is a more concise syntax.

@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Indentation
 
 Indent props for readability and according to the [line length][rules-base-whitespace-maxlen].

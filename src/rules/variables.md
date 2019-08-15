@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Declaration
 
 Always use `const` or `let` to declare variables to avoid polluting the global namespace, otherwise this will result in global variables.

@@ -89,6 +89,8 @@ The Styleguide JavaScript uses the [gitflow][gitflow] branching model. The repos
 
 **All [pull requests](#pull-requests) for the limited development lifecycle _story_/_topic_ branches must be send against the `develop` branch**.
 
+<!--lint disable no-heading-punctuation-->
+
 ## How else can I help?
 
 ### Improve Issues

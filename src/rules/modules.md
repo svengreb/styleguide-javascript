@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Use `import` and `export`
 
 Always use modules (`import`/`export`) over a non-standard module system because modules will become the standard. If necessary it is always possible to transpile to another module system afterwards.

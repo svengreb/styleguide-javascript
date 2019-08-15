@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## No Iterators
 
 Don't use iterators. Prefer JavaScript's higher-order functions instead of loops like `for-in` or `for-of`. Dealing with pure functions that return values is easier to reason about than side effects and enforces the immutable rule of this style guide.

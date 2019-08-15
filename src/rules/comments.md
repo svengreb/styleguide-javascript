@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Multi Line
 
 Use `/** ... */` for multi-line comments.

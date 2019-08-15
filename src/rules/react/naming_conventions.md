@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## One Component Per File
 
 Only include one [React component][react-docs-component] per file. However, multiple [stateless functions or pure components][react-docs-stateless_functions] are allowed per file.

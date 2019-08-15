@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## No `new`
 
 Use the literal syntax for object creation.

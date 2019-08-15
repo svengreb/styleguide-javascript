@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Overview
 
 `var` declarations get hoisted to the top of their closest enclosing function scope, their assignment does not. `const` and `let` declarations are blessed with a new concept called [Temporal Dead Zones (TDZ)][mdn-temporal_dead_zone]. It is important to know why [`typeof` is no longer safe][ref-tdz_no_longer_safe].

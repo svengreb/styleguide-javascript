@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Dot Notation
 
 Use [dot notation][mdn-property_accessors-dot_notation] when accessing properties.

@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Descriptive
 
 Avoid single letter names. Be descriptive with naming.

@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Literals
 
 Use the literal syntax for array creation.

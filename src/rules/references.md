@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Prefer `const`
 
 Use `const` for all references and avoid using `var`.

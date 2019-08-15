@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Prefer `class`
 
 Always use `class`. Avoid manipulating `prototype` directly. The `class` syntax is more concise and easier to reason about.

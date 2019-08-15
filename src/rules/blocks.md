@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Braces
 
 Use braces with all multi-line blocks.

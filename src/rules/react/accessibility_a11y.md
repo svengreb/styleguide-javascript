@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## `img` Alternate Text
 
 Always include an `alt` prop on `<img>` tags. If the image is presentational, `alt` can be an empty string or the `<img>` must have `role="presentation"`.

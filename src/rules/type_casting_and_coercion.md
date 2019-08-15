@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Explicitness
 
 Perform type coercion at the beginning of the statement.

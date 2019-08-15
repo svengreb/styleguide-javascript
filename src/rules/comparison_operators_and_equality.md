@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Equality Syntax
 
 Use `===` and `!==` instead of `==` and `!=`.
