@@ -40,15 +40,19 @@ Use `//` for single line comments. Place single line comments on a newline above
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const isSnowing = true;  // the current snow state.
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ```js
 function getWinterElement() {
   console.log("Loading winter elements...");
   // set the default type to "frost".
-  const element = this.snow || 'frost';
+  const element = this.snow || "frost";
 
   return element;
 }
@@ -66,7 +70,7 @@ function getWinterElement() {
   console.log("Loading winter elements...");
 
   // set the default type to "frost".
-  const element = this.snow || 'frost';
+  const element = this.snow || "frost";
 
   return element;
 }
@@ -75,7 +79,7 @@ function getWinterElement() {
 ```js
 function getWinterElement() {
   // set the default type to "frost".
-  const element = this.snow || 'frost';
+  const element = this.snow || "frost";
 
   return element;
 }
@@ -128,7 +132,5 @@ function getElement(season) {
   return element;
 }
 ```
-
-## 
 
 [eslint/spaced-comment]: https://eslint.org/docs/rules/spaced-comment

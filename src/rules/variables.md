@@ -30,8 +30,8 @@ Use one `const` or `let` declaration per variable. It simplifies the addition of
 
 ```js
 const snowflakes = getSnowflakes(),
-    frost = true,
-    season = "winter";
+  frost = true,
+  season = "winter";
 ```
 
 ⇡ **Correct** code for this rule:
@@ -51,9 +51,11 @@ Group all `const` and then group all `let` declarations. This helps to assign a 
 ⇣ **Incorrect** code for this rule:
 
 ```js
-let snow, frost, ice,
-    snowflakes = getSnowflakes(),
-    isWinter = true;
+let snow,
+  frost,
+  ice,
+  snowflakes = getSnowflakes(),
+  isWinter = true;
 ```
 
 ```js
@@ -129,6 +131,8 @@ Don't chain variable assignments. Chaining variable assignments creates implicit
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 (function winter() {
   /*
@@ -151,6 +155,7 @@ console.log(ice); // 1
 
 ⇡ **Correct** code for this rule:
 
+<!-- prettier-ignore -->
 ```js
 (function winter() {
   let snow = 1;
@@ -162,6 +167,8 @@ console.log(snow); // ReferenceError
 console.log(frost); // ReferenceError
 console.log(ice); // ReferenceError
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ## No Unary Increment and Decrement
 

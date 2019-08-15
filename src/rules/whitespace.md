@@ -16,17 +16,22 @@ function winter() {
 }
 ```
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 function winter() {
     let snow;
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 function winter() {
  let snow;
 }
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -46,18 +51,23 @@ Place one (1) space before the leading brace.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 function snow(){
   console.log("snow");
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 winter.set("snow",{
   density: 20,
   frozen: false
 });
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -84,17 +94,22 @@ Place one (1) space before the opening parenthesis in control statements (`if`, 
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 if(isWinter) {
   snow ();
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 function snow () {
   console.log ("falling");
 }
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -120,9 +135,13 @@ Set off operators with spaces.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const snowflakes=snow+5;
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -132,7 +151,7 @@ const snowflakes = snow + 5;
 
 ## Newline
 
-End files with a single [newline][ref-wikipedia-newline] character. Prefer the *LF* [control character][ref-wikipedia-control_character] (\*nix based OS) and avoid the usage of *CRLF* characters (mostly Microsoft Windows based OS).
+End files with a single [newline][ref-wikipedia-newline] character. Prefer the _LF_ [control character][ref-wikipedia-control_character] (\*nix based OS) and avoid the usage of _CRLF_ characters (mostly Microsoft Windows based OS).
 
 > ESlint: [eol-last][eslint/eol-last]
 
@@ -168,11 +187,14 @@ Use indentation when making long method chains. Use a leading dot, which emphasi
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const elements = ["snow", "frost", "ice"];
 elements.map(element => `sparkling ${element}`).find("snow").highlight().tokenize(2).end().updateCount();
 ```
 
+<!-- prettier-ignore -->
 ```js
 const elements = ["snow", "frost", "ice"];
 elements.map(element => `sparkling ${element}`).
@@ -183,6 +205,7 @@ elements.map(element => `sparkling ${element}`).
     updateCount();
 ```
 
+<!-- prettier-ignore -->
 ```js
 const elements = ["snow", "frost", "ice"];
 elements.map(element => `sparkling ${element}`).find("snow").highlight().tokenize(2).find("frost")
@@ -191,21 +214,27 @@ elements.map(element => `sparkling ${element}`).find("snow").highlight().tokeniz
     .toString();
 ```
 
+<!--lint enable no-missing-blank-lines-->
+
 ⇡ **Correct** code for this rule:
 
 ```js
 const elements = ["snow", "frost", "ice"];
-elements.map(element => `sparkling ${element}`)
+elements
+  .map(element => `sparkling ${element}`)
   .find("snow")
-    .highlight()
-    .tokenize(2)
+  .highlight()
+  .tokenize(2)
   .end()
-    .updateCount();
+  .updateCount();
 ```
 
 ```js
 const elements = ["snow", "frost", "ice"];
-elements.map(element => `sparkling ${element}`).tokenize(2).updateCount();
+elements
+  .map(element => `sparkling ${element}`)
+  .tokenize(2)
+  .updateCount();
 ```
 
 ## After Blocks
@@ -231,6 +260,8 @@ const winter = {
 return winter;
 ```
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const winter = [
   function snow() {},
@@ -238,6 +269,8 @@ const winter = [
 ];
 return winter;
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -260,11 +293,7 @@ return winter;
 ```
 
 ```js
-const winter = [
-  function snow() {},
-
-  function frost() {}
-];
+const winter = [function snow() {}, function frost() {}];
 
 return winter;
 ```
@@ -279,6 +308,8 @@ Do not pad blocks with blank lines.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 function winter() {
 
@@ -287,6 +318,7 @@ function winter() {
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 if (winter) {
 
@@ -297,6 +329,7 @@ if (winter) {
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 class Winter {
 
@@ -305,6 +338,8 @@ class Winter {
   }
 }
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -340,17 +375,22 @@ Do not add spaces inside parentheses.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 function winter( element ) {
   return element;
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 if ( winter ) {
   console.log(snow);
 }
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -376,10 +416,14 @@ Do not add spaces inside brackets.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const winter = [ "snow", "frost", "ice" ];
 console.log(winter[ 0 ]);
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -398,9 +442,13 @@ Add spaces inside curly braces.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const season = {name: "winter"};
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -420,23 +468,29 @@ Note that the [rule for long strings][strings-line_length] is exempt from this r
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const season = winter && winter.elements && winter.elements.snow && winter.elements.snow.state && winter.elements.snow.state.temperature && winter.elements.snow.state.temperature.celsius;
 ```
 
+<!-- prettier-ignore -->
 ```js
 season({ name: "winter", elements: ["snow", "frost"] }).load(() => console.log("Sparkling")).catch(() => console.log("Melting"));
 ```
 
+<!--lint enable no-missing-blank-lines-->
+
 ⇡ **Correct** code for this rule:
 
 ```js
-const season = winter
-  && winter.elements
-  && winter.elements.snow
-  && winter.elements.snow.state
-  && winter.elements.snow.state.temperature
-  && winter.elements.snow.state.temperature.celsius;
+const season =
+  winter &&
+  winter.elements &&
+  winter.elements.snow &&
+  winter.elements.snow.state &&
+  winter.elements.snow.state.temperature &&
+  winter.elements.snow.state.temperature.celsius;
 ```
 
 ```js
@@ -447,8 +501,6 @@ season({
   .load(() => console.log("Sparkling"))
   .catch(() => console.log("Melting"));
 ```
-
-[strings-line_length]: strings.md#line-length
 
 [eslint/array-bracket-spacing]: https://eslint.org/docs/rules/array-bracket-spacing
 [eslint/eol-last]: https://eslint.org/docs/rules/eol-last
@@ -464,3 +516,4 @@ season({
 [eslint/space-infix-ops]: https://eslint.org/docs/rules/space-infix-ops
 [ref-wikipedia-control_character]: https://en.wikipedia.org/wiki/Control_character
 [ref-wikipedia-newline]: https://en.wikipedia.org/wiki/Newline
+[strings-line_length]: strings.md#line-length

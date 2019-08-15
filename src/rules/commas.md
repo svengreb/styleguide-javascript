@@ -18,6 +18,8 @@ function snow(...flakes,) {} // SyntaxError: parameter after rest parameter
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const winter = [
     snow
@@ -26,6 +28,7 @@ const winter = [
 ];
 ```
 
+<!-- prettier-ignore -->
 ```js
 const winter = {
     name: "winter"
@@ -35,6 +38,7 @@ const winter = {
 };
 ```
 
+<!-- prettier-ignore -->
 ```js
 const winter = [
   snow,
@@ -43,6 +47,7 @@ const winter = [
 ];
 ```
 
+<!-- prettier-ignore -->
 ```js
 const winter = {
   name: "winter",
@@ -54,6 +59,7 @@ const winter = {
 
 ⇡ **Correct** code for this rule:
 
+<!-- prettier-ignore -->
 ```js
 const winter = [
   snow,
@@ -61,6 +67,8 @@ const winter = [
   ice
 ];
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ```js
 const winter = {
@@ -74,6 +82,6 @@ const winter = {
 [eslint/comma-dangle]: https://eslint.org/docs/rules/comma-dangle
 [eslint/comma-style]: https://eslint.org/docs/rules/comma-style
 [json-notation]: https://www.json.org
-[mdn-trailing_commas]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas
-[mdn-trailing_commas-illegal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Illegal_trailing_commas
 [mdn-rest_parameters]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+[mdn-trailing_commas-illegal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Illegal_trailing_commas
+[mdn-trailing_commas]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas

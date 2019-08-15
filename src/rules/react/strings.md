@@ -8,9 +8,13 @@ Always use [double quotes][rules-base-strings-quotes] (`""`) for JSX attributes.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```jsx
 <Snow season='winter' />
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -18,6 +22,5 @@ Always use [double quotes][rules-base-strings-quotes] (`""`) for JSX attributes.
 <Snow season="winter" />
 ```
 
-[rules-base-strings-quotes]: ../strings.md#quotes
-
 [eslint/jsx-quotes]: https://eslint.org/docs/rules/jsx-quotes
+[rules-base-strings-quotes]: ../strings.md#quotes

@@ -39,9 +39,7 @@ The guide also includes information about [minimal, complete, and verifiable exa
 
 <p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/blob/develop/LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-5E81AC.svg?style=flat-square"/></a></p>
 
-[docs]: https://arcticicestudio.github.io/styleguide-javascript
 [docs-dev-building]: https://arcticicestudio.github.io/styleguide-javascript/development/building.html
-[docs-dev-contributing]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html
 [docs-dev-contributing-branch-org]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#branch-organization
 [docs-dev-contributing-bug-reports]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#bug-reports
 [docs-dev-contributing-enhancements]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#enhancement-suggestions
@@ -51,16 +49,18 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [docs-dev-contributing-pr]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#pull-requests
 [docs-dev-contributing-styleguides]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#styleguides
 [docs-dev-contributing-versioning]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#versioning
+[docs-dev-contributing]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html
 [docs-dev-requirements]: https://arcticicestudio.github.io/styleguide-javascript/development/requirements.html
-[docs-rules]: https://arcticicestudio.github.io/styleguide-javascript/rules/index.html
+[docs-dev-testing]: https://arcticicestudio.github.io/styleguide-javascript/development/testing.html
 [docs-rules-ecmascript_6+_styles]: https://arcticicestudio.github.io/styleguide-javascript/rules/ecmascript_6+_styles.html
-[docs-rules-react]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/index.html
 [docs-rules-react-hoc]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/higher_order_components.html
 [docs-rules-react-ordering-methods_and_properties]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/ordering.html#component-methods-and-properties
 [docs-rules-react-props]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/props.html
-[docs-dev-testing]: https://arcticicestudio.github.io/styleguide-javascript/development/testing.html
-[eslint]: https://eslint.org
+[docs-rules-react]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/index.html
+[docs-rules]: https://arcticicestudio.github.io/styleguide-javascript/rules/index.html
+[docs]: https://arcticicestudio.github.io/styleguide-javascript
 [eslint-config-arcticicestudio-base-ghio]: https://arcticicestudio.github.io/eslint-config-arcticicestudio-base
 [eslint-config-arcticicestudio-ghio]: https://arcticicestudio.github.io/eslint-config-arcticicestudio
+[eslint]: https://eslint.org
 [npm-eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y
 [react]: https://reactjs.org

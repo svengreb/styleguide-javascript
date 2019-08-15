@@ -24,9 +24,9 @@
 
 <p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascriptscript/blob/develop/LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-5E81AC.svg?style=flat-square"/></a></p>
 
-[docs]: https://arcticicestudio.github.io/styleguide-javascript
-[docs-rules]: https://arcticicestudio.github.io/styleguide-javascript/rules/index.html
-[docs-rules-react]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/index.html
 [docs-rules-react-hoc]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/higher_order_components.html
 [docs-rules-react-ordering-methods_and_properties]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/ordering.html#component-methods-and-properties
 [docs-rules-react-props]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/props.html
+[docs-rules-react]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/index.html
+[docs-rules]: https://arcticicestudio.github.io/styleguide-javascript/rules/index.html
+[docs]: https://arcticicestudio.github.io/styleguide-javascript

@@ -10,9 +10,8 @@ The [remark-preset-lint-arcticicestudio][remark-preset-lint-arcticicestudio-ghdo
 npm run lint:md
 ```
 
-[requirements]: requirements.md
-
 [ci-circle]: https://circleci.com/gh/arcticicestudio/styleguide-javascript
 [remark-lint-gh]: https://github.com/remarkjs/remark-lint
 [remark-preset-lint-arcticicestudio-ghdocs]: https://arcticicestudio.github.io/remark-preset-lint-arcticicestudio
+[requirements]: requirements.md
 [styleguide-markdown-ghdocs]: https://arcticicestudio.github.io/styleguide-markdown

@@ -77,7 +77,7 @@ Only import from a path in one place. The code maintainability is more difficult
 ```js
 import winter from "winter";
 // ... other imports
-import { snow, frost } from  "winter";
+import { snow, frost } from "winter";
 ```
 
 ⇡ **Correct** code for this rule:
@@ -86,12 +86,16 @@ import { snow, frost } from  "winter";
 import winter, { snow, frost } from "winter";
 ```
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 import winter, {
   snow,
   frost
 } from "winter";
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ## No Mutable Exports
 
@@ -169,12 +173,15 @@ Multiline imports should be indented like multiline array and object literals. T
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 import {snow, frost, ice, storm, sparkle} from "winter";
 ```
 
 ⇡ **Correct** code for this rule:
 
+<!-- prettier-ignore -->
 ```js
 import {
   snow,
@@ -184,6 +191,8 @@ import {
   sparkle
 } from "winter";
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ## Avoid Webpack Loader Syntax
 
@@ -207,8 +216,8 @@ import snow from "snow.scss";
 import frost from "frost.css";
 ```
 
-[eslint/no-duplicate-imports]: https://eslint.org/docs/rules/no-duplicate-imports
 [eslint-plugin-import/import-first]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
 [eslint-plugin-import/no-mutable-exports]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
 [eslint-plugin-import/no-webpack-loader-syntax]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
 [eslint-plugin-import/prefer-default-export]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
+[eslint/no-duplicate-imports]: https://eslint.org/docs/rules/no-duplicate-imports

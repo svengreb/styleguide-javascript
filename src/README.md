@@ -39,7 +39,6 @@ The guide also includes information about [minimal, complete, and verifiable exa
 <p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/blob/develop/LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-5E81AC.svg?style=flat-square"/></a></p>
 
 [dev-building]: development/building.md
-[dev-contributing]: development/contributing.md
 [dev-contributing-branch-org]: development/contributing.md#branch-organization
 [dev-contributing-bug-reports]: development/contributing.md#bug-reports
 [dev-contributing-enhancements]: development/contributing.md#enhancement-suggestions
@@ -49,17 +48,17 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [dev-contributing-pr]: development/contributing.md#pull-requests
 [dev-contributing-styleguides]: development/contributing.md#styleguides
 [dev-contributing-versioning]: development/contributing.md#versioning
+[dev-contributing]: development/contributing.md
 [dev-requirements]: development/requirements.md
 [dev-testing]: development/testing.md
-[rules]: rules/index.md
+[eslint-config-arcticicestudio-base-ghio]: https://arcticicestudio.github.io/eslint-config-arcticicestudio-base
+[eslint-config-arcticicestudio-ghio]: https://arcticicestudio.github.io/eslint-config-arcticicestudio
+[eslint]: https://eslint.org
+[npm-eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y
+[react]: https://reactjs.org
 [rules-ecmascript_6+_styles]: rules/ecmascript_6+_styles.md
-[rules-react]: rules/react/index.md
 [rules-react-hoc]: rules/react/higher_order_components.md
 [rules-react-ordering-methods_and_properties]: rules/react/ordering.md#component-methods-and-properties
 [rules-react-props]: rules/react/props.md
-
-[eslint]: https://eslint.org
-[eslint-config-arcticicestudio-base-ghio]: https://arcticicestudio.github.io/eslint-config-arcticicestudio-base
-[eslint-config-arcticicestudio-ghio]: https://arcticicestudio.github.io/eslint-config-arcticicestudio
-[npm-eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y
-[react]: https://reactjs.org
+[rules-react]: rules/react/index.md
+[rules]: rules/index.md

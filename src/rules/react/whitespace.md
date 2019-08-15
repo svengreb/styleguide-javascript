@@ -8,18 +8,24 @@ Always include a single space in self-closing tags.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```jsx
 <Snow/>
 ```
 
+<!-- prettier-ignore -->
 ```jsx
 <Snow                 />
 ```
 
+<!-- prettier-ignore -->
 ```jsx
 <Snow
  />
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -37,9 +43,13 @@ Do not pad JSX curly braces with spaces.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```jsx
 <Winter element={ snow } />
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -47,8 +57,6 @@ Do not pad JSX curly braces with spaces.
 <Winter element={snow} />
 ```
 
-[rules-base-whitespace-maxlen]: ../whitespace.md#maximum-line-length
-
-[eslint/no-multi-spaces]: https://eslint.org/docs/rules/no-multi-spaces
 [eslint-react/jsx-curly-spacing]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
 [eslint-react/jsx-tag-spacing]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
+[eslint/no-multi-spaces]: https://eslint.org/docs/rules/no-multi-spaces

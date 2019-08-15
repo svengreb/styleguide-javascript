@@ -4,7 +4,7 @@
 
 ###### References
 
-* [JavaScript Scoping & Hoisting][ref-js_scoping_and_hoisting] by Ben Cherry
+- [JavaScript Scoping & Hoisting][ref-js_scoping_and_hoisting] by Ben Cherry
 
 ###### Examples
 
@@ -57,7 +57,7 @@ function snow() {
 
   anonymous(); // TypeError: anonymous is not a function
 
-  var anonymous = function () {
+  var anonymous = function() {
     console.log("anonymous function expression");
   };
 }
@@ -114,5 +114,5 @@ function snow() {
 ```
 
 [mdn-temporal_dead_zone]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let
-[ref-tdz_no_longer_safe]: http://es-discourse.com/t/why-typeof-is-no-longer-safe/15
 [ref-js_scoping_and_hoisting]: http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting
+[ref-tdz_no_longer_safe]: http://es-discourse.com/t/why-typeof-is-no-longer-safe/15

@@ -8,14 +8,19 @@ Use braces with all multi-line blocks.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 if (snow)
   return false;
 ```
 
+<!-- prettier-ignore -->
 ```js
 function snow() { return false; }
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -45,6 +50,8 @@ When using multi-line blocks with `if` and `else`, put the `else` on the same li
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 if (winter) {
   snow();
@@ -54,6 +61,8 @@ else {
   sunshine();
 }
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 

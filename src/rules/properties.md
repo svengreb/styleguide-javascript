@@ -71,5 +71,5 @@ const binary = 2 ** 10;
 
 [eslint/dot-notation]: https://eslint.org/docs/rules/dot-notation
 [eslint/no-restricted-properties]: https://eslint.org/docs/rules/no-restricted-properties
-[mdn-property_accessors-dot_notation]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#Dot_notation
 [mdn-property_accessors-bracket_notation]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#Bracket_notation
+[mdn-property_accessors-dot_notation]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#Dot_notation

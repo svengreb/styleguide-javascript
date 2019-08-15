@@ -94,8 +94,8 @@ Do not use `accessKey` on elements. Inconsistencies between keyboard shortcuts a
 <div />
 ```
 
-[eslint-jsx-a11y/no-access-key]: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-access-key.md
-[eslint-jsx-a11y/aria-role]: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md
 [eslint-jsx-a11y/alt-text]: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-text.md
+[eslint-jsx-a11y/aria-role]: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md
 [eslint-jsx-a11y/img-redundant-alt]: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-redundant-alt.md
+[eslint-jsx-a11y/no-access-key]: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-access-key.md
 [ref-w3-aria_roles]: https://www.w3.org/TR/wai-aria/roles#role_definition

@@ -33,7 +33,7 @@ function getSnow(snow) {
 
 const obj = {
   id: 5,
-  name: "South Pole",
+  name: "South Pole"
 };
 obj[getSnow("enabled")] = true;
 ```
@@ -48,7 +48,7 @@ function getSnow(snow) {
 const obj = {
   id: 5,
   name: "South Pole",
-  [getSnow("enabled")]: true,
+  [getSnow("enabled")]: true
 };
 ```
 
@@ -66,7 +66,7 @@ Use object method shorthand.
 const snow = {
   flake: 1,
 
-  addFlake: function (flake) {
+  addFlake: function(flake) {
     return snow.flake + flake;
   }
 };
@@ -98,7 +98,7 @@ Use property value shorthand. It is shorter to write and descriptive.
 const southPole = "South Pole";
 
 const obj = {
-  southPole: southPole,
+  southPole: southPole
 };
 ```
 

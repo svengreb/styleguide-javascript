@@ -4,14 +4,14 @@
 
 Additionally, arrow functions are
 
-* less verbose, and easier to reason about which improves the readability of the code.
-* bound lexically regardless of where or when they are invoked.
+- less verbose, and easier to reason about which improves the readability of the code.
+- bound lexically regardless of where or when they are invoked.
 
 Anyway, please note that there are some differences between arrow functions and binding:
 
-* **Arrow functions are always anonymous**, which means e.g. it is not possible to reliably call them recursively since there is no reliable lexical name to use.
-* **Arrow functions actually create lexical bindings for `this`, `super`, and `arguments`**. Only `this` is bound by `.bind()`.
-**Arrow functions cannot be used in `new` expressions**, while `.bind()` bound functions can.
+- **Arrow functions are always anonymous**, which means e.g. it is not possible to reliably call them recursively since there is no reliable lexical name to use.
+- **Arrow functions actually create lexical bindings for `this`, `super`, and `arguments`**. Only `this` is bound by `.bind()`.
+  **Arrow functions cannot be used in `new` expressions**, while `.bind()` bound functions can.
 
 > ESLint: [prefer-arrow-callback][eslint/prefer-arrow-callback]
 
@@ -20,18 +20,28 @@ Anyway, please note that there are some differences between arrow functions and 
 ⇣ **Incorrect** code for this rule:
 
 ```jsx
-XXX
+snow(function(flake) {
+  return flake;
+});
+```
+
+```jsx
+snow(
+  function() {
+    return this.flake;
+  }.bind(this)
+);
 ```
 
 ⇡ **Correct** code for this rule:
 
 ```jsx
-XXX
+snow(flake => flake);
 ```
 
 ###### References
 
-* [Differences between `bind()` and fat arrow functions (GitHub issue comment)][ref-gh-getify/you-dont-know-js/513_comment]
+- [Differences between `bind()` and fat arrow functions (GitHub issue comment)][ref-gh-getify/you-dont-know-js/513_comment]
 
 ## No Binding Or Arrow Functions In Render
 
@@ -81,7 +91,7 @@ class Snow extends React.Component {
 class Snow extends React.Component {
   onSnowflakeClick = () => {
     // ...
-  }
+  };
 
   render() {
     return <div onClick={this.onSnowflakeClick} />;
@@ -91,8 +101,8 @@ class Snow extends React.Component {
 
 ###### References
 
-* [Why arrow functions and bind in React's Render are problematic][ref-medium-arrow_funcs_bind_render]
-* [Arrow functions vs. bind()][ref-2ality-arrow_func_vs_bind]
+- [Why arrow functions and bind in React's Render are problematic][ref-medium-arrow_funcs_bind_render]
+- [Arrow functions vs. bind()][ref-2ality-arrow_func_vs_bind]
 
 ## No Underscore Prefix
 
@@ -144,10 +154,10 @@ render() {
 }
 ```
 
-[eslint/prefer-arrow-callback]: https://eslint.org/docs/rules/prefer-arrow-callback
-[eslint-react/require-render-return]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
 [eslint-react/jsx-no-bind]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
+[eslint-react/require-render-return]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
+[eslint/prefer-arrow-callback]: https://eslint.org/docs/rules/prefer-arrow-callback
 [mdn-arrow_functions]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
-[ref-medium-arrow_funcs_bind_render]: https://medium.freecodecamp.org/why-arrow-functions-and-bind-in-reacts-render-are-problematic-f1c08b060e36
 [ref-2ality-arrow_func_vs_bind]: http://2ality.com/2016/02/arrow-functions-vs-bind.html
 [ref-gh-getify/you-dont-know-js/513_comment]: https://github.com/getify/You-Dont-Know-JS/issues/513#issuecomment-130300480
+[ref-medium-arrow_funcs_bind_render]: https://medium.freecodecamp.org/why-arrow-functions-and-bind-in-reacts-render-are-problematic-f1c08b060e36

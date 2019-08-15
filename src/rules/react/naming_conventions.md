@@ -76,11 +76,10 @@ import SnowFlake from "./SnowFlake";
 const snowFlake = <SnowFlake />;
 ```
 
-[rules-react-jsx-syntax]: index.md#jsx-syntax
-
 [eslint-react/jsx-pascal-case]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
 [eslint-react/no-multi-comp]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md#ignorestateless
 [react-docs-component]: https://reactjs.org/docs/react-component.html
 [react-docs-stateless_functions]: https://reactjs.org/docs/components-and-props.html#stateless-functions
+[rules-react-jsx-syntax]: index.md#jsx-syntax
 [wikipedia-camel_case]: https://en.wikipedia.org/wiki/Camel_case
 [wikipedia-pascal_case]: https://en.wikipedia.org/wiki/PascalCase
