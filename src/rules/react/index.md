@@ -16,8 +16,8 @@ Mixins introduce implicit dependencies, cause name clashes, and cause snowballin
 
 **Do not use `isMounted`!**
 
-[`isMounted` is an anti-pattern][react-blog-ismounted_antipattern], it is not available when using ES6 classes, and is going to be officially deprecated.
+[`isMounted` is an anti-pattern][react-blog-ismounted_anti_pattern], it is not available when using ES6 classes, and is going to be officially deprecated.
 
-[react-blog-ismounted_antipattern]: https://reactjs.org/blog/2015/12/16/ismounted-antipattern.html
+[react-blog-ismounted_anti_pattern]: https://reactjs.org/blog/2015/12/16/ismounted-antipattern.html
 [react-blog-mixins_harmful]: https://reactjs.org/blog/2016/07/13/mixins-considered-harmful.html
 [react-docs-jsx]: https://reactjs.org/docs/introducing-jsx.html

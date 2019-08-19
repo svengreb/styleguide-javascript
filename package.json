@@ -25,25 +25,34 @@
     "eslint",
     "eslintconfig"
   ],
-  "private": true,
+  "engines": {
+    "yarn": "^1.17.3"
+  },
   "scripts": {
     "clean": "del build",
     "docs:build": "gitbook install src && gitbook build src build/docs",
-    "docs:dev": "npm run docs:build && gitbook serve src build/docs",
-    "format": "npm-run-all format:pretty",
+    "docs:dev": "yarn docs:build && gitbook serve src build/docs",
+    "format": "npm-run-all format:pretty format:fix",
+    "format:fix": "eslint --fix --ext .js .",
     "format:pretty": "prettier --write \"**/*.{js,json,md,yml}\"",
-    "lint:md": "remark --no-stdout ./*.md src/ .github/",
-    "lint": "npm run lint:md",
-    "prepublishOnly": "npm run lint"
+    "lint": "npm-run-all lint:*",
+    "lint:js": "eslint --ext .js .",
+    "lint:md": "remark --no-stdout . \".github/**/*.md\"",
+    "test": "yarn workspaces run test"
   },
   "devDependencies": {
-    "del-cli": "1.1.0",
+    "del-cli": "2.0.0",
+    "eslint": "6.2.0",
     "gitbook-cli": "2.3.2",
-    "husky": "3.0.3",
-    "lint-staged": "9.2.1",
+    "husky": "3.0.4",
+    "lint-staged": "9.2.3",
     "npm-run-all": "4.1.5",
     "prettier": "1.18.2",
-    "remark-cli": "5.0.0",
+    "remark-cli": "7.0.0",
     "remark-preset-lint-arcticicestudio": ">=0.3.0 <1.0.0"
-  }
+  },
+  "private": true,
+  "workspaces": [
+    "packages/@arcticicestudio/*"
+  ]
 }

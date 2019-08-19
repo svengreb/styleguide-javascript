@@ -22,7 +22,7 @@ const snow = new Snow();
 
 ## Declaration Separation
 
-Use one `const` or `let` declaration per variable. It simplifies the addition of new variable declarations and increases the code readability and maintainability. This also allows to step through each declaration with the debugger, instead of jumping through all of them at once.
+Use one `const` or `let` declaration per variable or assignment. It simplifies the addition of new variable declarations and increases the code readability and maintainability. This also allows to step through each declaration with the debugger, instead of jumping through all of them at once.
 
 > ESLint: [one-var][eslint/one-var]
 
@@ -213,8 +213,51 @@ const total = snowflakes.reduce((a, b) => a + b, 0);
 const allFlakes = snowflakes.filter(Boolean).length;
 ```
 
+## Unused
+
+No variables that are declared and not used anywhere in the code (unused). These are most likely an error due to incomplete refactoring, take up space in the code and can lead to confusion by readers.
+
+> ESLint: [no-unused-vars][eslint/no-unused-vars]
+
+###### Examples
+
+⇣ **Incorrect** code for this rule:
+
+```js
+// Write-only variables are not considered as used.
+let snowflakes = 10;
+snowflakes = 5;
+```
+
+```js
+// A read for a modification of itself is not considered as used.
+let snowflakes = 0;
+snowflakes = snowflakes + 1;
+```
+
+```js
+// Unused function arguments.
+function getSnow(flakes, frost) {
+  return flakes;
+}
+```
+
+⇡ **Correct** code for this rule:
+
+```js
+function getSnow(snow, frost) {
+  return snow + frost;
+}
+```
+
+```js
+// `type` is ignored even if unused because it has a rest property sibling.
+var { snow, ...flakes } = winter;
+```
+
 [eslint/no-multi-assign]: https://eslint.org/docs/rules/no-multi-assign
 [eslint/no-plusplus]: https://eslint.org/docs/rules/no-plusplus
 [eslint/no-undef]: https://eslint.org/docs/rules/no-undef
+[eslint/no-unused-vars]: https://eslint.org/docs/rules/no-unused-vars
 [eslint/one-var]: https://eslint.org/docs/rules/one-var
 [eslint/prefer-const]: https://eslint.org/docs/rules/prefer-const

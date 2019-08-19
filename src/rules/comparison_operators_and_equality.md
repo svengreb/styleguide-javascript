@@ -218,7 +218,7 @@ const snow = !negativeTemperature;
 
 ## No Mixed Operators
 
-When mixing operators, enclose them in parentheses. The only exception is the standard arithmetic operators (`+`, `-`, `*`, `/`) since their precedence is broadly understood. This improves readability and clarifies the developer's intention.
+When mixing operators, enclose them in parentheses. The only exception are the standard arithmetic operators: `+`, `-` and `**` since their precedence is broadly understood. It is recommended to enclose `/` and `*` in parentheses because their precedence can be ambiguous when they are mixed. This improves readability and clarifies the developer's intention.
 
 > ESLint: [no-mixed-operators][eslint/no-mixed-operators]
 
@@ -243,6 +243,11 @@ const season = winter ** frost - 5 % ice;
 if (winter || frost && snow) {
   return ice;
 }
+```
+
+<!-- prettier-ignore -->
+```js
+const winter = frost + snow / ice * snowflakes;
 ```
 
 <!--lint enable no-missing-blank-lines-->

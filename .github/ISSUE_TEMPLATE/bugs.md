@@ -56,7 +56,7 @@ The recommended way is to upload it as [Gist](https://gist.github.com) or new re
   - Have you tried to reproduce it on different OS environments and if yes is the behavior the same for all?
 - If the problem is related to the runtime of the project (e.g. [Node.js](https://nodejs.org), [Go](https://golang.org) or [Java](https://java.com)) please provide the version you're running.
   - Are you using any additional CLI arguments to run the project?
-- What is the version of the build tool (e.g. [Yarn](https://yarnpkg.com)/[npm](https://www.npmjs.com), [dep](https://golang.github.io/dep) or [Gradle](https://gradle.org)) you are running?
+- What is the version of the build tool (e.g. [Yarn](https://yarnpkg.com)/[npm](https://www.npmjs.com), [Go Modules](https://github.com/golang/go/wiki/Modules) or [Gradle](https://gradle.org)) you are running?
   - Are you using any additional CLI arguments to start the build tool task/script other than defined by the project?
 
 If you've installed [Node.js](https://nodejs.org) on your system you can run [envinfo](https://www.npmjs.com/package/envinfo) via [npx](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) which will print environment information that help the the community to better reproduce the bug.
@@ -70,7 +70,7 @@ Paste output of the command here.
 ## Stack Trace and Error Messages
 
 ```raw
-Paste the full stack trace, error messages or the logfile here.
+Paste the full stack trace, error messages or the log file here.
 ```
 
 ... or [attach them as files](https://help.github.com/articles/file-attachments-on-issues-and-pull-requests) to this issue.

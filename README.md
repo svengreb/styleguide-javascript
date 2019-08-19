@@ -4,7 +4,7 @@
 
 <p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-javascript.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a> <a href="https://arcticicestudio.github.io/styleguide-javascript" target="_blank"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-javascript.svg?style=flat-square&label=Docs&logo=read-the-docs&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a> <a href="https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CHANGELOG.md" target="_blank"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-javascript.svg?style=flat-square&label=Changelog&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
 
-<p align="center"><a href="https://www.npmjs.com/package/eslint-config-arcticicestudio" target="_blank"><img src="https://img.shields.io/npm/v/eslint-config-arcticicestudio.svg?style=flat-square&label=eslint-config-arcticicestudio&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTEyIDE0SDRhMiAyIDAgMCAxLTItMlY0YTIgMiAwIDAgMSAyLTJoOGEyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxLTIgMnpNNCAzLjMzMkEuNjcuNjcgMCAwIDAgMy4zMzIgNHY4YzAgLjM2Ny4zLjY2OC42NjguNjY4aDhhLjY3LjY3IDAgMCAwIC42NjgtLjY2OFY0QS42Ny42NyAwIDAgMCAxMiAzLjMzMnptMCAwIi8+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTggNmgyLjY2OHY2LjY2OEg4em0wIDAiLz48L3N2Zz4K"/></a> <a href="https://www.npmjs.com/package/eslint-config-arcticicestudio-base"><img src="https://img.shields.io/npm/v/eslint-config-arcticicestudio-base.svg?style=flat-square&label=eslint-config-arcticicestudio-base&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTEyIDE0SDRhMiAyIDAgMCAxLTItMlY0YTIgMiAwIDAgMSAyLTJoOGEyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxLTIgMnpNNCAzLjMzMkEuNjcuNjcgMCAwIDAgMy4zMzIgNHY4YzAgLjM2Ny4zLjY2OC42NjguNjY4aDhhLjY3LjY3IDAgMCAwIC42NjgtLjY2OFY0QS42Ny42NyAwIDAgMCAxMiAzLjMzMnptMCAwIi8+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTggNmgyLjY2OHY2LjY2OEg4em0wIDAiLz48L3N2Zz4K"/></a></p>
+<p align="center"><a href="https://www.npmjs.com/package/@arcticicestudio/eslint-config" target="_blank"><img src="https://img.shields.io/npm/v/@arcticicestudio/eslint-config.svg?style=flat-square&label=@arcticicestudio/eslint-config&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTEyIDE0SDRhMiAyIDAgMCAxLTItMlY0YTIgMiAwIDAgMSAyLTJoOGEyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxLTIgMnpNNCAzLjMzMkEuNjcuNjcgMCAwIDAgMy4zMzIgNHY4YzAgLjM2Ny4zLjY2OC42NjguNjY4aDhhLjY3LjY3IDAgMCAwIC42NjgtLjY2OFY0QS42Ny42NyAwIDAgMCAxMiAzLjMzMnptMCAwIi8+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTggNmgyLjY2OHY2LjY2OEg4em0wIDAiLz48L3N2Zz4K"/></a> <a href="https://www.npmjs.com/package/@arcticicestudio/eslint-config-base" target="_blank"><img src="https://img.shields.io/npm/v/@arcticicestudio/eslint-config-base.svg?style=flat-square&label=@arcticicestudio/eslint-config-base&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTEyIDE0SDRhMiAyIDAgMCAxLTItMlY0YTIgMiAwIDAgMSAyLTJoOGEyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxLTIgMnpNNCAzLjMzMkEuNjcuNjcgMCAwIDAgMy4zMzIgNHY4YzAgLjM2Ny4zLjY2OC42NjguNjY4aDhhLjY3LjY3IDAgMCAwIC42NjgtLjY2OFY0QS42Ny42NyAwIDAgMCAxMiAzLjMzMnptMCAwIi8+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTggNmgyLjY2OHY2LjY2OEg4em0wIDAiLz48L3N2Zz4K"/></a></p>
 
 <p align="center"><a href="https://circleci.com/gh/arcticicestudio/styleguide-javascript" target="_blank"><img src="https://img.shields.io/circleci/project/github/arcticicestudio/styleguide-javascript/develop.svg?style=flat-square&label=Build&logo=circleci&logoColor=eceff4&colorA=4c566a"/></a></p>
 
@@ -12,21 +12,19 @@ Every major open source project has its own style guide, a set of standards and 
 
 A style guide establishes and enforces styles to improve the intelligibility and communication within the project community. It ensures consistency and enforces best practice in usage and language composition.
 
-### Getting Started
+## Getting Started
 
-The [project documentation][docs] contains chapters to learn about the [comprehensive base rule set][docs-rules] including [ECMAScript +6 (ES 2015+)][docs-rules-ecmascript_6+_styles] and [React][docs-rules-react] specific styles like e.g. [Higher-Order Components][docs-rules-react-hoc], the [component methods & properties ordering][docs-rules-react-ordering-methods_and_properties] and [props][docs-rules-react-props].
+The [project documentation][docs] contains chapters to learn about the [comprehensive base rule set][docs-r] including [ECMAScript +6 (ES 2015+)][docs-r-ecma6] and [React][docs-r-react] specific styles like e.g. [Higher-Order Components][docs-rules-react-hoc], the [component methods & properties ordering][docs-r-react-order#meth_props] and [props][docs-r-react-props].
 
-The development chapters contain information about the [requirements][docs-dev-requirements], [how to build][docs-dev-building] this style guide documentation and [run the tests][docs-dev-testing].
+### ESLint Configurations
 
-#### ESLint Configurations
+To follow these rules in a project use the official extensible code linter configurations [@arcticicestudio/eslint-config-base][gh-t-pkg-esl-conf-base] for [ESLint][eslint]. The advanced [@arcticicestudio/eslint-config][gh-t-pkg-esl-conf] package provides support for specific [React][] and [JSX A11Y][npm-eslint-plugin-jsx-a11y] rules as well as compatibility integrations for other projects like [Prettier][].
 
-To make sure a project adheres to this style guide, use the official extensible code linter configuration [eslint-config-arcticicestudio-base][eslint-config-arcticicestudio-base-ghio] for [ESLint][eslint]. The advanced [eslint-config-arcticicestudio][eslint-config-arcticicestudio-ghio] package provides support for [React][react] and [JSX A11Y][npm-eslint-plugin-jsx-a11y] specific rules as well as an compatibility integration for [Prettier][].
+## Contributing
 
-### Contributing
+Read the [contributing guide][gh-b-contrib] to learn about the development process and how to propose [enhancement suggestions][gh-b-contrib#enhance] and [report bugs][gh-b-contrib#bug], how to [submit pull requests][gh-b-contrib#pr] and the project's [styleguides][gh-b-contrib#stgs], [branch organization][gh-b-contrib#vcs] and [versioning][gh-b-contrib#ver] model.
 
-Read the [contributing guide][docs-dev-contributing] to learn about the development process and how to propose [enhancement suggestions][docs-dev-contributing-enhancements] and [report bugs][docs-dev-contributing-bug-reports], how to [submit pull requests][docs-dev-contributing-pr] and the project's [styleguides][docs-dev-contributing-styleguides], [branch organization][docs-dev-contributing-branch-org] and [versioning][docs-dev-contributing-versioning] model.
-
-The guide also includes information about [minimal, complete, and verifiable examples][docs-dev-contributing-mcve] and other ways to contribute to the project like [improving existing issues][docs-dev-contributing-other-improve-issues] and [giving feedback on issues and pull requests][docs-dev-contributing-other-feedback].
+The guide also includes information about [minimal, complete, and verifiable examples][gh-b-contrib#mcve] and other ways to contribute to the project like [improving existing issues][gh-b-contrib#help_issues] and [giving feedback on issues and pull requests][gh-b-contrib#help_fb].
 
 <p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/develop/assets/images/nord/repository-footer-separator.svg?sanitize=true" /></p>
 
@@ -34,29 +32,26 @@ The guide also includes information about [minimal, complete, and verifiable exa
 
 <p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/blob/develop/LICENSE.md" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=License&message=MIT&logoColor=eceff4&logo=github&colorA=4c566a&colorB=88c0d0"/></a></p>
 
-[docs-dev-building]: https://arcticicestudio.github.io/styleguide-javascript/development/building.html
-[docs-dev-contributing-branch-org]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#branch-organization
-[docs-dev-contributing-bug-reports]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#bug-reports
-[docs-dev-contributing-enhancements]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#enhancement-suggestions
-[docs-dev-contributing-mcve]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#mcve
-[docs-dev-contributing-other-feedback]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#give-feedback-on-issues-and-pull-requests
-[docs-dev-contributing-other-improve-issues]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#improve-issues
-[docs-dev-contributing-pr]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#pull-requests
-[docs-dev-contributing-styleguides]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#styleguides
-[docs-dev-contributing-versioning]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html#versioning
-[docs-dev-contributing]: https://arcticicestudio.github.io/styleguide-javascript/development/contributing.html
-[docs-dev-requirements]: https://arcticicestudio.github.io/styleguide-javascript/development/requirements.html
-[docs-dev-testing]: https://arcticicestudio.github.io/styleguide-javascript/development/testing.html
-[docs-rules-ecmascript_6+_styles]: https://arcticicestudio.github.io/styleguide-javascript/rules/ecmascript_6+_styles.html
+[docs-r-ecma6]: https://arcticicestudio.github.io/styleguide-javascript/rules/ecmascript_6+_styles.html
+[docs-r-react-order#meth_props]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/ordering.html#component-methods-and-properties
+[docs-r-react-props]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/props.html
+[docs-r-react]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/index.html
+[docs-r]: https://arcticicestudio.github.io/styleguide-javascript/rules/index.html
 [docs-rules-react-hoc]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/higher_order_components.html
-[docs-rules-react-ordering-methods_and_properties]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/ordering.html#component-methods-and-properties
-[docs-rules-react-props]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/props.html
-[docs-rules-react]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/index.html
-[docs-rules]: https://arcticicestudio.github.io/styleguide-javascript/rules/index.html
 [docs]: https://arcticicestudio.github.io/styleguide-javascript
-[eslint-config-arcticicestudio-base-ghio]: https://arcticicestudio.github.io/eslint-config-arcticicestudio-base
-[eslint-config-arcticicestudio-ghio]: https://arcticicestudio.github.io/eslint-config-arcticicestudio
 [eslint]: https://eslint.org
+[gh-b-contrib]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CONTRIBUTING.md
+[gh-b-contrib#bug]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CONTRIBUTING.md#bug-reports
+[gh-b-contrib#enhance]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CONTRIBUTING.md#enhancement-suggestions
+[gh-b-contrib#help_fb]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CONTRIBUTING.md#give-feedback-on-issues-and-pull-requests
+[gh-b-contrib#help_issues]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CONTRIBUTING.md#improve-issues
+[gh-b-contrib#mcve]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CONTRIBUTING.md#mcve
+[gh-b-contrib#pr]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CONTRIBUTING.md#pull-requests
+[gh-b-contrib#stgs]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CONTRIBUTING.md#style-guides
+[gh-b-contrib#vcs]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CONTRIBUTING.md#branch-organization
+[gh-b-contrib#ver]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CONTRIBUTING.md#versioning
+[gh-t-pkg-esl-conf-base]: https://github.com/arcticicestudio/styleguide-javascript/tree/develop/packages/@arcticicestudio/eslint-config-base
+[gh-t-pkg-esl-conf]: https://github.com/arcticicestudio/styleguide-javascript/tree/develop/packages/@arcticicestudio/eslint-config
 [npm-eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y
 [prettier]: https://prettier.io
 [react]: https://reactjs.org

@@ -115,6 +115,6 @@ function snow() {
 }
 ```
 
-[mdn-temporal_dead_zone]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let
+[mdn-temporal_dead_zone]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone
 [ref-js_scoping_and_hoisting]: http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting
 [ref-tdz_no_longer_safe]: http://es-discourse.com/t/why-typeof-is-no-longer-safe/15

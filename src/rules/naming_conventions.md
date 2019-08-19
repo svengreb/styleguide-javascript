@@ -106,9 +106,17 @@ this.frost = "Frost";
 this.ice = "Ice";
 ```
 
+In environments where [`WeakMap`][mdn-js-globj-wkmap] is available:
+
+```js
+this.snow = "Snow";
+const flakes = new WeakMap();
+flakes.set(this, "Snow");
+```
+
 ## No `this` Self References
 
-Don't save references to `this`. Use arrow functions or [Function#bind][mdn-function-bind].
+Don't save references to `this`. Use arrow functions or [Function#bind][mdn-js-globj-func-bind].
 
 ###### Examples
 
@@ -195,7 +203,7 @@ import seasons from "./seasons";
 
 ## Function Default Export
 
-Use [camelCase][camelcase] when using `export default` for a function. The filename should be identical to your function's name.
+Use [camelCase](#) when using `export default` for a function. The filename should be identical to your function's name.
 
 ###### Examples
 
@@ -251,7 +259,7 @@ export default Winter;
 
 ## Acronyms And Initialisms
 
-[Acronyms and initialisms][wikipedia-acronym] should always be all capitalized or all lowercased. Names are for readability, not to appease a computer algorithm.
+[Acronyms and initialisms][wikipedia-acronym] should always be all uppercased or all lowercased. Names are for readability, not to appease a computer algorithm.
 
 ###### Examples
 
@@ -297,13 +305,43 @@ const requests = [
 ];
 ```
 
-[camelcase]: #camelcase
+## Constants
+
+Use [UPPERCASE][wikipedia-letter_case] for constants if it
+
+1. is exported
+2. is a `const`
+3. the consumer can trust it to never change
+
+This is an additional tool to assist in situations where the consumer would be unsure if a variable might ever change. UPPERCASE_VARIABLES indicating that they (and its properties) doesn't change.
+
+⇣ **Incorrect** code for this rule:
+
+```js
+const PRIVATE_VARIABLE = "should not be unnecessarily use uppercase naming within a file";
+export let REASSIGNABLE_VARIABLE = "do not use let with uppercase variables";
+```
+
+⇡ **Correct** code for this rule:
+
+```js
+export const API_KEY = "snow";
+```
+
+```js
+export const SNOW = {
+  flakes: "falling"
+};
+```
+
 [eslint/camelcase]: https://eslint.org/docs/rules/camelcase
 [eslint/id-length]: https://eslint.org/docs/rules/id-length
 [eslint/new-cap]: https://eslint.org/docs/rules/new-cap
 [eslint/no-underscore-dangle]: https://eslint.org/docs/rules/no-underscore-dangle
-[mdn-function-bind]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+[mdn-js-globj-func-bind]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+[mdn-js-globj-wkmap]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
 [pascalcase]: #pascalcase
 [wikipedia-acronym]: https://en.wikipedia.org/wiki/Acronym
 [wikipedia-camel_case]: https://en.wikipedia.org/wiki/Camel_case
+[wikipedia-letter_case]: https://en.wikipedia.org/wiki/Letter_case
 [wikipedia-pascal_case]: https://en.wikipedia.org/wiki/PascalCase
