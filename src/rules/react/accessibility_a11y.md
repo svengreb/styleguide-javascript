@@ -30,7 +30,7 @@ Always include an `alt` prop on `<img>` tags. If the image is presentational, `a
 
 ## No Redundant `img` Alternate Text
 
-Do not use words like "image", "photo", or "picture" in `<img>` `alt` props. Screenreaders already announce `img` elements as images, so there is no need to include this information in the `alt` text.
+Do not use words like "image", "photo", or "picture" in `<img>` `alt` props. Screen readers already announce `img` elements as images, so there is no need to include this information in the `alt` text.
 
 > ESLint: [jsx-a11y/img-redundant-alt][eslint-jsx-a11y/img-redundant-alt]
 
@@ -78,7 +78,7 @@ Abstract ARIA role:
 
 ## No `accessKey`
 
-Do not use `accessKey` on elements. Inconsistencies between keyboard shortcuts and keyboard commands used by people using screenreaders and keyboards complicate accessibility.
+Do not use `accessKey` on elements. Inconsistencies between keyboard shortcuts and keyboard commands used by people using screen readers and keyboards complicate accessibility.
 
 > ESLint: [jsx-a11y/no-access-key][eslint-jsx-a11y/no-access-key]
 
@@ -100,4 +100,4 @@ Do not use `accessKey` on elements. Inconsistencies between keyboard shortcuts a
 [eslint-jsx-a11y/aria-role]: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md
 [eslint-jsx-a11y/img-redundant-alt]: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-redundant-alt.md
 [eslint-jsx-a11y/no-access-key]: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-access-key.md
-[ref-w3-aria_roles]: https://www.w3.org/TR/wai-aria/roles#role_definition
+[ref-w3-aria_roles]: https://www.w3.org/TR/wai-aria/#usage_intro

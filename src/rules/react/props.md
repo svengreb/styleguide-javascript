@@ -99,7 +99,9 @@ Omit the value of the prop when it is explicitly `true`.
 
 ## No Index As `key`
 
-Avoid using an array index as `key` prop, always use a unique ID.
+Avoid using an array index as `key` prop, always use a unique ID. Not using a stable ID is an anti-pattern because it can negatively impact performance and cause issues with component state. Please see the [official React documentation about keys][react-d-keys].
+
+> ESLint: [react/no-array-index-key][eslint-react/no-array-index-key]
 
 ###### Examples
 
@@ -121,7 +123,7 @@ Avoid using an array index as `key` prop, always use a unique ID.
 
 ###### References
 
-- [Index as a key is an anti-pattern][ref-medium-index_key_anti_pattern]
+- [Index as a key is an anti-pattern][medium-react-idx_key_anti_pattern]
 
 ## Explicit Default Props
 
@@ -277,15 +279,17 @@ If it is necessary to use [refs][react-docs-refs_and:dom], always use ref callba
 [eslint-react/jsx-boolean-value]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
 [eslint-react/jsx-closing-bracket-location]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
 [eslint-react/jsx-closing-tag-location]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
+[eslint-react/no-array-index-key]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
 [eslint-react/no-string-refs]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
 [higher_order_components]: higher_order_components.md
+[medium-react-idx_key_anti_pattern]: https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318
 [mocha]: https://mochajs.org
 [npm-prop-types-exact]: https://www.npmjs.com/package/prop-types-exact
 [npm-prop-types]: https://www.npmjs.com/package/prop-types
 [react-blog-dom_attr_react_16]: https://reactjs.org/blog/2017/09/08/dom-attributes-in-react-16.html
+[react-d-keys]: https://reactjs.org/docs/lists-and-keys.html#keys
 [react-docs-comp_and_props]: https://reactjs.org/docs/components-and-props.html
 [react-docs-refs_and:dom]: https://reactjs.org/docs/refs-and-the-dom.html
 [react-docs-typechecking_proptypes]: https://reactjs.org/docs/typechecking-with-proptypes.html
-[ref-medium-index_key_anti_pattern]: https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318
 [rules-base-whitespace-maxlen]: ../whitespace.md#maximum-line-length
 [wikipedia-camel_case]: https://en.wikipedia.org/wiki/Camel_case

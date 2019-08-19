@@ -119,7 +119,7 @@ Use return statements in array method callbacks. This excludes functions that co
 ⇣ **Incorrect** code for this rule:
 
 ```js
-// No returned value means "winter" becomes undefined after the first iteration.
+// No returned value means `winter` becomes undefined after the first iteration.
 [[0, 1], [2, 3], [4, 5]].reduce((winter, element, index) => {
   const flatten = winter.concat(element);
   winter[index] = flatten;
@@ -153,7 +153,6 @@ seasons.filter(season => {
 ```js
 [[0, 1], [2, 3], [4, 5]].reduce((winter, element, index) => {
   const flatten = winter.concat(element);
-  winter[index] = flatten;
   return flatten;
 });
 ```

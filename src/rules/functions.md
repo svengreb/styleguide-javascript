@@ -361,6 +361,8 @@ new Date(...[2018, 1, 20]);
 
 Functions with multiline signatures, or invocations, should be indented like every other multiline list. Each item on a line by itself.
 
+> ESLint: [function-paren-newline][eslint/function-paren-newline]
+
 ###### Examples
 
 ⇣ **Incorrect** code for this rule:
@@ -408,6 +410,7 @@ console.log(
 
 [babel]: https://babeljs.io
 [eslint/func-style]: https://eslint.org/docs/rules/func-style
+[eslint/function-paren-newline]: https://eslint.org/docs/rules/function-paren-newline
 [eslint/no-loop-func]: https://eslint.org/docs/rules/no-loop-func
 [eslint/no-new-func]: https://eslint.org/docs/rules/no-new-func
 [eslint/no-param-reassign]: https://eslint.org/docs/rules/no-param-reassign

@@ -3,6 +3,7 @@
 When creating React components it is more convenient to always follow the same organization for methods and properties order to easier find lifecycle methods, event handlers, static properties and `render` related elements:
 
 1. Static methods and properties:
+   1.1. Instance variables
 2. Lifecycle methods and properties:
    2.1. `displayName`
    2.2. `propTypes`
@@ -23,7 +24,7 @@ When creating React components it is more convenient to always follow the same o
    2.17. `componentWillUpdate`
    2.18. `componentDidUpdate`
    2.19. `componentWillUnmount`
-3. Custom methods:
+3. Custom and instance methods:
    3.1. _Click and Event Handlers_ like e.g. `onClickSubmit()` or `onChangeValue()`
    3.2. _Getter and Setter_ methods for `render` like e.g. `getSelectReason()` or `getFooterContent()`
    3.3. Any custom method like e.g. `calculateSnowflakes()`

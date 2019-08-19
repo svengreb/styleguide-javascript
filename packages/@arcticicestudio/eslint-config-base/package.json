@@ -1,0 +1,48 @@
+{
+  "name": "@arcticicestudio/eslint-config-base",
+  "title": "Arctic Ice Studio ESLint Base Configuration",
+  "version": "0.6.0",
+  "description": "The Arctic Ice Studio JavaScript Style Guide base rules as an extensible shared ESLint configuration",
+  "author": "Arctic Ice Studio <development@arcticicestudio.com> (https://www.arcticicestudio.com)",
+  "homepage": "https://github.com/arcticicestudio/styleguide-javascript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcticicestudio/styleguide-javascript.git",
+    "directory": "packages/@arcticicestudio/eslint-config-base"
+  },
+  "bugs": {
+    "url": "https://github.com/arcticicestudio/styleguide-javascript/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "styleguide",
+    "codestyle",
+    "eslint",
+    "config",
+    "javascript"
+  ],
+  "main": "index.js",
+  "files": [
+    "rules",
+    "index.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "yarn test:unused-rules",
+    "test:unused-rules": "eslint-find-rules --unused --deprecated --no-error"
+  },
+  "dependencies": {
+    "confusing-browser-globals": "^1.0.8"
+  },
+  "devDependencies": {
+    "eslint": "^6.2.0",
+    "eslint-find-rules": "3.4.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "peerDependencies": {
+    "eslint": "^6.2.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}

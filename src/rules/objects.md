@@ -203,7 +203,7 @@ const hasProp = Object.prototype.hasOwnProperty;
 console.log(hasProp.call(object, key));
 ```
 
-Using the [has][npm-pkg-has] npm package:
+Using the [has][npm-has] npm package:
 
 ```js
 import has from "has";
@@ -257,16 +257,16 @@ const has = Object.prototype.hasOwnProperty;
 console.log(has.call(object, key));
 ```
 
-Using the [has][npm-pkg-has] npm package:
+Using the [has][npm-has] npm package:
 
 ```js
 import has from "has";
 
-console.log(has.call(object, key));
+console.log(has(object, key));
 ```
 
 [eslint/no-new-object]: https://eslint.org/docs/rules/no-new-object
 [eslint/object-shorthand]: https://eslint.org/docs/rules/object-shorthand
 [eslint/quote-props]: https://eslint.org/docs/rules/quote-props
 [mdn-object-assign]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
-[npm-pkg-has]: https://www.npmjs.com/package/has
+[npm-has]: https://www.npmjs.com/package/has

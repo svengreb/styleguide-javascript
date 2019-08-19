@@ -53,6 +53,13 @@ let isFalling = false;
 snow(() => isFalling = true);
 ```
 
+```js
+[1, 2, 3].map(number => {
+  const nextNumber = number + 1;
+  `A string containing the ${nextNumber}.`;
+});
+```
+
 <!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
@@ -72,6 +79,10 @@ snow(() => isFalling = true);
 ["snow", "frost"].map((element, index) => ({
   [index]: element
 }));
+```
+
+```js
+[1, 2, 3].map(number => `A string containing the ${number + 1}.`);
 ```
 
 ```js
