@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Declaration
 
 Use named function expressions instead of function declarations. Function declarations are hoisted, which means that it is (too) easy to reference the function before it is defined in the file. This harms readability and maintainability.
@@ -17,7 +19,7 @@ function winter() {
 ```
 
 ```js
-const winter = function () {
+const winter = function() {
   // ...
 };
 ```
@@ -42,16 +44,16 @@ Wrap immediately invoked function expressions ([IIFE][mdn-iife]) in parentheses.
 ⇡ **Correct** code for this rule:
 
 ```js
-(function () {
+(function() {
   console.log("The winter is snowy and sparkling.");
-}());
+})();
 ```
 
 ## Block Declaration
 
 Never declare a function in a non-function block (`if`, `while`, etc). Assign the function to a variable instead. Most browsers will allow it, but they all interpret it differently.
 
-**Note:** *ECMA-262* defines a block as a list of statements. A function declaration is not a statement!
+**Note:** _ECMA-262_ defines a block as a list of statements. A function declaration is not a statement!
 
 > ESLint: [no-loop-func][eslint/no-loop-func]
 
@@ -135,10 +137,10 @@ Use default parameter syntax rather than mutating function arguments.
 
 ```js
 function winter(elements) {
-/*
- * This mutates function arguments!
- * If "elements" is falsy it'll also be set to an object which can introduce subtle bugs.
- */
+  /*
+   * This mutates function arguments!
+   * If "elements" is falsy it'll also be set to an object which can introduce subtle bugs.
+   */
   elements = elements || {};
   // ...
 }
@@ -177,10 +179,10 @@ let snowflakes = 1;
 function count(amount = snowflakes++) {
   console.log(amount);
 }
-count();  // 1
-count();  // 2
+count(); // 1
+count(); // 2
 count(3); // 3
-count();  // 3
+count(); // 3
 ```
 
 ## Default Parameter Ordering
@@ -225,7 +227,7 @@ const subtract = Function("snow", "frost", "return snow - frost");
 
 ## Signature Spacing
 
-Use spacing in a function signature.
+Use spacing in a function signature for named functions while anonymous functions must not contain a space between the parentheses and the `function` keyword.
 
 > ESLint: [space-before-function-paren][eslint/space-before-function-paren] and [space-before-blocks][eslint/space-before-blocks]
 
@@ -233,22 +235,23 @@ Use spacing in a function signature.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const snow = function(){};
 ```
 
+<!-- prettier-ignore -->
 ```js
 const snow = function (){};
 ```
 
-```js
-const snow = function() {};
-```
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
 ```js
-const snow = function () {};
+const snow = function() {};
 ```
 
 ```js
@@ -298,7 +301,9 @@ function snow(flake) {
 
 ```js
 function snow(flake) {
-  if (!flake) { flake = 1; }
+  if (!flake) {
+    flake = 1;
+  }
   // ...
 }
 ```
@@ -333,9 +338,13 @@ const winter = ["snow", "frost"];
 console.log.apply(console, winter);
 ```
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 new (Function.prototype.bind.apply(Date, [null, 2018, 1, 20]));
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -352,10 +361,14 @@ new Date(...[2018, 1, 20]);
 
 Functions with multiline signatures, or invocations, should be indented like every other multiline list. Each item on a line by itself.
 
+> ESLint: [function-paren-newline][eslint/function-paren-newline]
+
 ###### Examples
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 function winter(snow,
                frost,
@@ -364,6 +377,7 @@ function winter(snow,
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 console.log(snow,
   frost,
@@ -372,6 +386,7 @@ console.log(snow,
 
 ⇡ **Correct** code for this rule:
 
+<!-- prettier-ignore -->
 ```js
 function winter(
   snow,
@@ -382,6 +397,7 @@ function winter(
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 console.log(
   snow,
@@ -390,8 +406,11 @@ console.log(
 );
 ```
 
+<!--lint enable no-missing-blank-lines-->
+
 [babel]: https://babeljs.io
 [eslint/func-style]: https://eslint.org/docs/rules/func-style
+[eslint/function-paren-newline]: https://eslint.org/docs/rules/function-paren-newline
 [eslint/no-loop-func]: https://eslint.org/docs/rules/no-loop-func
 [eslint/no-new-func]: https://eslint.org/docs/rules/no-new-func
 [eslint/no-param-reassign]: https://eslint.org/docs/rules/no-param-reassign

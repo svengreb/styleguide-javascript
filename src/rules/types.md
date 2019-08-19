@@ -2,12 +2,12 @@
 
 Work directly on the value when accessing a primitive type.
 
-* `string`
-* `number`
-* `boolean`
-* `null`
-* `undefined`
-* `symbol`
+- `string`
+- `number`
+- `boolean`
+- `null`
+- `undefined`
+- `symbol`
 
 ###### Examples
 
@@ -28,9 +28,9 @@ Symbols cannot be faithfully polyfilled, so they should not be used when targeti
 
 Work on a reference to the value when accessing a complex type.
 
-* `object`
-* `array`
-* `function`
+- `object`
+- `array`
+- `function`
 
 ###### Example
 

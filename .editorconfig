@@ -1,6 +1,15 @@
+# Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2018-present Sven Greb <development@svengreb.de>
+#
+# Project:    Styleguide JavaScript
+# Repository: https://github.com/arcticicestudio/styleguide-javascript
+# License:    MIT
+
 # +--------------------+
 # + Base Configuration +
 # +--------------------+
+root = true
+
 [*]
 charset = utf-8
 end_of_line = lf
@@ -14,5 +23,6 @@ trim_trailing_whitespace = true
 # + Languages +
 # +-----------+
 # +--- Markdown ---+
-[*.{md,gfm}]
+[*.{md}]
+max_line_length = off
 trim_trailing_whitespace = false

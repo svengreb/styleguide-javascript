@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Equality Syntax
 
 Use `===` and `!==` instead of `==` and `!=`.
@@ -6,7 +8,7 @@ Use `===` and `!==` instead of `==` and `!=`.
 
 ###### References
 
-* [Truth, Equality and JavaScript][ref-truth_equality_and_javascript] by Angus Croll
+- [Truth, Equality and JavaScript][ref-truth_equality_and_javascript] by Angus Croll
 
 ###### Examples
 
@@ -32,12 +34,12 @@ console.log(season !== "winter");
 
 Conditional statements such as the `if` statement evaluate their expression using coercion with the `ToBoolean` abstract function and always follows these rules:
 
-* **Objects** evaluate to `true`
-* **Undefined** evaluates to `false`
-* **Null** evaluates to `false`
-* **Booleans** evaluate to the **value of the boolean**
-* **Numbers** evaluate to `false` if +0, -0, or `NaN`, otherwise `true`
-* **Strings** evaluate to `false` if an empty string `""`, otherwise `true`
+- **Objects** evaluate to `true`
+- **Undefined** evaluates to `false`
+- **Null** evaluates to `false`
+- **Booleans** evaluate to the **value of the boolean**
+- **Numbers** evaluate to `false` if +0, -0, or `NaN`, otherwise `true`
+- **Strings** evaluate to `false` if an empty string `""`, otherwise `true`
 
 ###### Examples
 
@@ -160,6 +162,8 @@ Ternaries should not be nested and generally be single line expressions.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const winter = snow > frost
   ? "snow"
@@ -168,6 +172,7 @@ const winter = snow > frost
 
 ⇡ **Correct** code for this rule:
 
+<!-- prettier-ignore -->
 ```js
 // Split into two separated ternary expressions.
 const maybeIce = ice > frost ? "ice" : null;
@@ -176,6 +181,8 @@ const winter = snow > frost
   ? "snow"
   : maybeIce;
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇢ **Recommended** code for this rule:
 
@@ -211,7 +218,7 @@ const snow = !negativeTemperature;
 
 ## No Mixed Operators
 
-When mixing operators, enclose them in parentheses. The only exception is the standard arithmetic operators (`+`, `-`, `*`, `/`) since their precedence is broadly understood. This improves readability and clarifies the developer's intention.
+When mixing operators, enclose them in parentheses. The only exception are the standard arithmetic operators: `+`, `-` and `**` since their precedence is broadly understood. It is recommended to enclose `/` and `*` in parentheses because their precedence can be ambiguous when they are mixed. This improves readability and clarifies the developer's intention.
 
 > ESLint: [no-mixed-operators][eslint/no-mixed-operators]
 
@@ -219,14 +226,18 @@ When mixing operators, enclose them in parentheses. The only exception is the st
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const season = winter && frost < 0 || snow > 0 || ice + 1 === 0;
 ```
 
+<!-- prettier-ignore -->
 ```js
 const season = winter ** frost - 5 % ice;
 ```
 
+<!-- prettier-ignore -->
 ```js
 // Could be confused with: (a || b) && c
 if (winter || frost && snow) {
@@ -234,14 +245,21 @@ if (winter || frost && snow) {
 }
 ```
 
+<!-- prettier-ignore -->
+```js
+const winter = frost + snow / ice * snowflakes;
+```
+
+<!--lint enable no-missing-blank-lines-->
+
 ⇡ **Correct** code for this rule:
 
 ```js
-const season = (winter && frost < 0) || snow > 0 || (ice + 1 === 0);
+const season = (winter && frost < 0) || snow > 0 || ice + 1 === 0;
 ```
 
 ```js
-const season = (winter ** frost) - (5 % ice);
+const season = winter ** frost - (5 % ice);
 ```
 
 ```js
@@ -251,7 +269,7 @@ if (winter || (frost && snow)) {
 ```
 
 ```js
-const season = winter + frost / snow * ice;
+const season = winter + (frost / snow) * ice;
 ```
 
 [eslint/eqeqeq]: https://eslint.org/docs/rules/eqeqeq

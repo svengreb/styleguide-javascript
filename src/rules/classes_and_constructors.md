@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Prefer `class`
 
 Always use `class`. Avoid manipulating `prototype` directly. The `class` syntax is more concise and easier to reason about.
@@ -11,7 +13,7 @@ function Winter(elements = []) {
   this.elementQueue = [...elements];
 }
 
-Winter.prototype.pop = function () {
+Winter.prototype.pop = function() {
   const element = this.elementQueue[0];
   this.elementQueue.splice(0, 1);
   return element;
@@ -47,7 +49,7 @@ function SparklingWinter(elements) {
   Winter.apply(this, elements);
 }
 inherits(SparklingWinter, Winter);
-SparklingWinter.prototype.sparkle = function () {
+SparklingWinter.prototype.sparkle = function() {
   return this.sparkles[0];
 };
 ```
@@ -71,12 +73,12 @@ Methods can return `this` to help with method chaining.
 ⇣ **Incorrect** code for this rule:
 
 ```js
-Snow.prototype.fall = function () {
+Snow.prototype.fall = function() {
   this.falling = true;
   return true;
 };
 
-Snow.prototype.setFlakeDensity = function (density) {
+Snow.prototype.setFlakeDensity = function(density) {
   this.flakeDensity = density;
 };
 
@@ -102,8 +104,7 @@ class Snow {
 
 const snow = new Snow();
 
-snow.fall()
-  .setFlakeDensity(20);
+snow.fall().setFlakeDensity(20);
 ```
 
 ## Custom String Representation
@@ -179,24 +180,32 @@ Avoid duplicate class members. Duplicate class member declarations will silently
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 class Snow {
   fall() { return true; }
   fall() { return false; }
 }
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
 ```js
 class Snow {
-  fall() { return true; }
+  fall() {
+    return true;
+  }
 }
 ```
 
 ```js
 class Snow {
-  fall() { return false; }
+  fall() {
+    return false;
+  }
 }
 ```
 

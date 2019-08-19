@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## One Component Per File
 
 Only include one [React component][react-docs-component] per file. However, multiple [stateless functions or pure components][react-docs-stateless_functions] are allowed per file.
@@ -7,6 +9,8 @@ Only include one [React component][react-docs-component] per file. However, mult
 ## JSX File Extension
 
 Always use `.jsx` file extension for files with [JSX syntax][rules-react-jsx-syntax].
+
+> ESLint: [react/jsx-filename-extension][eslint-react/jsx-filename-extension]
 
 ## File And Component Folder
 
@@ -76,11 +80,11 @@ import SnowFlake from "./SnowFlake";
 const snowFlake = <SnowFlake />;
 ```
 
-[rules-react-jsx-syntax]: index.md#jsx-syntax
-
+[eslint-react/jsx-filename-extension]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
 [eslint-react/jsx-pascal-case]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
 [eslint-react/no-multi-comp]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md#ignorestateless
 [react-docs-component]: https://reactjs.org/docs/react-component.html
 [react-docs-stateless_functions]: https://reactjs.org/docs/components-and-props.html#stateless-functions
+[rules-react-jsx-syntax]: index.md#jsx-syntax
 [wikipedia-camel_case]: https://en.wikipedia.org/wiki/Camel_case
 [wikipedia-pascal_case]: https://en.wikipedia.org/wiki/PascalCase

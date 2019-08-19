@@ -1,0 +1,61 @@
+{
+  "name": "@arcticicestudio/eslint-config",
+  "title": "Arctic Ice Studio ESLint Configuration",
+  "version": "0.7.0",
+  "description": "The Arctic Ice Studio JavaScript Style Guide rules with React support as an extensible shared ESLint configuration",
+  "author": "Arctic Ice Studio <development@arcticicestudio.com> (https://www.arcticicestudio.com)",
+  "homepage": "https://github.com/arcticicestudio/styleguide-javascript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcticicestudio/styleguide-javascript.git",
+    "directory": "packages/@arcticicestudio/eslint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/arcticicestudio/styleguide-javascript/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "styleguide",
+    "codestyle",
+    "eslint",
+    "config",
+    "javascript",
+    "react",
+    "a11y",
+    "prettier"
+  ],
+  "main": "index.js",
+  "files": [
+    "rules",
+    "index.js",
+    "prettier.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "yarn test:unused-rules",
+    "test:unused-rules": "eslint-find-rules --unused --deprecated --no-error"
+  },
+  "dependencies": {
+    "@arcticicestudio/eslint-config-base": ">=0.7.0 <1.0.0",
+    "eslint-config-prettier": "6.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.2.0",
+    "eslint-find-rules": "3.4.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "prettier": "^1.18.2"
+  },
+  "peerDependencies": {
+    "eslint": "^6.2.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "prettier": "^1.18.2"
+  }
+}

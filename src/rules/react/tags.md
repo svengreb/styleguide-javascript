@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Self-Closing
 
 Always self-close tags that have no children.
@@ -28,6 +30,8 @@ If a component has multi-line properties, close its tag on a new line.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```jsx
 <Snow
   season="winter"
@@ -36,12 +40,15 @@ If a component has multi-line properties, close its tag on a new line.
 
 ⇡ **Correct** code for this rule:
 
+<!-- prettier-ignore -->
 ```jsx
 <Snow
   season="winter"
   density={20}
 />
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 [eslint-react/jsx-closing-bracket-location]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
 [eslint-react/self-closing-comp]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md

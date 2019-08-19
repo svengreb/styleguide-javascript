@@ -1,5 +1,5 @@
-# Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
-# Copyright (c) 2018-present Sven Greb <code@svengreb.de>
+# Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2018-present Sven Greb <development@svengreb.de>
 
 # Project:    Styleguide JavaScript
 # Repository: https://github.com/arcticicestudio/styleguide-javascript
@@ -19,10 +19,13 @@ jobs:
           name: preprocess-clean-node-modules
           command: rm -rf node_modules
       - run:
-          name: preprocess-npm-install
-          command: npm install
+          name: preprocess-yarn-install
+          command: yarn install
+      - run:
+          name: lint
+          command: yarn lint
       - run:
           name: generate-docs
-          command: npm run docs:build
+          command: yarn docs:build
       - store_artifacts:
           path: build/docs

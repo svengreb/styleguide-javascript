@@ -9,59 +9,53 @@ A higher-order component `withSnow()`, when passed a component `Winter` should p
 ⇣ **Incorrect** code for this rule:
 
 ```jsx
-import React, {Component} from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export const withSnow = ComposedComponent => class WithSnow extends Component {
-  constructor(props) {
-    super();
-  }
+export const withSnow = ComposedComponent =>
+  class WithSnow extends Component {
+    constructor(props) {
+      super();
+    }
 
-  static propTypes = {
-    children: PropTypes.any
+    static propTypes = {
+      children: PropTypes.any
+    };
+
+    static defaultProps = {};
+
+    render() {
+      const { children, ...passThroughProps } = this.props;
+      return <ComposedComponent {...passThroughProps}>{children}</ComposedComponent>;
+    }
   };
-
-  static defaultProps = {};
-
-  render() {
-    const {children, ...passThroughProps} = this.props;
-    return (
-      <ComposedComponent {...passThroughProps}>
-        {children}
-      </ComposedComponent>
-    );
-  }
-}
 ```
 
 ⇡ **Correct** code for this rule:
 
 ```jsx
-import React, {Component} from "react";
-import PropTypes from "prop-types"
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-export const withSnow = ComposedComponent => class WithSnow extends Component {
-  constructor(props) {
-    super();
-  }
+export const withSnow = ComposedComponent =>
+  class WithSnow extends Component {
+    constructor(props) {
+      super();
+    }
 
-  static displayName = `WithSnow(${ComposedComponent.displayName || ComposedComponent.name || Component.name})`;
+    static displayName = `WithSnow(${ComposedComponent.displayName || ComposedComponent.name || Component.name})`;
 
-  static propTypes = {
-    children: PropTypes.any
+    static propTypes = {
+      children: PropTypes.any
+    };
+
+    static defaultProps = {};
+
+    render() {
+      const { children, ...passThroughProps } = this.props;
+      return <ComposedComponent {...passThroughProps}>{children}</ComposedComponent>;
+    }
   };
-
-  static defaultProps = {};
-
-  render() {
-    const {children, ...passThroughProps} = this.props;
-    return (
-      <ComposedComponent {...passThroughProps}>
-        {children}
-      </ComposedComponent>
-    );
-  }
-}
 ```
 
 [react-docs-hoc]: https://reactjs.org/docs/higher-order-components.html

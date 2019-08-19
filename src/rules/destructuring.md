@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Objects
 
 Use object destructuring when accessing and using multiple properties of an object. Destructuring avoids the usage of temporary references for those properties.

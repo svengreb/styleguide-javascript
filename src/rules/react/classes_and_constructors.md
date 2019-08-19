@@ -28,12 +28,16 @@ class Snow extends React.Component {
 }
 ```
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```jsx
 // Relying on function name inference is discouraged.
 const Snow = ({ snowflakes }) => (
   <div>{snowflakes}</div>
 );
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -53,7 +57,6 @@ function Snow({ snowflakes }) {
 }
 ```
 
-[rules-react-jsx-syntax]: index.md#jsx-syntax
-
 [eslint-react/prefer-es6-class]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
 [eslint-react/prefer-stateless-function]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
+[rules-react-jsx-syntax]: index.md#jsx-syntax

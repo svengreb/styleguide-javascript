@@ -1,10 +1,10 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Literals
 
 Use the literal syntax for array creation.
 
 > ESLint: [no-array-constructor][eslint-no-array-constructor]
-
-[eslint-no-array-constructor]: https://eslint.org/docs/rules/no-array-constructor
 
 ###### Examples
 
@@ -119,7 +119,7 @@ Use return statements in array method callbacks. This excludes functions that co
 ⇣ **Incorrect** code for this rule:
 
 ```js
-// No returned value means "winter" becomes undefined after the first iteration.
+// No returned value means `winter` becomes undefined after the first iteration.
 [[0, 1], [2, 3], [4, 5]].reduce((winter, element, index) => {
   const flatten = winter.concat(element);
   winter[index] = flatten;
@@ -127,7 +127,7 @@ Use return statements in array method callbacks. This excludes functions that co
 ```
 
 ```js
-seasons.filter((season) => {
+seasons.filter(season => {
   const { name, element } = season;
   if (name === "winter") {
     return element === "snow";
@@ -140,7 +140,7 @@ seasons.filter((season) => {
 ⇡ **Correct** code for this rule:
 
 ```js
-[1, 2, 3].map((num) => {
+[1, 2, 3].map(num => {
   const snow = num + 1;
   return num * snow;
 });
@@ -153,13 +153,12 @@ seasons.filter((season) => {
 ```js
 [[0, 1], [2, 3], [4, 5]].reduce((winter, element, index) => {
   const flatten = winter.concat(element);
-  winter[index] = flatten;
   return flatten;
 });
 ```
 
 ```js
-seasons.filter((season) => {
+seasons.filter(season => {
   const { name, element } = season;
   if (name === "winter") {
     return element === "snow";
@@ -177,12 +176,15 @@ Use line breaks after open and before close array brackets if an array has multi
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const arr = [
   [0, 1], [2, 3], [4, 5]
 ];
 ```
 
+<!-- prettier-ignore -->
 ```js
 const objectInArray = [{
   id: 1
@@ -191,11 +193,14 @@ const objectInArray = [{
 }];
 ```
 
+<!-- prettier-ignore -->
 ```js
 const numberInArray = [
   1, 2
 ];
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -214,6 +219,8 @@ const objectInArray = [
 ];
 ```
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const numberInArray = [
   1,
@@ -221,6 +228,9 @@ const numberInArray = [
 ];
 ```
 
+<!--lint enable no-missing-blank-lines-->
+
 [eslint-array-callback-return]: https://eslint.org/docs/rules/array-callback-return
+[eslint-no-array-constructor]: https://eslint.org/docs/rules/no-array-constructor
 [mdn-array-from]: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from
 [mdn-array-push]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push

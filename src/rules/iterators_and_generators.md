@@ -1,23 +1,25 @@
+<!--lint disable no-duplicate-headings-->
+
 ## No Iterators
 
 Don't use iterators. Prefer JavaScript's higher-order functions instead of loops like `for-in` or `for-of`. Dealing with pure functions that return values is easier to reason about than side effects and enforces the immutable rule of this style guide.
 
 Use
 
-* `map()`
-* `every()`
-* `filter()`
-* `find()`
-* `findIndex()`
-* `reduce()`
-* `some()`
-* ...
+- `map()`
+- `every()`
+- `filter()`
+- `find()`
+- `findIndex()`
+- `reduce()`
+- `some()`
+- ...
 
 to iterate over arrays, and
 
-* `Object.keys()`
-* `Object.values()`
-* `Object.entries()`
+- `Object.keys()`
+- `Object.values()`
+- `Object.entries()`
 
 to produce arrays to iterate over objects.
 
@@ -94,6 +96,8 @@ If the usage of generators is necessary, or disregard the rule to [not use gener
 
 ↯ **Critical incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 function
 *
@@ -102,6 +106,7 @@ snow() {
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 const snow = function
 *
@@ -112,29 +117,37 @@ const snow = function
 
 ⇣ **Incorrect** code for this rule:
 
+<!-- prettier-ignore -->
 ```js
 function * snow() {}
 ```
 
+<!-- prettier-ignore -->
 ```js
 const snow = function * () {}
 ```
 
+<!-- prettier-ignore -->
 ```js
 const snow = function *() {}
 ```
 
+<!-- prettier-ignore -->
 ```js
 const snow = function*() {}
 ```
 
+<!-- prettier-ignore -->
 ```js
 function*snow() {}
 ```
 
+<!-- prettier-ignore -->
 ```js
 function *snow() {}
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -143,10 +156,9 @@ function* snow() {}
 ```
 
 ```js
-const snow = function* () {}
+const snow = function*() {};
 ```
-
-[no-generators]: #no-generators
 
 [eslint/no-iterator]: https://eslint.org/docs/rules/no-iterator
 [eslint/no-restricted-syntax]: https://eslint.org/docs/rules/no-restricted-syntax
+[no-generators]: #no-generators

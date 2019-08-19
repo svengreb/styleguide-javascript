@@ -1,12 +1,14 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Quotes
 
 Use double quotes `""` for strings:
 
-* **Double quotes reduce the need to escape characters**. It eliminates the need to escape apostrophes e.g the string `"I'm in love with the winter season"` must be changed to `'I\'m in love with the winter season'` when using single quotes.
-* **Similarity to other languages**. Double quotes are used by many other programming languages like Java, Go and C/C++.
-* **Double quotes are used by the [JSON notation][json]**.
-* **Parallelism to the natural language**. Double quotes are used to identify a passage of quoted text. When using single quotes, the reader may misinterpret it as a contraction. The other meaning of a passage of text surrounded by the `'` indicates the *colloquial* meaning. It makes sense to stay consistent with pre-existing languages, and this may likely ease the learning and interpretation of code.
-* **Double quotes Inline HTML is an anti-pattern**.
+- **Double quotes reduce the need to escape characters**. It eliminates the need to escape apostrophes e.g the string `"I'm in love with the winter season"` must be changed to `'I\'m in love with the winter season'` when using single quotes.
+- **Similarity to other languages**. Double quotes are used by many other programming languages like Java, Go and C/C++.
+- **Double quotes are used by the [JSON notation][json]**.
+- **Parallelism to the natural language**. Double quotes are used to identify a passage of quoted text. When using single quotes, the reader may misinterpret it as a contraction. The other meaning of a passage of text surrounded by the `'` indicates the _colloquial_ meaning. It makes sense to stay consistent with pre-existing languages, and this may likely ease the learning and interpretation of code.
+- **Double quotes Inline HTML is an anti-pattern**.
 
 Some users argument that single quotes can be used for inline HTML without the need to escape characters. We don't agree to this statement because inline HTML is normally a anti-pattern and templates should be used instead.
 
@@ -16,9 +18,13 @@ Some users argument that single quotes can be used for inline HTML without the n
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const name = 'South Pole';
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ```js
 // Template literals should only be used for interpolation or newlines.
@@ -39,27 +45,33 @@ Strings that cause the line to go over 100 characters should not be written acro
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const message = "Cupcake ipsum candy pudding soufflé chocolate. Croissant \
 muffin biscuit brownie caramels pudding toffee pie. Tiramisu cookie ice cream \
 cake dessert icing donut.";
 ```
 
+<!-- prettier-ignore -->
 ```js
 const message = "Cupcake ipsum candy pudding soufflé chocolate. Croissant" +
  "muffin biscuit brownie caramels pudding toffee pie. Tiramisu cookie ice cream " +
  "cake dessert icing donut.";
 ```
 
+<!--lint enable no-missing-blank-lines-->
+
 ⇡ **Correct** code for this rule:
 
 ```js
-const message = "Cupcake ipsum candy pudding soufflé chocolate. Croissant muffin biscuit brownie caramels pudding toffee pie. Tiramisu cookie ice cream cake dessert icing donut."
+const message =
+  "Cupcake ipsum candy pudding soufflé chocolate. Croissant muffin biscuit brownie caramels pudding toffee pie. Tiramisu cookie ice cream cake dessert icing donut.";
 ```
 
 ## ES6 Template Literals
 
-When programmatically building up strings, use [template literals][mdn-template-literals] (previoudly called *template strings* in ES2015 specification) instead of concatenation. Template literals provide a readable, concise syntax with support for embedded expressions. They allow the usage of features like multi-line strings and string interpolation.
+When programmatically building up strings, use [template literals][mdn-template-literals] (previoudly called _template strings_ in ES2015 specification) instead of concatenation. Template literals provide a readable, concise syntax with support for embedded expressions. They allow the usage of features like multi-line strings and string interpolation.
 
 > ESLint: [prefer-template][eslint/prefer-template] and [template-curly-spacing][eslint/template-curly-spacing]
 
@@ -79,11 +91,15 @@ function printSeason(name) {
 }
 ```
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 function printSeason(name) {
   return `It's ${ name } season!`;
 }
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -109,9 +125,13 @@ Do not unnecessarily escape characters in strings. Backslashes harm readability 
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const winter = "\'snowy\' \a\n\d \'sparkling\'";
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 

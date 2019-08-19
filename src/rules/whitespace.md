@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Indentation Character
 
 Always use spaces characters where two (2) spaces are used for indentation. The usage of tab characters is disallowed. A tab could be a different number of columns depending on the environment, but a space is always one column. Adhering to this rule increases the code readability and maintainability significantly.
@@ -6,25 +8,32 @@ Always use spaces characters where two (2) spaces are used for indentation. The 
 
 ###### Examples
 
+Note: The `»` character represents a tab.
+
 ⇣ **Incorrect** code for this rule:
 
 ```js
 function winter() {
-	let snow;
+ » let snow;
 }
 ```
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 function winter() {
     let snow;
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 function winter() {
  let snow;
 }
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -44,18 +53,23 @@ Place one (1) space before the leading brace.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 function snow(){
   console.log("snow");
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 winter.set("snow",{
   density: 20,
   frozen: false
 });
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -82,17 +96,22 @@ Place one (1) space before the opening parenthesis in control statements (`if`, 
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 if(isWinter) {
   snow ();
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 function snow () {
   console.log ("falling");
 }
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -118,9 +137,13 @@ Set off operators with spaces.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const snowflakes=snow+5;
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -130,7 +153,7 @@ const snowflakes = snow + 5;
 
 ## Newline
 
-End files with a single [newline][ref-wikipedia-newline] character. Prefer the *LF* [control character][ref-wikipedia-control_character] (\*nix based OS) and avoid the usage of *CRLF* characters (mostly Microsoft Windows based OS).
+End files with a single [newline][ref-wikipedia-newline] character. Prefer the _LF_ [control character][ref-wikipedia-control_character] (\*nix based OS) and avoid the usage of _CRLF_ characters (mostly Microsoft Windows based OS).
 
 > ESlint: [eol-last][eslint/eol-last]
 
@@ -166,11 +189,14 @@ Use indentation when making long method chains. Use a leading dot, which emphasi
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const elements = ["snow", "frost", "ice"];
 elements.map(element => `sparkling ${element}`).find("snow").highlight().tokenize(2).end().updateCount();
 ```
 
+<!-- prettier-ignore -->
 ```js
 const elements = ["snow", "frost", "ice"];
 elements.map(element => `sparkling ${element}`).
@@ -181,6 +207,7 @@ elements.map(element => `sparkling ${element}`).
     updateCount();
 ```
 
+<!-- prettier-ignore -->
 ```js
 const elements = ["snow", "frost", "ice"];
 elements.map(element => `sparkling ${element}`).find("snow").highlight().tokenize(2).find("frost")
@@ -189,21 +216,27 @@ elements.map(element => `sparkling ${element}`).find("snow").highlight().tokeniz
     .toString();
 ```
 
+<!--lint enable no-missing-blank-lines-->
+
 ⇡ **Correct** code for this rule:
 
 ```js
 const elements = ["snow", "frost", "ice"];
-elements.map(element => `sparkling ${element}`)
+elements
+  .map(element => `sparkling ${element}`)
   .find("snow")
-    .highlight()
-    .tokenize(2)
+  .highlight()
+  .tokenize(2)
   .end()
-    .updateCount();
+  .updateCount();
 ```
 
 ```js
 const elements = ["snow", "frost", "ice"];
-elements.map(element => `sparkling ${element}`).tokenize(2).updateCount();
+elements
+  .map(element => `sparkling ${element}`)
+  .tokenize(2)
+  .updateCount();
 ```
 
 ## After Blocks
@@ -229,6 +262,8 @@ const winter = {
 return winter;
 ```
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const winter = [
   function snow() {},
@@ -236,6 +271,8 @@ const winter = [
 ];
 return winter;
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -258,11 +295,7 @@ return winter;
 ```
 
 ```js
-const winter = [
-  function snow() {},
-
-  function frost() {}
-];
+const winter = [function snow() {}, function frost() {}];
 
 return winter;
 ```
@@ -277,6 +310,8 @@ Do not pad blocks with blank lines.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 function winter() {
 
@@ -285,6 +320,7 @@ function winter() {
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 if (winter) {
 
@@ -295,6 +331,7 @@ if (winter) {
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 class Winter {
 
@@ -303,6 +340,8 @@ class Winter {
   }
 }
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -338,17 +377,22 @@ Do not add spaces inside parentheses.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 function winter( element ) {
   return element;
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 if ( winter ) {
   console.log(snow);
 }
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -374,10 +418,14 @@ Do not add spaces inside brackets.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const winter = [ "snow", "frost", "ice" ];
 console.log(winter[ 0 ]);
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -396,9 +444,13 @@ Add spaces inside curly braces.
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const season = {name: "winter"};
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -418,23 +470,29 @@ Note that the [rule for long strings][strings-line_length] is exempt from this r
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const season = winter && winter.elements && winter.elements.snow && winter.elements.snow.state && winter.elements.snow.state.temperature && winter.elements.snow.state.temperature.celsius;
 ```
 
+<!-- prettier-ignore -->
 ```js
 season({ name: "winter", elements: ["snow", "frost"] }).load(() => console.log("Sparkling")).catch(() => console.log("Melting"));
 ```
 
+<!--lint enable no-missing-blank-lines-->
+
 ⇡ **Correct** code for this rule:
 
 ```js
-const season = winter
-  && winter.elements
-  && winter.elements.snow
-  && winter.elements.snow.state
-  && winter.elements.snow.state.temperature
-  && winter.elements.snow.state.temperature.celsius;
+const season =
+  winter &&
+  winter.elements &&
+  winter.elements.snow &&
+  winter.elements.snow.state &&
+  winter.elements.snow.state.temperature &&
+  winter.elements.snow.state.temperature.celsius;
 ```
 
 ```js
@@ -446,14 +504,239 @@ season({
   .catch(() => console.log("Melting"));
 ```
 
-[strings-line_length]: strings.md#line-length
+## Inside Blocks
+
+Use consistent spacing inside an open block token and the next token on the same line.
+This rule also enforces consistent spacing inside a close block token and previous token on the same line.
+
+> ESLint: [block-spacing][eslint/block-spacing]
+
+###### Examples
+
+⇣ **Incorrect** code for this rule:
+
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
+```js
+function snow() {return true;}
+if (snow) { flakes = 0;}
+```
+
+⇡ **Correct** code for this rule:
+
+<!-- prettier-ignore -->
+```js
+function snow() { return true; }
+if (snow) { flakes = 0; }
+```
+
+<!--lint enable no-missing-blank-lines-->
+
+## Around Commas
+
+No spaces before commas and require a space after commas.
+
+> ESLint: [comma-spacing][eslint/comma-spacing]
+
+###### Examples
+
+⇣ **Incorrect** code for this rule:
+
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
+```js
+var snow = 1,flakes = 2;
+var winter = [1 , 2];
+```
+
+⇡ **Correct** code for this rule:
+
+<!-- prettier-ignore -->
+```js
+var snow = 1, flakes = 2;
+var winter = [1, 2];
+```
+
+<!--lint enable no-missing-blank-lines-->
+
+## Inside Computed Properties
+
+Use spacing inside of computed property brackets.
+
+> ESLint: [computed-property-spacing][eslint/computed-property-spacing]
+
+###### Examples
+
+⇣ **Incorrect** code for this rule:
+
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
+```js
+winter[snow ];
+winter[ "snow"];
+var flakes = {[ frost ]: cold};
+winter[snow[ ice ]];
+```
+
+<!--lint enable no-missing-blank-lines-->
+
+⇡ **Correct** code for this rule:
+
+```js
+obj[snow];
+obj["snow"];
+var flakes = { [frost]: cold };
+winter[snow[ice]];
+```
+
+## Around Function Signatures
+
+No spaces between functions and their invocations.
+
+> ESLint: [func-call-spacing][eslint/func-call-spacing]
+
+###### Examples
+
+⇣ **Incorrect** code for this rule:
+
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
+```js
+func ();
+```
+
+<!-- prettier-ignore -->
+```js
+func
+();
+```
+
+⇡ **Correct** code for this rule:
+
+```js
+func();
+```
+
+<!--lint enable no-missing-blank-lines-->
+
+## Inside Object Literal Properties
+
+Use spacing between keys and values in object literal properties.
+
+> ESLint: [key-spacing][eslint/key-spacing]
+
+###### Examples
+
+⇣ **Incorrect** code for this rule:
+
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
+```js
+var winter = { "snow" : 42 };
+var arctic = { "ice":42 };
+```
+
+⇡ **Correct** code for this rule:
+
+<!-- prettier-ignore -->
+```js
+var winter = { "snow": 42 };
+```
+
+<!--lint enable no-missing-blank-lines-->
+
+## Trailing At The End Of Lines
+
+No trailing spaces at the end of lines.
+
+> ESLint: [no-trailing-spaces][eslint/no-trailing-spaces]
+
+## Multiple Empty Lines
+
+No multiple empty lines, only allow one (1) newline at the end of files, and no newline at the beginning of files.
+Also do not use multiple blank lines to pad code.
+
+> ESLint: [no-multiple-empty-lines][eslint/no-multiple-empty-lines]
+
+###### Examples
+
+⇣ **Incorrect** code for this rule:
+
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
+```js
+var winter = 1;
+
+
+var snow = 2;
+```
+
+<!-- prettier-ignore -->
+```js
+// 2+ newlines at end of file.
+var winter = 1;
+var snow = 2;
+
+
+```
+
+<!-- prettier-ignore -->
+```js
+
+// 1+ newline(s) at beginning of file.
+
+var winter = 1;
+var snow = 2;
+```
+
+<!-- prettier-ignore -->
+```js
+const snow = winter => {
+  // code padded with 2+ newlines
+  const snow = winter.getSnow();
+
+
+  const frost = winter.getFrost();
+
+
+
+  const ice = winter.getIce();
+}
+```
+
+⇡ **Correct** code for this rule:
+
+```js
+var winter = 1;
+var snow = 2;
+```
+
+```js
+const snow = winter => {
+  // code padded with 2+ newlines
+  const snow = winter.getSnow();
+
+  const frost = winter.getFrost();
+
+  const ice = winter.getIce();
+};
+```
+
+<!--lint enable no-missing-blank-lines-->
 
 [eslint/array-bracket-spacing]: https://eslint.org/docs/rules/array-bracket-spacing
+[eslint/block-spacing]: https://eslint.org/docs/rules/block-spacing
+[eslint/comma-spacing]: https://eslint.org/docs/rules/comma-spacing
+[eslint/computed-property-spacing]: https://eslint.org/docs/rules/computed-property-spacing
 [eslint/eol-last]: https://eslint.org/docs/rules/eol-last
+[eslint/func-call-spacing]: https://eslint.org/docs/rules/func-call-spacing
 [eslint/indent]: https://eslint.org/docs/rules/indent
+[eslint/key-spacing]: https://eslint.org/docs/rules/key-spacing
 [eslint/keyword-spacing]: https://eslint.org/docs/rules/keyword-spacing
 [eslint/max-len]: https://eslint.org/docs/rules/max-len
 [eslint/newline-per-chained-call]: https://eslint.org/docs/rules/newline-per-chained-call
+[eslint/no-multiple-empty-lines]: https://eslint.org/docs/rules/no-multiple-empty-lines
+[eslint/no-trailing-spaces]: https://eslint.org/docs/rules/no-trailing-spaces
 [eslint/no-whitespace-before-property]: https://eslint.org/docs/rules/no-whitespace-before-property
 [eslint/object-curly-spacing]: https://eslint.org/docs/rules/object-curly-spacing
 [eslint/padded-blocks]: https://eslint.org/docs/rules/padded-blocks
@@ -462,3 +745,4 @@ season({
 [eslint/space-infix-ops]: https://eslint.org/docs/rules/space-infix-ops
 [ref-wikipedia-control_character]: https://en.wikipedia.org/wiki/Control_character
 [ref-wikipedia-newline]: https://en.wikipedia.org/wiki/Newline
+[strings-line_length]: strings.md#line-length

@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Explicitness
 
 Perform type coercion at the beginning of the statement.
@@ -132,7 +134,7 @@ const snow = snowflakes >> 0;
 
 ###### References
 
-* [StackOverflow: "Bitshift in JavaScript"][ref-stackoverflow-bitshift]
+- [StackOverflow: "Bitshift in JavaScript"][ref-stackoverflow-bitshift]
 
 [eslint/no-new-wrappers]: https://eslint.org/docs/rules/no-new-wrappers
 [eslint/radix]: https://eslint.org/docs/rules/radix

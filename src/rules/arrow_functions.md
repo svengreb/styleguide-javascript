@@ -1,3 +1,5 @@
+<!--lint disable no-duplicate-headings-->
+
 ## Anonymous Functions
 
 Use arrow function notation for anonymous functions e.g. when passing an inline callback. It creates a version of the function that executes in the context of this which is usually the desired functionality, and is a more concise syntax.
@@ -11,7 +13,7 @@ When dealing with a fairly complicated function, it is recommended to move that 
 ⇣ **Incorrect** code for this rule:
 
 ```js
-[1, 2, 3].map(function (number) {
+[1, 2, 3].map(function(number) {
   const nextNumber = number + 1;
   return number * nextNumber;
 });
@@ -43,11 +45,22 @@ If the function body consists of a single statement returning an [expression][md
 });
 ```
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 let isFalling = false;
 
 snow(() => isFalling = true);
 ```
+
+```js
+[1, 2, 3].map(number => {
+  const nextNumber = number + 1;
+  `A string containing the ${nextNumber}.`;
+});
+```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -66,6 +79,10 @@ snow(() => isFalling = true);
 ["snow", "frost"].map((element, index) => ({
   [index]: element
 }));
+```
+
+```js
+[1, 2, 3].map(number => `A string containing the ${number + 1}.`);
 ```
 
 ```js
@@ -94,6 +111,8 @@ In case the expression spans over multiple lines, wrap it in parentheses for bet
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 ["snow", "frost", "ice"].map(element => Object.prototype.hasOwnProperty.call(
     elementObjectWithAVeryLongName,
@@ -104,6 +123,7 @@ In case the expression spans over multiple lines, wrap it in parentheses for bet
 
 ⇡ **Correct** code for this rule:
 
+<!-- prettier-ignore -->
 ```js
 ["snow", "frost", "ice"].map(element => (
   Object.prototype.hasOwnProperty.call(
@@ -112,6 +132,8 @@ In case the expression spans over multiple lines, wrap it in parentheses for bet
   )
 ));
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ## Single Argument Parentheses
 
@@ -123,16 +145,21 @@ If a function takes a single argument and doesn't use braces, omit the parenthes
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 ["snow", "frost"].map((element) => `sparkling ${element}`);
 ```
 
+<!-- prettier-ignore -->
 ```js
 ["snow", "frost"].map((element) => {
   const sparkling = "sparkling";
   return `${sparkling} ${element}`;
 });
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
@@ -141,9 +168,10 @@ If a function takes a single argument and doesn't use braces, omit the parenthes
 ```
 
 ```js
-["snow", "frost"].map(element => (
-  `A long string about the winter season with sparkling ${element}. It's so long that we don't want it to take up space on the ".map()" line!`
-));
+["snow", "frost"].map(
+  element =>
+    `A long string about the winter season with sparkling ${element}. It's so long that we don't want it to take up space on the ".map()" line!`
+);
 ```
 
 ## Comparison Operators Confusion
@@ -156,13 +184,18 @@ Avoid confusing arrow function syntax `=>` with comparison operators (`<=`, `>=`
 
 ⇣ **Incorrect** code for this rule:
 
+<!--lint disable no-missing-blank-lines-->
+<!-- prettier-ignore -->
 ```js
 const elementDensity = element => element.density > 256 ? element.highDensity : element.lowDensity;
 ```
 
+<!-- prettier-ignore -->
 ```js
 const elementDensity = (element) => element.density > 256 ? element.highDensity : element.lowDensity;
 ```
+
+<!--lint enable no-missing-blank-lines-->
 
 ⇡ **Correct** code for this rule:
 
