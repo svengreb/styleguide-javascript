@@ -10,7 +10,7 @@
 /**
  * Imports all rule definitions and sets the default parser options.
  * This is the main entry point of the package.
- * @version 0.4.0
+ * @version 0.7.0
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @copyright 2018-present Arctic Ice Studio <development@arcticicestudio.com>

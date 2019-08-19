@@ -1,13 +1,9 @@
 {
   "name": "styleguide-javascript",
   "title": "Styleguide JavaScript",
-  "version": "0.1.0",
-  "description": "The Arctic Ice Studio JavaScript Code Style.",
-  "author": {
-    "name": "Arctic Ice Studio",
-    "email": "development@arcticicestudio.com",
-    "url": "http://arcticicestudio.com"
-  },
+  "version": "0.7.0",
+  "description": "The Arctic Ice Studio JavaScript Code Style",
+  "author": "Arctic Ice Studio <development@arcticicestudio.com> (https://www.arcticicestudio.com)",
   "homepage": "https://arcticicestudio.github.io/styleguide-javascript",
   "repository": {
     "type": "git",
