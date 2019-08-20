@@ -32,7 +32,7 @@ npm install --save-dev @arcticicestudio/eslint-config
 
 #### Peer Dependencies
 
-Therefore this package depends on the [eslint-plugin-react][gh-esl-p-react], [eslint-plugin-jsx-a11y][gh-esl-p-jsx-a11y], [eslint-plugin-prettier][gh-esl-p-prettier] and [prettier][gh-prettier] packages defined as [peer dependencies][node-b-peerdeps].
+This package depends on the [eslint-plugin-react][gh-esl-p-react], [eslint-plugin-jsx-a11y][gh-esl-p-jsx-a11y], [eslint-plugin-prettier][gh-esl-p-prettier] and [prettier][gh-prettier] packages defined as [peer dependencies][node-b-peerdeps].
 Since this configuration is build on top of the [base rules package][gh-t-pkg-esl-base], the additional [eslint-plugin-import][gh-esl-p-import] peer dependency is also required.
 
 These packages must be installed separately either manually or using the [install-peerdeps][npm-install-peerdeps] helper package:
