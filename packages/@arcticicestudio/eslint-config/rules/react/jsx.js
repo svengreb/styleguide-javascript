@@ -118,8 +118,10 @@ module.exports = {
     "react/jsx-no-bind": [
       "error",
       {
+        ignoreDOMComponents: true,
         ignoreRefs: true,
-        allowArrowFunctions: false,
+        allowArrowFunctions: true,
+        allowFunctions: false,
         allowBind: false
       }
     ],
