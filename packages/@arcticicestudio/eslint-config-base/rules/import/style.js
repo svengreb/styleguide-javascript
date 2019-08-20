@@ -8,7 +8,7 @@
  */
 
 /**
- * Import plugin related to style guidelines.
+ * Import plugin related rules for code style guidelines.
  * @since 0.1.0
  * @see https://github.com/benmosher/eslint-plugin-import/blob/master/README.md#rules
  */

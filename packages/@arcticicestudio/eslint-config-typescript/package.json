@@ -1,14 +1,14 @@
 {
-  "name": "@arcticicestudio/eslint-config",
-  "title": "Arctic Ice Studio ESLint Configuration",
+  "name": "@arcticicestudio/eslint-config-typescript",
+  "title": "Arctic Ice Studio ESLint TypeScript Configuration",
   "version": "0.7.0",
-  "description": "The Arctic Ice Studio JavaScript Style Guide rules with React support as an extensible shared ESLint configuration",
+  "description": "The Arctic Ice Studio JavaScript Style Guide rules with TypeScript support as an extensible shared ESLint configuration",
   "author": "Arctic Ice Studio <development@arcticicestudio.com> (https://www.arcticicestudio.com)",
   "homepage": "https://github.com/arcticicestudio/styleguide-javascript",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arcticicestudio/styleguide-javascript.git",
-    "directory": "packages/@arcticicestudio/eslint-config"
+    "directory": "packages/@arcticicestudio/eslint-config-typescript"
   },
   "bugs": {
     "url": "https://github.com/arcticicestudio/styleguide-javascript/issues"
@@ -20,16 +20,13 @@
     "eslint",
     "config",
     "javascript",
-    "react",
-    "a11y",
-    "prettier"
+    "typescript"
   ],
   "main": "index.js",
   "files": [
     "rules",
     "index.js",
-    "prettier.js",
-    "react-hooks.js"
+    "prettier.js"
   ],
   "publishConfig": {
     "access": "public"
@@ -38,26 +35,21 @@
     "test": "yarn test:unused-rules",
     "test:unused-rules": "eslint-find-rules --unused --deprecated --no-error"
   },
-  "dependencies": {
-    "@arcticicestudio/eslint-config-base": ">=0.7.0 <1.0.0"
-  },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
     "eslint": "^6.2.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-find-rules": "3.4.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "typescript": "^3.5.3"
   },
   "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
     "eslint": "^6.2.0",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "typescript": "^3.5.3"
   }
 }
