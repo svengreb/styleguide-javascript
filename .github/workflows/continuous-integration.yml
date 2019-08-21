@@ -15,9 +15,6 @@ jobs:
   build-docs:
     runs-on: ubuntu-latest
     needs: [lint]
-    strategy:
-      matrix:
-        node-version: [8.x, 10.x, 11.x, 12.x]
     steps:
       - name: Print metadata and context information
         env:
@@ -29,10 +26,10 @@ jobs:
           echo "GitHub Action Runner: $STYLEGUIDE_JAVASCRIPT_GITHUB_ACTION_CONTEXT_RUNNER"
       - name:
         uses: actions/checkout@v1
-      - name: Setup Node.js version ${{ matrix.node-version }}
+      - name: Setup Node.js version 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 12.x
       - name: Install Node modules
         run: yarn --frozen-lockfile
       - name: Build documentations
@@ -54,11 +51,11 @@ jobs:
           echo "GitHub Action Runner: $STYLEGUIDE_JAVASCRIPT_GITHUB_ACTION_CONTEXT_RUNNER"
       - name: Checkout repository
         uses: actions/checkout@v1
-      - name: Setup Node.js version ${{ matrix.node-version }}
+      - name: "Setup Node.js version ${{ matrix.node-version }}"
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install Node modules
         run: yarn --frozen-lockfile
-      - name: Run all linters
+      - name: Run linter
         run: yarn lint
