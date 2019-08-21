@@ -1,0 +1,64 @@
+# Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2018-present Sven Greb <development@svengreb.de>
+#
+# Project:    Styleguide JavaScript
+# Repository: https://github.com/arcticicestudio/styleguide-javascript
+# License:    MIT
+# References:
+#   https://github.com/features/actions
+#   https://help.github.com/en/categories/automating-your-workflow-with-github-actions
+
+name: Continuous Integration
+on: [push]
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    needs: [lint]
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 11.x, 12.x]
+    steps:
+      - name: Print metadata and context information
+        env:
+          STYLEGUIDE_JAVASCRIPT_GITHUB_ACTION_CONTEXT_RUNNER: ${{ toJson(runner) }}
+        run: |
+          echo "Git SHA: $GITHUB_SHA"
+          echo "Git Ref: $GITHUB_REF"
+          echo "Workflow Actor: $GITHUB_ACTOR"
+          echo "GitHub Action Runner: $STYLEGUIDE_JAVASCRIPT_GITHUB_ACTION_CONTEXT_RUNNER"
+      - name:
+        uses: actions/checkout@v1
+      - name: Setup Node.js version ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Node modules
+        run: yarn --frozen-lockfile
+      - name: Build documentations
+        run: yarn docs:build
+
+  lint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 11.x, 12.x]
+    steps:
+      - name: Print metadata and context information
+        env:
+          STYLEGUIDE_JAVASCRIPT_GITHUB_ACTION_CONTEXT_RUNNER: ${{ toJson(runner) }}
+        run: |
+          echo "Git SHA: $GITHUB_SHA"
+          echo "Git Ref: $GITHUB_REF"
+          echo "Workflow Actor: $GITHUB_ACTOR"
+          echo "GitHub Action Runner: $STYLEGUIDE_JAVASCRIPT_GITHUB_ACTION_CONTEXT_RUNNER"
+      - name: Checkout repository
+        uses: actions/checkout@v1
+      - name: Setup Node.js version ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Node modules
+        run: yarn --frozen-lockfile
+      - name: Run all linters
+        run: yarn lint

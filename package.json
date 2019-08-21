@@ -34,6 +34,7 @@
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint --ext .js .",
     "lint:md": "remark --no-stdout . \".github/**/*.md\"",
+    "lint:pretty": "prettier --check \"**/*.{js,json,md,yml}\"",
     "test": "yarn workspaces run test"
   },
   "devDependencies": {
