@@ -24,10 +24,10 @@ jobs:
           echo "Git Ref: $GITHUB_REF"
           echo "Workflow Actor: $GITHUB_ACTOR"
           echo "GitHub Action Runner: $STYLEGUIDE_JAVASCRIPT_GITHUB_ACTION_CONTEXT_RUNNER"
-      - name:
-        uses: actions/checkout@v1
+      - name: Checkout repository
+        uses: actions/checkout@master
       - name: Setup Node.js version 12.x
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@master
         with:
           node-version: 12.x
       - name: Install Node modules
@@ -50,9 +50,9 @@ jobs:
           echo "Workflow Actor: $GITHUB_ACTOR"
           echo "GitHub Action Runner: $STYLEGUIDE_JAVASCRIPT_GITHUB_ACTION_CONTEXT_RUNNER"
       - name: Checkout repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@master
       - name: "Setup Node.js version ${{ matrix.node-version }}"
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@master
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install Node modules
