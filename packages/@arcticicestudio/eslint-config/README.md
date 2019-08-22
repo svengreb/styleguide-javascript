@@ -6,9 +6,9 @@
 
 <p align="center"><a href="https://www.npmjs.com/package/@arcticicestudio/eslint-config" target="_blank"><img src="https://img.shields.io/npm/v/@arcticicestudio/eslint-config.svg?style=flat-square&label=npm&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTEyIDE0SDRhMiAyIDAgMCAxLTItMlY0YTIgMiAwIDAgMSAyLTJoOGEyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxLTIgMnpNNCAzLjMzMkEuNjcuNjcgMCAwIDAgMy4zMzIgNHY4YzAgLjM2Ny4zLjY2OC42NjguNjY4aDhhLjY3LjY3IDAgMCAwIC42NjgtLjY2OFY0QS42Ny42NyAwIDAgMCAxMiAzLjMzMnptMCAwIi8+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTggNmgyLjY2OHY2LjY2OEg4em0wIDAiLz48L3N2Zz4K"/></a> <a href="https://www.npmjs.com/package/@arcticicestudio/eslint-config" target="_blank"><img src="https://img.shields.io/npm/dt/@arcticicestudio/eslint-config.svg?style=flat-square&label=Downloads&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTEyIDE0SDRhMiAyIDAgMCAxLTItMlY0YTIgMiAwIDAgMSAyLTJoOGEyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxLTIgMnpNNCAzLjMzMkEuNjcuNjcgMCAwIDAgMy4zMzIgNHY4YzAgLjM2Ny4zLjY2OC42NjguNjY4aDhhLjY3LjY3IDAgMCAwIC42NjgtLjY2OFY0QS42Ny42NyAwIDAgMCAxMiAzLjMzMnptMCAwIi8+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTggNmgyLjY2OHY2LjY2OEg4em0wIDAiLz48L3N2Zz4K"/></a></p>
 
-<p align="center"><a href="https://circleci.com/gh/arcticicestudio/styleguide-javascript" target="_blank"><img src="https://img.shields.io/circleci/project/github/arcticicestudio/styleguide-javascript/develop.svg?style=flat-square&label=Build&logo=circleci&logoColor=eceff4&colorA=4c566a"/></a></p>
+<p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/actions"><img src="https://github.com/arcticicestudio/styleguide-javascript/workflows/Continuous%20Integration/badge.svg" alt="Continuous Integration Status"/></a></p>
 
-This project implements the rules of the [“Arctic Ice Studio JavaScript Style Guide”][gh-stg-repo] as an extensible shared [ESLint][] configuration including plugin support for [React][gh-esl-p-react] and [JSX A11Y][gh-esl-p-jsx-a11y] as well as compatibility integrations for other projects like [Prettier][].
+This project implements the rules of the [“Arctic Ice Studio JavaScript Style Guide”][gh-stg-repo] as an extensible shared [ESLint][] configuration including plugin support for [React][gh-esl-p-react] with [Hooks][gh-esl-p-react-hooks], [JSX A11Y][gh-esl-p-jsx-a11y] as well as compatibility integrations for other projects like [Prettier][].
 
 ## Getting Started
 
@@ -32,7 +32,7 @@ npm install --save-dev @arcticicestudio/eslint-config
 
 #### Peer Dependencies
 
-Therefore this package depends on the [eslint-plugin-react][gh-esl-p-react], [eslint-plugin-jsx-a11y][gh-esl-p-jsx-a11y], [eslint-plugin-prettier][gh-esl-p-prettier] and [prettier][gh-prettier] packages defined as [peer dependencies][node-b-peerdeps].
+This package depends on the [eslint-plugin-react][gh-esl-p-react], [eslint-plugin-jsx-a11y][gh-esl-p-jsx-a11y], [eslint-plugin-prettier][gh-esl-p-prettier] and [prettier][gh-prettier] packages defined as [peer dependencies][node-b-peerdeps].
 Since this configuration is build on top of the [base rules package][gh-t-pkg-esl-base], the additional [eslint-plugin-import][gh-esl-p-import] peer dependency is also required.
 
 These packages must be installed separately either manually or using the [install-peerdeps][npm-install-peerdeps] helper package:
@@ -89,7 +89,11 @@ module.exports = {
     /* Provides all base rules and specific rules for "React" and "JSX A11Y". */
     "@arcticicestudio/eslint-config"
     /*
-     * Provides support for projects using Prettier.
+     * Optional entry point to enable support for projects using React Hooks.
+     */
+    "@arcticicestudio/eslint-config/react-hooks",
+    /*
+     * Optional entry point to enable support for projects using Prettier.
      * Note that this must always be placed after the `@arcticicestudio/eslint-config` preset to take precedence,
      * otherwise it won't prevent errors due to useless and possibly conflicting rules!
      */
@@ -103,7 +107,8 @@ module.exports = {
 This package provides multiple entry points that can be composed especially for the projects they are used in:
 
 - `@arcticicestudio/eslint-config` — The default entry point that includes the base rules of the [@arcticicestudio/eslint-config-base][gh-t-pkg-esl-base] package as well as additional rules from the [eslint-plugin-react][gh-esl-p-react] and [eslint-plugin-jsx-a11y][gh-esl-p-jsx-a11y] packages.
-- `@arcticicestudio/eslint-config/prettier` — Entry point with support for [Prettier][] through [eslint-plugin-prettier][gh-esl-p-prettier] and the officially recommended Prettier ESLint configuration through the [eslint-config-prettier][gh-esl-c-prettier] package. It disables possibly conflicting rules and rules that definitely not needed when using _Prettier_ for code formatting. There is also additional support when _Prettier_ is used for React based projects by extending the special `prettier/react` configuration that also disables specific `react/` and JSX rules. Note that this configuration **should always be placed after `@arcticicestudio/eslint-config`** in order to override conflicting rules, otherwise the `@arcticicestudio/eslint-config` preset will take precedence leaving conflicting rules untouched!
+- `@arcticicestudio/eslint-config/prettier` — Entry point to enable support for [Prettier][] through [eslint-plugin-prettier][gh-esl-p-prettier] and the officially recommended Prettier ESLint configuration using the [eslint-config-prettier][gh-esl-c-prettier] package. It disables possibly conflicting rules and rules that definitely not needed when using _Prettier_ for code formatting. There is also additional support when _Prettier_ is used for React based projects by extending the special `prettier/react` configuration that also disables specific `react/` and JSX rules. Note that this configuration **should always be placed after `@arcticicestudio/eslint-config`** in order to override conflicting rules, otherwise the `@arcticicestudio/eslint-config` preset will take precedence leaving conflicting rules untouched!
+- `@arcticicestudio/eslint-config/react-hooks` — Entry point to enable support for [React _Hooks_][react-d-hooks] through [eslint-plugin-react-hooks][gh-esl-p-react-hooks].
 
 ## Contributing
 
@@ -122,6 +127,7 @@ Please read the [contribution guidelines][gh-stg-b-readme#contrib] of the [“Ar
 [gh-esl-p-import]: https://github.com/benmosher/eslint-plugin-import
 [gh-esl-p-jsx-a11y]: https://github.com/evcohen/eslint-plugin-jsx-a11y
 [gh-esl-p-prettier]: https://github.com/prettier/eslint-plugin-prettier
+[gh-esl-p-react-hooks]: https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
 [gh-esl-p-react]: https://github.com/yannickcr/eslint-plugin-react
 [gh-eslint]: https://github.com/eslint/eslint
 [gh-prettier]: https://github.com/prettier/prettier
@@ -134,4 +140,5 @@ Please read the [contribution guidelines][gh-stg-b-readme#contrib] of the [“Ar
 [npm-npx]: https://www.npmjs.com/package/npx
 [npm]: https://npmjs.com
 [prettier]: https://prettier.io
+[react-d-hooks]: https://reactjs.org/docs/hooks-intro.html
 [yarn]: https://yarnpkg.com

@@ -2,7 +2,7 @@
  * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
  * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
  *
- * Project:    Arctic Ice Studio ESLint Base Configuration
+ * Project:    Arctic Ice Studio ESLint Configuration
  * Repository: https://github.com/arcticicestudio/styleguide-javascript
  * License:    MIT
  */
@@ -16,26 +16,18 @@
  * @copyright 2018-present Arctic Ice Studio <development@arcticicestudio.com>
  * @copyright 2018-present Sven Greb <development@svengreb.de>
  * @license MIT
+ * @since 0.8.0
  * @see https://eslint.org/docs/user-guide/configuring.html#specifying-parser-options
  * @see https://eslint.org/docs/user-guide/configuring.html#configuring-rules
  */
 module.exports = {
   extends: [
-    "./rules/best-practices",
-    "./rules/es6",
-    "./rules/node-and-common",
-    "./rules/possible-errors",
-    "./rules/strict",
-    "./rules/style",
-    "./rules/variables",
-    "./rules/import/helpful-warnings",
-    "./rules/import/module-systems",
-    "./rules/import/settings",
-    "./rules/import/static-analysis",
-    "./rules/import/style"
-  ].map(require.resolve),
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: "module"
-  }
+    "./rules/typescript",
+    /* Adjustments for unnecessary or incompatible React plugin rules. */
+    "./rules/react/index.js",
+    "./rules/react/jsx.js",
+    /* Updated import plugin rules, settings and resolvers to include `.ts` and `.tsx` file extensions. */
+    "./rules/import/settings.js",
+    "./rules/import/style.js"
+  ].map(require.resolve)
 };

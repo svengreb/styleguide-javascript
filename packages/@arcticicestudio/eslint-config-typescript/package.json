@@ -1,14 +1,14 @@
 {
-  "name": "@arcticicestudio/eslint-config-base",
-  "title": "Arctic Ice Studio ESLint Base Configuration",
+  "name": "@arcticicestudio/eslint-config-typescript",
+  "title": "Arctic Ice Studio ESLint TypeScript Configuration",
   "version": "0.8.0",
-  "description": "The Arctic Ice Studio JavaScript Style Guide base rules as an extensible shared ESLint configuration",
+  "description": "The Arctic Ice Studio JavaScript Style Guide rules with TypeScript support as an extensible shared ESLint configuration",
   "author": "Arctic Ice Studio <development@arcticicestudio.com> (https://www.arcticicestudio.com)",
   "homepage": "https://github.com/arcticicestudio/styleguide-javascript",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arcticicestudio/styleguide-javascript.git",
-    "directory": "packages/@arcticicestudio/eslint-config-base"
+    "directory": "packages/@arcticicestudio/eslint-config-typescript"
   },
   "bugs": {
     "url": "https://github.com/arcticicestudio/styleguide-javascript/issues"
@@ -19,12 +19,14 @@
     "codestyle",
     "eslint",
     "config",
-    "javascript"
+    "javascript",
+    "typescript"
   ],
   "main": "index.js",
   "files": [
     "rules",
-    "index.js"
+    "index.js",
+    "prettier.js"
   ],
   "publishConfig": {
     "access": "public"
@@ -33,16 +35,21 @@
     "test": "yarn test:unused-rules",
     "test:unused-rules": "eslint-find-rules --unused --deprecated --no-error"
   },
-  "dependencies": {
-    "confusing-browser-globals": "^1.0.8"
-  },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
     "eslint": "^6.2.0",
+    "eslint-config-prettier": "^6.0.0",
     "eslint-find-rules": "3.4.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-plugin-prettier": "^3.1.0",
+    "typescript": "^3.5.3"
   },
   "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
     "eslint": "^6.2.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "typescript": "^3.5.3"
   }
 }
