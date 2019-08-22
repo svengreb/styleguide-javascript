@@ -6,6 +6,95 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.8.0
+
+![Release Date: 2019-08-22](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-22&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/projects/6) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/milestone/3)
+
+## Features
+
+### Packages
+
+#### `@arcticicestudio/eslint-config`
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/63332289-9318bb80-c337-11e9-8291-c0969f587e79.png" /></p>
+
+**React Hooks support and entry point** — #17 ⇄ #18 (⊶ 833cc51d)
+↠ All React based _Arctic Ice Studio_ projects using at least React version [16.8][react-b-rln-16.8.0] that introduced the awesome [Hooks][react-d-hooks]. Since this comes with a [entire new API][react-d-hooks-api] that follows new design/usage pattern, the React team created an official [„Hooks“ ESLint plugin][gh-t-esl-p-react-hooks] to help to adhere to the [„Rules of Hooks“][react-d-hooks-rules].
+
+Since the `@arcticicestudio/eslint-config` package already includes support for React and „JSX A11Y“, support for _Hooks_ has also been added through a new shareable configuration entry point that
+
+- enables the `react-hooks` plugin.
+- configures both currently available rules `react-hooks/rules-of-hooks` and `react-hooks/exhaustive-deps` rule to `error` level.
+
+Because _Hooks_ make more use of arrow functions the [`react/jsx-no-bind`][gh-esl-p-react-jsx_bind] has been adjusted to prevent compatibility problems by allowing setting the `ignoreDOMComponents` and `allowArrowFunctions` options to `true`.
+The `react/display-name` rule has also been disabled in order to prevent problems due to missing _display names_ for _functional components_ that make use of _Hooks_ instead of being created through a _class_ component.
+
+The new entry point is available as `@arcticicestudio/eslint-config/react-hooks` and can be composed with all other [available entry points][gh-b-pkg-esl-readme#entry_points] to inherit their rules.
+
+This feature adds the `eslint-plugin-react-hooks` package as new peer dependency for `@arcticicestudio/eslint-config`.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/63377282-1534ce80-c390-11e9-8ab6-53f125f34d5c.png" /></p>
+
+**ESLint TypeScript Configuration Package** — #19 ⇄ #20 (⊶ 484c981d)
+↠ To support projects build with [TypeScript][], a new `@arcticicestudio/eslint-config-typescript` package has been implemented using the awesome [@typescript-eslint][gh-tsesl] project. It mainly extends `@typescript-eslint/eslint-plugin`'s [already provided and recommended configurations][gh-tsesl-t-configs] in order to adapt best practices:
+
+1. `plugin:@typescript-eslint/eslint-recommended`
+2. `plugin:@typescript-eslint/recommended`
+3. `plugin:@typescript-eslint/recommended-requiring-type-checking`
+
+The [`@typescript-eslint/parser`][gh-tsesl-parser] is set as ESLint parser. As of [`@typescript-eslint/parser` version `2.0.0`][gh-tsesl-rl-2.0.0] (also see [typescript-eslint/typescript-eslint#890][gh-tsesl#890]), the parser will panic when parsing files that are not included within the provided _tsconfig(s)_.
+The documentation of the new package contains instructions and a quick setup and usage guide to inform about the [required `tsconfig` configurations][gh-tsesl-parser#config] and the corresponding `eslintrc` changes.
+
+Next to the support for TypeScript, the package also modifies some _React_ and _import_ related rules in order to prevent conflicts, like the adaption of the `.ts` and `.tsx` extensions for all JS and JSX files as well as removing `.jsx` to force the usage of `.tsx`. There are other rules that have been disabled like the check for valid React `prop-types` since these and not necessary anymore when working with TypeScript.
+
+The new package provides two entry points, available as `@arcticicestudio/eslint-config-typescript` (main) and `@arcticicestudio/eslint-config-typescript/prettier` that can both be composed with all other [available entry points][gh-b-pkg-esl-readme#entry_points] to inherit their rules.
+
+This package mainly depends on the `@typescript-eslint/eslint-plugin@^2.0.0` and `@typescript-eslint/parser@^2.0.0` packages as peer dependencies.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/63409801-31695780-c3f2-11e9-9742-8212f4919557.png" /></p>
+
+**From CircleCI to GitHub Actions** — #21 ⇄ #22 (⊶ c7d663eb)
+↠ The project migrated from [CircleCI][cci] as CI/CD service to the awesome new [GitHub Actions][gh-feat-actions] that is smoothly integrated into the GitHub platform and page for a „single-source-of-truth“ developer experience: OPS configurations as code right next to the source code in the repository.
+
+##### Previous Project State
+
+The previous project setup used [CircleCI][cci] with [API version 2.x][cci-d] as CI/CD service. This worked great, but also comes with the disadvantage of being decoupled from the repository.
+
+<p align="center">
+  <figure>
+      <div align="center"><img src="https://user-images.githubusercontent.com/7836623/63436449-00f0e000-c429-11e9-95e4-5fffe64e859b.jpg" width="80%" /></div>
+      <figcaption><div align="center">The <em>GitHub Actions</em> CI/CD UI</div></figcaption>
+  </figure>
+</p>
+
+During _GitHub Universe 2018_, the awesome new [GitHub Actions][gh-feat-actions] feature was [introduced and launched as closed beta][gh-blog-actions]. Luckily _Arctic Ice Studio_ was given access in order to test all the great possibilities. During the [GitHub Actions stream „Now with built-in CI/CD!“ (live from GitHub HQ)][yt-gh-stream-actions_cicd] the _Actions_ update was announced and previewed showing the expansion to use _GitHub Actions_ as [CI/CD service described as „fast CI/CD for any OS, any language, and any cloud“][gh-blog-actions-cicd].
+
+<p align="center">
+  <figure>
+      <div align="center"><img src="https://user-images.githubusercontent.com/7836623/63409864-4c3bcc00-c3f2-11e9-99f0-24964e4a8cc2.gif" width="80%" /></div>
+      <figcaption><div align="center">Live logs showing real-time feedback</div></figcaption>
+  </figure>
+</p>
+
+**See the [official GitHub Actions documentation][gh-help-actions] for details about setups, features, the configuration API and many more!**
+
+##### Project Integration
+
+The switch from _CircleCI_ to _GitHub Actions_ brought many advantages like a „close-to-the-source“ development pipeline. Having the code and automated pipelines/workflows in one place is worth a lot. This also comes along with the perfect and smooth integrations into the GitHub platform and page itself like status reports on PRs and many more possibilities like the [customization and triggering of workflows through webhooks][gh-help-actions-events] for almost every event that can occur in a repository/issue/PR etc.
+
+To integrate _GitHub Actions_ the previous [_CircleCI_ build configuration][gh-b-ac611f7e-circleci] has been adapted and adjusted. The official [starter-workflows][gh-starter-workflows] were used as inspiration as well as showcase projects like [Yarn _Berry_ (Yarn v2)][gh-yarn-berry-t-gh-wrkf] also presented during the announcement livestream.
+
+Next to the `starter-workflows` repository the [official _GitHub Actions_ documentation][gh-help-actions] was the main source of information to set up the project workflows.
+
+<p align="center">
+  <figure>
+      <div align="center"><img src="https://user-images.githubusercontent.com/7836623/63436450-01897680-c429-11e9-8031-4a744a816fe0.png" width="80%" /></div>
+      <figcaption><div align="center"><em>GitHub Actions</em> starter workflows based on the epository languages</div></figcaption>
+  </figure>
+</p>
+
+Since _GitHub Actions_ are still in closed/limited public beta, there is no support for SVG badges through [shields.io][]. Anyway, there are (currently undocumented) official badges provided by the GitHub API that are used until _Actions_ goes _GA_ and [shields.io][] implements support for it: `https://github.com/{owner}/{repo}/workflows/{workflow_name}/badge.svg`
+
 # 0.7.0
 
 ![Release Date: 2019-08-19](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-19&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/projects/3) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/milestone/2)
@@ -679,6 +768,7 @@ More details can also be found in the initially published ~~[project documentati
 [docs-r-react-order#meth_props]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/ordering.html#component-methods-and-properties
 [esl-b-rl-6.0.0]: https://eslint.org/blog/2019/06/eslint-v6.0.0-released
 [esl-d-mg-6.0.0]: https://eslint.org/docs/user-guide/migrating-to-6.0.0
+[gh-b-pkg-esl-readme#entry_points]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/packages/%40arcticicestudio/eslint-config/README.md#entry-points
 [styleguide-markdown]: https://arcticicestudio.github.io/styleguide-markdown
 
 <!-- v0.1.0 -->
@@ -794,3 +884,29 @@ More details can also be found in the initially published ~~[project documentati
 [npm-cli-dep]: https://docs.npmjs.com/cli/deprecate
 [npm-d-scope]: https://docs.npmjs.com/about-scopes
 [yarn-d-ws]: https://yarnpkg.com/en/docs/workspaces
+
+<!-- v0.8.0 -->
+
+[cci-d]: https://circleci.com/docs
+[cci]: https://circleci.com
+[gh-b-ac611f7e-circleci]: https://github.com/arcticicestudio/styleguide-javascript/blob/ac611f7e342e8475767b03d95fa174aea65b39e5/.circleci/config.yml
+[gh-blog-actions-cicd]: https://github.blog/2019-08-08-github-actions-now-supports-ci-cd
+[gh-blog-actions]: https://github.blog/2018-10-17-action-demos
+[gh-esl-p-react-jsx_bind]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
+[gh-feat-actions]: https://github.com/features/actions
+[gh-help-actions-events]: https://help.github.com/en/articles/events-that-trigger-workflows#webhook-events
+[gh-help-actions]: https://help.github.com/en/categories/automating-your-workflow-with-github-actions
+[gh-starter-workflows]: https://github.com/actions/starter-workflows
+[gh-t-esl-p-react-hooks]: https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
+[gh-tsesl-parser]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser
+[gh-tsesl-parser#config]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#configuration
+[gh-tsesl-rl-2.0.0]: https://github.com/typescript-eslint/typescript-eslint/releases/tag/v2.0.0
+[gh-tsesl-t-configs]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/src/configs
+[gh-tsesl]: https://github.com/typescript-eslint/typescript-eslint
+[gh-tsesl#890]: https://github.com/typescript-eslint/typescript-eslint/issues/890
+[gh-yarn-berry-t-gh-wrkf]: https://github.com/yarnpkg/berry/tree/master/.github/workflows
+[react-b-rln-16.8.0]: https://reactjs.org/blog/2019/02/06/react-v16.8.0.html
+[react-d-hooks-api]: https://reactjs.org/docs/hooks-reference.html
+[react-d-hooks-rules]: https://reactjs.org/docs/hooks-rules.html
+[react-d-hooks]: https://reactjs.org/docs/hooks-intro.html
+[yt-gh-stream-actions_cicd]: https://www.youtube.com/watch?v=E1OunoCyuhY
