@@ -120,14 +120,18 @@ Use return statements in array method callbacks. This excludes functions that co
 
 ```js
 // No returned value means `winter` becomes undefined after the first iteration.
-[[0, 1], [2, 3], [4, 5]].reduce((winter, element, index) => {
+[
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduce((winter, element, index) => {
   const flatten = winter.concat(element);
   winter[index] = flatten;
 });
 ```
 
 ```js
-seasons.filter(season => {
+seasons.filter((season) => {
   const { name, element } = season;
   if (name === "winter") {
     return element === "snow";
@@ -140,25 +144,29 @@ seasons.filter(season => {
 ⇡ **Correct** code for this rule:
 
 ```js
-[1, 2, 3].map(num => {
+[1, 2, 3].map((num) => {
   const snow = num + 1;
   return num * snow;
 });
 ```
 
 ```js
-[1, 2, 3].map(num => num + 1);
+[1, 2, 3].map((num) => num + 1);
 ```
 
 ```js
-[[0, 1], [2, 3], [4, 5]].reduce((winter, element, index) => {
+[
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduce((winter, element, index) => {
   const flatten = winter.concat(element);
   return flatten;
 });
 ```
 
 ```js
-seasons.filter(season => {
+seasons.filter((season) => {
   const { name, element } = season;
   if (name === "winter") {
     return element === "snow";
@@ -205,17 +213,21 @@ const numberInArray = [
 ⇡ **Correct** code for this rule:
 
 ```js
-const arr = [[0, 1], [2, 3], [4, 5]];
+const arr = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
 ```
 
 ```js
 const objectInArray = [
   {
-    id: 1
+    id: 1,
   },
   {
-    id: 2
-  }
+    id: 2,
+  },
 ];
 ```
 

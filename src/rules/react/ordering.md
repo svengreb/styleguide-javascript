@@ -43,7 +43,7 @@ import PropTypes from "prop-types";
 
 const propTypes = {
   density: PropTypes.number.isRequired,
-  season: PropTypes.string
+  season: PropTypes.string,
 };
 
 class Snow extends React.Component {
@@ -79,7 +79,7 @@ class Snow extends React.Component {
   }
 
   static defaultProps = {
-    season: "Winter"
+    season: "Winter",
   };
 
   render() {
@@ -101,11 +101,11 @@ import PropTypes from "prop-types";
 export default class Snow extends React.Component {
   static propTypes = {
     density: PropTypes.number.isRequired,
-    season: PropTypes.string
+    season: PropTypes.string,
   };
 
   static defaultProps = {
-    season: "Winter"
+    season: "Winter",
   };
 
   static isFalling() {

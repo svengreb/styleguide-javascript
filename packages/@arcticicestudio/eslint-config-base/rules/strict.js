@@ -19,6 +19,6 @@ module.exports = {
      * Disabled because it is automatically handled through Babel.
      * @see https://eslint.org/docs/rules/strict
      */
-    strict: ["error", "never"]
-  }
+    strict: ["error", "never"],
+  },
 };

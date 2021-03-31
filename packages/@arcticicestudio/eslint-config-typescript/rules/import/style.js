@@ -25,8 +25,8 @@ module.exports = {
         js: "never",
         mjs: "never",
         ts: "never",
-        tsx: "never"
-      }
-    ]
-  }
+        tsx: "never",
+      },
+    ],
+  },
 };

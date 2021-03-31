@@ -59,7 +59,7 @@ function snow() {
 
   anonymous(); // TypeError: anonymous is not a function
 
-  var anonymous = function() {
+  var anonymous = function () {
     console.log("anonymous function expression");
   };
 }

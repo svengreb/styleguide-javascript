@@ -16,8 +16,8 @@ module.exports = {
   plugins: ["jsx-a11y", "react"],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   rules: {
     /**
@@ -33,8 +33,8 @@ module.exports = {
     "jsx-a11y/alt-text": [
       "warn",
       {
-        elements: ["img", "object", "area", 'input[type="image"]']
-      }
+        elements: ["img", "object", "area", 'input[type="image"]'],
+      },
     ],
     /**
      * Enforce all anchors to contain accessible content.
@@ -51,8 +51,8 @@ module.exports = {
       {
         components: ["Link"],
         specialLink: ["to"],
-        aspects: ["noHref", "invalidHref", "preferButton"]
-      }
+        aspects: ["noHref", "invalidHref", "preferButton"],
+      },
     ],
     /**
      * Enforce elements with `aria-activedescendant` are tabbable.
@@ -113,8 +113,8 @@ module.exports = {
     "jsx-a11y/interactive-supports-focus": [
       "warn",
       {
-        tabbable: ["button", "checkbox", "link", "searchbox", "spinbutton", "switch", "textbox"]
-      }
+        tabbable: ["button", "checkbox", "link", "searchbox", "spinbutton", "switch", "textbox"],
+      },
     ],
     /**
      * Enforce `lang` attribute has a valid value.
@@ -150,8 +150,8 @@ module.exports = {
     "jsx-a11y/no-distracting-elements": [
       "error",
       {
-        elements: ["marquee", "blink"]
-      }
+        elements: ["marquee", "blink"],
+      },
     ],
     /**
      * Interactive elements should not be assigned non-interactive roles.
@@ -160,8 +160,8 @@ module.exports = {
     "jsx-a11y/no-interactive-element-to-noninteractive-role": [
       "warn",
       {
-        tr: ["none", "presentation"]
-      }
+        tr: ["none", "presentation"],
+      },
     ],
     /**
      * Non-interactive elements should not be assigned mouse or keyboard event listeners.
@@ -170,8 +170,8 @@ module.exports = {
     "jsx-a11y/no-noninteractive-element-interactions": [
       "warn",
       {
-        handlers: ["onClick", "onMouseDown", "onMouseUp", "onKeyPress", "onKeyDown", "onKeyUp"]
-      }
+        handlers: ["onClick", "onMouseDown", "onMouseUp", "onKeyPress", "onKeyDown", "onKeyUp"],
+      },
     ],
     /**
      * Non-interactive elements should not be assigned interactive roles.
@@ -184,8 +184,8 @@ module.exports = {
         ol: ["listbox", "menu", "menubar", "radiogroup", "tablist", "tree", "treegrid"],
         li: ["menuitem", "option", "row", "tab", "treeitem"],
         table: ["grid"],
-        td: ["gridcell"]
-      }
+        td: ["gridcell"],
+      },
     ],
     /**
      * `tabIndex` should only be declared on interactive elements.
@@ -209,8 +209,8 @@ module.exports = {
     "jsx-a11y/no-static-element-interactions": [
       "warn",
       {
-        handlers: ["onClick", "onMouseDown", "onMouseUp", "onKeyPress", "onKeyDown", "onKeyUp"]
-      }
+        handlers: ["onClick", "onMouseDown", "onMouseUp", "onKeyPress", "onKeyDown", "onKeyUp"],
+      },
     ],
     /**
      * Enforce that elements with ARIA roles must have all required attributes for that role.
@@ -244,6 +244,6 @@ module.exports = {
      * @since 0.5.0
      * @see https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-associated-control.md
      */
-    "jsx-a11y/label-has-associated-control": "warn"
-  }
+    "jsx-a11y/label-has-associated-control": "warn",
+  },
 };

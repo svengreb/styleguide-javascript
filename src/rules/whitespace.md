@@ -82,7 +82,7 @@ function snow() {
 ```js
 winter.set("snow", {
   density: 20,
-  frozen: false
+  frozen: false,
 });
 ```
 
@@ -223,7 +223,7 @@ elements.map(element => `sparkling ${element}`).find("snow").highlight().tokeniz
 ```js
 const elements = ["snow", "frost", "ice"];
 elements
-  .map(element => `sparkling ${element}`)
+  .map((element) => `sparkling ${element}`)
   .find("snow")
   .highlight()
   .tokenize(2)
@@ -234,7 +234,7 @@ elements
 ```js
 const elements = ["snow", "frost", "ice"];
 elements
-  .map(element => `sparkling ${element}`)
+  .map((element) => `sparkling ${element}`)
   .tokenize(2)
   .updateCount();
 ```
@@ -257,7 +257,7 @@ return frost;
 ```js
 const winter = {
   snow() {},
-  frost() {}
+  frost() {},
 };
 return winter;
 ```
@@ -288,7 +288,7 @@ return frost;
 const winter = {
   snow() {},
 
-  frost() {}
+  frost() {},
 };
 
 return winter;
@@ -498,7 +498,7 @@ const season =
 ```js
 season({
   name: "winter",
-  elements: ["snow", "frost"]
+  elements: ["snow", "frost"],
 })
   .load(() => console.log("Sparkling"))
   .catch(() => console.log("Melting"));
@@ -712,7 +712,7 @@ var snow = 2;
 ```
 
 ```js
-const snow = winter => {
+const snow = (winter) => {
   // code padded with 2+ newlines
   const snow = winter.getSnow();
 

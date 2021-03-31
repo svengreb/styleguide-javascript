@@ -19,7 +19,7 @@ function winter() {
 ```
 
 ```js
-const winter = function() {
+const winter = function () {
   // ...
 };
 ```
@@ -44,7 +44,7 @@ Wrap immediately invoked function expressions ([IIFE][mdn-iife]) in parentheses.
 ⇡ **Correct** code for this rule:
 
 ```js
-(function() {
+(function () {
   console.log("The winter is snowy and sparkling.");
 })();
 ```
@@ -251,7 +251,7 @@ const snow = function (){};
 ⇡ **Correct** code for this rule:
 
 ```js
-const snow = function() {};
+const snow = function () {};
 ```
 
 ```js

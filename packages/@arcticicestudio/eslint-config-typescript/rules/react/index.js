@@ -15,6 +15,6 @@
 module.exports = {
   rules: {
     /* No need for React `prop-types` when using TypeScript. */
-    "react/prop-types": "off"
-  }
+    "react/prop-types": "off",
+  },
 };

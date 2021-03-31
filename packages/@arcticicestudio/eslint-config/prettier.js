@@ -17,5 +17,5 @@
  * @see https://github.com/prettier/eslint-config-prettier
  */
 module.exports = {
-  extends: ["./rules/prettier"].map(require.resolve)
+  extends: ["./rules/prettier"].map(require.resolve),
 };

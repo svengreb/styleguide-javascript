@@ -28,12 +28,12 @@ module.exports = {
     "./rules/react/jsx.js",
     /* Updated import plugin rules, settings and resolvers to include `.ts` and `.tsx` file extensions. */
     "./rules/import/settings.js",
-    "./rules/import/style.js"
+    "./rules/import/style.js",
   ].map(require.resolve),
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
-      extends: ["@arcticicestudio/eslint-config-typescript", "@arcticicestudio/eslint-config-typescript/prettier"]
-    }
-  ]
+      extends: ["@arcticicestudio/eslint-config-typescript", "@arcticicestudio/eslint-config-typescript/prettier"],
+    },
+  ],
 };

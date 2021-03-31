@@ -14,7 +14,7 @@ If the component has internal state and/or refs, use `class extends React.Compon
 const Snow = React.createClass({
   render() {
     return <div>{this.state.snowflakes}</div>;
-  }
+  },
 });
 ```
 

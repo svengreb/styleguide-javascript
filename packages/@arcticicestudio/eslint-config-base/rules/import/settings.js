@@ -18,10 +18,10 @@ module.exports = {
   settings: {
     "import/resolver": {
       node: {
-        extensions: [".mjs", ".js", ".json"]
-      }
+        extensions: [".mjs", ".js", ".json"],
+      },
     },
     "import/extensions": [".js", ".mjs", ".jsx"],
-    "import/ignore": ["node_modules", "\\.coffee$", "\\.hbs$", "\\.svg$", "\\.(scss|css|less)$"]
-  }
+    "import/ignore": ["node_modules", "\\.coffee$", "\\.hbs$", "\\.svg$", "\\.(scss|css|less)$"],
+  },
 };

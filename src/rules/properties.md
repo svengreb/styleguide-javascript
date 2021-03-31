@@ -13,7 +13,7 @@ Use [dot notation][mdn-property_accessors-dot_notation] when accessing propertie
 ```js
 const snowball = {
   density: 20,
-  falling: true
+  falling: true,
 };
 
 const isFalling = snowball["falling"];
@@ -24,7 +24,7 @@ const isFalling = snowball["falling"];
 ```js
 const snowball = {
   density: 20,
-  falling: true
+  falling: true,
 };
 
 const isFalling = snowball.falling;
@@ -41,7 +41,7 @@ Use [bracket notation][mdn-property_accessors-bracket_notation] `[]` when access
 ```js
 const snowball = {
   density: 20,
-  falling: true
+  falling: true,
 };
 
 function getProp(prop) {

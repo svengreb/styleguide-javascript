@@ -21,6 +21,6 @@ module.exports = {
     /**
      * Run Prettier as an ESLint rule and report differences as individual ESLint issues.
      */
-    "prettier/prettier": "error"
-  }
+    "prettier/prettier": "error",
+  },
 };

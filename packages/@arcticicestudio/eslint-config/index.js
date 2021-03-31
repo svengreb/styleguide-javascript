@@ -22,5 +22,5 @@
 module.exports = {
   extends: ["@arcticicestudio/eslint-config-base", "./rules/react", "./rules/react/jsx", "./rules/jsx-a11y"].map(
     require.resolve
-  )
+  ),
 };
