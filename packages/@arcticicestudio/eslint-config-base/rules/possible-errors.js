@@ -76,6 +76,12 @@ module.exports = {
      */
     "no-dupe-args": "error",
     /**
+     * Disallow chained `if-else-if` statements.
+     * @since 0.9.0
+     * @see https://eslint.org/docs/rules/no-dupe-else-if
+     */
+    "no-dupe-else-if": "error",
+    /**
      * Disallow duplicate keys in object literals.
      * @see https://eslint.org/docs/rules/no-dupe-keys
      */
@@ -132,6 +138,12 @@ module.exports = {
      */
     "no-func-assign": "error",
     /**
+     * Disallow assigning to imported bindings.
+     * @since 0.9.0
+     * @see https://eslint.org/docs/rules/no-import-assign
+     */
+    "no-import-assign": "error",
+    /**
      * Disallow variable or "function" declarations in nested blocks.
      * @see https://eslint.org/docs/rules/no-inner-declarations
      */
@@ -172,6 +184,12 @@ module.exports = {
      * @see https://eslint.org/docs/rules/no-sparse-arrays
      */
     "no-sparse-arrays": "error",
+    /**
+     * Disallow returning values from setters.
+     * @since 0.9.0
+     * @see https://eslint.org/docs/rules/no-setter-return
+     */
+    "no-setter-return": "error",
     /**
      * Disallow template literal placeholder syntax in regular strings.
      * @see https://eslint.org/docs/rules/no-template-curly-in-string

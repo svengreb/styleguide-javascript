@@ -111,6 +111,12 @@ module.exports = {
       }
     ],
     /**
+     * Do not require a new line after jsx elements and expressions.
+     * @since 0.9.0
+     * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-newline.md
+     */
+    "react/jsx-newline": "off",
+    /**
      * Prevent usage of .`bind()` and arrow functions in JSX props.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
      * @see https://arcticicestudio.github.io/styleguide-javascript/rules/react/methods.html#no-binding-or-arrow-functions-in-render
@@ -131,6 +137,13 @@ module.exports = {
      */
     "react/jsx-no-comment-textnodes": "error",
     /**
+     * Prevent react contexts from taking non-stable values.
+     * @since 0.9.0
+     * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-constructed-context-values.md
+     */
+    "react/jsx-no-constructed-context-values": "error",
+
+    /**
      * Prevent duplicate props in JSX.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
      */
@@ -144,12 +157,18 @@ module.exports = {
      * Prevent usage of unsafe `_blank` target.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
      */
-    "react/jsx-no-target-blank": "error",
+    "react/jsx-no-target-blank": ["error", { enforceDynamicLinks: "always" }],
     /**
      * Disallow undeclared variables in JSX.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
      */
     "react/jsx-no-undef": "error",
+    /**
+     * Disallow unnecessary fragments in JSX.
+     * @since 0.9.0
+     * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md
+     */
+    "react/jsx-no-useless-fragment": "error",
     /**
      * Limit to one expression per line in JSX.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
@@ -266,7 +285,8 @@ module.exports = {
       "warn",
       {
         html: "enforce",
-        custom: "ignore"
+        custom: "ignore",
+        explicitSpread: "ignore"
       }
     ]
   }
