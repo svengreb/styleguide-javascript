@@ -16,13 +16,13 @@
  */
 module.exports = {
   env: {
-    node: true
+    node: true,
   },
   rules: {
     /**
      * Disallow use of the `Buffer()` constructor.
      * @see https://eslint.org/docs/rules/no-buffer-constructor
      */
-    "no-buffer-constructor": "error"
-  }
+    "no-buffer-constructor": "error",
+  },
 };

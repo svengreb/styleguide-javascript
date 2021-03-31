@@ -34,6 +34,6 @@ module.exports = {
      * No Node.js builtin modules.
      * @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
      */
-    "import/no-nodejs-modules": "off"
-  }
+    "import/no-nodejs-modules": "off",
+  },
 };

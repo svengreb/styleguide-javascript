@@ -18,8 +18,8 @@ module.exports = {
   plugins: ["react-hooks"],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   rules: {
     /**
@@ -32,6 +32,6 @@ module.exports = {
      * EVerify the list of the dependencies for Hooks like `useEffect` and similar.
      * @see https://github.com/facebook/react/blob/master/packages/eslint-plugin-react-hooks/src/ExhaustiveDeps.js
      */
-    "react-hooks/exhaustive-deps": "error"
-  }
+    "react-hooks/exhaustive-deps": "error",
+  },
 };

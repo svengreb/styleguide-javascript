@@ -26,6 +26,6 @@ module.exports = {
      * Additionally enable the slightly expanded set of rules that require type information.
      * It also disables some ESLint core rules for compatibility since they are already handled by TypeScript.
      */
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
-  ]
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+  ],
 };

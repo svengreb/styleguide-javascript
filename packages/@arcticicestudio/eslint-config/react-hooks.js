@@ -16,5 +16,5 @@
  * @see https://reactjs.org/docs/hooks-intro.html
  */
 module.exports = {
-  extends: ["./rules/react-hooks"].map(require.resolve)
+  extends: ["./rules/react-hooks"].map(require.resolve),
 };

@@ -17,12 +17,12 @@ module.exports = {
   settings: {
     "import/resolver": {
       node: {
-        extensions: [".js", ".jsx", ".json"]
-      }
+        extensions: [".js", ".jsx", ".json"],
+      },
     },
     react: {
-      version: "detect"
-    }
+      version: "detect",
+    },
   },
   rules: {
     /**
@@ -48,9 +48,9 @@ module.exports = {
           "componentDidUpdate",
           "componentWillUnmount",
           "componentDidCatch",
-          "getSnapshotBeforeUpdate"
-        ]
-      }
+          "getSnapshotBeforeUpdate",
+        ],
+      },
     ],
     /**
      * Disable consistent naming for boolean props.
@@ -60,8 +60,8 @@ module.exports = {
       "off",
       {
         propTypeNames: ["bool", "mutuallyExclusiveTrueProps"],
-        rule: "^(is|has)[A-Z]([A-Za-z0-9]?)+"
-      }
+        rule: "^(is|has)[A-Z]([A-Za-z0-9]?)+",
+      },
     ],
     /**
      * Forbid `button` element without an explicit `type` attribute.
@@ -72,8 +72,8 @@ module.exports = {
       {
         button: true,
         submit: true,
-        reset: false
-      }
+        reset: false,
+      },
     ],
     /**
      * Prevent extraneous defaultProps on components.
@@ -114,8 +114,8 @@ module.exports = {
     "react/forbid-prop-types": [
       "warn",
       {
-        forbid: ["any", "array", "object"]
-      }
+        forbid: ["any", "array", "object"],
+      },
     ],
     /**
      * Forbid foreign `propTypes`.
@@ -308,12 +308,12 @@ module.exports = {
           "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
           "instance-methods",
           "everything-else",
-          "rendering"
+          "rendering",
         ],
         groups: {
-          rendering: ["/^render.+$/", "render"]
-        }
-      }
+          rendering: ["/^render.+$/", "render"],
+        },
+      },
     ],
     /**
      * Enforce propTypes declarations alphabetical sorting.
@@ -324,8 +324,8 @@ module.exports = {
       {
         ignoreCase: true,
         callbacksLast: false,
-        requiredFirst: false
-      }
+        requiredFirst: false,
+      },
     ],
     /**
      * Enforce `style` prop value being an object.
@@ -360,6 +360,6 @@ module.exports = {
      * @since 0.5.0
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
      */
-    "react/static-property-placement": "warn"
-  }
+    "react/static-property-placement": "warn",
+  },
 };

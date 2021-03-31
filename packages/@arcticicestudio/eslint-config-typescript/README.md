@@ -108,8 +108,8 @@ Set the `project` field in your `eslintrc` to the path of your `tsconfig` and op
 module.exports = {
   // ...
   parserOptions: {
-    project: "./tsconfig.json"
-  }
+    project: "./tsconfig.json",
+  },
   // ...
 };
 ```

@@ -1,6 +1,10 @@
+<!--lint disable heading-style-->
+
 ---
+
 name: Bug Report
 about: Report a bug that is caused by the code in this repository
+
 ---
 
 <!-- Click on the "Preview" tab to render the instructions in a more readable format -->

@@ -1,6 +1,10 @@
+<!--lint disable heading-style-->
+
 ---
+
 name: Enhancement Suggestions
 about: Submit an enhancement suggestion for new features or minor improvements to existing functionality
+
 ---
 
 <!-- Click on the "Preview" tab to render the instructions in a more readable format -->

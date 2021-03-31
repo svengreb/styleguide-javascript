@@ -83,7 +83,7 @@ Add `@arcticicestudio/eslint-config-base` to your `extends` array in your `.esli
 
 ```js
 module.exports = {
-  extends: ["@arcticicestudio/eslint-config-base"]
+  extends: ["@arcticicestudio/eslint-config-base"],
 };
 ```
 

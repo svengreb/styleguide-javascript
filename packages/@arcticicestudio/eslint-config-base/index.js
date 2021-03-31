@@ -32,10 +32,10 @@ module.exports = {
     "./rules/import/module-systems",
     "./rules/import/settings",
     "./rules/import/static-analysis",
-    "./rules/import/style"
+    "./rules/import/style",
   ].map(require.resolve),
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: "module"
-  }
+    sourceType: "module",
+  },
 };

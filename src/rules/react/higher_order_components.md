@@ -12,14 +12,14 @@ A higher-order component `withSnow()`, when passed a component `Winter` should p
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export const withSnow = ComposedComponent =>
+export const withSnow = (ComposedComponent) =>
   class WithSnow extends Component {
     constructor(props) {
       super();
     }
 
     static propTypes = {
-      children: PropTypes.any
+      children: PropTypes.any,
     };
 
     static defaultProps = {};
@@ -37,7 +37,7 @@ export const withSnow = ComposedComponent =>
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export const withSnow = ComposedComponent =>
+export const withSnow = (ComposedComponent) =>
   class WithSnow extends Component {
     constructor(props) {
       super();
@@ -46,7 +46,7 @@ export const withSnow = ComposedComponent =>
     static displayName = `WithSnow(${ComposedComponent.displayName || ComposedComponent.name || Component.name})`;
 
     static propTypes = {
-      children: PropTypes.any
+      children: PropTypes.any,
     };
 
     static defaultProps = {};

@@ -22,14 +22,14 @@ Anyway, please note that there are some differences between arrow functions and 
 ⇣ **Incorrect** code for this rule:
 
 ```jsx
-snow(function(flake) {
+snow(function (flake) {
   return flake;
 });
 ```
 
 ```jsx
 snow(
-  function() {
+  function () {
     return this.flake;
   }.bind(this)
 );
@@ -38,7 +38,7 @@ snow(
 ⇡ **Correct** code for this rule:
 
 ```jsx
-snow(flake => flake);
+snow((flake) => flake);
 ```
 
 ###### References

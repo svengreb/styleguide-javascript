@@ -117,7 +117,7 @@ Avoid using an array index as `key` prop, always use a unique ID. Not using a st
 
 ```jsx
 {
-  snow.map(snowflake => <Snow {...snowflake} key={snowflake.id} />);
+  snow.map((snowflake) => <Snow {...snowflake} key={snowflake.id} />);
 }
 ```
 
@@ -146,7 +146,7 @@ function Snow({ density, season, snowflakes }) {
 Snow.propTypes = {
   density: PropTypes.number.isRequired,
   season: PropTypes.string,
-  snowflakes: PropTypes.node
+  snowflakes: PropTypes.node,
 };
 ```
 
@@ -165,11 +165,11 @@ function Snow({ density, season, snowflakes }) {
 Snow.propTypes = {
   density: PropTypes.number.isRequired,
   season: PropTypes.string,
-  snowflakes: PropTypes.node
+  snowflakes: PropTypes.node,
 };
 Snow.defaultProps = {
   season: "winter",
-  snowflakes: null
+  snowflakes: null,
 };
 ```
 
@@ -187,11 +187,11 @@ Use spread props sparingly. Otherwise unnecessary props can be passed down to co
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export const withSnow = ComposedComponent =>
+export const withSnow = (ComposedComponent) =>
   class WithSnow extends Component {
     static propTypes = {
       season: PropTypes.string,
-      isFalling: PropTypes.bool
+      isFalling: PropTypes.bool,
     };
 
     render() {
@@ -270,7 +270,7 @@ If it is necessary to use [refs][react-docs-refs_and:dom], always use ref callba
 
 ```jsx
 <Snow
-  ref={ref => {
+  ref={(ref) => {
     this.snowRef = ref;
   }}
 />

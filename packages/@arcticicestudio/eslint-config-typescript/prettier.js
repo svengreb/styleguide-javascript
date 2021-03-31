@@ -18,5 +18,5 @@
  * @see https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
  */
 module.exports = {
-  extends: ["./rules/prettier"].map(require.resolve)
+  extends: ["./rules/prettier"].map(require.resolve),
 };

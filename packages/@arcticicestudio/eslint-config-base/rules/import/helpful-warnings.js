@@ -60,15 +60,15 @@ module.exports = {
           "**/gulpfile.js",
           "**/gulpfile.*.js",
           "**/Gruntfile{,.js}",
-          "**/gatsby-*{,.js}"
-        ]
-      }
+          "**/gatsby-*{,.js}",
+        ],
+      },
     ],
     /**
      * Forbid the use of mutable exports with `var` or `let`.
      * @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
      * @see https://arcticicestudio.github.io/styleguide-javascript/rules/modules.html#no-mutable-exports
      */
-    "import/no-mutable-exports": "error"
-  }
+    "import/no-mutable-exports": "error",
+  },
 };

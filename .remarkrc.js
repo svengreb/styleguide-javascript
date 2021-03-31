@@ -12,5 +12,5 @@
  * @see https://github.com/remarkjs/remark-lint#configuring-remark-lint
  */
 module.exports = {
-  plugins: ["remark-preset-lint-arcticicestudio"]
+  plugins: ["remark-preset-lint-arcticicestudio"],
 };

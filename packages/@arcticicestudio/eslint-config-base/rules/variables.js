@@ -73,8 +73,8 @@ module.exports = {
       {
         vars: "all",
         args: "after-used",
-        ignoreRestSiblings: true
-      }
+        ignoreRestSiblings: true,
+      },
     ],
     /**
      * Disallow the use of variables before they are defined.
@@ -85,8 +85,8 @@ module.exports = {
       {
         functions: true,
         classes: true,
-        variables: true
-      }
-    ]
-  }
+        variables: true,
+      },
+    ],
+  },
 };

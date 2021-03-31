@@ -52,8 +52,8 @@ module.exports = {
     "no-console": [
       "warn",
       {
-        allow: ["warn", "error", "time", "timeEnd", "timeStamp"]
-      }
+        allow: ["warn", "error", "time", "timeEnd", "timeStamp"],
+      },
     ],
     /**
      * Disallow constant expressions in conditions.
@@ -124,8 +124,8 @@ module.exports = {
         nestedBinaryExpressions: false,
         // Delegate to "eslint-plugin-react" via "@arcticicestudio/eslint-config".
         ignoreJSX: "all",
-        enforceForArrowConditionals: false
-      }
+        enforceForArrowConditionals: false,
+      },
     ],
     /**
      * Disallow unnecessary semicolons.
@@ -230,6 +230,6 @@ module.exports = {
      * Enforce comparing "typeof" expressions against valid strings.
      * @see https://eslint.org/docs/rules/valid-typeof
      */
-    "valid-typeof": ["error", { requireStringLiterals: true }]
-  }
+    "valid-typeof": ["error", { requireStringLiterals: true }],
+  },
 };

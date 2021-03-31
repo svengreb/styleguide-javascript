@@ -14,6 +14,6 @@
 module.exports = {
   extends: [
     "./packages/@arcticicestudio/eslint-config-base/index.js",
-    "./packages/@arcticicestudio/eslint-config/prettier.js"
-  ]
+    "./packages/@arcticicestudio/eslint-config/prettier.js",
+  ],
 };

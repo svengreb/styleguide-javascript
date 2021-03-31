@@ -23,8 +23,8 @@ module.exports = {
       "error",
       {
         commonjs: true,
-        caseSensitive: true
-      }
+        caseSensitive: true,
+      },
     ],
     /**
      * Ensure named imports correspond to a named export in the remote file.
@@ -97,6 +97,6 @@ module.exports = {
      * @since 0.6.0
      * @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
      */
-    "import/no-unused-modules": "off"
-  }
+    "import/no-unused-modules": "off",
+  },
 };

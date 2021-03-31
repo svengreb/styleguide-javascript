@@ -64,7 +64,7 @@ function snow(snowflakes) {
 }
 
 const snowball = new snow({
-  density: 20
+  density: 20,
 });
 ```
 
@@ -78,7 +78,7 @@ class Snow {
 }
 
 const snowball = new Snow({
-  density: 20
+  density: 20,
 });
 ```
 
@@ -125,7 +125,7 @@ Don't save references to `this`. Use arrow functions or [Function#bind][mdn-js-g
 ```js
 function snow() {
   const self = this;
-  return function() {
+  return function () {
     console.log(self);
   };
 }
@@ -155,7 +155,9 @@ class Frost {
 export default Frost;
 
 // SnowFalling.js
-export default function snowFalling() { return "sparkling"; }
+export default function snowFalling() {
+  return "sparkling";
+}
 
 // Seasons.js
 export default function winter() {}
@@ -240,7 +242,7 @@ Use [PascalCase][pascalcase] when exporting a constructor, class, singleton, fun
 ```js
 // Winter.js
 const Winter = {
-  elements: ["snow", "frost"]
+  elements: ["snow", "frost"],
 };
 
 export default winter;
@@ -251,7 +253,7 @@ export default winter;
 ```js
 // Winter.js
 const Winter = {
-  elements: ["snow", "frost"]
+  elements: ["snow", "frost"],
 };
 
 export default Winter;
@@ -330,7 +332,7 @@ export const API_KEY = "snow";
 
 ```js
 export const SNOW = {
-  flakes: "falling"
+  flakes: "falling",
 };
 ```
 

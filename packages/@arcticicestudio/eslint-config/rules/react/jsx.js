@@ -18,8 +18,8 @@ module.exports = {
   plugins: ["react"],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   rules: {
     /**
@@ -59,8 +59,8 @@ module.exports = {
     "react/jsx-filename-extension": [
       "error",
       {
-        extensions: [".jsx"]
-      }
+        extensions: [".jsx"],
+      },
     ],
     /**
      * Enforce position of the first prop in JSX.
@@ -75,8 +75,8 @@ module.exports = {
       "warn",
       {
         eventHandlerPrefix: "handle",
-        eventHandlerPropPrefix: "on"
-      }
+        eventHandlerPropPrefix: "on",
+      },
     ],
     /**
      * Validate JSX indentation.
@@ -107,8 +107,8 @@ module.exports = {
       "warn",
       {
         maximum: 4,
-        when: "multiline"
-      }
+        when: "multiline",
+      },
     ],
     /**
      * Do not require a new line after jsx elements and expressions.
@@ -128,8 +128,8 @@ module.exports = {
         ignoreRefs: true,
         allowArrowFunctions: true,
         allowFunctions: false,
-        allowBind: false
-      }
+        allowBind: false,
+      },
     ],
     /**
      * Prevent comments from being inserted as text nodes.
@@ -182,8 +182,8 @@ module.exports = {
       "error",
       {
         props: "never",
-        children: "never"
-      }
+        children: "never",
+      },
     ],
     /**
      * Enforce PascalCase for user-defined JSX components.
@@ -209,8 +209,8 @@ module.exports = {
         shorthandFirst: false,
         shorthandLast: false,
         noSortAlphabetically: false,
-        reservedFirst: true
-      }
+        reservedFirst: true,
+      },
     ],
     /**
      * Validate whitespace in and around the JSX opening and closing brackets.
@@ -223,8 +223,8 @@ module.exports = {
         closingSlash: "never",
         beforeSelfClosing: "always",
         afterOpening: "never",
-        beforeClosing: "never"
-      }
+        beforeClosing: "never",
+      },
     ],
     /**
      * Prevent React to be incorrectly marked as unused.
@@ -250,8 +250,8 @@ module.exports = {
         arrow: "parens-new-line",
         condition: "ignore",
         logical: "ignore",
-        prop: "ignore"
-      }
+        prop: "ignore",
+      },
     ],
     /**
      * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions.
@@ -286,8 +286,8 @@ module.exports = {
       {
         html: "enforce",
         custom: "ignore",
-        explicitSpread: "ignore"
-      }
-    ]
-  }
+        explicitSpread: "ignore",
+      },
+    ],
+  },
 };
