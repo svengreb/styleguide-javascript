@@ -226,6 +226,12 @@ module.exports = {
      */
     "react/no-unknown-property": "error",
     /**
+     * Prevent creating unstable components inside components.
+     * @since 0.9.0
+     * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unstable-nested-components.md
+     */
+    "react/no-unstable-nested-components": "error",
+    /**
      * Prevent definitions of unused prop types.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
      */
@@ -265,7 +271,7 @@ module.exports = {
      * Enforce a `defaultProps` definition for every prop that is not a required prop.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
      */
-    "react/require-default-props": "error",
+    "react/require-default-props": ["error", { forbidDefaultForRequired: true }],
     /**
      * Enforce components to have a `shouldComponentUpdate` method.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-optimization.md
@@ -291,9 +297,11 @@ module.exports = {
       "warn",
       {
         order: [
+          "static-variables",
           "static-methods",
           "instance-variables",
           "lifecycle",
+          "/^handle.+$/",
           "/^on.+$/",
           "getters",
           "setters",

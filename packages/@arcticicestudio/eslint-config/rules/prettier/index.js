@@ -15,7 +15,7 @@
  * @see https://prettier.io
  */
 module.exports = {
-  extends: ["prettier", "prettier/react"],
+  extends: ["prettier"],
   plugins: ["prettier"],
   rules: {
     /**
