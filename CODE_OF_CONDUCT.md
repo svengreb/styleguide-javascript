@@ -1,8 +1,8 @@
 # Code of Conduct
 
-All (core) team members, contributors/committers and volunteers in this project are required to act according to the following Code of Conduct. We ask you to follow these guidelines which help steer our interactions and strive to keep “Styleguide JavaScript” a positive and growing project and help us provide and ensure a safe environment for everyone.
+All (core) team members, contributors/committers and volunteers in this project are required to act according to the following Code of Conduct. We ask you to follow these guidelines which help steer our interactions and strive to keep this a positive and growing project and help us provide and ensure a safe environment for everyone.
 
-If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact us at support@arcticicestudio.com or directly to one of the core team members via [email][mailmap]. Your reports will be taken seriously and not dismissed or argued with.
+If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact me at support@arcticicestudio.com or directly to one of the core team members via [email][mailmap]. Your reports will be taken seriously and not dismissed or argued with.
 
 ## What we believe in and how we act
 
@@ -34,7 +34,7 @@ The members of the core team and project maintainers are responsible for clarify
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting us via support@arcticicestudio.com or directly to one of the project core team members or owner via [email][mailmap]. The project team will review and investigate all complaints, and will respond in a way that it deems appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting us via support@svengreb.de or directly to one of the project core team members or owner via [email][mailmap]. The project team will review and investigate all complaints, and will respond in a way that it deems appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
 
 Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
 
@@ -56,6 +56,6 @@ Thanks for the inspirations and attributions to GitHub's [Open Source Guides][os
 
 [contrib-cov-1.4]: https://contributor-covenant.org/version/1/4/code-of-conduct
 [hoodie-coc]: http://hood.ie/code-of-conduct
-[mailmap]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/.mailmap
+[mailmap]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/.mailmap
 [oss-guides]: https://opensource.guide
 [ref-gender-neutral-docs]: https://modelviewculture.com/pieces/gendered-language-feature-or-bug-in-software-documentation

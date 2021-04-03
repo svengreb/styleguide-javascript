@@ -1,17 +1,14 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Arctic Ice Studio ESLint Configuration
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 const INDENT_SIZE = 2;
 
 /**
  * React plugin rules related to JSX.
- * @since 0.1.0
+ *
  * @see https://github.com/yannickcr/eslint-plugin-react#jsx-specific-rules
  */
 module.exports = {

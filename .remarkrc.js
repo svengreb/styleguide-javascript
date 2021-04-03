@@ -1,16 +1,18 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Styleguide JavaScript
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 /**
- * The remark-lint configuration.
- * @see https://github.com/remarkjs/remark-lint#configuring-remark-lint
+ * Configurations for remark-lint.
+ *
+ * @see https://github.com/remarkjs/remark-lint
  */
 module.exports = {
-  plugins: ["remark-preset-lint-arcticicestudio"],
+  plugins: [
+    "@arcticicestudio/remark-preset-lint",
+    /* Disabled to suppress warnings about duplicate "Example" headings. */
+    ["remark-lint-no-duplicate-headings", false],
+  ],
 };

@@ -1,9 +1,15 @@
 {
   "name": "styleguide-javascript",
-  "title": "Styleguide JavaScript",
   "version": "0.8.0",
-  "description": "The Arctic Ice Studio JavaScript Code Style",
+  "description": "The Arctic Ice Studio JavaScript code style",
   "author": "Arctic Ice Studio <development@arcticicestudio.com> (https://www.arcticicestudio.com)",
+  "contributors": [
+    {
+      "name": "Sven Greb",
+      "email": "development@svengreb.de",
+      "url": "https://www.svengreb.de"
+    }
+  ],
   "homepage": "https://arcticicestudio.github.io/styleguide-javascript",
   "repository": {
     "type": "git",
@@ -13,33 +19,34 @@
     "url": "https://github.com/arcticicestudio/styleguide-javascript/issues"
   },
   "license": "MIT",
-  "keywords": [
-    "styleguide",
-    "javascript",
-    "codestyle",
-    "ecmascript",
-    "eslint",
-    "eslintconfig"
-  ],
+  "private": true,
   "engines": {
-    "yarn": "^1.17.3"
+    "node": "^15.13.0",
+    "npm": "^7.7.0"
   },
+  "workspaces": [
+    "packages/@arcticicestudio/*"
+  ],
   "scripts": {
     "clean": "del build/",
-    "docs:build": "gitbook install src && gitbook build src build/docs",
-    "docs:dev": "yarn docs:build && gitbook serve src build/docs",
-    "format": "npm-run-all format:pretty format:fix",
+    "docs": "run-s docs:prepare docs:compile",
+    "docs:compile": "gitbook build src build/docs",
+    "docs:dev": "run-s docs:compile docs:serve",
+    "docs:prepare": "gitbook install src",
+    "docs:serve": "gitbook serve src build/docs",
+    "format": "run-s format:pretty format:fix",
     "format:fix": "eslint --fix .",
-    "format:pretty": "prettier --write \"**/*.{js,json,md,yml}\"",
+    "format:pretty": "prettier --write .",
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint .",
     "lint:md": "remark --no-stdout . \".github/**/*.md\"",
-    "lint:pretty": "prettier --check \"**/*.{js,json,md,yml}\"",
+    "lint:pretty": "prettier --check .",
+    "prepare": "run-s prepare:*",
     "prepare:husky": "husky install",
-    "prepare": "npm-run-all prepare:*",
-    "test": "yarn workspaces run test"
+    "test": "npm --workspaces run test"
   },
   "devDependencies": {
+    "@arcticicestudio/remark-preset-lint": ">=0.4.0 <1.0.0",
     "del-cli": "^3.0.1",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
@@ -50,11 +57,6 @@
     "lint-staged": "^10.5.4",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
-    "remark-cli": "^9.0.0",
-    "remark-preset-lint-arcticicestudio": ">=0.3.0 <1.0.0"
-  },
-  "private": true,
-  "workspaces": [
-    "packages/@arcticicestudio/*"
-  ]
+    "remark-cli": "^9.0.0"
+  }
 }

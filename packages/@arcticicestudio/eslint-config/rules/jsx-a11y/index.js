@@ -1,15 +1,12 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Arctic Ice Studio ESLint Configuration
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 /**
  * React JSX A11Y plugin rules.
- * @since 0.1.0
+ *
  * @see https://github.com/evcohen/eslint-plugin-jsx-a11y#supported-rules
  */
 module.exports = {

@@ -1,10 +1,7 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Arctic Ice Studio ESLint Base Configuration
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 const INDENT_SIZE = 2;
@@ -12,7 +9,7 @@ const MAX_LINE_LENGTH = 120;
 
 /**
  * Rules related to style guidelines.
- * @since 0.1.0
+ *
  * @see https://eslint.org/docs/rules/#stylistic-issues
  */
 module.exports = {
