@@ -25,6 +25,7 @@
     "guide",
     "javascript",
     "ecmascript",
+    "prettier",
     "eslint",
     "eslint-config",
     "rule",
@@ -33,7 +34,8 @@
   "main": "index.js",
   "files": [
     "rules",
-    "index.js"
+    "index.js",
+    "prettier.js"
   ],
   "publishConfig": {
     "access": "public"
@@ -47,11 +49,15 @@
   },
   "devDependencies": {
     "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "eslint-find-rules": "^3.6.1",
     "eslint-plugin-import": "^2.22.1"
   },
   "peerDependencies": {
     "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-import": "^2.22.1"
   }
 }

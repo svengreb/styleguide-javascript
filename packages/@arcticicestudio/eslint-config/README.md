@@ -10,7 +10,7 @@
 
 <p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/actions" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/workflow/status/arcticicestudio/styleguide-javascript/ci?style=flat-square&label=CI&logoColor=eceff4&colorA=4c566a&logo=github-actions"/></a></p>
 
-This package implements the rules of the [Arctic Ice Studio JavaScript style guide][gh-stg-repo] as an extensible shared [ESLint][] configuration with plugin support for [React][gh-esl-p-react] and its [_Hooks_][gh-esl-p-react-hooks], [JSX A11Y][gh-esl-p-jsx-a11y] and compatibility integrations for other projects like [Prettier][].
+This package implements the rules of the [Arctic Ice Studio JavaScript style guide][gh-stg-repo] as an extensible shared [ESLint][] configuration with plugin support for [React][gh-esl-p-react], its [_Hooks_][gh-esl-p-react-hooks] and [JSX A11Y][gh-esl-p-jsx-a11y].
 
 ## Getting Started
 
@@ -35,7 +35,7 @@ See the [Node distribution index][node-dist-index] for more information about wh
 
 #### Peer Dependencies
 
-This package depends on the [eslint-plugin-react][gh-esl-p-react], [eslint-plugin-jsx-a11y][gh-esl-p-jsx-a11y], [eslint-plugin-prettier][gh-esl-p-prettier] and [prettier][gh-prettier] packages that are defined as [peer dependencies][node-blog-peer_deps].
+This package depends on the [eslint-plugin-react][gh-esl-p-react] and [eslint-plugin-jsx-a11y][gh-esl-p-jsx-a11y] packages that are defined as [peer dependencies][node-blog-peer_deps].
 Since this configuration is build on top of the [base rules package][gh-t-pkg-esl-base], the additional [eslint-plugin-import][gh-esl-p-import] peer dependency is also required.
 
 ##### npm versions `>=7.0.0`
@@ -100,13 +100,7 @@ module.exports = {
     /*
      * Optional entry point to enable support for projects using React Hooks.
      */
-    "@arcticicestudio/eslint-config/react-hooks",
-    /*
-     * Optional entry point to enable support for projects using Prettier.
-     * Note that this must always be placed after the `@arcticicestudio/eslint-config` preset to take precedence,
-     * otherwise it won't prevent errors due to useless and possibly conflicting rules!
-     */
-    "@arcticicestudio/eslint-config/prettier"
+    "@arcticicestudio/eslint-config/react-hooks"
   ]
 };
 ```
@@ -116,7 +110,6 @@ module.exports = {
 This package provides multiple entry points that can be composed especially for the projects they are used in:
 
 - `@arcticicestudio/eslint-config` — The default entry point that includes the base rules of the [@arcticicestudio/eslint-config-base][gh-t-pkg-esl-base] package as well as additional rules from the [eslint-plugin-react][gh-esl-p-react] and [eslint-plugin-jsx-a11y][gh-esl-p-jsx-a11y] packages.
-- `@arcticicestudio/eslint-config/prettier` — Entry point to enable support for [Prettier][] through [eslint-plugin-prettier][gh-esl-p-prettier] and the officially recommended Prettier ESLint configuration using the [eslint-config-prettier][gh-esl-c-prettier] package. It disables possibly conflicting rules and rules that definitely not needed when using _Prettier_ for code formatting. There is also additional support when _Prettier_ is used for React based projects by extending the special `prettier/react` configuration that also disables specific `react/` and JSX rules. Note that this configuration **should always be placed after `@arcticicestudio/eslint-config`** in order to override conflicting rules, otherwise the `@arcticicestudio/eslint-config` preset will take precedence leaving conflicting rules untouched!
 - `@arcticicestudio/eslint-config/react-hooks` — Entry point to enable support for [React _Hooks_][react-d-hooks] through [eslint-plugin-react-hooks][gh-esl-p-react-hooks].
 
 ## Contributing
@@ -133,14 +126,11 @@ Please read the [contribution guidelines][gh-stg-b-readme#contrib] of the [Arcti
 [esl-d-config#ext_conf]: https://eslint.org/docs/user-guide/configuring#extending-configuration-files
 [eslint]: https://eslint.org
 [gh-blog-npm_v7]: https://github.blog/2020-10-13-presenting-v7-0-0-of-the-npm-cli
-[gh-esl-c-prettier]: https://github.com/prettier/eslint-config-prettier
 [gh-esl-p-import]: https://github.com/benmosher/eslint-plugin-import
 [gh-esl-p-jsx-a11y]: https://github.com/evcohen/eslint-plugin-jsx-a11y
-[gh-esl-p-prettier]: https://github.com/prettier/eslint-plugin-prettier
 [gh-esl-p-react-hooks]: https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
 [gh-esl-p-react]: https://github.com/yannickcr/eslint-plugin-react
 [gh-npm/rfcs-blob-install_peer_deps]: https://github.com/npm/rfcs/blob/latest/implemented/0025-install-peer-deps.md
-[gh-prettier]: https://github.com/prettier/prettier
 [gh-remarkjs/remark-lint]: https://github.com/remarkjs/remark-lint
 [gh-stg-b-readme#contrib]: https://github.com/arcticicestudio/styleguide-javascript#contributing
 [gh-stg-repo]: https://github.com/arcticicestudio/styleguide-javascript
@@ -150,6 +140,5 @@ Please read the [contribution guidelines][gh-stg-b-readme#contrib] of the [Arcti
 [node-dist-v8-latest]: https://nodejs.org/dist/latest-v8.x
 [npm-install-peerdeps]: https://www.npmjs.com/package/install-peerdeps
 [npm-npx]: https://www.npmjs.com/package/npx
-[prettier]: https://prettier.io
 [react-d-hooks]: https://reactjs.org/docs/hooks-intro.html
 [yarn-classic]: https://classic.yarnpkg.com

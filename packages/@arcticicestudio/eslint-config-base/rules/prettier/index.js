@@ -7,7 +7,7 @@
 /**
  * Prettier plugin rules.
  *
- * @since 0.5.0
+ * @since 0.9.0
  * @see https://github.com/prettier/eslint-plugin-prettier
  * @see https://github.com/prettier/eslint-config-prettier
  * @see https://prettier.io
