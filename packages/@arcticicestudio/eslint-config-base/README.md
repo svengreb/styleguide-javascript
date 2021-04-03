@@ -10,7 +10,7 @@
 
 <p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/actions" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/workflow/status/arcticicestudio/styleguide-javascript/ci?style=flat-square&label=CI&logoColor=eceff4&colorA=4c566a&logo=github-actions"/></a></p>
 
-This package implements the base rules of the [Arctic Ice Studio JavaScript style guide][gh-stg-repo] as an extensible [ESLint][] configuration.
+This package implements the base rules of the [Arctic Ice Studio JavaScript style guide][gh-stg-repo] as an extensible [ESLint][] configuration with plugin support for [Prettier][].
 
 ## Getting Started
 
@@ -35,8 +35,8 @@ See the [Node distribution index][node-dist-index] for more information about wh
 
 #### Peer Dependencies
 
-Next to all base ESLint rules, the default export also contains rules related to ECMAScript 6+ including the [import][mdn-js-import] and [export][mdn-js-export] features.
-Therefore this package depends on the [`eslint-plugin-import`][gh-esl-p-import] and [`eslint`][gh-eslint] package that are defined as [peer dependencies][node-blog-peer_deps].
+Next to all base ESLint rules, the default export also contains rules related to ECMAScript 6+ including the [import][mdn-js-import] and [export][mdn-js-export] features as well as compatibility integrations for other projects like [Prettier][].
+Therefore this package depends on the [`eslint-plugin-import`][gh-esl-p-import], [eslint-plugin-prettier][gh-esl-p-prettier], [prettier][gh-prettier] and [`eslint`][gh-eslint] packages that are defined as [peer dependencies][node-blog-peer_deps].
 
 ##### npm versions `>=7.0.0`
 
@@ -90,13 +90,29 @@ yarn run install-peerdeps --dev @arcticicestudio/eslint-config-base
 
 ### Usage
 
-This package provides a [shareable configuration preset][esl-docs-conf_share] that can be used by [extending the ESLint configuration file][esl-docs-config#ext_conf]. Add `@arcticicestudio/eslint-config-base` to your `extends` array in your `.eslintrc` configuration file:
+This package provides a [shareable configuration preset][esl-docs-conf_share] that can be used by [extending the ESLint configuration file][esl-docs-config#ext_conf]. Add `@arcticicestudio/eslint-config-base` and/or any of the [additional entry points](#entry-points) to the `extends` array in your `.eslintrc` configuration file:
 
 ```js
 module.exports = {
-  extends: ["@arcticicestudio/eslint-config-base"],
+  extends: [
+    /* Provides support for all ESLint core rules. */
+    "@arcticicestudio/eslint-config-base",
+    /*
+     * Optional entry point to enable support for projects using Prettier.
+     * Note that this must always be placed after the `@arcticicestudio/eslint-config-base` preset to take precedence,
+     * otherwise it won't prevent errors due to useless and possibly conflicting rules!
+     */
+    "@arcticicestudio/eslint-config-base/prettier",
+  ],
 };
 ```
+
+## Entry Points
+
+This package provides multiple entry points that can be composed especially for the projects they are used in:
+
+- `@arcticicestudio/eslint-config-base` — The default entry point that support for all ESLint core rules.
+- `@arcticicestudio/eslint-config-base/prettier` — Entry point to enable support for [Prettier][] through [eslint-plugin-prettier][gh-esl-p-prettier] and the officially recommended Prettier ESLint configuration [eslint-config-prettier][gh-esl-c-prettier]. It disables possibly conflicting rules and rules that definitely not needed when using Prettier for code formatting. There is also additional support when Prettier is used for React based projects by extending the special `prettier/react` configuration that also disables specific `react/` and JSX rules. See the [@arcticicestudio/eslint-config][gh-t-pkg-esl] package to use React specific rules. Note that this configuration **should always be placed after `@arcticicestudio/eslint-config-base`** in order to override conflicting rules, otherwise the `@arcticicestudio/eslint-config-base` preset will take precedence leaving conflicting rules untouched!
 
 ## Contributing
 
@@ -112,11 +128,14 @@ Please read the [contribution guidelines][gh-stg-b-readme#contrib] of the [Arcti
 [esl-docs-config#ext_conf]: https://eslint.org/docs/user-guide/configuring#extending-configuration-files
 [eslint]: https://eslint.org
 [gh-blog-npm_v7]: https://github.blog/2020-10-13-presenting-v7-0-0-of-the-npm-cli
+[gh-esl-c-prettier]: https://github.com/prettier/eslint-config-prettier
 [gh-esl-p-import]: https://github.com/benmosher/eslint-plugin-import
 [gh-esl-p-jsx-a11y]: https://github.com/evcohen/eslint-plugin-jsx-a11y
+[gh-esl-p-prettier]: https://github.com/prettier/eslint-plugin-prettier
 [gh-esl-p-react]: https://github.com/yannickcr/eslint-plugin-react
 [gh-eslint]: https://github.com/eslint/eslint
 [gh-npm/rfcs-blob-install_peer_deps]: https://github.com/npm/rfcs/blob/latest/implemented/0025-install-peer-deps.md
+[gh-prettier]: https://github.com/prettier/prettier
 [gh-remarkjs/remark-lint]: https://github.com/remarkjs/remark-lint
 [gh-stg-b-readme#contrib]: https://github.com/arcticicestudio/styleguide-javascript#contributing
 [gh-stg-repo]: https://github.com/arcticicestudio/styleguide-javascript
