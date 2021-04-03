@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Styleguide JavaScript
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 /**
- * The ESLint configuration.
+ * Configurations for ESLint.
+ *
  * @see https://eslint.org/docs/user-guide/configuring
  */
 module.exports = {

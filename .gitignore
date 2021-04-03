@@ -1,15 +1,9 @@
-# Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
-# Copyright (C) 2018-present Sven Greb <development@svengreb.de>
-#
-# Project:    Styleguide JavaScript
-# Repository: https://github.com/arcticicestudio/styleguide-javascript
-# License:    MIT
+# Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+# This source code is licensed under the MIT license found in the LICENSE file.
 
-# +------+
-# + Logs +
-# +------+
-**/logs/
-**/*.log
+# Path match pattern to intentionally ignore untracked files and directories.
+# See https://git-scm.com/docs/gitignore for more details.
 
 # +---------+
 # + Node.js +

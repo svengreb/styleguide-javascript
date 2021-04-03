@@ -1,18 +1,16 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Styleguide JavaScript
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 /**
- * The lint-staged configuration.
+ * Configurations for lint-staged.
+ *
  * @see https://github.com/okonet/lint-staged#configuration
  */
 module.exports = {
-  "*.{js,json,md,yml}": "prettier --list-different",
-  "*.{js}": "eslint",
-  "*.md": "remark --no-stdout",
+  "*.{css,html,js,json,yaml,yml}": "prettier --check",
+  "*.js": ["eslint", "prettier --check"],
+  "*.md": ["remark --no-stdout", "prettier --check"],
 };

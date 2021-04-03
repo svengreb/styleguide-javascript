@@ -1,9 +1,15 @@
 {
   "name": "@arcticicestudio/eslint-config-typescript",
-  "title": "Arctic Ice Studio ESLint TypeScript Configuration",
   "version": "0.8.0",
   "description": "The Arctic Ice Studio JavaScript Style Guide rules with TypeScript support as an extensible shared ESLint configuration",
   "author": "Arctic Ice Studio <development@arcticicestudio.com> (https://www.arcticicestudio.com)",
+  "contributors": [
+    {
+      "name": "Sven Greb",
+      "email": "development@svengreb.de",
+      "url": "https://www.svengreb.de"
+    }
+  ],
   "homepage": "https://github.com/arcticicestudio/styleguide-javascript",
   "repository": {
     "type": "git",
@@ -15,12 +21,15 @@
   },
   "license": "MIT",
   "keywords": [
-    "styleguide",
-    "codestyle",
-    "eslint",
-    "config",
+    "style",
+    "guide",
     "javascript",
-    "typescript"
+    "typescript",
+    "ecmascript",
+    "eslint",
+    "eslint-config",
+    "rule",
+    "preset"
   ],
   "main": "index.js",
   "files": [
@@ -32,7 +41,7 @@
     "access": "public"
   },
   "scripts": {
-    "test": "yarn test:unused-rules",
+    "test": "npm run test:unused-rules",
     "test:unused-rules": "eslint-find-rules --unused --deprecated --no-error"
   },
   "devDependencies": {
