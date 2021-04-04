@@ -23,7 +23,7 @@ A bug is a _demonstrable problem_ that is caused by the code in the repository. 
 **Do NOT report security vulnerabilities in public issues!** Please only contact one of the core team members or project owner in a responsible manner by [email][gh-mailmap] or via support@arcticicestudio.com. We will assess the issue as soon as possible on a best-effort basis and will give you an estimate for when we have a fix and release available for an eventual public disclosure.
 
 - **Use the [GitHub Issue search][gh-issues]** — check if the issue has already been reported. If it has **and the issue is still open**, add a comment to the existing issue instead of opening a new one. If you find a closed issue that seems like it is the same thing that you are experiencing, open a new issue and include a link to the original issue in the body of your new one.
-- **Check if the issue has been fixed** — try to reproduce it using the [latest version][gh-releases-latest] and [`master`][gh-branch-master] branch in the repository.
+- **Check if the issue has been fixed** — try to reproduce it using the [latest version][gh-releases-latest] and [`main`][gh-branch-main] branch in the repository.
 - **Isolate the problem** — ideally create a [MCVE](#mcve).
 
 When you are creating a bug report, please provide as much detail and context as possible. Fill out on of [the required templates][gh-issues-template-bug], the information it asks helps maintainers to reproduce the problem and resolve issues faster.
@@ -47,7 +47,7 @@ Please include details about your configuration and environment based on the [is
 This section guides you through submitting an enhancement suggestion, including completely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your suggestion and find related suggestions.
 
 - **Use the [GitHub Issues search][gh-issues]** — check if this enhancement has already been suggested. If it has **and the issue is still open**, add your additions as comment to the existing issue instead of opening a new one.
-- **Check if the enhancement has already been implemented** — use the [latest version][gh-releases-latest] and [`master`][gh-branch-master] branch to ensure that the feature or improvement has not already been added.
+- **Check if the enhancement has already been implemented** — use the [latest version][gh-releases-latest] and [`main`][gh-branch-main] branch to ensure that the feature or improvement has not already been added.
 - **Provide a reduced show case** — ideally create a [MCVE](#mcve).
 
 Before creating enhancement suggestions, please check if your idea fits with the scope and provide as much detail and context as possible using a structured layout like the [the issue template][gh-issues-template-enhancement].
@@ -76,7 +76,7 @@ When you are submitting an pull request, please provide as much detail and conte
 - **Lint and test before submitting the pull request**.
 - **Make sure to create the pull request from a [topic branch][git-docs-branching-workflows]**.
 
-**All pull requests must be send against the [`master`][gh-branch-master] branch** - Please read the [branch organization](#branch-organization) section below for details about the branching model.
+**All pull requests must be send against the [`main`][gh-branch-main] branch** - Please read the [branch organization](#branch-organization) section below for details about the branching model.
 
 ### Documentations
 
@@ -86,9 +86,9 @@ You can help improve the docs and guides by making them more coherent, consisten
 
 ## Branch Organization
 
-styleguide-javascript adheres to the [Arctic Ice Studio Git style guide][gh-styleguide-git] which assumes that you are familiar with the [GitHub Flow][ghg-flow] branching model. The repository consists of the `master` core branch with an infinite development lifecycle. The source code of `HEAD` in this branch contains the latest development state and reflects all tagged release versions.
+styleguide-javascript adheres to the [Arctic Ice Studio Git style guide][gh-styleguide-git] which assumes that you are familiar with the [GitHub Flow][ghg-flow] branching model. The repository consists of the `main` core branch with an infinite development lifecycle. The source code of `HEAD` in this branch contains the latest development state and reflects all tagged release versions.
 
-**All [pull requests](#pull-requests) for limited development lifecycle _story_/_topic_ branches must be send against the `master` branch**.
+**All [pull requests](#pull-requests) for limited development lifecycle _story_/_topic_ branches must be send against the `main` branch**.
 
 <!-- lint disable no-heading-punctuation -->
 
@@ -170,17 +170,17 @@ Every significant change is documented in the [changelog][gh-changelog].
 Thanks for the inspirations and attributions to GitHub's [Open Source Guides][os-guide] and various contribution guides of large open source projects like [Atom][gh-atom-contrib], [React][react-contrib] and [Ruby on Rails][ruby-on-rails-contrib].
 
 [gh-atom-contrib]: https://github.com/atom/atom/blob/master/CONTRIBUTING.md
-[gh-branch-master]: https://github.com/arcticicestudio/styleguide-javascript/tree/master
-[gh-changelog]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/CHANGELOG.md
-[gh-coc]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/CODE_OF_CONDUCT.md
+[gh-branch-main]: https://github.com/arcticicestudio/styleguide-javascript/tree/main
+[gh-changelog]: https://github.com/arcticicestudio/styleguide-javascript/blob/main/CHANGELOG.md
+[gh-coc]: https://github.com/arcticicestudio/styleguide-javascript/blob/main/CODE_OF_CONDUCT.md
 [gh-gist]: https://gist.github.com
 [gh-issues-label-question]: https://github.com/arcticicestudio/styleguide-javascript/labels/type-question
-[gh-issues-template-bug]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/.github/ISSUE_TEMPLATE/bugs.md
-[gh-issues-template-enhancement]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/.github/ISSUE_TEMPLATE/enhancement.md
-[gh-issues-template-pr]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/.github/PULL_REQUEST_TEMPLATE.md
+[gh-issues-template-bug]: https://github.com/arcticicestudio/styleguide-javascript/blob/main/.github/ISSUE_TEMPLATE/bugs.md
+[gh-issues-template-enhancement]: https://github.com/arcticicestudio/styleguide-javascript/blob/main/.github/ISSUE_TEMPLATE/enhancement.md
+[gh-issues-template-pr]: https://github.com/arcticicestudio/styleguide-javascript/blob/main/.github/PULL_REQUEST_TEMPLATE.md
 [gh-issues-templates]: https://github.com/arcticicestudio/styleguide-javascript/issues/new/choose
 [gh-issues]: https://github.com/arcticicestudio/styleguide-javascript/issues
-[gh-mailmap]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/.mailmap
+[gh-mailmap]: https://github.com/arcticicestudio/styleguide-javascript/blob/main/.mailmap
 [gh-pr]: https://github.com/arcticicestudio/styleguide-javascript/pulls
 [gh-releases-latest]: https://github.com/arcticicestudio/styleguide-javascript/releases/latest
 [gh-styleguide-git]: https://github.com/arcticicestudio/styleguide-git
