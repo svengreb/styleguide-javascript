@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/styleguide-javascript/master/assets/images/repository-hero.svg?sanitize=true"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/styleguide-javascript/main/assets/images/repository-hero.svg?sanitize=true"/></p>
 
 <p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/releases/latest" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-javascript.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a> <a href="https://arcticicestudio.github.io/styleguide-javascript" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-javascript.svg?style=flat-square&label=Docs&logo=read-the-docs&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
 
@@ -213,7 +213,7 @@ Actually I'm not a supporter when it comes to [monorepos][trbdev-monorepo] and n
 - **No more assignment of commits to single modules** — Like described in the bullet point above, commit can contain changes to multiple modules, it is harder to detect which commit targeted a specific module.
 - **Steeper learning curve for new contributors** — In a dedicated repository that only hosts a specific module it is easier for new developers to contribute to the project, but in a monorepo they might need to change code in multiple places within other modules or the root code/documentation of the entire project.
 - **Uniform version number** — In order to keep conform to [SemVer][], the entire project must use a uniform version number. This means that a module that has not been changed since the last version must also be incremented in order to keep compatible with the other modules.
-  Using different version numbers prefixed/suffixed with an individual version number **is a not go**, **increases the maintenance overhead** and **and drastically reduces the project overview and quality**! This would result in multiple Git tags on the `master` branch as well as “empty” changelogs and release notes with placeholder logs that only refer to changes of other modules.
+  Using different version numbers prefixed/suffixed with an individual version number **is a not go**, **increases the maintenance overhead** and **and drastically reduces the project overview and quality**! This would result in multiple Git tags on the `main` branch as well as “empty” changelogs and release notes with placeholder logs that only refer to changes of other modules.
 
 #### Project Future
 
@@ -827,7 +827,7 @@ More details can also be found in the initially published ~~[project documentati
 
 <p align="center">Copyright &copy; 2018-present <a href="https://www.arcticicestudio.com" target="_blank">Arctic Ice Studio</a> and <a href="https://www.svengreb.de" target="_blank" rel="noreferrer">Sven Greb</a></p>
 
-<p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/blob/master/LICENSE" target="_blank" rel="noreferrer"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=License&message=MIT&logoColor=eceff4&logo=github&colorA=4c566a&colorB=88c0d0"/></a></p>
+<p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/blob/main/LICENSE" target="_blank" rel="noreferrer"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=License&message=MIT&logoColor=eceff4&logo=github&colorA=4c566a&colorB=88c0d0"/></a></p>
 
 <!--
 +------------------+
@@ -863,14 +863,14 @@ otherwise Markdown elements are not parsed and rendered!
 [eslint]: https://eslint.org
 [flow]: https://flow.org
 [gatsby]: https://gatsbyjs.org
-[gh-b-pkg-esl-readme#entry_points]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/packages/%40arcticicestudio/eslint-config/README.md#entry-points
+[gh-b-pkg-esl-readme#entry_points]: https://github.com/arcticicestudio/styleguide-javascript/blob/main/packages/%40arcticicestudio/eslint-config/README.md#entry-points
 [gh-esl-c-prettier]: https://github.com/prettier/eslint-config-prettier
 [gh-esl-p-import]: https://github.com/benmosher/eslint-plugin-import
 [gh-esl-p-jsx-a11y]: https://github.com/evcohen/eslint-plugin-jsx-a11y
 [gh-esl-p-prettier]: https://github.com/prettier/eslint-plugin-prettier
 [gh-esl-p-react]: https://github.com/yannickcr/eslint-plugin-react
-[gh-t-pkg-esl-base]: https://github.com/arcticicestudio/styleguide-javascript/tree/master/packages/@arcticicestudio/eslint-config-base
-[gh-t-pkg-esl]: https://github.com/arcticicestudio/styleguide-javascript/tree/master/packages/@arcticicestudio/eslint-config
+[gh-t-pkg-esl-base]: https://github.com/arcticicestudio/styleguide-javascript/tree/main/packages/@arcticicestudio/eslint-config-base
+[gh-t-pkg-esl]: https://github.com/arcticicestudio/styleguide-javascript/tree/main/packages/@arcticicestudio/eslint-config
 [jest]: https://jestjs.io
 [mdn-js-op-cond]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 [mdn-js-op-destruct]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
@@ -897,7 +897,7 @@ otherwise Markdown elements are not parsed and rendered!
 [esl-r-max-len]: https://eslint.org/docs/rules/max-len
 [esl-r-operator-linebreak]: https://eslint.org/docs/rules/operator-linebreak
 [esl-r-sort-imports]: https://eslint.org/docs/rules/sort-imports
-[gh-clog#0.2.0]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/CHANGELOG.md#020
+[gh-clog#0.2.0]: https://github.com/arcticicestudio/styleguide-javascript/blob/main/CHANGELOG.md#020
 [gh-compare-tag-v0.1.0_v0.2.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.1.0...v0.2.0
 [gh-esl-p-import-clog-2.10.0]: https://github.com/benmosher/eslint-plugin-import/blob/master/CHANGELOG.md#2100---2018-03-29
 [gh-esl-p-import-clog-2.9.0]: https://github.com/benmosher/eslint-plugin-import/blob/master/CHANGELOG.md#290---2018-02-21
@@ -994,7 +994,7 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-help-pr-templ]: https://help.github.com/articles/creating-a-pull-request-template-for-your-repository
 [gh-husky]: https://github.com/typicode/husky
 [gh-lint-staged]: https://github.com/okonet/lint-staged
-[gh-remark-cli]: https://github.com/remarkjs/remark/tree/master/packages/remark-cli
+[gh-remark-cli]: https://github.com/remarkjs/remark/tree/main/packages/remark-cli
 [gh-remark-lint]: https://github.com/remarkjs/remark-lint
 [gh-remark-preset-lint-arcticicestudio]: https://github.com/arcticicestudio/remark-preset-lint-arcticicestudio
 [git-d-gitattributes]: https://git-scm.com/docs/gitattributes
