@@ -39,7 +39,7 @@
     "format:pretty": "prettier --write .",
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint .",
-    "lint:md": "remark --no-stdout . \".github/**/*.md\"",
+    "lint:md": "remark --no-stdout . .github/**/*.md",
     "lint:pretty": "prettier --check .",
     "prepare": "run-s prepare:*",
     "prepare:husky": "husky install",

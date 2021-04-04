@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/styleguide-javascript/develop/assets/images/repository-hero.svg?sanitize=true"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/styleguide-javascript/master/assets/images/repository-hero.svg?sanitize=true"/></p>
 
 <p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/releases/latest" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-javascript.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a> <a href="https://arcticicestudio.github.io/styleguide-javascript" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-javascript.svg?style=flat-square&label=Docs&logo=read-the-docs&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
 
@@ -51,7 +51,7 @@ The documentation of the new package contains instructions and a quick setup and
 
 Next to the support for TypeScript, the package also modifies some _React_ and _import_ related rules in order to prevent conflicts, like the adaption of the `.ts` and `.tsx` extensions for all JS and JSX files as well as removing `.jsx` to force the usage of `.tsx`. There are other rules that have been disabled like the check for valid React `prop-types` since these and not necessary anymore when working with TypeScript.
 
-The new package provides two entry points, available as `@arcticicestudio/eslint-config-typescript` (main) and `@arcticicestudio/eslint-config-typescript/prettier` that can both be composed with all other [available entry points][gh-b-pkg-esl-readme#entry_points] to inherit their rules.
+The new package provides two entry points, available as `@arcticicestudio/eslint-config-typescript` and `@arcticicestudio/eslint-config-typescript/prettier` that can both be composed with all other [available entry points][gh-b-pkg-esl-readme#entry_points] to inherit their rules.
 
 This package mainly depends on the `@typescript-eslint/eslint-plugin@^2.0.0` and `@typescript-eslint/parser@^2.0.0` packages as peer dependencies.
 
@@ -734,11 +734,11 @@ More details can also be found in the initially published ~~[project documentati
 ↠ Added all [ESLint core rules][esl-r] and [eslint-plugin-import][gh-esl-p-import] plugin rules.
 More details can also be found in the initially published ~~[project documentation][noop]~~.
 
-<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/develop/assets/images/nord/repository-footer-separator.svg?sanitize=true" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/master/assets/images/nord/repository-footer-separator.svg?sanitize=true" /></p>
 
 <p align="center">Copyright &copy; 2018-present <a href="https://www.arcticicestudio.com" target="_blank">Arctic Ice Studio</a> and <a href="https://www.svengreb.de" target="_blank" rel="noreferrer">Sven Greb</a></p>
 
-<p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/blob/develop/LICENSE" target="_blank" rel="noreferrer"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=License&message=MIT&logoColor=eceff4&logo=github&colorA=4c566a&colorB=88c0d0"/></a></p>
+<p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/blob/master/LICENSE" target="_blank" rel="noreferrer"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=License&message=MIT&logoColor=eceff4&logo=github&colorA=4c566a&colorB=88c0d0"/></a></p>
 
 <!--
 +------------------+
@@ -774,14 +774,14 @@ otherwise Markdown elements are not parsed and rendered!
 [eslint]: https://eslint.org
 [flow]: https://flow.org
 [gatsby]: https://gatsbyjs.org
-[gh-b-pkg-esl-readme#entry_points]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/packages/%40arcticicestudio/eslint-config/README.md#entry-points
+[gh-b-pkg-esl-readme#entry_points]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/packages/%40arcticicestudio/eslint-config/README.md#entry-points
 [gh-esl-c-prettier]: https://github.com/prettier/eslint-config-prettier
 [gh-esl-p-import]: https://github.com/benmosher/eslint-plugin-import
 [gh-esl-p-jsx-a11y]: https://github.com/evcohen/eslint-plugin-jsx-a11y
 [gh-esl-p-prettier]: https://github.com/prettier/eslint-plugin-prettier
 [gh-esl-p-react]: https://github.com/yannickcr/eslint-plugin-react
-[gh-t-pkg-esl-base]: https://github.com/arcticicestudio/styleguide-javascript/tree/develop/packages/@arcticicestudio/eslint-config-base
-[gh-t-pkg-esl]: https://github.com/arcticicestudio/styleguide-javascript/tree/develop/packages/@arcticicestudio/eslint-config
+[gh-t-pkg-esl-base]: https://github.com/arcticicestudio/styleguide-javascript/tree/master/packages/@arcticicestudio/eslint-config-base
+[gh-t-pkg-esl]: https://github.com/arcticicestudio/styleguide-javascript/tree/master/packages/@arcticicestudio/eslint-config
 [jest]: https://jestjs.io
 [mdn-js-op-cond]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 [mdn-js-op-destruct]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
@@ -808,7 +808,7 @@ otherwise Markdown elements are not parsed and rendered!
 [esl-r-max-len]: https://eslint.org/docs/rules/max-len
 [esl-r-operator-linebreak]: https://eslint.org/docs/rules/operator-linebreak
 [esl-r-sort-imports]: https://eslint.org/docs/rules/sort-imports
-[gh-clog#0.2.0]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CHANGELOG.md#020
+[gh-clog#0.2.0]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/CHANGELOG.md#020
 [gh-compare-tag-v0.1.0_v0.2.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.1.0...v0.2.0
 [gh-esl-p-import-clog-2.10.0]: https://github.com/benmosher/eslint-plugin-import/blob/master/CHANGELOG.md#2100---2018-03-29
 [gh-esl-p-import-clog-2.9.0]: https://github.com/benmosher/eslint-plugin-import/blob/master/CHANGELOG.md#290---2018-02-21
