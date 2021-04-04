@@ -5,7 +5,7 @@ about: Submit an enhancement suggestion for new features or minor improvements t
 
 <!-- Click on the "Preview" tab to render the instructions in a more readable format -->
 
-> **Please read the [contribution guidelines](https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CONTRIBUTING.md) before filling out this issue template**.
+> **Please read the [contribution guidelines](https://github.com/arcticicestudio/styleguide-javascript/blob/master/CONTRIBUTING.md) before filling out this issue template**.
 
 ## Prerequisites
 
@@ -14,12 +14,11 @@ This section and the instructions in the sections below are only part of this is
 Please do your best to provide as much information as possible and use a clear and descriptive title for your enhancement suggestion to help maintainers and the community understand and reproduce the behavior, find related reports and to resolve the ticket faster.
 
 - **Ensure the enhancement has not already been reported by using the [GitHub Issues search](https://github.com/arcticicestudio/styleguide-javascript/issues)** — check if this enhancement has already been suggested. If it has **and the issue is still open**, add your additions as comment to the existing issue instead of opening a new one. If you find a closed issue that seems to be similar to this one, include a link to the original issue in the [metadata head](#metadata-head) section of this issue.
-- **Ensure your [contribution belongs to the correct scope](https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CONTRIBUTING.md#contribution-scope).**
-- **Check if the enhancement has already been implemented** — use the [latest version](https://github.com/arcticicestudio/styleguide-javascript/releases/latest) and [`develop`](https://github.com/arcticicestudio/styleguide-javascript/tree/develop) branch to ensure that the feature or improvement has not already been added.
+- **Check if the enhancement has already been implemented** — use the [latest version](https://github.com/arcticicestudio/styleguide-javascript/releases/latest) and [`master`](https://github.com/arcticicestudio/styleguide-javascript/tree/master) branch to ensure that the feature or improvement has not already been added.
 
 ## Metadata Head
 
-The metadata head can be added to the top of the issue as [Markdown text quote](https://help.github.com/articles/basic-writing-and-formatting-syntax) containing the ID of other related issues.
+The metadata head can be added to the top of the issue as [Markdown text quote](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) containing the ID of other related issues.
 
 > Related issues:
 
@@ -41,10 +40,10 @@ If you've considered alternative features or solutions please describe it clearl
 
 ## Example
 
-Provide a [MCVE - The Minimal, Complete, and Verifiable Example](https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CONTRIBUTING.md#mcve)
+Provide a [MCVE - The Minimal, Complete, and Verifiable Example](https://github.com/arcticicestudio/styleguide-javascript/blob/master/CONTRIBUTING.md#mcve)
 
 **This is a optional section, but it can drastically increase the speed at which this issue can be processed since it takes away the time-consuming reconstruction to reproduce the enhancement.**
-The recommended way is to upload it as [Gist](https://gist.github.com) or new repository to GitHub, but of course you can [attach it to this issue](https://help.github.com/articles/file-attachments-on-issues-and-pull-requests), use any free file hosting service or paste the code in [Markdown code blocks](https://help.github.com/articles/basic-writing-and-formatting-syntax) into this issue.
+The recommended way is to upload it as [Gist](https://gist.github.com) or new repository to GitHub, but of course you can [attach it to this issue](https://docs.github.com/en/github/managing-your-work-on-github/file-attachments-on-issues-and-pull-requests), use any free file hosting service or paste the code in [Markdown code blocks](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) into this issue.
 
 ## Additional Context
 

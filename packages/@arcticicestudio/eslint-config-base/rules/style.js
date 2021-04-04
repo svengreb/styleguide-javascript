@@ -1,10 +1,7 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Arctic Ice Studio ESLint Base Configuration
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 const INDENT_SIZE = 2;
@@ -12,7 +9,7 @@ const MAX_LINE_LENGTH = 120;
 
 /**
  * Rules related to style guidelines.
- * @since 0.1.0
+ *
  * @see https://eslint.org/docs/rules/#stylistic-issues
  */
 module.exports = {
@@ -39,8 +36,8 @@ module.exports = {
       "off",
       {
         multiline: true,
-        minItems: 4
-      }
+        minItems: 4,
+      },
     ],
     /**
      * Disallow or enforce spaces inside of blocks after opening block and before closing block.
@@ -66,10 +63,10 @@ module.exports = {
      */
     "capitalized-comments": ["warn", "always"],
     /**
-     * Require or disallow trailing commas.
+     * Require trailing commas for multiline statements.
      * @see https://eslint.org/docs/rules/comma-dangle
      */
-    "comma-dangle": ["error", "never"],
+    "comma-dangle": ["error", "always-multiline"],
     /**
      * Enforce consistent spacing before and after commas.
      * @see https://eslint.org/docs/rules/comma-spacing
@@ -78,8 +75,8 @@ module.exports = {
       "error",
       {
         before: false,
-        after: true
-      }
+        after: true,
+      },
     ],
     /**
      * Enforce consistent comma style.
@@ -101,9 +98,9 @@ module.exports = {
           ObjectExpression: false,
           ObjectPattern: false,
           VariableDeclaration: false,
-          NewExpression: false
-        }
-      }
+          NewExpression: false,
+        },
+      },
     ],
     /**
      * Enforce consistent spacing inside computed property brackets.
@@ -191,11 +188,11 @@ module.exports = {
         outerIIFEBody: 1,
         FunctionDeclaration: {
           parameters: 1,
-          body: 1
+          body: 1,
         },
         FunctionExpression: {
           parameters: 1,
-          body: 1
+          body: 1,
         },
         CallExpression: { arguments: 1 },
         ArrayExpression: 1,
@@ -215,10 +212,10 @@ module.exports = {
           "JSXClosingElement",
           "JSXText",
           "JSXEmptyExpression",
-          "JSXSpreadChild"
+          "JSXSpreadChild",
         ],
-        ignoreComments: false
-      }
+        ignoreComments: false,
+      },
     ],
     /**
      * Enforce the consistent use of either double or single quotes in JSX attributes.
@@ -234,8 +231,8 @@ module.exports = {
       "error",
       {
         beforeColon: false,
-        afterColon: true
-      }
+        afterColon: true,
+      },
     ],
     /**
      * Enforce consistent spacing before and after keywords.
@@ -246,8 +243,8 @@ module.exports = {
       "error",
       {
         before: true,
-        after: true
-      }
+        after: true,
+      },
     ],
     /**
      * Enforce position of line comments.
@@ -288,8 +285,8 @@ module.exports = {
         ignoreComments: false,
         ignoreStrings: true,
         ignoreTemplateLiterals: true,
-        ignoreRegExpLiterals: true
-      }
+        ignoreRegExpLiterals: true,
+      },
     ],
     /**
      * Enforce a maximum number of lines per file.
@@ -392,10 +389,10 @@ module.exports = {
           ["/", "*"],
           ["&", "|", "<<", ">>", ">>>"],
           ["==", "!=", "===", "!=="],
-          ["&&", "||"]
+          ["&&", "||"],
         ],
-        allowSamePrecedence: false
-      }
+        allowSamePrecedence: false,
+      },
     ],
     /**
      * Disallow mixed spaces and tabs for indentation.
@@ -417,8 +414,8 @@ module.exports = {
       {
         max: 1,
         maxEOF: 0,
-        maxBOF: 0
-      }
+        maxBOF: 0,
+      },
     ],
     /**
      * Disallow negated conditions.
@@ -453,22 +450,22 @@ module.exports = {
       {
         selector: "ForInStatement",
         message:
-          "'for..in' loops iterate over the entire prototype chain, which is virtually not what's intended in most cases. Use 'Object.{keys,values,entries}', and iterate over the resulting array."
+          "'for..in' loops iterate over the entire prototype chain, which is virtually not what's intended in most cases. Use 'Object.{keys,values,entries}', and iterate over the resulting array.",
       },
       {
         selector: "ForOfStatement",
         message:
-          "iterators/generators require 'regenerator-runtime', which are too heavyweight. Separately, loops should be avoided in favor of array iterations."
+          "iterators/generators require 'regenerator-runtime', which are too heavyweight. Separately, loops should be avoided in favor of array iterations.",
       },
       {
         selector: "LabeledStatement",
         message:
-          "Labels are a form of GOTO. Using them makes code confusing, hard to maintain, and decreases the readability."
+          "Labels are a form of GOTO. Using them makes code confusing, hard to maintain, and decreases the readability.",
       },
       {
         selector: "WithStatement",
-        message: "'with' is disallowed in strict mode because it makes code impossible to predict and optimize."
-      }
+        message: "'with' is disallowed in strict mode because it makes code impossible to predict and optimize.",
+      },
     ],
     /**
      * Disallow all tabs.
@@ -488,8 +485,8 @@ module.exports = {
       "error",
       {
         skipBlankLines: false,
-        ignoreComments: false
-      }
+        ignoreComments: false,
+      },
     ],
     /**
      * Disallow dangling underscores in identifiers.
@@ -501,8 +498,8 @@ module.exports = {
       {
         allowAfterThis: false,
         allowAfterSuper: false,
-        enforceInMethodNames: true
-      }
+        enforceInMethodNames: true,
+      },
     ],
     /**
      * Disallow ternary operators when simpler alternatives exist.
@@ -538,8 +535,8 @@ module.exports = {
         ObjectExpression: { multiline: true, consistent: true },
         ObjectPattern: { multiline: true, consistent: true },
         ImportDeclaration: { multiline: true, consistent: true },
-        ExportDeclaration: { multiline: true, consistent: true }
-      }
+        ExportDeclaration: { multiline: true, consistent: true },
+      },
     ],
     /**
      * Enforce placing object properties on separate lines.
@@ -595,8 +592,8 @@ module.exports = {
       {
         keywords: false,
         unnecessary: true,
-        numbers: false
-      }
+        numbers: false,
+      },
     ],
     /**
      * Enforce the consistent use of either backticks, double, or single quotes.
@@ -608,8 +605,8 @@ module.exports = {
       "double",
       {
         avoidEscape: true,
-        allowTemplateLiterals: true
-      }
+        allowTemplateLiterals: true,
+      },
     ],
     /**
      * Enforce or disallow semicolons instead of ASI.
@@ -625,8 +622,8 @@ module.exports = {
       "error",
       {
         before: false,
-        after: true
-      }
+        after: true,
+      },
     ],
     /**
      * Enforce location of semicolons.
@@ -642,8 +639,8 @@ module.exports = {
       "asc",
       {
         caseSensitive: false,
-        natural: true
-      }
+        natural: true,
+      },
     ],
     /**
      * Require variables within the same declaration block to be sorted.
@@ -667,8 +664,8 @@ module.exports = {
       {
         anonymous: "never",
         named: "never",
-        asyncArrow: "always"
-      }
+        asyncArrow: "always",
+      },
     ],
     /**
      * Enforce consistent spacing inside parentheses.
@@ -690,8 +687,8 @@ module.exports = {
       "error",
       {
         words: true,
-        nonwords: false
-      }
+        nonwords: false,
+      },
     ],
     /**
      * Enforce consistent spacing after the `//` or `/*` in a comment.
@@ -704,14 +701,14 @@ module.exports = {
       {
         line: {
           exceptions: ["+-"],
-          markers: ["!"]
+          markers: ["!"],
         },
         block: {
           exceptions: ["+-"],
           markers: ["!"],
-          balanced: true
-        }
-      }
+          balanced: true,
+        },
+      },
     ],
     /**
      * Enforce spacing around colons of switch statements.
@@ -721,8 +718,8 @@ module.exports = {
       "error",
       {
         after: true,
-        before: false
-      }
+        before: false,
+      },
     ],
     /**
      * Require or disallow spacing between template tags and their literals.
@@ -738,6 +735,6 @@ module.exports = {
      * Require parenthesis around regex literals.
      * @see https://eslint.org/docs/rules/wrap-regex
      */
-    "wrap-regex": "off"
-  }
+    "wrap-regex": "off",
+  },
 };

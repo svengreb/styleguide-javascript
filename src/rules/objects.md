@@ -35,7 +35,7 @@ function getSnow(snow) {
 
 const obj = {
   id: 5,
-  name: "South Pole"
+  name: "South Pole",
 };
 obj[getSnow("enabled")] = true;
 ```
@@ -50,7 +50,7 @@ function getSnow(snow) {
 const obj = {
   id: 5,
   name: "South Pole",
-  [getSnow("enabled")]: true
+  [getSnow("enabled")]: true,
 };
 ```
 
@@ -68,9 +68,9 @@ Use object method shorthand.
 const snow = {
   flake: 1,
 
-  addFlake: function(flake) {
+  addFlake: function (flake) {
     return snow.flake + flake;
-  }
+  },
 };
 ```
 
@@ -82,7 +82,7 @@ const snow = {
 
   addFlake(flake) {
     return snow.flake + flake;
-  }
+  },
 };
 ```
 
@@ -100,7 +100,7 @@ Use property value shorthand. It is shorter to write and descriptive.
 const southPole = "South Pole";
 
 const obj = {
-  southPole: southPole
+  southPole: southPole,
 };
 ```
 
@@ -110,7 +110,7 @@ const obj = {
 const southPole = "South Pole";
 
 const obj = {
-  southPole
+  southPole,
 };
 ```
 
@@ -130,7 +130,7 @@ const obj = {
   floatingIce: 1,
   northPole,
   penguins: 2,
-  southPole
+  southPole,
 };
 ```
 
@@ -144,7 +144,7 @@ const obj = {
   northPole,
   southPole,
   floatingIce: 1,
-  penguins: 2
+  penguins: 2,
 };
 ```
 
@@ -172,7 +172,7 @@ const obj = {
 const obj = {
   snow: 1,
   ice: 2,
-  "frost-wind": 3
+  "frost-wind": 3,
 };
 ```
 
@@ -222,7 +222,7 @@ Prefer the object spread operator over [`Object.assign`][mdn-object-assign] to s
 ```js
 const original = {
   snow: 1,
-  ice: 2
+  ice: 2,
 };
 // Both statements mutate "original"!
 const copy = Object.assign(original, { frost: 3 });

@@ -1,29 +1,26 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Arctic Ice Studio ESLint Base Configuration
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 /**
  * Environment specific settings, parser options and rules related to ECMAScript 6, also known as ES2015.
- * @since 0.1.0
+ *
  * @see https://eslint.org/docs/rules/#ecmascript-6
  * @see https://arcticicestudio.github.io/styleguide-javascript/rules/ecmascript_6+_styles.html
  */
 module.exports = {
   env: {
-    es6: true
+    es6: true,
   },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: "module",
     ecmaFeatures: {
       generators: false,
-      objectLiteralDuplicateProperties: false
-    }
+      objectLiteralDuplicateProperties: false,
+    },
   },
   rules: {
     /**
@@ -48,8 +45,8 @@ module.exports = {
       "error",
       {
         before: true,
-        after: true
-      }
+        after: true,
+      },
     ],
     /**
      * Enforce require `super()` calls in constructors.
@@ -64,8 +61,8 @@ module.exports = {
       "error",
       {
         before: false,
-        after: true
-      }
+        after: true,
+      },
     ],
     /**
      * Disallow reassigning class members.
@@ -134,8 +131,8 @@ module.exports = {
       {
         ignoreDestructuring: false,
         ignoreImport: false,
-        ignoreExport: false
-      }
+        ignoreExport: false,
+      },
     ],
     /**
      * Require `let` or `const` instead of `var`.
@@ -154,8 +151,8 @@ module.exports = {
       "always",
       {
         ignoreConstructors: false,
-        avoidQuotes: true
-      }
+        avoidQuotes: true,
+      },
     ],
     /**
      * Require using arrow functions for callbacks.
@@ -167,8 +164,8 @@ module.exports = {
       "error",
       {
         allowNamedFunctions: false,
-        allowUnboundThis: true
-      }
+        allowUnboundThis: true,
+      },
     ],
     /**
      * Require `const` declarations for variables that are never reassigned after declared.
@@ -180,8 +177,8 @@ module.exports = {
       "error",
       {
         destructuring: "any",
-        ignoreReadBeforeAssign: true
-      }
+        ignoreReadBeforeAssign: true,
+      },
     ],
     /**
      * Require destructuring from arrays and/or objects.
@@ -194,14 +191,14 @@ module.exports = {
       {
         VariableDeclarator: {
           array: false,
-          object: true
+          object: true,
         },
         AssignmentExpression: {
           array: true,
-          object: true
-        }
+          object: true,
+        },
       },
-      { enforceForRenamedProperties: false }
+      { enforceForRenamedProperties: false },
     ],
     /**
      * Disallow `parseInt()` and `Number.parseInt()` in favor of binary, octal, and hexadecimal literals.
@@ -244,8 +241,8 @@ module.exports = {
       {
         ignoreCase: false,
         ignoreMemberSort: false,
-        memberSyntaxSortOrder: ["none", "all", "multiple", "single"]
-      }
+        memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
+      },
     ],
     /**
      * Require symbol descriptions.
@@ -262,6 +259,6 @@ module.exports = {
      * Require or disallow spacing around the `*` in `yield*` expressions.
      * @see https://eslint.org/docs/rules/yield-star-spacing
      */
-    "yield-star-spacing": ["error", "after"]
-  }
+    "yield-star-spacing": ["error", "after"],
+  },
 };

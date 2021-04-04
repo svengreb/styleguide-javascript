@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Arctic Ice Studio ESLint Configuration
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 /**
  * TypeScript plugin rules and parser configurations.
+ *
  * @since 0.8.0
  * @see https://typescript-eslint.io
  * @see https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules
@@ -26,6 +24,6 @@ module.exports = {
      * Additionally enable the slightly expanded set of rules that require type information.
      * It also disables some ESLint core rules for compatibility since they are already handled by TypeScript.
      */
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
-  ]
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+  ],
 };

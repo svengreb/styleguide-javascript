@@ -1,9 +1,15 @@
 {
   "name": "@arcticicestudio/eslint-config",
-  "title": "Arctic Ice Studio ESLint Configuration",
   "version": "0.8.0",
   "description": "The Arctic Ice Studio JavaScript Style Guide rules with React support as an extensible shared ESLint configuration",
   "author": "Arctic Ice Studio <development@arcticicestudio.com> (https://www.arcticicestudio.com)",
+  "contributors": [
+    {
+      "name": "Sven Greb",
+      "email": "development@svengreb.de",
+      "url": "https://www.svengreb.de"
+    }
+  ],
   "homepage": "https://github.com/arcticicestudio/styleguide-javascript",
   "repository": {
     "type": "git",
@@ -15,49 +21,46 @@
   },
   "license": "MIT",
   "keywords": [
-    "styleguide",
-    "codestyle",
-    "eslint",
-    "config",
+    "style",
+    "guide",
     "javascript",
+    "ecmascript",
+    "eslint",
     "react",
     "a11y",
-    "prettier"
+    "eslint-config",
+    "rule",
+    "preset"
   ],
   "main": "index.js",
   "files": [
     "rules",
     "index.js",
-    "prettier.js",
     "react-hooks.js"
   ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "test": "yarn test:unused-rules",
+    "test": "npm run test:unused-rules",
     "test:unused-rules": "eslint-find-rules --unused --deprecated --no-error"
   },
   "dependencies": {
     "@arcticicestudio/eslint-config-base": ">=0.7.0 <1.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.2.0",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-find-rules": "3.4.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint": "^7.23.0",
+    "eslint-find-rules": "^3.6.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0"
   },
   "peerDependencies": {
-    "eslint": "^6.2.0",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint": "^7.23.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }

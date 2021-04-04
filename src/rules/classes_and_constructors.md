@@ -13,7 +13,7 @@ function Winter(elements = []) {
   this.elementQueue = [...elements];
 }
 
-Winter.prototype.pop = function() {
+Winter.prototype.pop = function () {
   const element = this.elementQueue[0];
   this.elementQueue.splice(0, 1);
   return element;
@@ -49,7 +49,7 @@ function SparklingWinter(elements) {
   Winter.apply(this, elements);
 }
 inherits(SparklingWinter, Winter);
-SparklingWinter.prototype.sparkle = function() {
+SparklingWinter.prototype.sparkle = function () {
   return this.sparkles[0];
 };
 ```
@@ -73,12 +73,12 @@ Methods can return `this` to help with method chaining.
 ⇣ **Incorrect** code for this rule:
 
 ```js
-Snow.prototype.fall = function() {
+Snow.prototype.fall = function () {
   this.falling = true;
   return true;
 };
 
-Snow.prototype.setFlakeDensity = function(density) {
+Snow.prototype.setFlakeDensity = function (density) {
   this.flakeDensity = density;
 };
 

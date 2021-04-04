@@ -43,7 +43,7 @@ winter()
 ```js
 const snow = {};
 const frost = {};
-[snow, frost].forEach(element => {
+[snow, frost].forEach((element) => {
   season.name = "winter";
 });
 ```

@@ -1,17 +1,14 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Arctic Ice Studio ESLint Base Configuration
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 const confusingBrowserGlobals = require("confusing-browser-globals");
 
 /**
  * Rules related to variable declarations.
- * @since 0.1.0
+ *
  * @see https://eslint.org/docs/rules/#variables
  */
 module.exports = {
@@ -73,8 +70,8 @@ module.exports = {
       {
         vars: "all",
         args: "after-used",
-        ignoreRestSiblings: true
-      }
+        ignoreRestSiblings: true,
+      },
     ],
     /**
      * Disallow the use of variables before they are defined.
@@ -85,8 +82,8 @@ module.exports = {
       {
         functions: true,
         classes: true,
-        variables: true
-      }
-    ]
-  }
+        variables: true,
+      },
+    ],
+  },
 };

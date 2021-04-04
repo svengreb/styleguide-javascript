@@ -54,7 +54,7 @@ for (let i = 0; i < snowflakes.length; i++) {
 const snowflakes = [1, 2, 3, 4, 5];
 
 let flakes = 0;
-snowflakes.forEach(flake => {
+snowflakes.forEach((flake) => {
   flakes += flake;
 });
 flakes === 15;
@@ -64,7 +64,7 @@ flakes === 15;
 const snowflakes = [1, 2, 3, 4, 5];
 
 const increasedByOne = [];
-snowflakes.forEach(flake => {
+snowflakes.forEach((flake) => {
   increasedByOne.push(flake + 1);
 });
 ```
@@ -81,7 +81,7 @@ flakes === 15;
 ```js
 const snowflakes = [1, 2, 3, 4, 5];
 
-const increasedByOne = snowflakes.map(flake => flake + 1);
+const increasedByOne = snowflakes.map((flake) => flake + 1);
 ```
 
 ## No Generators
@@ -156,7 +156,7 @@ function* snow() {}
 ```
 
 ```js
-const snow = function*() {};
+const snow = function* () {};
 ```
 
 [eslint/no-iterator]: https://eslint.org/docs/rules/no-iterator

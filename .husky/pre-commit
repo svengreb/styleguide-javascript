@@ -1,9 +1,15 @@
+#!/bin/sh
+
 # Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
 # Copyright (c) 2018-present Sven Greb <development@svengreb.de>
 # This source code is licensed under the MIT license found in the LICENSE file.
 
-# Path match pattern to ignore (i.e. not reformat) certain files and folders.
-# See https://prettier.io/docs/en/ignore for more details.
+# Git "pre-commit" hook for husky.
+#
+# References:
+#   1. https://github.com/typicode/husky
+#   2. https://git-scm.com/docs/githooks#_pre_commit
 
-build/*
-**/node_modules/*
+. "$(dirname "$0")/_/husky.sh"
+
+npm exec lint-staged

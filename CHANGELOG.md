@@ -1,10 +1,103 @@
-<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/styleguide-javascript/develop/assets/images/repository-hero.svg?sanitize=true"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/styleguide-javascript/master/assets/images/repository-hero.svg?sanitize=true"/></p>
 
-<p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-javascript.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a> <a href="https://arcticicestudio.github.io/styleguide-javascript" target="_blank"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-javascript.svg?style=flat-square&label=Docs&logo=read-the-docs&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
+<p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/releases/latest" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-javascript.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a> <a href="https://arcticicestudio.github.io/styleguide-javascript" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-javascript.svg?style=flat-square&label=Docs&logo=read-the-docs&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
 
-<p align="center">Changelog for the official <a href="https://github.com/arcticicestudio/styleguide-javascript" target="_blank">Arctic Ice Studio JavaScript Code Style</a></p>
+<p align="center"><a href="https://www.npmjs.com/package/@arcticicestudio/eslint-config" target="_blank" rel="noreferrer"><img src="https://img.shields.io/npm/v/@arcticicestudio/eslint-config.svg?style=flat-square&label=@arcticicestudio/eslint-config&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTEyIDE0SDRhMiAyIDAgMCAxLTItMlY0YTIgMiAwIDAgMSAyLTJoOGEyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxLTIgMnpNNCAzLjMzMkEuNjcuNjcgMCAwIDAgMy4zMzIgNHY4YzAgLjM2Ny4zLjY2OC42NjguNjY4aDhhLjY3LjY3IDAgMCAwIC42NjgtLjY2OFY0QS42Ny42NyAwIDAgMCAxMiAzLjMzMnptMCAwIi8+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTggNmgyLjY2OHY2LjY2OEg4em0wIDAiLz48L3N2Zz4K"/></a> <a href="https://www.npmjs.com/package/@arcticicestudio/eslint-config-base" target="_blank" rel="noreferrer"><img src="https://img.shields.io/npm/v/@arcticicestudio/eslint-config-base.svg?style=flat-square&label=@arcticicestudio/eslint-config-base&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTEyIDE0SDRhMiAyIDAgMCAxLTItMlY0YTIgMiAwIDAgMSAyLTJoOGEyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxLTIgMnpNNCAzLjMzMkEuNjcuNjcgMCAwIDAgMy4zMzIgNHY4YzAgLjM2Ny4zLjY2OC42NjguNjY4aDhhLjY3LjY3IDAgMCAwIC42NjgtLjY2OFY0QS42Ny42NyAwIDAgMCAxMiAzLjMzMnptMCAwIi8+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTggNmgyLjY2OHY2LjY2OEg4em0wIDAiLz48L3N2Zz4K"/></a> <a href="https://www.npmjs.com/package/@arcticicestudio/eslint-config-typescript" target="_blank" rel="noreferrer"><img src="https://img.shields.io/npm/v/@arcticicestudio/eslint-config-typescript.svg?style=flat-square&label=@arcticicestudio/eslint-config-typescript&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTEyIDE0SDRhMiAyIDAgMCAxLTItMlY0YTIgMiAwIDAgMSAyLTJoOGEyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxLTIgMnpNNCAzLjMzMkEuNjcuNjcgMCAwIDAgMy4zMzIgNHY4YzAgLjM2Ny4zLjY2OC42NjguNjY4aDhhLjY3LjY3IDAgMCAwIC42NjgtLjY2OFY0QS42Ny42NyAwIDAgMCAxMiAzLjMzMnptMCAwIi8+PHBhdGggZmlsbD0iI2Q4ZGVlOSIgZD0iTTggNmgyLjY2OHY2LjY2OEg4em0wIDAiLz48L3N2Zz4K"/></a> </p>
+
+<p align="center">Changelog for the official <a href="https://github.com/arcticicestudio/styleguide-javascript" target="_blank" rel="noreferrer">Arctic Ice Studio JavaScript code style</a>.</p>
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
+
+# 0.8.0
+
+![Release Date: 2019-08-22](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-22&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/projects/6) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/milestone/3)
+
+⇅ [Show all commits][gh-compare-tag-v0.7.0_v0.8.0]
+
+## Features
+
+### Packages
+
+#### `@arcticicestudio/eslint-config`
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/63332289-9318bb80-c337-11e9-8291-c0969f587e79.png" /></p>
+
+**React Hooks support and entry point** — #17 ⇄ #18 (⊶ 833cc51d)
+↠ All React based _Arctic Ice Studio_ projects using at least React version [16.8][react-b-rln-16.8.0] that introduced the awesome [Hooks][react-d-hooks]. Since this comes with a [entire new API][react-d-hooks-api] that follows new design/usage pattern, the React team created an official [„Hooks“ ESLint plugin][gh-t-esl-p-react-hooks] to help to adhere to the [„Rules of Hooks“][react-d-hooks-rules].
+
+Since the `@arcticicestudio/eslint-config` package already includes support for React and „JSX A11Y“, support for _Hooks_ has also been added through a new shareable configuration entry point that
+
+- enables the `react-hooks` plugin.
+- configures both currently available rules `react-hooks/rules-of-hooks` and `react-hooks/exhaustive-deps` rule to `error` level.
+
+Because _Hooks_ make more use of arrow functions the [`react/jsx-no-bind`][gh-esl-p-react-jsx_bind] has been adjusted to prevent compatibility problems by allowing setting the `ignoreDOMComponents` and `allowArrowFunctions` options to `true`.
+The `react/display-name` rule has also been disabled in order to prevent problems due to missing _display names_ for _functional components_ that make use of _Hooks_ instead of being created through a _class_ component.
+
+The new entry point is available as `@arcticicestudio/eslint-config/react-hooks` and can be composed with all other [available entry points][gh-b-pkg-esl-readme#entry_points] to inherit their rules.
+
+This feature adds the `eslint-plugin-react-hooks` package as new peer dependency for `@arcticicestudio/eslint-config`.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/63377282-1534ce80-c390-11e9-8ab6-53f125f34d5c.png" /></p>
+
+**ESLint TypeScript Configuration Package** — #19 ⇄ #20 (⊶ 484c981d)
+↠ To support projects build with [TypeScript][], a new `@arcticicestudio/eslint-config-typescript` package has been implemented using the awesome [@typescript-eslint][gh-tsesl] project. It mainly extends `@typescript-eslint/eslint-plugin`'s [already provided and recommended configurations][gh-tsesl-t-configs] in order to adapt best practices:
+
+1. `plugin:@typescript-eslint/eslint-recommended`
+2. `plugin:@typescript-eslint/recommended`
+3. `plugin:@typescript-eslint/recommended-requiring-type-checking`
+
+The [`@typescript-eslint/parser`][gh-tsesl-parser] is set as ESLint parser. As of [`@typescript-eslint/parser` version `2.0.0`][gh-tsesl-rl-2.0.0] (also see [typescript-eslint/typescript-eslint#890][gh-tsesl#890]), the parser will panic when parsing files that are not included within the provided _tsconfig(s)_.
+The documentation of the new package contains instructions and a quick setup and usage guide to inform about the [required `tsconfig` configurations][gh-tsesl-parser#config] and the corresponding `eslintrc` changes.
+
+Next to the support for TypeScript, the package also modifies some _React_ and _import_ related rules in order to prevent conflicts, like the adaption of the `.ts` and `.tsx` extensions for all JS and JSX files as well as removing `.jsx` to force the usage of `.tsx`. There are other rules that have been disabled like the check for valid React `prop-types` since these and not necessary anymore when working with TypeScript.
+
+The new package provides two entry points, available as `@arcticicestudio/eslint-config-typescript` and `@arcticicestudio/eslint-config-typescript/prettier` that can both be composed with all other [available entry points][gh-b-pkg-esl-readme#entry_points] to inherit their rules.
+
+This package mainly depends on the `@typescript-eslint/eslint-plugin@^2.0.0` and `@typescript-eslint/parser@^2.0.0` packages as peer dependencies.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/63409801-31695780-c3f2-11e9-9742-8212f4919557.png" /></p>
+
+**From CircleCI to GitHub Actions** — #21 ⇄ #22 (⊶ c7d663eb)
+↠ The project migrated from [CircleCI][cci] as CI/CD service to the awesome new [GitHub Actions][gh-feat-actions] that is smoothly integrated into the GitHub platform and page for a „single-source-of-truth“ developer experience: OPS configurations as code right next to the source code in the repository.
+
+##### Previous Project State
+
+The previous project setup used [CircleCI][cci] with [API version 2.x][cci-d] as CI/CD service. This worked great, but also comes with the disadvantage of being decoupled from the repository.
+
+<p align="center">
+  <figure>
+      <div align="center"><img src="https://user-images.githubusercontent.com/7836623/63436449-00f0e000-c429-11e9-95e4-5fffe64e859b.jpg" width="80%" /></div>
+      <figcaption><div align="center">The <em>GitHub Actions</em> CI/CD UI</div></figcaption>
+  </figure>
+</p>
+
+During _GitHub Universe 2018_, the awesome new [GitHub Actions][gh-feat-actions] feature was [introduced and launched as closed beta][gh-blog-actions]. Luckily _Arctic Ice Studio_ was given access in order to test all the great possibilities. During the [GitHub Actions stream „Now with built-in CI/CD!“ (live from GitHub HQ)][yt-gh-stream-actions_cicd] the _Actions_ update was announced and previewed showing the expansion to use _GitHub Actions_ as [CI/CD service described as „fast CI/CD for any OS, any language, and any cloud“][gh-blog-actions-cicd].
+
+<p align="center">
+  <figure>
+      <div align="center"><img src="https://user-images.githubusercontent.com/7836623/63409864-4c3bcc00-c3f2-11e9-99f0-24964e4a8cc2.gif" width="80%" /></div>
+      <figcaption><div align="center">Live logs showing real-time feedback</div></figcaption>
+  </figure>
+</p>
+
+**See the [official GitHub Actions documentation][gh-help-actions] for details about setups, features, the configuration API and many more!**
+
+##### Project Integration
+
+The switch from _CircleCI_ to _GitHub Actions_ brought many advantages like a „close-to-the-source“ development pipeline. Having the code and automated pipelines/workflows in one place is worth a lot. This also comes along with the perfect and smooth integrations into the GitHub platform and page itself like status reports on PRs and many more possibilities like the [customization and triggering of workflows through webhooks][gh-help-actions-events] for almost every event that can occur in a repository/issue/PR etc.
+
+To integrate _GitHub Actions_ the previous [_CircleCI_ build configuration][gh-b-ac611f7e-circleci] has been adapted and adjusted. The official [starter-workflows][gh-starter-workflows] were used as inspiration as well as showcase projects like [Yarn _Berry_ (Yarn v2)][gh-yarn-berry-t-gh-wrkf] also presented during the announcement livestream.
+
+Next to the `starter-workflows` repository the [official _GitHub Actions_ documentation][gh-help-actions] was the main source of information to set up the project workflows.
+
+<p align="center">
+  <figure>
+      <div align="center"><img src="https://user-images.githubusercontent.com/7836623/63436450-01897680-c429-11e9-8031-4a744a816fe0.png" width="80%" /></div>
+      <figcaption><div align="center"><em>GitHub Actions</em> starter workflows based on the epository languages</div></figcaption>
+  </figure>
+</p>
+
+Since _GitHub Actions_ are still in closed/limited public beta, there is no support for SVG badges through [shields.io][]. Anyway, there are (currently undocumented) official badges provided by the GitHub API that are used until _Actions_ goes _GA_ and [shields.io][] implements support for it: `https://github.com/{owner}/{repo}/workflows/{workflow_name}/badge.svg`
 
 # 0.8.0
 
@@ -98,6 +191,8 @@ Since _GitHub Actions_ are still in closed/limited public beta, there is no supp
 # 0.7.0
 
 ![Release Date: 2019-08-19](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-19&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/projects/3) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/milestone/2)
+
+⇅ [Show all commits][gh-compare-tag-v0.6.0_v0.7.0]
 
 ## Epics
 
@@ -218,6 +313,8 @@ Read #13 for more details about the configuration and setup.
 # 0.6.0
 
 ![Release Date: none](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=-&colorA=4c566a&colorB=88c0d0) ![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.6.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)
+
+⇅ [Show all commits][gh-compare-tag-v0.5.0_v0.6.0]
 
 ↳ Release date of transferred `eslint-config-base` package: _2019-08-14_
 
@@ -413,6 +510,8 @@ The following [rules are deprecated][esl-d-r#dep] and have been removed or repla
 
 ![Release Date: none](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=-&colorA=4c566a&colorB=88c0d0) ![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.5.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)
 
+⇅ [Show all commits][gh-compare-tag-v0.4.0_v0.5.0]
+
 ↳ Release date of transferred `eslint-config` package: _2019-08-19_
 ↳ Release date of transferred `eslint-config-base` package: _2018-11-17_
 
@@ -476,6 +575,8 @@ The following rules have been deprecated and therefore removed or replaced:
 
 ![Release Date: none](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=-&colorA=4c566a&colorB=88c0d0) ![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.4.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)
 
+⇅ [Show all commits][gh-compare-tag-v0.3.0_v0.4.0]
+
 ↳ Release date of transferred `eslint-config` package: _2018-11-16_
 ↳ Release date of transferred `eslint-config-base` package: _2018-11-15_
 
@@ -502,6 +603,8 @@ The following rules have been deprecated and therefore removed or replaced:
 # 0.3.0
 
 ![Release Date: none](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=-&colorA=4c566a&colorB=88c0d0) ![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.3.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)
+
+⇅ [Show all commits][gh-compare-tag-v0.2.0_v0.3.0]
 
 ↳ Release date of transferred `eslint-config` package: _2018-05-20_
 ↳ Release date of transferred `eslint-config-base` package: _2018-05-20_
@@ -535,6 +638,8 @@ This improvement also added the `ImportDeclaration` and `ExportDeclaration` conf
 # 0.2.0
 
 ![Release Date: none](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=-&colorA=4c566a&colorB=88c0d0) ![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.2.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)
+
+⇅ [Show all commits][gh-compare-tag-v0.1.0_v0.2.0]
 
 ↳ Release date of transferred `eslint-config` package: _2018-05-14_
 ↳ Release date of transferred `eslint-config-base` package: _2018-05-12_
@@ -685,6 +790,8 @@ It was set up to run the `npx` command to install the peer dependencies that is 
 
 ![Release Date: 2018-01-27](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2018-01-27&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.1.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/projects/2) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.1.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/milestone/1)
 
+⇅ [Show all commits][gh-compare-tag-init_v0.1.0]
+
 ↳ Release date of transferred `eslint-config` package: _2018-02-05_
 ↳ Release date of transferred `eslint-config-base` package: _2018-02-04_
 
@@ -716,13 +823,20 @@ More details can also be found in the initially published ~~[project documentati
 ↠ Added all [ESLint core rules][esl-r] and [eslint-plugin-import][gh-esl-p-import] plugin rules.
 More details can also be found in the initially published ~~[project documentation][noop]~~.
 
-<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/develop/assets/images/nord/repository-footer-separator.svg?sanitize=true" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/master/assets/images/nord/repository-footer-separator.svg?sanitize=true" /></p>
 
-<p align="center">Copyright &copy; 2018-present <a href="https://www.arcticicestudio.com" target="_blank">Arctic Ice Studio</a> and <a href="https://www.svengreb.de" target="_blank">Sven Greb</a></p>
+<p align="center">Copyright &copy; 2018-present <a href="https://www.arcticicestudio.com" target="_blank">Arctic Ice Studio</a> and <a href="https://www.svengreb.de" target="_blank" rel="noreferrer">Sven Greb</a></p>
 
-<p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/blob/develop/LICENSE.md" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=License&message=MIT&logoColor=eceff4&logo=github&colorA=4c566a&colorB=88c0d0"/></a></p>
+<p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/blob/master/LICENSE" target="_blank" rel="noreferrer"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=License&message=MIT&logoColor=eceff4&logo=github&colorA=4c566a&colorB=88c0d0"/></a></p>
 
 <!--
++------------------+
++ Formatting Notes +
++------------------+
+
+The `<summary />` tag must be separated with a blank line from the actual item content paragraph,
+otherwise Markdown elements are not parsed and rendered!
+
 +------------------+
 + Symbol Reference +
 +------------------+
@@ -730,27 +844,33 @@ More details can also be found in the initially published ~~[project documentati
 — (U+2014): Separator between a log section title and the metadata
 ⇄ (U+21C4): Separator between a issue ID and pull request ID in a log metadata
 ⊶ (U+22B6): Icon prefix for the short commit SHA checksum in a log metadata
+⇅ (U+21C5): Icon prefix for the link of the Git commit history comparison on GitHub
 -->
 
 <!--lint disable final-definition-->
 
-<!-- Base -->
+<!-- Shared -->
 
 [cra]: https://create-react-app.dev
+[docs-r-func#sig_invoc_indent]: https://arcticicestudio.github.io/styleguide-javascript/rules/functions.html#signature-invocation-indentation
+[docs-r-react-order#meth_props]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/ordering.html#component-methods-and-properties
 [docs-r-react]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/index.html
 [docs-r]: https://arcticicestudio.github.io/styleguide-javascript/rules/index.html
 [docs]: https://arcticicestudio.github.io/styleguide-javascript
+[esl-b-rl-6.0.0]: https://eslint.org/blog/2019/06/eslint-v6.0.0-released
+[esl-d-mg-6.0.0]: https://eslint.org/docs/user-guide/migrating-to-6.0.0
 [esl-r]: https://eslint.org/docs/rules
 [eslint]: https://eslint.org
 [flow]: https://flow.org
 [gatsby]: https://gatsbyjs.org
+[gh-b-pkg-esl-readme#entry_points]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/packages/%40arcticicestudio/eslint-config/README.md#entry-points
 [gh-esl-c-prettier]: https://github.com/prettier/eslint-config-prettier
 [gh-esl-p-import]: https://github.com/benmosher/eslint-plugin-import
 [gh-esl-p-jsx-a11y]: https://github.com/evcohen/eslint-plugin-jsx-a11y
 [gh-esl-p-prettier]: https://github.com/prettier/eslint-plugin-prettier
 [gh-esl-p-react]: https://github.com/yannickcr/eslint-plugin-react
-[gh-t-pkg-esl-base]: https://github.com/arcticicestudio/styleguide-javascript/tree/develop/packages/@arcticicestudio/eslint-config-base
-[gh-t-pkg-esl]: https://github.com/arcticicestudio/styleguide-javascript/tree/develop/packages/@arcticicestudio/eslint-config
+[gh-t-pkg-esl-base]: https://github.com/arcticicestudio/styleguide-javascript/tree/master/packages/@arcticicestudio/eslint-config-base
+[gh-t-pkg-esl]: https://github.com/arcticicestudio/styleguide-javascript/tree/master/packages/@arcticicestudio/eslint-config
 [jest]: https://jestjs.io
 [mdn-js-op-cond]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 [mdn-js-op-destruct]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
@@ -759,23 +879,16 @@ More details can also be found in the initially published ~~[project documentati
 [remark]: https://remark.js.org
 [semver]: https://semver.org
 [shields.io]: https://shields.io
+[styleguide-markdown]: https://arcticicestudio.github.io/styleguide-markdown
 [trbdev-monorepo]: https://trunkbaseddevelopment.com/monorepos
 [typescript]: https://www.typescriptlang.org
-
-<!-- Shared -->
-
-[docs-r-func#sig_invoc_indent]: https://arcticicestudio.github.io/styleguide-javascript/rules/functions.html#signature-invocation-indentation
-[docs-r-react-order#meth_props]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/ordering.html#component-methods-and-properties
-[esl-b-rl-6.0.0]: https://eslint.org/blog/2019/06/eslint-v6.0.0-released
-[esl-d-mg-6.0.0]: https://eslint.org/docs/user-guide/migrating-to-6.0.0
-[gh-b-pkg-esl-readme#entry_points]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/packages/%40arcticicestudio/eslint-config/README.md#entry-points
-[styleguide-markdown]: https://arcticicestudio.github.io/styleguide-markdown
 
 <!-- v0.1.0 -->
 
 [docs-r-react-a11y]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/accessibility_a11y.html
 [docs-r-react-hoc]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/higher_order_components.html
 [docs-r-react-props]: https://arcticicestudio.github.io/styleguide-javascript/rules/react/props.html
+[gh-compare-tag-init_v0.1.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/d2d94733...v0.1.0
 
 <!-- v0.2.0 -->
 
@@ -784,7 +897,8 @@ More details can also be found in the initially published ~~[project documentati
 [esl-r-max-len]: https://eslint.org/docs/rules/max-len
 [esl-r-operator-linebreak]: https://eslint.org/docs/rules/operator-linebreak
 [esl-r-sort-imports]: https://eslint.org/docs/rules/sort-imports
-[gh-clog#0.2.0]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CHANGELOG.md#020
+[gh-clog#0.2.0]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/CHANGELOG.md#020
+[gh-compare-tag-v0.1.0_v0.2.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.1.0...v0.2.0
 [gh-esl-p-import-clog-2.10.0]: https://github.com/benmosher/eslint-plugin-import/blob/master/CHANGELOG.md#2100---2018-03-29
 [gh-esl-p-import-clog-2.9.0]: https://github.com/benmosher/eslint-plugin-import/blob/master/CHANGELOG.md#290---2018-02-21
 [gh-esl-p-import/first]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
@@ -802,11 +916,13 @@ More details can also be found in the initially published ~~[project documentati
 
 [esl-r-default-case]: https://eslint.org/docs/rules/default-case
 [esl-r-object-curly-newline]: https://eslint.org/docs/rules/object-curly-newline
+[gh-compare-tag-v0.2.0_v0.3.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.2.0...v0.3.0
 [gh-esl-rl-4.18.0]: https://github.com/eslint/eslint/releases/tag/v4.18.0
 
 <!-- v0.4.0 -->
 
 [esl-r-valid-jsdoc]: https://eslint.org/docs/rules/valid-jsdoc
+[gh-compare-tag-v0.3.0_v0.4.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.3.0...v0.4.0
 [gh-esl-p-react/boolean-prop-naming]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
 [gh-esl-p-react/jsx-sort-props]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
 
@@ -814,6 +930,7 @@ More details can also be found in the initially published ~~[project documentati
 
 [esl-r-quote-props#keywords]: https://eslint.org/docs/rules/quote-props.html#keywords
 [esl-r-quote-props#numbers]: https://eslint.org/docs/rules/quote-props.html#numbers
+[gh-compare-tag-v0.4.0_v0.5.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.4.0...v0.5.0
 [gh-esl-p-jsx-a11y/label-has-associated-control]: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-associated-control.md
 [gh-esl-p-jsx-a11y/label-has-for.md]: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-for.md
 
@@ -852,6 +969,7 @@ More details can also be found in the initially published ~~[project documentati
 [esl-r-no-prototype-builtins]: https://eslint.org/docs/rules/no-prototype-builtins
 [esl-r-no-shadow]: https://eslint.org/docs/rules/no-shadow
 [esl-r-no-underscore-dangle]: https://eslint.org/docs/rules/no-underscore-dangle
+[gh-compare-tag-v0.5.0_v0.6.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.5.0...v0.6.0
 [gh-confusing-browser-globals]: https://github.com/facebook/create-react-app/tree/master/packages/confusing-browser-globals
 [gh-esl-b-7ad86de-r-empty_line:63]: https://github.com/eslint/eslint/blob/7ad86dea02feceb7631943a7e1423cc8a113fcfe/lib/rules/no-multiple-empty-lines.js#L63
 [gh-esl-p-react/forbid-prop-types]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
@@ -869,6 +987,7 @@ More details can also be found in the initially published ~~[project documentati
 [esl-d-dev-share_conf#scope]: https://eslint.org/docs/developer-guide/shareable-configs#npm-scoped-modules
 [gh-blog-intro-issue-templ]: https://blog.github.com/2016-02-17-issue-and-pull-request-templates
 [gh-blog-multi-issue-templ]: https://blog.github.com/2018-01-25-multiple-issue-and-pull-request-templates
+[gh-compare-tag-v0.6.0_v0.7.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.6.0...v0.7.0
 [gh-help-issue-templ-depr]: https://help.github.com/articles/manually-creating-a-single-issue-template-for-your-repository
 [gh-help-issue-templ-repo]: https://help.github.com/articles/creating-issue-templates-for-your-repository
 [gh-help-issue-templ]: https://help.github.com/articles/about-issue-and-pull-request-templates
@@ -910,3 +1029,4 @@ More details can also be found in the initially published ~~[project documentati
 [react-d-hooks-rules]: https://reactjs.org/docs/hooks-rules.html
 [react-d-hooks]: https://reactjs.org/docs/hooks-intro.html
 [yt-gh-stream-actions_cicd]: https://www.youtube.com/watch?v=E1OunoCyuhY
+[gh-compare-tag-v0.7.0_v0.8.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.7.0...v0.8.0

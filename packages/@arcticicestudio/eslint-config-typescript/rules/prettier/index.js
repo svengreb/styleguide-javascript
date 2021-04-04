@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Arctic Ice Studio ESLint Configuration
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 /**
  * Prettier plugin rules.
+ *
  * @since 0.8.0
  * @see https://github.com/prettier/eslint-plugin-prettier
  * @see https://github.com/prettier/eslint-config-prettier
@@ -21,6 +19,6 @@ module.exports = {
     /**
      * Run Prettier as an ESLint rule and report differences as individual ESLint issues.
      */
-    "prettier/prettier": "error"
-  }
+    "prettier/prettier": "error",
+  },
 };

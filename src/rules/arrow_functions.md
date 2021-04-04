@@ -13,7 +13,7 @@ When dealing with a fairly complicated function, it is recommended to move that 
 ⇣ **Incorrect** code for this rule:
 
 ```js
-[1, 2, 3].map(function(number) {
+[1, 2, 3].map(function (number) {
   const nextNumber = number + 1;
   return number * nextNumber;
 });
@@ -22,7 +22,7 @@ When dealing with a fairly complicated function, it is recommended to move that 
 ⇡ **Correct** code for this rule:
 
 ```js
-[1, 2, 3].map(number => {
+[1, 2, 3].map((number) => {
   const nextNumber = number + 1;
   return number * nextNumber;
 });
@@ -30,7 +30,7 @@ When dealing with a fairly complicated function, it is recommended to move that 
 
 ## Implicit Return
 
-If the function body consists of a single statement returning an [expression][mdn-expressions_and_operators] without side effects, omit the braces and use the implicit return. Otherwise use a `return` statement. This rule is syntactic sugar and significantly increases the readability when multiple functions are chained together.
+If the function body consists of a single statement returning an [expression][mdn-expressions_and_operators] without side effects, use the implicit return. Otherwise use a `return` statement. This rule is syntactic sugar and significantly increases the readability when multiple functions are chained together.
 
 > ESLint: [arrow-parens][eslint/arrow-parens] and [arrow-body-style][eslint/arrow-body-style]
 
@@ -39,7 +39,7 @@ If the function body consists of a single statement returning an [expression][md
 ⇣ **Incorrect** code for this rule:
 
 ```js
-["snow", "frost"].map(element => {
+["snow", "frost"].map((element) => {
   const nextElement = element;
   `The winter season has ${nextElement}.`;
 });
@@ -54,7 +54,7 @@ snow(() => isFalling = true);
 ```
 
 ```js
-[1, 2, 3].map(number => {
+[1, 2, 3].map((number) => {
   const nextNumber = number + 1;
   `A string containing the ${nextNumber}.`;
 });
@@ -65,11 +65,11 @@ snow(() => isFalling = true);
 ⇡ **Correct** code for this rule:
 
 ```js
-["snow", "frost"].map(element => `The winter season has ${element}.`);
+["snow", "frost"].map((element) => `The winter season has ${element}.`);
 ```
 
 ```js
-["snow", "frost"].map(element => {
+["snow", "frost"].map((element) => {
   const sparklingElement = `sparkling ${element}`;
   return `The winter season has ${sparklingElement}.`;
 });
@@ -77,12 +77,12 @@ snow(() => isFalling = true);
 
 ```js
 ["snow", "frost"].map((element, index) => ({
-  [index]: element
+  [index]: element,
 }));
 ```
 
 ```js
-[1, 2, 3].map(number => `A string containing the ${number + 1}.`);
+[1, 2, 3].map((number) => `A string containing the ${number + 1}.`);
 ```
 
 ```js
@@ -137,7 +137,7 @@ In case the expression spans over multiple lines, wrap it in parentheses for bet
 
 ## Single Argument Parentheses
 
-If a function takes a single argument and doesn't use braces, omit the parentheses. Otherwise, always include parentheses around arguments for clarity and consistency.
+Always include parentheses around arguments for clarity and consistency, even when a function takes a single argument.
 
 > ESLint: [arrow-parens][eslint/arrow-parens]
 
@@ -164,12 +164,12 @@ If a function takes a single argument and doesn't use braces, omit the parenthes
 ⇡ **Correct** code for this rule:
 
 ```js
-["snow", "frost"].map(element => `sparkling ${element}`);
+["snow", "frost"].map((element) => `sparkling ${element}`);
 ```
 
 ```js
 ["snow", "frost"].map(
-  element =>
+  (element) =>
     `A long string about the winter season with sparkling ${element}. It's so long that we don't want it to take up space on the ".map()" line!`
 );
 ```
@@ -200,11 +200,11 @@ const elementDensity = (element) => element.density > 256 ? element.highDensity 
 ⇡ **Correct** code for this rule:
 
 ```js
-const elementDensity = element => (element.density > 256 ? element.highDensity : element.lowDensity);
+const elementDensity = (element) => (element.density > 256 ? element.highDensity : element.lowDensity);
 ```
 
 ```js
-const elementDensity = element => {
+const elementDensity = (element) => {
   const { density, highDensity, lowDensity } = element;
   return density > 256 ? highDensity : lowDensity;
 };

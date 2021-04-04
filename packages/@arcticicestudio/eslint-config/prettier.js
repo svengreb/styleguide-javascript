@@ -1,10 +1,7 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Arctic Ice Studio ESLint Configuration
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 /**
@@ -12,10 +9,12 @@
  *
  * - `eslint-plugin-react`
  *
- * @since 0.5.0
+ * @since 0.9.0
+ * @deprecated Moved into the @arcticicestudio/eslint-config-base package.
+ * This entry point will be removed in version 1.0.0.
  * @see https://github.com/prettier/eslint-plugin-prettier
  * @see https://github.com/prettier/eslint-config-prettier
  */
 module.exports = {
-  extends: ["./rules/prettier"].map(require.resolve)
+  /* Deprecated */
 };

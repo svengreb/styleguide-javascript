@@ -1,15 +1,12 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Arctic Ice Studio ESLint Base Configuration
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 /**
  * Import plugin rules related to static analysis.
- * @since 0.1.0
+ *
  * @see https://github.com/benmosher/eslint-plugin-import/blob/master/README.md#rules
  */
 module.exports = {
@@ -23,8 +20,8 @@ module.exports = {
       "error",
       {
         commonjs: true,
-        caseSensitive: true
-      }
+        caseSensitive: true,
+      },
     ],
     /**
      * Ensure named imports correspond to a named export in the remote file.
@@ -97,6 +94,6 @@ module.exports = {
      * @since 0.6.0
      * @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
      */
-    "import/no-unused-modules": "off"
-  }
+    "import/no-unused-modules": "off",
+  },
 };

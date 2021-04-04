@@ -1,15 +1,12 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Arctic Ice Studio ESLint Base Configuration
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 /**
  * Import plugin rules related to helpful warnings.
- * @since 0.1.0
+ *
  * @see https://github.com/benmosher/eslint-plugin-import/blob/master/README.md#rules
  */
 module.exports = {
@@ -60,15 +57,15 @@ module.exports = {
           "**/gulpfile.js",
           "**/gulpfile.*.js",
           "**/Gruntfile{,.js}",
-          "**/gatsby-*{,.js}"
-        ]
-      }
+          "**/gatsby-*{,.js}",
+        ],
+      },
     ],
     /**
      * Forbid the use of mutable exports with `var` or `let`.
      * @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
      * @see https://arcticicestudio.github.io/styleguide-javascript/rules/modules.html#no-mutable-exports
      */
-    "import/no-mutable-exports": "error"
-  }
+    "import/no-mutable-exports": "error",
+  },
 };

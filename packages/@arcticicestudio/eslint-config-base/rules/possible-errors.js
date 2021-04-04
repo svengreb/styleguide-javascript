@@ -1,15 +1,12 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Arctic Ice Studio ESLint Base Configuration
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 /**
  * Rules related to possible syntax or logic errors.
- * @since 0.1.0
+ *
  * @see https://eslint.org/docs/rules/#possible-errors
  */
 module.exports = {
@@ -52,8 +49,8 @@ module.exports = {
     "no-console": [
       "warn",
       {
-        allow: ["warn", "error", "time", "timeEnd", "timeStamp"]
-      }
+        allow: ["warn", "error", "time", "timeEnd", "timeStamp"],
+      },
     ],
     /**
      * Disallow constant expressions in conditions.
@@ -75,6 +72,12 @@ module.exports = {
      * @see https://eslint.org/docs/rules/no-dupe-args
      */
     "no-dupe-args": "error",
+    /**
+     * Disallow chained `if-else-if` statements.
+     * @since 0.9.0
+     * @see https://eslint.org/docs/rules/no-dupe-else-if
+     */
+    "no-dupe-else-if": "error",
     /**
      * Disallow duplicate keys in object literals.
      * @see https://eslint.org/docs/rules/no-dupe-keys
@@ -118,8 +121,8 @@ module.exports = {
         nestedBinaryExpressions: false,
         // Delegate to "eslint-plugin-react" via "@arcticicestudio/eslint-config".
         ignoreJSX: "all",
-        enforceForArrowConditionals: false
-      }
+        enforceForArrowConditionals: false,
+      },
     ],
     /**
      * Disallow unnecessary semicolons.
@@ -131,6 +134,12 @@ module.exports = {
      * @see https://eslint.org/docs/rules/no-func-assign
      */
     "no-func-assign": "error",
+    /**
+     * Disallow assigning to imported bindings.
+     * @since 0.9.0
+     * @see https://eslint.org/docs/rules/no-import-assign
+     */
+    "no-import-assign": "error",
     /**
      * Disallow variable or "function" declarations in nested blocks.
      * @see https://eslint.org/docs/rules/no-inner-declarations
@@ -173,6 +182,12 @@ module.exports = {
      */
     "no-sparse-arrays": "error",
     /**
+     * Disallow returning values from setters.
+     * @since 0.9.0
+     * @see https://eslint.org/docs/rules/no-setter-return
+     */
+    "no-setter-return": "error",
+    /**
      * Disallow template literal placeholder syntax in regular strings.
      * @see https://eslint.org/docs/rules/no-template-curly-in-string
      */
@@ -212,6 +227,6 @@ module.exports = {
      * Enforce comparing "typeof" expressions against valid strings.
      * @see https://eslint.org/docs/rules/valid-typeof
      */
-    "valid-typeof": ["error", { requireStringLiterals: true }]
-  }
+    "valid-typeof": ["error", { requireStringLiterals: true }],
+  },
 };

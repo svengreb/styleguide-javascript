@@ -1,8 +1,6 @@
 ## Leading and Trailing
 
-Never use leading and [trailing commas][mdn-trailing_commas]. It significantly decreases the code readability and is not compatible with the [JSON notation][json-notation].
-
-Also note that [trailing commas are illegal][mdn-trailing_commas-illegal] and will throw a `SyntaxError` when used function parameter definitions or function invocations only containing a comma. Furthermore, when using [rest parameters][mdn-rest_parameters] (ES6 Rest Spread), trailing commas are not allowed:
+Never use leading but [trailing commas][mdn-trailing_commas]. As of [Prettier][] version `2.0.0` this has also been [set as default configuration][prettier-blob-v2.0.0#traling_comma_default]:
 
 ```js
 function snow(,) {} // SyntaxError: missing formal parameter
@@ -75,13 +73,12 @@ const winter = {
   name: "winter",
   elements: ["snow", "frost", "ice"],
   temperature: -12,
-  state: "frozen"
+  state: "frozen",
 };
 ```
 
 [eslint/comma-dangle]: https://eslint.org/docs/rules/comma-dangle
 [eslint/comma-style]: https://eslint.org/docs/rules/comma-style
-[json-notation]: https://www.json.org
-[mdn-rest_parameters]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
-[mdn-trailing_commas-illegal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Illegal_trailing_commas
 [mdn-trailing_commas]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas
+[prettier-blob-v2.0.0#traling_comma_default]: https://prettier.io/blog/2020/03/21/2.0.0.html#change-default-value-for-trailingcomma-to-es5-6963httpsgithubcomprettierprettierpull6963-by-fiskerhttpsgithubcomfisker
+[prettier]: https://prettier.io

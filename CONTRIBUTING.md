@@ -1,50 +1,42 @@
-# Contributing to Styleguide JavaScript
+# Contributing to styleguide-javascript
 
-Thanks for contributing to “Styleguide JavaScript”!
+Thanks for contributing to styleguide-javascript!
 
-This is a set of guidelines for contributing to “Styleguide JavaScript”. Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved.
+This is a set of guidelines for contributing to styleguide-javascript. Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved.
 
 Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue, assessing changes, and helping you finalize your pull requests.
 
-As for everything else in the project, the contributions to “Styleguide JavaScript” are governed by our [Code of Conduct][gh-contrib]. By participating, you are expected to uphold this code. Please report unacceptable behavior at support@arcticicestudio.com or directly to one of the core team members via [email][gh-tree-mailmap].
+As for everything else in the project, the contributions to styleguide-javascript are governed by our [Code of Conduct][gh-coc]. By participating, you are expected to uphold this code. Please report unacceptable behavior at support@arcticicestudio.com or directly to one of the core team members via [email][gh-mailmap].
 
 ## Getting Started
 
-“Styleguide JavaScript” is an open source project and we love to receive contributions from the community! There are many ways to contribute, from [writing- and improving documentation and tutorials](#documentations), [reporting bugs](#bug-reports), [submitting enhancement suggestions](#enhancement-suggestions) which can be incorporated into this project by [submitting a pull request](#pull-requests).
+styleguide-javascript is an open source project and we love to receive contributions from the community! There are many ways to contribute, from [writing- and improving documentation and tutorials](#documentations), [reporting bugs](#bug-reports), [submitting enhancement suggestions](#enhancement-suggestions) which can be incorporated into this project by [submitting a pull request](#pull-requests).
 
 The project development workflow and process uses [GitHub Issues][gh-issues]- and [Pull Requests][gh-pr] management to track issues and pull requests including multiple [issue templates][gh-issues-templates].
 
 Before you continue with these contribution guidelines we highly recommend to read the awesome GitHub [Open Source Guides][os-guide] on how to [making open source contributions][os-guide-contrib].
 
-### Contribution Scope
-
-“Styleguide JavaScript” is a open source project using the [monolithic repository layout][wiki-monorepo] and contains [multiple packages][gh-tree-packages].
-
-**Please make sure to determine the correct code scope(s) before you continue!**
-This splits into contributions related to the style guide itself or to one or multiple specific packages. Scoping contributions helps all core team members, committers and maintainer to process them faster without organization overhead.
-
 ### Bug Reports
 
-A bug is a _demonstrable problem_ that is caused by the code in the repository. This section guides you through submitting a bug report for “Styleguide JavaScript”. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior and find related reports.
+A bug is a _demonstrable problem_ that is caused by the code in the repository. This section guides you through submitting a bug report for styleguide-javascript. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior and find related reports.
 
-**Do NOT report security vulnerabilities in public issues!** Please only contact one of the core team members or project owner in a responsible manner by [email][gh-tree-mailmap] or via support@arcticicestudio.com. We will assess the issue as soon as possible on a best-effort basis and will give you an estimate for when we have a fix and release available for an eventual public disclosure.
+**Do NOT report security vulnerabilities in public issues!** Please only contact one of the core team members or project owner in a responsible manner by [email][gh-mailmap] or via support@arcticicestudio.com. We will assess the issue as soon as possible on a best-effort basis and will give you an estimate for when we have a fix and release available for an eventual public disclosure.
 
 - **Use the [GitHub Issue search][gh-issues]** — check if the issue has already been reported. If it has **and the issue is still open**, add a comment to the existing issue instead of opening a new one. If you find a closed issue that seems like it is the same thing that you are experiencing, open a new issue and include a link to the original issue in the body of your new one.
-- **Determine [the scope the contribution belongs to](#contribution-scope).**
-- **Check if the issue has been fixed** — try to reproduce it using the [latest version][gh-releases-latest] and [`develop`][gh-branch-develop] branch in the repository.
+- **Check if the issue has been fixed** — try to reproduce it using the [latest version][gh-releases-latest] and [`master`][gh-branch-master] branch in the repository.
 - **Isolate the problem** — ideally create a [MCVE](#mcve).
 
 When you are creating a bug report, please provide as much detail and context as possible. Fill out on of [the required templates][gh-issues-template-bug], the information it asks helps maintainers to reproduce the problem and resolve issues faster.
 
 - **Use a clear and descriptive title** for the issue to identify the problem.
 - **Describe the exact steps which reproduce the problem** in as many details as possible.
-- **Include screenshots and animated GIFs if appropriate** to help visualize the reproduction steps and clearly demonstrate the problem.
-- **Provide specific examples to demonstrate the steps**. Include links to files or GitHub projects, or copy/pasteable snippets. If you are providing snippets in the issue, use [Markdown code blocks][ghh-markdown-code-blocks] or [attach files to the issue][ghh-attach-file].
+- **Include screenshots and animated GIFs** if appropriate which show you following the described steps and clearly demonstrate the problem.
+- **Provide specific examples to demonstrate the steps**. Include links to files or GitHub projects, or copy/pasteable snippets. If you are providing snippets in the issue, use [Markdown code blocks][ghd-markdown-code-blocks] or [attach files to the issue][ghd-attach-file].
 
 If possible please provide more context by answering these questions:
 
-- **Did the problem start happening recently** e.g. after updating to a new version of “Styleguide JavaScript” or was this always a problem?
-  - If the problem started happening recently, **can you reproduce the problem in an older version of “Styleguide JavaScript”?**
+- **Did the problem start happening recently** e.g. after updating to a new version of styleguide-javascript or was this always a problem?
+  - If the problem started happening recently, **can you reproduce the problem in an older version of styleguide-javascript?**
   - What is the most recent version in which the problem does not happen?
 - **Can you reliably reproduce the issue?** If not, please provide details about how often the problem happens and under which conditions it normally happens.
 
@@ -52,20 +44,19 @@ Please include details about your configuration and environment based on the [is
 
 ### Enhancement Suggestions
 
-This section guides you through submitting an enhancement suggestion, including completely new features and minor improvements to existing functionality, documentations or any [package][gh-tree-packages]. Following these guidelines helps maintainers and the community understand your suggestion and find related suggestions.
+This section guides you through submitting an enhancement suggestion, including completely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your suggestion and find related suggestions.
 
 - **Use the [GitHub Issues search][gh-issues]** — check if this enhancement has already been suggested. If it has **and the issue is still open**, add your additions as comment to the existing issue instead of opening a new one.
-- **Determine [the scope the contribution belongs to](#contribution-scope).**
-- **Check if the enhancement has already been implemented** — use the [latest version][gh-releases-latest] and [`develop`][gh-branch-develop] branch to ensure that the feature or improvement has not already been added.
+- **Check if the enhancement has already been implemented** — use the [latest version][gh-releases-latest] and [`master`][gh-branch-master] branch to ensure that the feature or improvement has not already been added.
 - **Provide a reduced show case** — ideally create a [MCVE](#mcve).
 
 Before creating enhancement suggestions, please check if your idea fits with the scope and provide as much detail and context as possible using a structured layout like the [the issue template][gh-issues-template-enhancement].
 
 - **Use a clear and descriptive title** for the issue to identify the suggestion.
 - **Provide a step-by-step description of the suggested enhancement** in as many details as possible and provide use-cases.
-- **Provide examples to demonstrate the need of an enhancement**. Include copy/pasteable snippets which you use in those examples, use [Markdown code blocks][ghh-markdown-code-blocks] or [attach files to the issue][ghh-attach-file].
+- **Provide examples to demonstrate the need of an enhancement**. Include copy/paste snippets which you use in those examples, use [Markdown code blocks][ghd-markdown-code-blocks] or [attach files to the issue][ghd-attach-file].
 - **Describe the current behavior** and **explain which behavior you expected to see instead** and why.
-- **Explain why this enhancement would be useful** to most “Styleguide JavaScript” users.
+- **Explain why this enhancement would be useful** to most styleguide-javascript users.
 - **Maybe list some other projects where this enhancement exists.**
 
 ### Pull Requests
@@ -77,30 +68,27 @@ This section guides you through submitting an pull request. Following these guid
 When you are submitting an pull request, please provide as much detail and context as possible. Fill out [the required template][gh-issues-template-pr] to help maintainers to understand your submitted code.
 
 - **Use a clear and descriptive title for the pull request**
-- **Do not include issue numbers in the pull request title** but fill in the metadata section at the top of the [required pull request template][gh-issues-template-pr] making use of the [GitHub issue keywords][ghh-issue-keywords] to link to specific [enhancement suggestions](#enhancement-suggestions) or [bug reports](#bug-reports).
-- **Include screenshots and animated GIFs if appropriate** to help visualize the reproduction steps and clearly demonstrate the problem.
-- **Make sure to follow this JavaScript as well as the [Markdown](#markdown-style-guide) and [Git](#git-style-guide) style guides**.
+- **Do not include issue numbers in the pull request title** but fill in the metadata section at the top of the [required pull request template][gh-issues-template-pr] making use of the [GitHub issue keywords][ghd-issue-keywords] to link to specific [enhancement suggestions](#enhancement-suggestions) or [bug reports](#bug-reports).
+- **Include screenshots and animated GIFs** if appropriate which show you following the described steps and clearly demonstrate the change.
+- **Make sure to follow the [JavaScript](#javascript-style-guide), [Markdown](#markdown-style-guide) and [Git](#git-style-guide) style guides**.
 - **Remain focused in scope and avoid to include unrelated commits**.
 - **Features and improvements should always be accompanied with tests and documentation**. If the pull request improves the performance consider to include a benchmark test, optimally including a chart.
 - **Lint and test before submitting the pull request**.
 - **Make sure to create the pull request from a [topic branch][git-docs-branching-workflows]**.
 
-**All pull requests must be send against the [`develop`][gh-branch-develop] branch** - Please read the [branch organization](#branch-organization) section below for details about the branching model.
+**All pull requests must be send against the [`master`][gh-branch-master] branch** - Please read the [branch organization](#branch-organization) section below for details about the branching model.
 
 ### Documentations
 
-“Styleguide JavaScript” documentations consist of guides, which helps users to learn about the project which serves as a reference including the [packages][gh-tree-packages].
+styleguide-javascript's documentation consists of guides, which helps users to learn about the project.
 
 You can help improve the docs and guides by making them more coherent, consistent or readable, adding missing information, correcting factual errors, fixing typos, bringing them up to date when there are differences to the latest version. This can be done by submitting a [enhancement suggestion](#enhancement-suggestions) and then opening a [pull request](#pull-requests) for it.
 
 ## Branch Organization
 
-“Styleguide JavaScript” uses the [gitflow][gitflow] branching model. The repository consists of two core branches with an infinite development lifecycle:
+styleguide-javascript adheres to the [Arctic Ice Studio Git style guide][gh-styleguide-git] which assumes that you are familiar with the [GitHub Flow][ghg-flow] branching model. The repository consists of the `master` core branch with an infinite development lifecycle. The source code of `HEAD` in this branch contains the latest development state and reflects all tagged release versions.
 
-- `master` - The source code of `HEAD` always reflects a tagged release version.
-- `develop` - The default branch where the source code of `HEAD` always reflects a state with the latest development state.
-
-**All [pull requests](#pull-requests) for the limited development lifecycle _story_/_topic_ branches must be send against the `develop` branch**.
+**All [pull requests](#pull-requests) for limited development lifecycle _story_/_topic_ branches must be send against the `master` branch**.
 
 <!-- lint disable no-heading-punctuation -->
 
@@ -114,7 +102,7 @@ Some issues are created with missing information, not reproducible, or plain inv
 
 ### Give Feedback On Issues and Pull Requests
 
-We're always looking for more opinions on discussions in issues and pull request reviews which is a good opportunity to influence the future direction of “Styleguide JavaScript”.
+We're always looking for more opinions on discussions in issues and pull request reviews which is a good opportunity to influence the future direction of styleguide-javascript.
 
 The [question][gh-issues-label-question] issue label is a good place to find ongoing discussions and questions.
 
@@ -124,25 +112,15 @@ Every major open source project has its own style guide, a set of standards and 
 
 A style guide establishes and enforces style to improve the intelligibility and communication within the project community. It ensures consistency and enforces best practice in usage and language composition.
 
-### JavaScript Style Guide
+### Markdown Style Guide
 
-Because “Styleguide JavaScript” itself is the style guide, it follows it owns rules for all JavaScript files included in the project.
-
-### Markdown Code Style
-
-All Markdown sources and documentations adhere to the [Arctic Ice Studio Markdown Style Guide][styleguide-markdown-github-ghdocs].
-
-<a href="https://github.com/arcticicestudio/styleguide-markdown" target="_blank"><img src="https://raw.githubusercontent.com/arcticicestudio/styleguide-markdown/develop/assets/images/badge.svg?sanitize=true" width="300"/></a>
+styleguide-javascript adheres to the [Arctic Ice Studio Markdown Style Guide][gh-styleguide-markdown].
 
 ### Git Commit Messages
 
 A well-crafted Git commit message is the best way to communicate _context_ about a change to the maintainers. The code will tell what changed, but only the commit message can properly tell why. Re-establishing the context of a piece of code is wasteful. We can't avoid it completely, so our efforts should go to reducing it as much as possible.
 
-“Styleguide JavaScript” adheres to the [Arctic Ice Studio Git Style Guide][gh-styleguide-git].
-
-<a href="https://github.com/arcticicestudio/styleguide-markdown" target="_blank"><img src="https://raw.githubusercontent.com/arcticicestudio/styleguide-git/develop/assets/images/badge.svg?sanitize=true" width="300"/></a>
-
-The style guide assumes that you are familiar with the [gitflow][gitflow] branching model.
+styleguide-javascript adheres to the [Arctic Ice Studio Git Style Guide][gh-styleguide-git]. The style guide assumes that you are familiar with the [GitHub Flow][ghg-flow] branching model.
 
 ## MCVE
 
@@ -156,7 +134,7 @@ When [reporting a bug](#bug-reports), sometimes even when [suggesting enhancemen
 
 A MCVE is a common practice like on [Stack Overflow][stackoverflow-mcve] and sometimes it is also called [SSCCE][sscce], a _Short, Self Contained, Correct (Compilable), Example_.
 
-The recommended way for GitHub based projects is to create it as [Gist][gh-gist] or new repository, but of course you can [attach it to issues and pull requests as files][ghh-attach-file], use any free code paste- or file hosting service or paste the code in [Markdown code blocks][ghh-markdown-code-blocks] into the issue.
+The recommended way for GitHub based projects is to create it as [Gist][gh-gist] or new repository, but of course you can [attach it to issues and pull requests as files][ghd-attach-file], use any free code paste- or file hosting service or paste the code in [Markdown code blocks][ghd-markdown-code-blocks] into the issue.
 
 ### Minimal
 
@@ -183,7 +161,7 @@ To entirely understand your enhancement or bug report, developers will need to v
 
 ## Versioning
 
-“Styleguide JavaScript” follows the [Semantic Versioning Specification][semver] (SemVer). We release patch versions for bug fixes, minor versions for enhancements like new features and improvements, and major versions for any backwards incompatible changes. Deprecation warnings are introduced for breaking changes in a minor version so that users learn about the upcoming changes and migrate their code in advance.
+styleguide-javascript follows the [Semantic Versioning Specification][semver] (SemVer). We release patch versions for bug fixes, minor versions for enhancements like new features and improvements, and major versions for any backwards incompatible changes. Deprecation warnings are introduced for breaking changes in a minor version so that users learn about the upcoming changes and migrate their code in advance.
 
 Every significant change is documented in the [changelog][gh-changelog].
 
@@ -192,32 +170,30 @@ Every significant change is documented in the [changelog][gh-changelog].
 Thanks for the inspirations and attributions to GitHub's [Open Source Guides][os-guide] and various contribution guides of large open source projects like [Atom][gh-atom-contrib], [React][react-contrib] and [Ruby on Rails][ruby-on-rails-contrib].
 
 [gh-atom-contrib]: https://github.com/atom/atom/blob/master/CONTRIBUTING.md
-[gh-branch-develop]: https://github.com/arcticicestudio/styleguide-javascript/tree/develop
-[gh-changelog]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CHANGELOG.md
-[gh-contrib]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/CODE_OF_CONDUCT.md
+[gh-branch-master]: https://github.com/arcticicestudio/styleguide-javascript/tree/master
+[gh-changelog]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/CHANGELOG.md
+[gh-coc]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/CODE_OF_CONDUCT.md
 [gh-gist]: https://gist.github.com
-[gh-issues-label-question]: https://github.com/arcticicestudio/styleguide-javascript/labels/question
-[gh-issues-template-bug]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/.github/ISSUE_TEMPLATE/bugs.md
-[gh-issues-template-enhancement]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/.github/ISSUE_TEMPLATE/enhancement.md
-[gh-issues-template-pr]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/.github/PULL_REQUEST_TEMPLATE.md
+[gh-issues-label-question]: https://github.com/arcticicestudio/styleguide-javascript/labels/type-question
+[gh-issues-template-bug]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/.github/ISSUE_TEMPLATE/bugs.md
+[gh-issues-template-enhancement]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/.github/ISSUE_TEMPLATE/enhancement.md
+[gh-issues-template-pr]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/.github/PULL_REQUEST_TEMPLATE.md
 [gh-issues-templates]: https://github.com/arcticicestudio/styleguide-javascript/issues/new/choose
 [gh-issues]: https://github.com/arcticicestudio/styleguide-javascript/issues
+[gh-mailmap]: https://github.com/arcticicestudio/styleguide-javascript/blob/master/.mailmap
 [gh-pr]: https://github.com/arcticicestudio/styleguide-javascript/pulls
 [gh-releases-latest]: https://github.com/arcticicestudio/styleguide-javascript/releases/latest
 [gh-styleguide-git]: https://github.com/arcticicestudio/styleguide-git
-[gh-tree-mailmap]: https://github.com/arcticicestudio/styleguide-javascript/blob/develop/.mailmap
-[gh-tree-packages]: https://github.com/arcticicestudio/styleguide-javascript/tree/develop/packages
-[ghh-attach-file]: https://help.github.com/articles/file-attachments-on-issues-and-pull-requests
-[ghh-issue-keywords]: https://help.github.com/articles/closing-issues-using-keywords
-[ghh-markdown-code-blocks]: https://help.github.com/articles/basic-writing-and-formatting-syntax
+[gh-styleguide-markdown]: https://github.com/arcticicestudio/styleguide-markdown
+[ghd-attach-file]: https://docs.github.com/en/github/managing-your-work-on-github/file-attachments-on-issues-and-pull-requests
+[ghd-issue-keywords]: https://docs.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue
+[ghd-markdown-code-blocks]: https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
+[ghg-flow]: https://guides.github.com/introduction/flow
 [git-docs-branching-workflows]: https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
-[gitflow]: http://nvie.com/posts/a-successful-git-branching-model
 [os-guide-contrib]: https://opensource.guide/how-to-contribute
 [os-guide]: https://opensource.guide
 [react-contrib]: https://facebook.github.io/react/contributing/how-to-contribute.html
 [ruby-on-rails-contrib]: http://guides.rubyonrails.org/contributing_to_ruby_on_rails.html
-[semver]: http://semver.org
+[semver]: https://semver.org
 [sscce]: http://sscce.org
 [stackoverflow-mcve]: https://stackoverflow.com/help/mcve
-[styleguide-markdown-github-ghdocs]: https://arcticicestudio.github.io/styleguide-markdown
-[wiki-monorepo]: https://en.wikipedia.org/wiki/Monorepo

@@ -5,15 +5,20 @@
  */
 
 /**
- * Entry point for the Prettier plugin integration with compatibility support for the following ESLint plugins:
+ * Prettier plugin rules.
  *
- * - `@typescript-eslint/eslint-plugin`
- *
- * @since 0.8.0
+ * @since 0.9.0
  * @see https://github.com/prettier/eslint-plugin-prettier
  * @see https://github.com/prettier/eslint-config-prettier
- * @see https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
+ * @see https://prettier.io
  */
 module.exports = {
-  extends: ["./rules/prettier"].map(require.resolve),
+  extends: ["prettier"],
+  plugins: ["prettier"],
+  rules: {
+    /**
+     * Run Prettier as an ESLint rule and report differences as individual ESLint issues.
+     */
+    "prettier/prettier": "error",
+  },
 };

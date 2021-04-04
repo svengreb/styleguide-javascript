@@ -1,25 +1,22 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Arctic Ice Studio ESLint Configuration
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 const INDENT_SIZE = 2;
 
 /**
  * React plugin rules related to JSX.
- * @since 0.1.0
+ *
  * @see https://github.com/yannickcr/eslint-plugin-react#jsx-specific-rules
  */
 module.exports = {
   plugins: ["react"],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   rules: {
     /**
@@ -59,8 +56,8 @@ module.exports = {
     "react/jsx-filename-extension": [
       "error",
       {
-        extensions: [".jsx"]
-      }
+        extensions: [".jsx"],
+      },
     ],
     /**
      * Enforce position of the first prop in JSX.
@@ -75,8 +72,8 @@ module.exports = {
       "warn",
       {
         eventHandlerPrefix: "handle",
-        eventHandlerPropPrefix: "on"
-      }
+        eventHandlerPropPrefix: "on",
+      },
     ],
     /**
      * Validate JSX indentation.
@@ -107,9 +104,15 @@ module.exports = {
       "warn",
       {
         maximum: 4,
-        when: "multiline"
-      }
+        when: "multiline",
+      },
     ],
+    /**
+     * Do not require a new line after jsx elements and expressions.
+     * @since 0.9.0
+     * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-newline.md
+     */
+    "react/jsx-newline": "off",
     /**
      * Prevent usage of .`bind()` and arrow functions in JSX props.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
@@ -122,14 +125,21 @@ module.exports = {
         ignoreRefs: true,
         allowArrowFunctions: true,
         allowFunctions: false,
-        allowBind: false
-      }
+        allowBind: false,
+      },
     ],
     /**
      * Prevent comments from being inserted as text nodes.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
      */
     "react/jsx-no-comment-textnodes": "error",
+    /**
+     * Prevent react contexts from taking non-stable values.
+     * @since 0.9.0
+     * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-constructed-context-values.md
+     */
+    "react/jsx-no-constructed-context-values": "error",
+
     /**
      * Prevent duplicate props in JSX.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
@@ -144,12 +154,18 @@ module.exports = {
      * Prevent usage of unsafe `_blank` target.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
      */
-    "react/jsx-no-target-blank": "error",
+    "react/jsx-no-target-blank": ["error", { enforceDynamicLinks: "always" }],
     /**
      * Disallow undeclared variables in JSX.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
      */
     "react/jsx-no-undef": "error",
+    /**
+     * Disallow unnecessary fragments in JSX.
+     * @since 0.9.0
+     * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md
+     */
+    "react/jsx-no-useless-fragment": "error",
     /**
      * Limit to one expression per line in JSX.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
@@ -163,8 +179,8 @@ module.exports = {
       "error",
       {
         props: "never",
-        children: "never"
-      }
+        children: "never",
+      },
     ],
     /**
      * Enforce PascalCase for user-defined JSX components.
@@ -190,8 +206,8 @@ module.exports = {
         shorthandFirst: false,
         shorthandLast: false,
         noSortAlphabetically: false,
-        reservedFirst: true
-      }
+        reservedFirst: true,
+      },
     ],
     /**
      * Validate whitespace in and around the JSX opening and closing brackets.
@@ -204,8 +220,8 @@ module.exports = {
         closingSlash: "never",
         beforeSelfClosing: "always",
         afterOpening: "never",
-        beforeClosing: "never"
-      }
+        beforeClosing: "never",
+      },
     ],
     /**
      * Prevent React to be incorrectly marked as unused.
@@ -231,8 +247,8 @@ module.exports = {
         arrow: "parens-new-line",
         condition: "ignore",
         logical: "ignore",
-        prop: "ignore"
-      }
+        prop: "ignore",
+      },
     ],
     /**
      * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions.
@@ -266,8 +282,9 @@ module.exports = {
       "warn",
       {
         html: "enforce",
-        custom: "ignore"
-      }
-    ]
-  }
+        custom: "ignore",
+        explicitSpread: "ignore",
+      },
+    ],
+  },
 };

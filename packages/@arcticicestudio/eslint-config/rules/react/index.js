@@ -1,15 +1,12 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Arctic Ice Studio ESLint Configuration
- * Repository: https://github.com/arcticicestudio/styleguide-javascript
- * License:    MIT
+ * Copyright (c) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2018-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the LICENSE file.
  */
 
 /**
  * React plugin rules.
- * @since 0.1.0
+ *
  * @see https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
  */
 module.exports = {
@@ -17,12 +14,12 @@ module.exports = {
   settings: {
     "import/resolver": {
       node: {
-        extensions: [".js", ".jsx", ".json"]
-      }
+        extensions: [".js", ".jsx", ".json"],
+      },
     },
     react: {
-      version: "detect"
-    }
+      version: "detect",
+    },
   },
   rules: {
     /**
@@ -48,9 +45,9 @@ module.exports = {
           "componentDidUpdate",
           "componentWillUnmount",
           "componentDidCatch",
-          "getSnapshotBeforeUpdate"
-        ]
-      }
+          "getSnapshotBeforeUpdate",
+        ],
+      },
     ],
     /**
      * Disable consistent naming for boolean props.
@@ -60,8 +57,8 @@ module.exports = {
       "off",
       {
         propTypeNames: ["bool", "mutuallyExclusiveTrueProps"],
-        rule: "^(is|has)[A-Z]([A-Za-z0-9]?)+"
-      }
+        rule: "^(is|has)[A-Z]([A-Za-z0-9]?)+",
+      },
     ],
     /**
      * Forbid `button` element without an explicit `type` attribute.
@@ -72,8 +69,8 @@ module.exports = {
       {
         button: true,
         submit: true,
-        reset: false
-      }
+        reset: false,
+      },
     ],
     /**
      * Prevent extraneous defaultProps on components.
@@ -114,8 +111,8 @@ module.exports = {
     "react/forbid-prop-types": [
       "warn",
       {
-        forbid: ["any", "array", "object"]
-      }
+        forbid: ["any", "array", "object"],
+      },
     ],
     /**
      * Forbid foreign `propTypes`.
@@ -226,6 +223,12 @@ module.exports = {
      */
     "react/no-unknown-property": "error",
     /**
+     * Prevent creating unstable components inside components.
+     * @since 0.9.0
+     * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unstable-nested-components.md
+     */
+    "react/no-unstable-nested-components": "error",
+    /**
      * Prevent definitions of unused prop types.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
      */
@@ -265,7 +268,7 @@ module.exports = {
      * Enforce a `defaultProps` definition for every prop that is not a required prop.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
      */
-    "react/require-default-props": "error",
+    "react/require-default-props": ["error", { forbidDefaultForRequired: true }],
     /**
      * Enforce components to have a `shouldComponentUpdate` method.
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-optimization.md
@@ -291,21 +294,23 @@ module.exports = {
       "warn",
       {
         order: [
+          "static-variables",
           "static-methods",
           "instance-variables",
           "lifecycle",
+          "/^handle.+$/",
           "/^on.+$/",
           "getters",
           "setters",
           "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
           "instance-methods",
           "everything-else",
-          "rendering"
+          "rendering",
         ],
         groups: {
-          rendering: ["/^render.+$/", "render"]
-        }
-      }
+          rendering: ["/^render.+$/", "render"],
+        },
+      },
     ],
     /**
      * Enforce propTypes declarations alphabetical sorting.
@@ -316,8 +321,8 @@ module.exports = {
       {
         ignoreCase: true,
         callbacksLast: false,
-        requiredFirst: false
-      }
+        requiredFirst: false,
+      },
     ],
     /**
      * Enforce `style` prop value being an object.
@@ -352,6 +357,6 @@ module.exports = {
      * @since 0.5.0
      * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
      */
-    "react/static-property-placement": "warn"
-  }
+    "react/static-property-placement": "warn",
+  },
 };
