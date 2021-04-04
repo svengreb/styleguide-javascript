@@ -7,7 +7,7 @@
 /**
  * Entry point for the React Hooks plugin integration.
  *
- * @since 0.8.0
+ * @since 0.9.0
  * @see https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
  * @see https://reactjs.org/docs/hooks-rules.html
  * @see https://reactjs.org/docs/hooks-intro.html

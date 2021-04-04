@@ -1,6 +1,6 @@
 {
   "name": "@arcticicestudio/eslint-config-typescript",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "The Arctic Ice Studio JavaScript Style Guide rules with TypeScript support as an extensible shared ESLint configuration",
   "author": "Arctic Ice Studio <development@arcticicestudio.com> (https://www.arcticicestudio.com)",
   "contributors": [

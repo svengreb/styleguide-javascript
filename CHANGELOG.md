@@ -8,6 +8,143 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.9.0
+
+![Release Date: 2021-04-04](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-04-04&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.9.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/projects/7) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.9.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/milestone/4)
+
+⇅ [Show all commits][gh-compare-tag-v0.8.0_v0.9.0]
+
+## Features
+
+<details>
+<summary><strong>Update ESLint and plugins</strong> — #31 ⇄ #32 (⊶ 486b2d18)</summary>
+
+↠ ESLint and most of the used plugins released new major versions so trying to use later versions of these plugins as well as ESLint itself caused errors when using npm v7 because [peer dependencies are installed automatically][gh-blog-npm_v7#break_change] now, which is a fantastic change, but also breaks and blocks the usage of the configuration packages due to outdated `peerDependencies` like `eslint@^6`.
+
+### Core
+
+The latest version 7 comes with great features and improvements.
+See the [official v7 migration guide][esl-docs-guides-mig_v7] for all details.
+
+- **Updated ESLint package version** — updated from [`v6.2.0` to `v7.23.0`][gh-eslint/eslint-comp-v6.2.0_v7.23.0].
+- **Allowed to define additional file extensions in configuration packages** — [files matched by `overrides[].files` are now linted by default][esl-docs-guides-mig_v7#override_file_match] which allows to add extensions like `*.ts` and `*.tsx` to the `@arcticicestudio/eslint-config-typescript` without the need to specify this override over and over again in each project.
+- **Removed deprecated rules** — [some rules have been deprecated][esl-docs-guides-mig_v7#depr_rules] and have been removed in favor of the support for `eslint-plugin-node` like documented in #30.
+  - [`callback-return`][esl-docs-rule-callback-return] → [`node/callback-return`][gh-mysticatea/eslint-plugin-node-blob-docs-rule-callback-return]
+  - [`global-require`][esl-docs-rule-global-require] → [`node/global-require`][gh-mysticatea/eslint-plugin-node-blob-docs-rule-global-require]
+  - [`handle-callback-err`][esl-docs-rule-handle-callback-err] → [`node/handle-callback-err`][gh-mysticatea/eslint-plugin-node-blob-docs-rule-handle-callback-err]
+  - [`no-mixed-requires`][esl-docs-rule-no-mixed-requires] → [`node/no-mixed-requires`][gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-mixed-requires]
+  - [`no-new-require`][esl-docs-rule-no-new-require] → [`node/no-new-require`][gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-new-require]
+  - [`no-path-concat`][esl-docs-rule-no-path-concat] → [`node/no-path-concat`][gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-path-concat]
+  - [`no-process-env`][esl-docs-rule-no-process-env] → [`node/no-process-env`][gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-process-env]
+  - [`no-process-exit`][esl-docs-rule-no-process-exit] → [`node/no-process-exit`][gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-process-exit]
+  - [`no-restricted-modules`][esl-docs-rule-no-restricted-modules] → [`node/no-restricted-modules`][gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-restricted-modules]
+  - [`no-sync`][esl-docs-rule-no-sync] → [`node/no-sync`][gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-sync]
+- **Adapted new recommended rules** — some rules have been [added and enabled on the `eslint:recommended` rule set][esl-docs-guides-mig_v7#recomm_rules] and have ben added to `@arcticicestudio/eslint-config-base` with `error` level:
+  - [`no-dupe-else-if`][esl-docs-rule-no-dupe-else-if]
+  - [`no-import-assign`][esl-docs-rule-no-import-assign]
+  - [`no-setter-return`][esl-docs-rule-no-setter-return]
+
+### Plugins & Dependencies
+
+#### `@arcticicestudio/eslint-config`
+
+- [eslint-config-prettier][gh-prettier/eslint-config-prettier] — Bumped version from [`v6.0.0` to `v8.1.0`][gh-prettier/eslint-config-prettier-comp-v6.0.0_v8.1.0]. As of [version `8.0.0` all rule sets have been merged into the main `prettier` set][gh-prettier/eslint-config-prettier-blob-chl#v8.0.0]. Therefore the additional `prettier/react` set has been removed from the `extends` array of the Prettier specific rules.
+- [eslint-find-rules][gh-sarbbottam/eslint-find-rules] — Bumped version from [`v3.4.0` to `v3.6.1`][gh-sarbbottam/eslint-find-rules-comp-v3.4.0_v3.6.1].
+- [eslint-plugin-import][gh-benmosher/eslint-plugin-import] — Bumped minimum version from [`v2.18.2` to `v2.22.1`][gh-benmosher/eslint-plugin-import-comp-v2.18.2_v2.22.1].
+- [eslint-plugin-jsx-a11y][gh-jsx-eslint/eslint-plugin-jsx-a11y] — Bumped minimum version from [`v6.2.3` to `v6.4.1`][gh-jsx-eslint/eslint-plugin-jsx-a11y-comp-v6.2.3_v6.4.1].
+- [eslint-plugin-prettier][gh-prettier/eslint-plugin-prettier] — Bumped minimum version from [`v3.1.0` to `v3.3.1`][gh-prettier/eslint-plugin-prettier-comp-v3.1.0_v3.3.1].
+- [eslint-plugin-react][gh-yannickcr/eslint-plugin-react] — Bumped minimum version from [`v7.14.3` to `v7.23.1`][gh-yannickcr/eslint-plugin-react-comp-v7.14.3_v7.23.1]. This includes new rules and improvements to existing ones:
+  - Added new [`react/jsx-no-useless-fragment`][gh-yannickcr/eslint-plugin-react-blob-docs-rule-jsx-no-useless-fragment] rule with `error` level (introduced in [`v7.15.0`][gh-yannickcr/eslint-plugin-react-blob-chl#v7.15.0]) that disallows unnecessary fragments.
+  - Added the new `static-variables` option to the [`react/sort-comp`][gh-yannickcr/eslint-plugin-react-blob-rules-sort-comp] rule (introduced in [`v7.15.0`][gh-yannickcr/eslint-plugin-react-blob-chl#v7.15.0]).
+  - Added new [`react/jsx-newline`][gh-yannickcr/eslint-plugin-react-blob-docs-rule-jsx-newline] rule (introduced in [`v7.22.0`][gh-yannickcr/eslint-plugin-react-blob-chl#v7.22.0]) and disable by default.
+  - Added new [`react/jsx-no-constructed-context-values`][gh-yannickcr/eslint-plugin-react-blob-docs-rule-jsx-no-constructed-context-values] rule (introduced in [`v7.22.0`][gh-yannickcr/eslint-plugin-react-blob-chl#v7.22.0]) and enabled it by default to prevent react contexts from taking non-stable values.
+    > React Context, and all its child nodes and Consumers are rerendered whenever the value prop changes. Because each Javascript object carries its own identity, things like object expressions (`{foo: "bar"}`) or function expressions get a new identity on every run through the component. This makes the context think it has gotten a new object and can cause needless rerenders and unintended consequences.
+    > This can be a pretty large performance hit because not only will it cause the context providers and consumers to rerender with all the elements in its subtree, the processing for the tree scan react does to render the provider and find consumers is also wasted.
+  - Added `enforceDynamicLinks` option with value `always` for [`react/jsx-no-target-blank`][gh-yannickcr/eslint-plugin-react-blob-docs-rule-jsx-no-target-blank] rule (introduced in [`v7.9.0`][gh-yannickcr/eslint-plugin-react-blob-chl#v7.9.0])
+  - Added [`react/no-unstable-nested-components`][gh-yannickcr/eslint-plugin-react-blob-docs-rule-no-unstable-nested-components] rule and enabled it by default to prevent creating unstable components inside components.
+    > Creating components inside components without memoization leads to unstable components. The nested component and all its children are recreated during each re-render. Given stateful children of the nested component will lose their state on each re-render.
+    > React reconcilation performs element type comparison with [reference equality][gh-facebook/react-blob-v16.13.1-recon_childfiber#l407]. The reference to the same element changes on each re-render when defining components inside the render block. This leads to complete recreation of the current node and all its children. As a result the virtual DOM has to do extra unnecessary work and possible bugs are introduced.
+  - Added `forbidDefaultForRequired` option with value `true` for [`react/require-default-props`][gh-yannickcr/eslint-plugin-react-blob-docs-rule-require-default-props] rule (introduced in [`v7.5.0`][gh-yannickcr/eslint-plugin-react-blob-chl#v7.5.0])
+- [eslint-plugin-react-hooks][gh-facebook/react-tree-pkg-eslint-plugin-react-hooks] — Bumped minimum version from `v2.0.0` to [`v4.2.0`][gh-facebook/react-blob-pkg-eslint-plugin-react-hooks-chl#v4.2.0].
+
+#### `@arcticicestudio/eslint-config-base`
+
+- [confusing-browser-globals][gh-facebook/create-react-app-tree-pkg-confusing-browser-globals] — Bumped minimum version from `v1.0.8` to `v1.0.10`.
+- [eslint-find-rules][gh-sarbbottam/eslint-find-rules] — Bumped version from [`v3.4.0` to `v3.6.1`][gh-sarbbottam/eslint-find-rules-comp-v3.4.0_v3.6.1].
+- [eslint-plugin-import][gh-benmosher/eslint-plugin-import] — Bumped minimum version from [`v2.18.2` to `v2.22.1`][gh-benmosher/eslint-plugin-import-comp-v2.18.2_v2.22.1].
+
+#### `@arcticicestudio/eslint-config-typescript`
+
+- [@typescript-eslint/eslint-plugin][gh-typescript-eslint/typescript-eslint-tree-pkg-eslint-plugin] — Bumped minimum version from [`v2.0.0` to `v4.20.0`][gh-typescript-eslint/typescript-eslint-comp-v2.0.0_v4.20.0].
+- [@typescript-eslint/parser][gh-typescript-eslint/typescript-eslint-tree-pkg-parser] — Bumped minimum version from [`v2.0.0` to `v4.20.0`][gh-typescript-eslint/typescript-eslint-comp-v2.0.0_v4.20.0].
+- [typescript][gh-microsoft/typescript] — Bumped minimum version from [`v3.5.3` to `v4.2.3`][gh-microsoft/typescript-comp-v3.5.3_v4.2.3].
+
+</details>
+
+## Improvements
+
+<details>
+<summary><strong>Migrate to "tmpl" template repository</strong> — #35 ⇄ #36 (⊶ e6709a9c)</summary>
+
+<p align="center"><img src="https://github.com/svengreb/tmpl/blob/main/assets/images/repository-hero.svg?raw=true"/></p>
+
+↠ Migrated the project setup, structure and development workflow [from version 0.9.0][svengreb/tmpl-rl-v0.9.0] of the [“tmpl“ template repository][svengreb/tmpl].
+Additionally specific assets like the repository hero image have been replaced and documentations like the _README_ and GitHub issue/PR templates have been adjusted.
+
+</details>
+
+<details>
+<summary><strong>Move ESLint Prettier support into base package</strong> — #37 ⇄ #38 (⊶ a50130e0)</summary>
+
+↠ Before [eslint-plugin-prettier][gh-prettier/eslint-plugin-prettier] and its corresponding [eslint-config-prettier][gh-prettier/eslint-config-prettier] package were supported by the [@arcticicestudio/eslint-config][gh-styleguide-javascript-tree-pkgs-@arcticicestudio/eslint-config] rule preset package. This worked fine for most projects, but also pulled in React specific dependencies like [eslint-plugin-react][gh-yannickcr/eslint-plugin-react] and [eslint-plugin-jsx-a11y][gh-jsx-eslint/eslint-plugin-jsx-a11y].
+To allow to use Prettier without `@arcticicestudio/eslint-config`, the support has been moved into the `@arcticicestudio/eslint-config-base` package, including the optional entry point.
+
+</details>
+
+## Tasks
+
+<details>
+<summary><strong>Node.js package dependency & GitHub action version updates</strong> — #24, #23, #33 ⇄ #27, #34</summary>
+
+↠ Bumped outdated Node.js package dependencies and GitHub actions to their latest versions:
+
+- #24 (⊶ c0c22532) [`acorn`][gh-acornjs/acorn] from [7.0.0 to 7.1.1][gh-acornjs/acorn-comp-v7.0.0_v7.1.1]
+- #23 ⇄ #27 (⊶ e015dc0a) [`eslint-plugin-react-hooks`][gh-facebook/react-tree-pkgs-eslint-plugin-react-hooks] from `1.7.0` to `2.0.0`.
+- #33 ⇄ #34 (⊶ e4fd1653) **Updated to ESLint v7** — bumped package version from [`v6.2.0` to `v7.23.0`][gh-eslint/eslint-comp-v6.2.0_v7.23.0]. See #32 and the [official v7 migration guide][esl-docs-guides-mig_v7] for more details.
+- #33 ⇄ #34 (⊶ e4fd1653) **Removed `--ext` option for ESLint tasks** — as of ESLint v7, [files matched by `overrides[].files` are now linted by default][esl-docs-guides-mig_v7#override_file_match] which makes it obsolete to explicitly define file extensions like `*.js`.
+- #33 ⇄ #34 (⊶ e4fd1653) [del-cli][gh-sindresorhus/del-cli] — bumped minimum version from [`v2.0.0` to `v3.0.1`][gh-sindresorhus/del-cli-comp-v2.0.0_v3.0.1].
+- #33 ⇄ #34 (⊶ e4fd1653) [eslint-config-prettier][gh-prettier/eslint-config-prettier] — bumped version from [`v6.1.0` to `v8.1.0`][gh-prettier/eslint-config-prettier-comp-v6.1.0_v8.1.0].
+- #33 ⇄ #34 (⊶ e4fd1653) [eslint-plugin-prettier][gh-prettier/eslint-plugin-prettier] — bump minimum version from [`v3.1.0` to `v3.3.1`][gh-prettier/eslint-plugin-prettier-comp-v3.1.0_v3.3.1].
+- #33 ⇄ #34 (⊶ e4fd1653) [eslint-plugin-import][gh-benmosher/eslint-plugin-import] — bumped minimum version from [`v2.18.2` to `v2.22.1`][gh-benmosher/eslint-plugin-import-comp-v2.18.2_v2.22.1].
+- #33 ⇄ #34 (⊶ e4fd1653) [husky][gh-typicode/husky] — bumped minimum version from [`v3.0.4` to `v6.0.0`][gh-typicode/husky-comp-v3.0.4_v6.0.0]. This also includes some breaking changes that require migrations. Run the official migration CLI to automatically migrate from v4 to v6: `npx husky-init && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config`
+- #33 ⇄ #34 (⊶ e4fd1653) [lint-staged][gh-okonet/lint-staged] — bumped minimum version from [`v9.2.3` to `v10.5.4`][gh-okonet/lint-staged-comp-v9.2.3_v10.5.4].
+- #33 ⇄ #34 (⊶ e4fd1653) [prettier][gh-prettier/prettier] — bumped minimum version from [`v1.18.2` to `v2.2.1`][gh-prettier/prettier-comp-v1.18.2_v2.2.1].
+- #33 ⇄ #34 (⊶ e4fd1653) [remark-cli][gh-remarkjs/remark] — bumped minimum version from [`v7.0.0` to `v9.0.0`][gh-remarkjs/remark-comp-v7.0.0_v9.0.0].
+
+</details>
+
+<details>
+<summary><strong>GitHub Flow migration</strong> — #39 ⇄ #40 (⊶ 70b81fc5)</summary>
+
+<div align="center"><img src="https://user-images.githubusercontent.com/7836623/78555431-4e318e80-780d-11ea-8ff4-52f9a9a27682.png" /></div>
+
+> Subtask of arcticicestudio/styleguide-git#9
+
+↠ Adapted to [GitHub Flow][gh-guides-intro-flow] like documented in detail in the main task issue arcticicestudio/styleguide-git#9.
+
+</details>
+
+<details>
+<summary><strong>From <code>master</code> to <code>main</code></strong> — #45 ⇄ #46 (⊶ 2ba56fb3)</summary>
+
+> Subtask of arcticicestudio/styleguide-git#11
+
+<div align="center"><img src="https://user-images.githubusercontent.com/7836623/113505556-d8572480-953f-11eb-8e72-2a7ba7387765.png" /></div>
+
+↠ Adapted to the [default branch renaming from `master` to `main`][gh-github/renaming] like documented in detail in the main task issue arcticicestudio/styleguide-git#11.
+
+</details>
+
 # 0.8.0
 
 ![Release Date: 2019-08-22](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-22&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/projects/6) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/milestone/3)
@@ -1030,3 +1167,88 @@ otherwise Markdown elements are not parsed and rendered!
 [react-d-hooks]: https://reactjs.org/docs/hooks-intro.html
 [yt-gh-stream-actions_cicd]: https://www.youtube.com/watch?v=E1OunoCyuhY
 [gh-compare-tag-v0.7.0_v0.8.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.7.0...v0.8.0
+
+<!-- v0.9.0 -->
+
+[esl-docs-guides-mig_v7]: https://eslint.org/docs/user-guide/migrating-to-7.0.0
+[esl-docs-guides-mig_v7#depr_rules]: https://eslint.org/docs/user-guide/migrating-to-7.0.0#nodejscommonjs-rules-have-been-deprecated
+[esl-docs-guides-mig_v7#override_file_match]: https://eslint.org/docs/user-guide/migrating-to-7.0.0#lint-files-matched-by-overridesfiles-by-default
+[esl-docs-guides-mig_v7#recomm_rules]: https://eslint.org/docs/user-guide/migrating-to-7.0.0#eslintrecommended-has-been-updated
+[esl-docs-rule-callback-return]: https://eslint.org/docs/rules/callback-return
+[esl-docs-rule-global-require]: https://eslint.org/docs/rules/global-require
+[esl-docs-rule-handle-callback-err]: https://eslint.org/docs/rules/handle-callback-err
+[esl-docs-rule-no-dupe-else-if]: https://eslint.org/docs/rules/no-dupe-else-if
+[esl-docs-rule-no-import-assign]: https://eslint.org/docs/rules/no-import-assign
+[esl-docs-rule-no-mixed-requires]: https://eslint.org/docs/rules/no-mixed-requires
+[esl-docs-rule-no-new-require]: https://eslint.org/docs/rules/no-new-require
+[esl-docs-rule-no-path-concat]: https://eslint.org/docs/rules/no-path-concat
+[esl-docs-rule-no-process-env]: https://eslint.org/docs/rules/no-process-env
+[esl-docs-rule-no-process-exit]: https://eslint.org/docs/rules/no-process-exit
+[esl-docs-rule-no-restricted-modules]: https://eslint.org/docs/rules/no-restricted-modules
+[esl-docs-rule-no-setter-return]: https://eslint.org/docs/rules/no-setter-return
+[esl-docs-rule-no-sync]: https://eslint.org/docs/rules/no-sync
+[gh-acornjs/acorn-comp-v7.0.0_v7.1.1]: https://github.com/acornjs/acorn/compare/7.0.0...7.1.1
+[gh-acornjs/acorn]: https://github.com/acornjs/acorn
+[gh-benmosher/eslint-plugin-import-comp-v2.18.2_v2.22.1]: https://github.com/benmosher/eslint-plugin-import/compare/v2.18.2...v2.22.1
+[gh-benmosher/eslint-plugin-import]: https://github.com/benmosher/eslint-plugin-import
+[gh-blog-npm_v7#break_change]: https://github.blog/2020-10-13-presenting-v7-0-0-of-the-npm-cli/#user-content-breaking-changes
+[gh-compare-tag-v0.8.0_v0.9.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.8.0...v0.9.0
+[gh-eslint/eslint-comp-v6.2.0_v7.23.0]: https://github.com/eslint/eslint/compare/v6.2.0....v7.23.0
+[gh-facebook/create-react-app-tree-pkg-confusing-browser-globals]: https://github.com/facebook/create-react-app/tree/master/packages/confusing-browser-globals
+[gh-facebook/react-blob-pkg-eslint-plugin-react-hooks-chl#v4.2.0]: https://github.com/facebook/react/blob/master/packages/eslint-plugin-react-hooks/CHANGELOG.md#420
+[gh-facebook/react-blob-v16.13.1-recon_childfiber#l407]: https://github.com/facebook/react/blob/v16.13.1/packages/react-reconciler/src/ReactChildFiber.js#L407
+[gh-facebook/react-tree-pkg-eslint-plugin-react-hooks]: https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
+[gh-facebook/react-tree-pkgs-eslint-plugin-react-hooks]: https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
+[gh-github/renaming]: https://github.com/github/renaming
+[gh-guides-intro-flow]: https://guides.github.com/introduction/flow
+[gh-jsx-eslint/eslint-plugin-jsx-a11y-comp-v6.2.3_v6.4.1]: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/compare/v6.2.3...v6.4.1
+[gh-jsx-eslint/eslint-plugin-jsx-a11y]: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y
+[gh-microsoft/typescript-comp-v3.5.3_v4.2.3]: https://github.com/microsoft/TypeScript/compare/v3.5.3...v4.2.3
+[gh-microsoft/typescript]: https://github.com/microsoft/TypeScript
+[gh-mysticatea/eslint-plugin-node-blob-docs-rule-callback-return]: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/callback-return.md
+[gh-mysticatea/eslint-plugin-node-blob-docs-rule-global-require]: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/global-require.md
+[gh-mysticatea/eslint-plugin-node-blob-docs-rule-handle-callback-err]: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/handle-callback-err.md
+[gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-mixed-requires]: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-mixed-requires.md
+[gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-new-require]: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-new-require.md
+[gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-path-concat]: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-path-concat.md
+[gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-process-env]: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-process-env.md
+[gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-process-exit]: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-process-exit.md
+[gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-restricted-modules]: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-restricted-modules.md
+[gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-sync]: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-sync.md
+[gh-okonet/lint-staged-comp-v9.2.3_v10.5.4]: https://github.com/typicode/husky/compare/v9.2.3...v10.5.4
+[gh-okonet/lint-staged]: https://github.com/okonet/lint-staged
+[gh-prettier/eslint-config-prettier-blob-chl#v8.0.0]: https://github.com/prettier/eslint-config-prettier/blob/main/CHANGELOG.md#version-800-2021-02-21
+[gh-prettier/eslint-config-prettier-comp-v6.0.0_v8.1.0]: https://github.com/prettier/eslint-config-prettier/compare/v6.0.0...v8.1.0
+[gh-prettier/eslint-config-prettier-comp-v6.1.0_v8.1.0]: https://github.com/prettier/eslint-config-prettier/compare/v6.1.0...v8.1.0
+[gh-prettier/eslint-config-prettier]: https://github.com/prettier/eslint-config-prettier
+[gh-prettier/eslint-plugin-prettier-comp-v3.1.0_v3.3.1]: https://github.com/prettier/eslint-plugin-prettier/compare/v3.1.0...v3.3.1
+[gh-prettier/eslint-plugin-prettier]: https://github.com/prettier/eslint-plugin-prettier
+[gh-prettier/prettier-comp-v1.18.2_v2.2.1]: https://github.com/typicode/husky/compare/v1.18.2...v2.2.1
+[gh-prettier/prettier]: https://github.com/prettier/prettier
+[gh-remarkjs/remark-comp-v7.0.0_v9.0.0]: https://github.com/typicode/husky/compare/v7.0.0...v9.0.0
+[gh-remarkjs/remark]: https://github.com/remarkjs/remark/releases
+[gh-sarbbottam/eslint-find-rules-comp-v3.4.0_v3.6.1]: https://github.com/sarbbottam/eslint-find-rules/compare/v3.4.0...v3.6.1
+[gh-sarbbottam/eslint-find-rules]: https://github.com/sarbbottam/eslint-find-rules
+[gh-sindresorhus/del-cli-comp-v2.0.0_v3.0.1]: https://github.com/sindresorhus/del-cli/compare/v2.0.0...v3.0.1
+[gh-sindresorhus/del-cli]: https://github.com/sindresorhus/del-cli
+[gh-styleguide-javascript-tree-pkgs-@arcticicestudio/eslint-config]: https://github.com/arcticicestudio/styleguide-javascript/tree/develop/packages/%40arcticicestudio/eslint-config
+[gh-typescript-eslint/typescript-eslint-comp-v2.0.0_v4.20.0]: https://github.com/typescript-eslint/typescript-eslint/compare/v2.0.0...v4.20.0
+[gh-typescript-eslint/typescript-eslint-tree-pkg-eslint-plugin]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
+[gh-typescript-eslint/typescript-eslint-tree-pkg-parser]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser
+[gh-typicode/husky-comp-v3.0.4_v6.0.0]: https://github.com/typicode/husky/compare/v3.0.4...v6.0.0
+[gh-typicode/husky]: https://github.com/typicode/husky
+[gh-yannickcr/eslint-plugin-react-blob-chl#v7.15.0]: https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md#7150---2019-09-30
+[gh-yannickcr/eslint-plugin-react-blob-chl#v7.22.0]: https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md#7220---20201229
+[gh-yannickcr/eslint-plugin-react-blob-chl#v7.5.0]: https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md#750---2017-11-18
+[gh-yannickcr/eslint-plugin-react-blob-chl#v7.9.0]: https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md#790---2018-06-03
+[gh-yannickcr/eslint-plugin-react-blob-docs-rule-jsx-newline]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-newline.md
+[gh-yannickcr/eslint-plugin-react-blob-docs-rule-jsx-no-constructed-context-values]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-constructed-context-values.md
+[gh-yannickcr/eslint-plugin-react-blob-docs-rule-jsx-no-target-blank]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
+[gh-yannickcr/eslint-plugin-react-blob-docs-rule-jsx-no-useless-fragment]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md
+[gh-yannickcr/eslint-plugin-react-blob-docs-rule-no-unstable-nested-components]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unstable-nested-components.md
+[gh-yannickcr/eslint-plugin-react-blob-docs-rule-require-default-props]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
+[gh-yannickcr/eslint-plugin-react-blob-rules-sort-comp]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
+[gh-yannickcr/eslint-plugin-react-comp-v7.14.3_v7.23.1]: https://github.com/yannickcr/eslint-plugin-react/compare/v7.14....v7.23.1
+[gh-yannickcr/eslint-plugin-react]: https://github.com/yannickcr/eslint-plugin-react
+[svengreb/tmpl-rl-v0.9.0]: https://github.com/svengreb/tmpl/releases/tag/v0.9.0
+[svengreb/tmpl]: https://github.com/svengreb/tmpl

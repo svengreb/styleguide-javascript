@@ -8,7 +8,7 @@
  * Arctic Ice Studio JavaScript style guide rules as an extensible remark-lint rule preset.
  * Imports all rule definitions and sets the default parser options.
  *
- * @version 0.8.0
+ * @version 0.9.0
  * @license MIT
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
