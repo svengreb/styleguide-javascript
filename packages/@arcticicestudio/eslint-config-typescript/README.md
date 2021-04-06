@@ -10,7 +10,7 @@
 
 <p align="center"><a href="https://github.com/arcticicestudio/styleguide-javascript/actions" target="_blank" rel="noreferrer"><img src="https://img.shields.io/github/workflow/status/arcticicestudio/styleguide-javascript/ci?style=flat-square&label=CI&logoColor=eceff4&colorA=4c566a&logo=github-actions"/></a></p>
 
-This package implements the rules of the [Arctic Ice Studio JavaScript style guide][gh-stg-repo] as an extensible shared [ESLint][] configuration with plugin support for [TypeScript][typescript] through the official [TypeScript ESLint][gh-esl-ts] project as well as compatibility integrations for other projects like [Prettier][].
+This package implements the rules of the [Arctic Ice Studio JavaScript style guide][gh-stg-repo] as an extensible shared [ESLint][] configuration with plugin support for [TypeScript][] through the official [TypeScript ESLint][gh-esl-ts] project as well as compatibility integrations for other projects like [Prettier][].
 
 ## Getting Started
 

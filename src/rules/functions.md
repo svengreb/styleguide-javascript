@@ -4,7 +4,7 @@
 
 Use named function expressions instead of function declarations. Function declarations are hoisted, which means that it is (too) easy to reference the function before it is defined in the file. This harms readability and maintainability.
 
-Functions which definition is too large or complex should be extracted into a own module. Make sure to explicitly name the expression, regardless of whether or not the name is inferred from the containing variable which is often the case in modern browsers or when using compilers such as [Babel][babel]. This eliminates any assumptions made about the call stack of errors.
+Functions which definition is too large or complex should be extracted into a own module. Make sure to explicitly name the expression, regardless of whether or not the name is inferred from the containing variable which is often the case in modern browsers or when using compilers such as [Babel][]. This eliminates any assumptions made about the call stack of errors.
 
 > ESLint: [func-style][eslint/func-style]
 
@@ -284,7 +284,7 @@ function snow(flake) {
 
 ## Parameter Reassign
 
-Never reassign parameters. It can lead to unexpected behavior, especially when accessing the `arguments` object. It can also cause optimization issues, especially in [V8][v8].
+Never reassign parameters. It can lead to unexpected behavior, especially when accessing the `arguments` object. It can also cause optimization issues, especially in [V8][].
 
 > ESLint: [no-param-reassign][eslint/no-param-reassign]
 
