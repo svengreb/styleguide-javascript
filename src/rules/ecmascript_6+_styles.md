@@ -6,7 +6,7 @@ This chapter is a collection of links in this style guide to the various ES6+ fe
 - [Object Concise][objects-es6_concise]
 - [Computed Object Properties][objects-es6_computed_properties]
 - [Template Literals][strings-es6_template_literals]
-- [Destructuring][destructuring]
+- [Destructuring][]
 - [Default Function Parameters][functions-default_parameters]
 - [Object Rest Spread][objects-rest_spread]
 - [Function Rest Spread][functions-es6_rest]
@@ -15,7 +15,7 @@ This chapter is a collection of links in this style guide to the various ES6+ fe
 - [`let`][references-disallow_var] and [`const`][references-prefer_const]
 - [Exponentiation Operator][properties-exponentiation_operator]
 - [Iterators and Generators][iterators_and-generators]
-- [Modules][modules]
+- [Modules][]
 
 ## TC39 Proposals
 

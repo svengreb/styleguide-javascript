@@ -217,7 +217,7 @@ function withSnow(ComposedComponent) {
 
 #### Spreading Explicitly Known Props
 
-Spreading objects with known, explicit props. This can be particularly useful when testing React components with [Mocha][mocha]'s `beforeEach` construct.
+Spreading objects with known, explicit props. This can be particularly useful when testing React components with [Mocha][]'s `beforeEach` construct.
 
 ```jsx
 export default function Snow {

@@ -8,10 +8,10 @@
 
 ### Recommended libraries and frameworks
 
-- [Jasmine][jasmine]
-- [Jest][jest]
-- [Mocha][mocha]
-- [Sinon.js][sinon.js]
+- [Jasmine][]
+- [Jest][]
+- [Mocha][]
+- [Sinon.js][]
 
 ###### References
 

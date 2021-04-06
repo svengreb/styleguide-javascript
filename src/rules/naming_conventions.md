@@ -233,7 +233,7 @@ export default snowFalling;
 
 ## Singleton Export
 
-Use [PascalCase][pascalcase] when exporting a constructor, class, singleton, function library or bare object.
+Use [PascalCase][] when exporting a constructor, class, singleton, function library or bare object.
 
 ###### Examples
 

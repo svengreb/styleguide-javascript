@@ -18,7 +18,7 @@ The [project documentation][docs] contains chapters to learn about the [comprehe
 
 ### ESLint Configurations
 
-To follow these rules in a project use the official extensible code linter configurations [@arcticicestudio/eslint-config-base][gh-t-pkg-esl-conf-base] for [ESLint][eslint]. The advanced [@arcticicestudio/eslint-config][gh-t-pkg-esl-conf] package provides support for specific [React][] and [JSX A11Y][npm-eslint-plugin-jsx-a11y] rules as well as compatibility integrations for other projects like [Prettier][].
+To follow these rules in a project use the official extensible code linter configurations [@arcticicestudio/eslint-config-base][gh-t-pkg-esl-conf-base] for [ESLint][]. The advanced [@arcticicestudio/eslint-config][gh-t-pkg-esl-conf] package provides support for specific [React][] and [JSX A11Y][npm-eslint-plugin-jsx-a11y] rules as well as compatibility integrations for other projects like [Prettier][].
 
 To lint projects build with [TypeScript][], the [@arcticicestudio/eslint-config-typescript][gh-t-pkg-esl-ts] package can be extended for full compatibility with the TypeScript compiler in combination with the powerful ESLint engine. It also allows to lint mixed projects consisting of both TypeScript and JavaScript sources.
 

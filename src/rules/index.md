@@ -1,4 +1,4 @@
-> This style guide assumes the usage of the JavaScript transpiler [Babel][babel], and requires [babel-preset-env][npm-babel-preset-env] or a equivalent configuration to make use of all ECMAScript 6+ (ES 2015+) features including [staged proposals][tc39-proposals-gh]!
+> This style guide assumes the usage of the JavaScript transpiler [Babel][], and requires [babel-preset-env][npm-babel-preset-env] or a equivalent configuration to make use of all ECMAScript 6+ (ES 2015+) features including [staged proposals][tc39-proposals-gh]!
 
 There are two sections with chapters about
 

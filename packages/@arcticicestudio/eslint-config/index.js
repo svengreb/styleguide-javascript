@@ -18,7 +18,10 @@
  * @see https://eslint.org/docs/user-guide/configuring.html#configuring-rules
  */
 module.exports = {
-  extends: ["@arcticicestudio/eslint-config-base", "./rules/react", "./rules/react/jsx", "./rules/jsx-a11y"].map(
-    require.resolve,
-  ),
+  extends: [
+    "@arcticicestudio/eslint-config-base",
+    require.resolve("./rules/react"),
+    require.resolve("./rules/react/jsx"),
+    require.resolve("./rules/jsx-a11y"),
+  ],
 };

@@ -50,7 +50,7 @@ See the [official v7 migration guide][esl-docs-guides-mig_v7] for all details.
 
 - [eslint-config-prettier][gh-prettier/eslint-config-prettier] — Bumped version from [`v6.0.0` to `v8.1.0`][gh-prettier/eslint-config-prettier-comp-v6.0.0_v8.1.0]. As of [version `8.0.0` all rule sets have been merged into the main `prettier` set][gh-prettier/eslint-config-prettier-blob-chl#v8.0.0]. Therefore the additional `prettier/react` set has been removed from the `extends` array of the Prettier specific rules.
 - [eslint-find-rules][gh-sarbbottam/eslint-find-rules] — Bumped version from [`v3.4.0` to `v3.6.1`][gh-sarbbottam/eslint-find-rules-comp-v3.4.0_v3.6.1].
-- [eslint-plugin-import][gh-benmosher/eslint-plugin-import] — Bumped minimum version from [`v2.18.2` to `v2.22.1`][gh-benmosher/eslint-plugin-import-comp-v2.18.2_v2.22.1].
+- [eslint-plugin-import][gh-esl-p-import] — Bumped minimum version from [`v2.18.2` to `v2.22.1`][gh-benmosher/eslint-plugin-import-comp-v2.18.2_v2.22.1].
 - [eslint-plugin-jsx-a11y][gh-jsx-eslint/eslint-plugin-jsx-a11y] — Bumped minimum version from [`v6.2.3` to `v6.4.1`][gh-jsx-eslint/eslint-plugin-jsx-a11y-comp-v6.2.3_v6.4.1].
 - [eslint-plugin-prettier][gh-prettier/eslint-plugin-prettier] — Bumped minimum version from [`v3.1.0` to `v3.3.1`][gh-prettier/eslint-plugin-prettier-comp-v3.1.0_v3.3.1].
 - [eslint-plugin-react][gh-yannickcr/eslint-plugin-react] — Bumped minimum version from [`v7.14.3` to `v7.23.1`][gh-yannickcr/eslint-plugin-react-comp-v7.14.3_v7.23.1]. This includes new rules and improvements to existing ones:
@@ -65,13 +65,13 @@ See the [official v7 migration guide][esl-docs-guides-mig_v7] for all details.
     > Creating components inside components without memoization leads to unstable components. The nested component and all its children are recreated during each re-render. Given stateful children of the nested component will lose their state on each re-render.
     > React reconcilation performs element type comparison with [reference equality][gh-facebook/react-blob-v16.13.1-recon_childfiber#l407]. The reference to the same element changes on each re-render when defining components inside the render block. This leads to complete recreation of the current node and all its children. As a result the virtual DOM has to do extra unnecessary work and possible bugs are introduced.
   - Added `forbidDefaultForRequired` option with value `true` for [`react/require-default-props`][gh-yannickcr/eslint-plugin-react-blob-docs-rule-require-default-props] rule (introduced in [`v7.5.0`][gh-yannickcr/eslint-plugin-react-blob-chl#v7.5.0])
-- [eslint-plugin-react-hooks][gh-facebook/react-tree-pkg-eslint-plugin-react-hooks] — Bumped minimum version from `v2.0.0` to [`v4.2.0`][gh-facebook/react-blob-pkg-eslint-plugin-react-hooks-chl#v4.2.0].
+- [eslint-plugin-react-hooks][gh-t-esl-p-react-hooks] — Bumped minimum version from `v2.0.0` to [`v4.2.0`][gh-facebook/react-blob-pkg-eslint-plugin-react-hooks-chl#v4.2.0].
 
 #### `@arcticicestudio/eslint-config-base`
 
-- [confusing-browser-globals][gh-facebook/create-react-app-tree-pkg-confusing-browser-globals] — Bumped minimum version from `v1.0.8` to `v1.0.10`.
+- [confusing-browser-globals][gh-confusing-browser-globals] — Bumped minimum version from `v1.0.8` to `v1.0.10`.
 - [eslint-find-rules][gh-sarbbottam/eslint-find-rules] — Bumped version from [`v3.4.0` to `v3.6.1`][gh-sarbbottam/eslint-find-rules-comp-v3.4.0_v3.6.1].
-- [eslint-plugin-import][gh-benmosher/eslint-plugin-import] — Bumped minimum version from [`v2.18.2` to `v2.22.1`][gh-benmosher/eslint-plugin-import-comp-v2.18.2_v2.22.1].
+- [eslint-plugin-import][gh-esl-p-import] — Bumped minimum version from [`v2.18.2` to `v2.22.1`][gh-benmosher/eslint-plugin-import-comp-v2.18.2_v2.22.1].
 
 #### `@arcticicestudio/eslint-config-typescript`
 
@@ -109,13 +109,13 @@ To allow to use Prettier without `@arcticicestudio/eslint-config`, the support h
 ↠ Bumped outdated Node.js package dependencies and GitHub actions to their latest versions:
 
 - #24 (⊶ c0c22532) [`acorn`][gh-acornjs/acorn] from [7.0.0 to 7.1.1][gh-acornjs/acorn-comp-v7.0.0_v7.1.1]
-- #23 ⇄ #27 (⊶ e015dc0a) [`eslint-plugin-react-hooks`][gh-facebook/react-tree-pkgs-eslint-plugin-react-hooks] from `1.7.0` to `2.0.0`.
+- #23 ⇄ #27 (⊶ e015dc0a) [`eslint-plugin-react-hooks`][gh-t-esl-p-react-hooks] from `1.7.0` to `2.0.0`.
 - #33 ⇄ #34 (⊶ e4fd1653) **Updated to ESLint v7** — bumped package version from [`v6.2.0` to `v7.23.0`][gh-eslint/eslint-comp-v6.2.0_v7.23.0]. See #32 and the [official v7 migration guide][esl-docs-guides-mig_v7] for more details.
 - #33 ⇄ #34 (⊶ e4fd1653) **Removed `--ext` option for ESLint tasks** — as of ESLint v7, [files matched by `overrides[].files` are now linted by default][esl-docs-guides-mig_v7#override_file_match] which makes it obsolete to explicitly define file extensions like `*.js`.
 - #33 ⇄ #34 (⊶ e4fd1653) [del-cli][gh-sindresorhus/del-cli] — bumped minimum version from [`v2.0.0` to `v3.0.1`][gh-sindresorhus/del-cli-comp-v2.0.0_v3.0.1].
 - #33 ⇄ #34 (⊶ e4fd1653) [eslint-config-prettier][gh-prettier/eslint-config-prettier] — bumped version from [`v6.1.0` to `v8.1.0`][gh-prettier/eslint-config-prettier-comp-v6.1.0_v8.1.0].
 - #33 ⇄ #34 (⊶ e4fd1653) [eslint-plugin-prettier][gh-prettier/eslint-plugin-prettier] — bump minimum version from [`v3.1.0` to `v3.3.1`][gh-prettier/eslint-plugin-prettier-comp-v3.1.0_v3.3.1].
-- #33 ⇄ #34 (⊶ e4fd1653) [eslint-plugin-import][gh-benmosher/eslint-plugin-import] — bumped minimum version from [`v2.18.2` to `v2.22.1`][gh-benmosher/eslint-plugin-import-comp-v2.18.2_v2.22.1].
+- #33 ⇄ #34 (⊶ e4fd1653) [eslint-plugin-import][gh-esl-p-import] — bumped minimum version from [`v2.18.2` to `v2.22.1`][gh-benmosher/eslint-plugin-import-comp-v2.18.2_v2.22.1].
 - #33 ⇄ #34 (⊶ e4fd1653) [husky][gh-typicode/husky] — bumped minimum version from [`v3.0.4` to `v6.0.0`][gh-typicode/husky-comp-v3.0.4_v6.0.0]. This also includes some breaking changes that require migrations. Run the official migration CLI to automatically migrate from v4 to v6: `npx husky-init && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config`
 - #33 ⇄ #34 (⊶ e4fd1653) [lint-staged][gh-okonet/lint-staged] — bumped minimum version from [`v9.2.3` to `v10.5.4`][gh-okonet/lint-staged-comp-v9.2.3_v10.5.4].
 - #33 ⇄ #34 (⊶ e4fd1653) [prettier][gh-prettier/prettier] — bumped minimum version from [`v1.18.2` to `v2.2.1`][gh-prettier/prettier-comp-v1.18.2_v2.2.1].
@@ -183,7 +183,7 @@ This feature adds the `eslint-plugin-react-hooks` package as new peer dependency
 2. `plugin:@typescript-eslint/recommended`
 3. `plugin:@typescript-eslint/recommended-requiring-type-checking`
 
-The [`@typescript-eslint/parser`][gh-tsesl-parser] is set as ESLint parser. As of [`@typescript-eslint/parser` version `2.0.0`][gh-tsesl-rl-2.0.0] (also see [typescript-eslint/typescript-eslint#890][gh-tsesl#890]), the parser will panic when parsing files that are not included within the provided _tsconfig(s)_.
+The [`@typescript-eslint/parser`][gh-typescript-eslint/typescript-eslint-tree-pkg-parser] is set as ESLint parser. As of [`@typescript-eslint/parser` version `2.0.0`][gh-tsesl-rl-2.0.0] (also see [typescript-eslint/typescript-eslint#890][gh-tsesl#890]), the parser will panic when parsing files that are not included within the provided _tsconfig(s)_.
 The documentation of the new package contains instructions and a quick setup and usage guide to inform about the [required `tsconfig` configurations][gh-tsesl-parser#config] and the corresponding `eslintrc` changes.
 
 Next to the support for TypeScript, the package also modifies some _React_ and _import_ related rules in order to prevent conflicts, like the adaption of the `.ts` and `.tsx` extensions for all JS and JSX files as well as removing `.jsx` to force the usage of `.tsx`. There are other rules that have been disabled like the check for valid React `prop-types` since these and not necessary anymore when working with TypeScript.
@@ -272,7 +272,7 @@ This feature adds the `eslint-plugin-react-hooks` package as new peer dependency
 2. `plugin:@typescript-eslint/recommended`
 3. `plugin:@typescript-eslint/recommended-requiring-type-checking`
 
-The [`@typescript-eslint/parser`][gh-tsesl-parser] is set as ESLint parser. As of [`@typescript-eslint/parser` version `2.0.0`][gh-tsesl-rl-2.0.0] (also see [typescript-eslint/typescript-eslint#890][gh-tsesl#890]), the parser will panic when parsing files that are not included within the provided _tsconfig(s)_.
+The [`@typescript-eslint/parser`][gh-typescript-eslint/typescript-eslint-tree-pkg-parser] is set as ESLint parser. As of [`@typescript-eslint/parser` version `2.0.0`][gh-tsesl-rl-2.0.0] (also see [typescript-eslint/typescript-eslint#890][gh-tsesl#890]), the parser will panic when parsing files that are not included within the provided _tsconfig(s)_.
 The documentation of the new package contains instructions and a quick setup and usage guide to inform about the [required `tsconfig` configurations][gh-tsesl-parser#config] and the corresponding `eslintrc` changes.
 
 Next to the support for TypeScript, the package also modifies some _React_ and _import_ related rules in order to prevent conflicts, like the adaption of the `.ts` and `.tsx` extensions for all JS and JSX files as well as removing `.jsx` to force the usage of `.tsx`. There are other rules that have been disabled like the check for valid React `prop-types` since these and not necessary anymore when working with TypeScript.
@@ -436,14 +436,14 @@ To format all compatible sources within the project the `format:pretty` NPM scri
 <p align="center"><img src="https://user-images.githubusercontent.com/7836623/63289152-b2273700-c2be-11e9-870f-2d43d700886d.png" width="100" /></p>
 
 **Introducing _lint-staged_** — #12 (⊶ c21a58a9)
-↠ Integrated [lint-staged][gh-lint-staged] to run linters against staged Git files and prevent adding code that violates any style guide into the code base.
+↠ Integrated [lint-staged][gh-okonet/lint-staged] to run linters against staged Git files and prevent adding code that violates any style guide into the code base.
 
 Read #12 for more details about the configuration and setup.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/7836623/63289221-e13da880-c2be-11e9-837d-38fd2657df6a.png" width="100" /></p>
 
 **Introducing _Husky_** — #13 (⊶ b4cac34f)
-↠ Integrated [Husky][gh-husky], the tool that make Git hooks easy and can prevent bad Git commits, pushes and more _woof_!
+↠ Integrated [Husky][gh-typicode/husky], the tool that make Git hooks easy and can prevent bad Git commits, pushes and more _woof_!
 
 Read #13 for more details about the configuration and setup.
 
@@ -661,13 +661,13 @@ The following [rules are deprecated][esl-d-r#dep] and have been removed or repla
 **Entry point for Prettier plugin integration** — #8 ⇄ #16 (⊶ ac611f7e)
 ↳ Transferred from ~~arcticicestudio/eslint-config-arcticicestudio#12 ⇄ arcticicestudio/eslint-config-arcticicestudio#15~~ (⊶ ~~arcticicestudio/eslint-config-arcticicestudio@8935d75a~~)
 ↠ All _Arctic Ice Studio_ projects using [Prettier][] for a smooth and uncomplicated developer experience as well as keeping the code style consistent across own and third-party projects.
-Almost all projects have added the [eslint-plugin-prettier][gh-esl-p-prettier] plugin to run Prettier as an ESLint rule and report differences as individual ESLint issues.
+Almost all projects have added the [eslint-plugin-prettier][gh-prettier/eslint-plugin-prettier] plugin to run Prettier as an ESLint rule and report differences as individual ESLint issues.
 
 Therefore a new entry point has been added that
 
 - enables the `prettier` plugin.
 - enables the `prettier/prettier` rule to `error` level in order to enable the linting output.
-- extends the official Prettier ESLint configuration from the [ `eslint-config-prettier` package][gh-esl-c-prettier] to ensure the best compatibility with Prettier as well as reducing required maintenance overhead to keep up-to-date with new Prettier releases. It also extends the following shared configurations to include support for other ESLint plugins:
+- extends the official Prettier ESLint configuration from the [`eslint-config-prettier` package][gh-prettier/eslint-config-prettier] to ensure the best compatibility with Prettier as well as reducing required maintenance overhead to keep up-to-date with new Prettier releases. It also extends the following shared configurations to include support for other ESLint plugins:
   - `eslint-plugin-react` through the shared `prettier/react` configuration
 
 The new entry point is available as `@arcticicestudio/eslint-config/prettier` and can be composed with the default entry point to inherit the rules and include all existing integrations like for „React“ and „JSX A11Y“.
@@ -789,7 +789,7 @@ This improvement also added the `ImportDeclaration` and `ExportDeclaration` conf
 
 **New React rule `react/jsx-max-depth`** — #8 ⇄ #16 (⊶ ac611f7e)
 ↳ Transferred from ~~arcticicestudio/eslint-config-arcticicestudio#6 ⇄ arcticicestudio/eslint-config-arcticicestudio#7~~ (⊶ ~~arcticicestudio/eslint-config-arcticicestudio@356292cd~~)
-↠ Added new rule [`react/jsx-max-depth`][gh-esl-p-react/jsx-max-depth] to validate the maximum JSX depth. Introduced in [eslint-plugin-react][gh-esl-p-react] version [7.7.0][gh-esl-p-react-clog-7.7.0].
+↠ Added new rule [`react/jsx-max-depth`][gh-esl-p-react/jsx-max-depth] to validate the maximum JSX depth. Introduced in [eslint-plugin-react][gh-yannickcr/eslint-plugin-react] version [7.7.0][gh-esl-p-react-clog-7.7.0].
 
 #### `@arcticicestudio/eslint-config-base`
 
@@ -950,7 +950,7 @@ It was set up to run the `npx` command to install the peer dependencies that is 
 
 **Base Rules** — #8 ⇄ #16 (⊶ ac611f7e)
 ↳ Transferred from ~~arcticicestudio/eslint-config-arcticicestudio#1 ⇄ arcticicestudio/eslint-config-arcticicestudio#2~~ (⊶ ~~arcticicestudio/eslint-config-arcticicestudio@c46bf556~~)
-↠ Added all rules of the [eslint-plugin-react][gh-esl-p-react] and [eslint-plugin-jsx-a11y][gh-esl-p-jsx-a11y] plugins based on the [React][docs-r-react] and [Accessibility A11Y][docs-r-react-a11y] style guidelines as shareable ESLint config.
+↠ Added all rules of the [eslint-plugin-react][gh-yannickcr/eslint-plugin-react] and [eslint-plugin-jsx-a11y][gh-esl-p-jsx-a11y] plugins based on the [React][docs-r-react] and [Accessibility A11Y][docs-r-react-a11y] style guidelines as shareable ESLint config.
 More details can also be found in the initially published ~~[project documentation][noop]~~.
 
 #### `@arcticicestudio/eslint-config-base`
@@ -1001,13 +1001,16 @@ otherwise Markdown elements are not parsed and rendered!
 [flow]: https://flow.org
 [gatsby]: https://gatsbyjs.org
 [gh-b-pkg-esl-readme#entry_points]: https://github.com/arcticicestudio/styleguide-javascript/blob/main/packages/%40arcticicestudio/eslint-config/README.md#entry-points
-[gh-esl-c-prettier]: https://github.com/prettier/eslint-config-prettier
 [gh-esl-p-import]: https://github.com/benmosher/eslint-plugin-import
 [gh-esl-p-jsx-a11y]: https://github.com/evcohen/eslint-plugin-jsx-a11y
-[gh-esl-p-prettier]: https://github.com/prettier/eslint-plugin-prettier
-[gh-esl-p-react]: https://github.com/yannickcr/eslint-plugin-react
+[gh-okonet/lint-staged]: https://github.com/okonet/lint-staged
+[gh-prettier/eslint-config-prettier]: https://github.com/prettier/eslint-config-prettier
+[gh-prettier/eslint-plugin-prettier]: https://github.com/prettier/eslint-plugin-prettier
 [gh-t-pkg-esl-base]: https://github.com/arcticicestudio/styleguide-javascript/tree/main/packages/@arcticicestudio/eslint-config-base
 [gh-t-pkg-esl]: https://github.com/arcticicestudio/styleguide-javascript/tree/main/packages/@arcticicestudio/eslint-config
+[gh-typescript-eslint/typescript-eslint-tree-pkg-parser]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser
+[gh-typicode/husky]: https://github.com/typicode/husky
+[gh-yannickcr/eslint-plugin-react]: https://github.com/yannickcr/eslint-plugin-react
 [jest]: https://jestjs.io
 [mdn-js-op-cond]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 [mdn-js-op-destruct]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
@@ -1129,8 +1132,6 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-help-issue-templ-repo]: https://help.github.com/articles/creating-issue-templates-for-your-repository
 [gh-help-issue-templ]: https://help.github.com/articles/about-issue-and-pull-request-templates
 [gh-help-pr-templ]: https://help.github.com/articles/creating-a-pull-request-template-for-your-repository
-[gh-husky]: https://github.com/typicode/husky
-[gh-lint-staged]: https://github.com/okonet/lint-staged
 [gh-remark-cli]: https://github.com/remarkjs/remark/tree/main/packages/remark-cli
 [gh-remark-lint]: https://github.com/remarkjs/remark-lint
 [gh-remark-preset-lint-arcticicestudio]: https://github.com/arcticicestudio/remark-preset-lint-arcticicestudio
@@ -1148,13 +1149,13 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-b-ac611f7e-circleci]: https://github.com/arcticicestudio/styleguide-javascript/blob/ac611f7e342e8475767b03d95fa174aea65b39e5/.circleci/config.yml
 [gh-blog-actions-cicd]: https://github.blog/2019-08-08-github-actions-now-supports-ci-cd
 [gh-blog-actions]: https://github.blog/2018-10-17-action-demos
+[gh-compare-tag-v0.7.0_v0.8.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.7.0...v0.8.0
 [gh-esl-p-react-jsx_bind]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
 [gh-feat-actions]: https://github.com/features/actions
 [gh-help-actions-events]: https://help.github.com/en/articles/events-that-trigger-workflows#webhook-events
 [gh-help-actions]: https://help.github.com/en/categories/automating-your-workflow-with-github-actions
 [gh-starter-workflows]: https://github.com/actions/starter-workflows
 [gh-t-esl-p-react-hooks]: https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
-[gh-tsesl-parser]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser
 [gh-tsesl-parser#config]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#configuration
 [gh-tsesl-rl-2.0.0]: https://github.com/typescript-eslint/typescript-eslint/releases/tag/v2.0.0
 [gh-tsesl-t-configs]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/src/configs
@@ -1166,7 +1167,6 @@ otherwise Markdown elements are not parsed and rendered!
 [react-d-hooks-rules]: https://reactjs.org/docs/hooks-rules.html
 [react-d-hooks]: https://reactjs.org/docs/hooks-intro.html
 [yt-gh-stream-actions_cicd]: https://www.youtube.com/watch?v=E1OunoCyuhY
-[gh-compare-tag-v0.7.0_v0.8.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.7.0...v0.8.0
 
 <!-- v0.9.0 -->
 
@@ -1190,15 +1190,11 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-acornjs/acorn-comp-v7.0.0_v7.1.1]: https://github.com/acornjs/acorn/compare/7.0.0...7.1.1
 [gh-acornjs/acorn]: https://github.com/acornjs/acorn
 [gh-benmosher/eslint-plugin-import-comp-v2.18.2_v2.22.1]: https://github.com/benmosher/eslint-plugin-import/compare/v2.18.2...v2.22.1
-[gh-benmosher/eslint-plugin-import]: https://github.com/benmosher/eslint-plugin-import
 [gh-blog-npm_v7#break_change]: https://github.blog/2020-10-13-presenting-v7-0-0-of-the-npm-cli/#user-content-breaking-changes
 [gh-compare-tag-v0.8.0_v0.9.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.8.0...v0.9.0
 [gh-eslint/eslint-comp-v6.2.0_v7.23.0]: https://github.com/eslint/eslint/compare/v6.2.0....v7.23.0
-[gh-facebook/create-react-app-tree-pkg-confusing-browser-globals]: https://github.com/facebook/create-react-app/tree/master/packages/confusing-browser-globals
 [gh-facebook/react-blob-pkg-eslint-plugin-react-hooks-chl#v4.2.0]: https://github.com/facebook/react/blob/master/packages/eslint-plugin-react-hooks/CHANGELOG.md#420
 [gh-facebook/react-blob-v16.13.1-recon_childfiber#l407]: https://github.com/facebook/react/blob/v16.13.1/packages/react-reconciler/src/ReactChildFiber.js#L407
-[gh-facebook/react-tree-pkg-eslint-plugin-react-hooks]: https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
-[gh-facebook/react-tree-pkgs-eslint-plugin-react-hooks]: https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
 [gh-github/renaming]: https://github.com/github/renaming
 [gh-guides-intro-flow]: https://guides.github.com/introduction/flow
 [gh-jsx-eslint/eslint-plugin-jsx-a11y-comp-v6.2.3_v6.4.1]: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/compare/v6.2.3...v6.4.1
@@ -1216,13 +1212,10 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-restricted-modules]: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-restricted-modules.md
 [gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-sync]: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-sync.md
 [gh-okonet/lint-staged-comp-v9.2.3_v10.5.4]: https://github.com/typicode/husky/compare/v9.2.3...v10.5.4
-[gh-okonet/lint-staged]: https://github.com/okonet/lint-staged
 [gh-prettier/eslint-config-prettier-blob-chl#v8.0.0]: https://github.com/prettier/eslint-config-prettier/blob/main/CHANGELOG.md#version-800-2021-02-21
 [gh-prettier/eslint-config-prettier-comp-v6.0.0_v8.1.0]: https://github.com/prettier/eslint-config-prettier/compare/v6.0.0...v8.1.0
 [gh-prettier/eslint-config-prettier-comp-v6.1.0_v8.1.0]: https://github.com/prettier/eslint-config-prettier/compare/v6.1.0...v8.1.0
-[gh-prettier/eslint-config-prettier]: https://github.com/prettier/eslint-config-prettier
 [gh-prettier/eslint-plugin-prettier-comp-v3.1.0_v3.3.1]: https://github.com/prettier/eslint-plugin-prettier/compare/v3.1.0...v3.3.1
-[gh-prettier/eslint-plugin-prettier]: https://github.com/prettier/eslint-plugin-prettier
 [gh-prettier/prettier-comp-v1.18.2_v2.2.1]: https://github.com/typicode/husky/compare/v1.18.2...v2.2.1
 [gh-prettier/prettier]: https://github.com/prettier/prettier
 [gh-remarkjs/remark-comp-v7.0.0_v9.0.0]: https://github.com/typicode/husky/compare/v7.0.0...v9.0.0
@@ -1234,9 +1227,7 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-styleguide-javascript-tree-pkgs-@arcticicestudio/eslint-config]: https://github.com/arcticicestudio/styleguide-javascript/tree/develop/packages/%40arcticicestudio/eslint-config
 [gh-typescript-eslint/typescript-eslint-comp-v2.0.0_v4.20.0]: https://github.com/typescript-eslint/typescript-eslint/compare/v2.0.0...v4.20.0
 [gh-typescript-eslint/typescript-eslint-tree-pkg-eslint-plugin]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
-[gh-typescript-eslint/typescript-eslint-tree-pkg-parser]: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser
 [gh-typicode/husky-comp-v3.0.4_v6.0.0]: https://github.com/typicode/husky/compare/v3.0.4...v6.0.0
-[gh-typicode/husky]: https://github.com/typicode/husky
 [gh-yannickcr/eslint-plugin-react-blob-chl#v7.15.0]: https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md#7150---2019-09-30
 [gh-yannickcr/eslint-plugin-react-blob-chl#v7.22.0]: https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md#7220---20201229
 [gh-yannickcr/eslint-plugin-react-blob-chl#v7.5.0]: https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md#750---2017-11-18
@@ -1249,6 +1240,5 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-yannickcr/eslint-plugin-react-blob-docs-rule-require-default-props]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
 [gh-yannickcr/eslint-plugin-react-blob-rules-sort-comp]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
 [gh-yannickcr/eslint-plugin-react-comp-v7.14.3_v7.23.1]: https://github.com/yannickcr/eslint-plugin-react/compare/v7.14....v7.23.1
-[gh-yannickcr/eslint-plugin-react]: https://github.com/yannickcr/eslint-plugin-react
 [svengreb/tmpl-rl-v0.9.0]: https://github.com/svengreb/tmpl/releases/tag/v0.9.0
 [svengreb/tmpl]: https://github.com/svengreb/tmpl
