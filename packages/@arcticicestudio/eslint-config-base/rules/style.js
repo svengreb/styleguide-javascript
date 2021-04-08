@@ -701,7 +701,14 @@ module.exports = {
       {
         line: {
           exceptions: ["+-"],
-          markers: ["!"],
+          markers: [
+            "!",
+            /*
+             * Support for TypeScript triple-slash directives.
+             * See https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html for more details.
+             */
+            "/",
+          ],
         },
         block: {
           exceptions: ["+-"],
