@@ -28,10 +28,4 @@ module.exports = {
     "./rules/import/settings.js",
     "./rules/import/style.js",
   ].map(require.resolve),
-  overrides: [
-    {
-      files: ["*.ts", "*.tsx"],
-      extends: ["@arcticicestudio/eslint-config-typescript", "@arcticicestudio/eslint-config-typescript/prettier"],
-    },
-  ],
 };
