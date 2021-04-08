@@ -8,6 +8,52 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.10.0
+
+![Release Date: 2021-04-08](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-04-08&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.10.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/projects/8) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.10.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/milestone/5)
+
+⇅ [Show all commits][gh-compare-tag-v0.9.0_v0.10.0]
+
+## Improvements
+
+<details>
+<summary><strong><code>@arcticicestudio/remark-preset-lint</code> migration</strong> — #47 ⇄ #48 (⊶ 90953d7c)</summary>
+
+↠ The `remark-preset-lint-arcticicestudio` package has been deprecated [during the migration into a monorepo][gh#10] and replaced by the new [`@arcticicestudio/remark-preset-lint` package][gh-tree-pkgs-@ais-remarl-preset-lint]. This package also [introduced support for remark `13.0.0`][gh#28] which comes with some new features and great improvements.
+To migrate to the new package the `remark-preset-lint-arcticicestudio` preset has been replaced by the new `@arcticicestudio/remark-preset-lint` preset in the `.remarkrc.js` file.
+
+</details>
+
+## Bug Fixes
+
+<details>
+<summary><strong>Invalid usage of <code>prettier/@typescript-eslint</code> configuration</strong> — #49 ⇄ #52 (⊶ c1aca60a)</summary>
+
+↠ As of [`eslint-config-prettier`][gh-prettier/eslint-config-prettier] version [`8.0.0`][gh-prettier/eslint-config-prettier-blob-chl#v8.0.0] all configurations have been merged into the `prettier` configuration that now includes not just ESLint core rules, but also rules from all plugins.
+In #32 the `eslint-config-prettier` version was bumped from version [v6.0.0 to v8.1.0][gh-prettier/eslint-config-prettier-comp-v6.0.0_v8.1.0], but the `@arcticicestudio/eslint-config-typescript` package still explicitly extends the `prettier/@typescript-eslint` configuration which results in an error when consuming the package.
+
+To fix this problem, the `prettier/@typescript-eslint` has been removed entirely from the `extend` field, leaving only the all-in-one `prettier` configuration.
+
+</details>
+
+<details>
+<summary><strong>Loop on TypeScript configuration override</strong> — #50 ⇄ #53 (⊶ ddc16cc7)</summary>
+
+↠ In #32 the `@arcticicestudio/eslint-config-typescript` package migrated to the latest plugin versions and added [the `override` field][gh-blob-pkgs-@ais-ts-index-ab59f71f#l31-36] to its index to simplify the usage for consumers by removing the need to explicitly define it per project. Unfortunately this resulted in a crash loop when doing so and also blocked users from overriding single rules based on the project needs.
+
+To fix this problem, the `override` field has been removed again, leaving it up to the user to define and customize the ESLint configuration for TypeScript to fit the project needs.
+
+</details>
+
+<details>
+<summary><strong>Invalid usage of <code>prettier/@typescript-eslint</code> configuration </strong> — #51 ⇄ #54 (⊶ aba45876)</summary>
+
+↠ TypeScript uses [triple-slash directives][typescript-docs-triple_slash_directives] (single-line comments containing a single XML tag) to define compiler directives. The `@arcticicestudio/eslint-config-base` configures the ESLint core rule [`spaced-comment`][eslint-rule-spaced-comment] and already defines exceptions and comment markers for special use cases, but did not support triple-slash directives. When running `eslint --fix` these comments in `*.d.ts` files were malformed (`///` → `// /`) which resulted in invalid TypeScript syntax.
+
+To support triple-slash directives, the `/` marker has been added to the `line` field.
+
+</details>
+
 # 0.9.0
 
 ![Release Date: 2021-04-04](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-04-04&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.9.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/projects/7) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.9.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/milestone/4)
@@ -1004,6 +1050,8 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-esl-p-import]: https://github.com/benmosher/eslint-plugin-import
 [gh-esl-p-jsx-a11y]: https://github.com/evcohen/eslint-plugin-jsx-a11y
 [gh-okonet/lint-staged]: https://github.com/okonet/lint-staged
+[gh-prettier/eslint-config-prettier-blob-chl#v8.0.0]: https://github.com/prettier/eslint-config-prettier/blob/main/CHANGELOG.md#version-800-2021-02-21
+[gh-prettier/eslint-config-prettier-comp-v6.0.0_v8.1.0]: https://github.com/prettier/eslint-config-prettier/compare/v6.0.0...v8.1.0
 [gh-prettier/eslint-config-prettier]: https://github.com/prettier/eslint-config-prettier
 [gh-prettier/eslint-plugin-prettier]: https://github.com/prettier/eslint-plugin-prettier
 [gh-t-pkg-esl-base]: https://github.com/arcticicestudio/styleguide-javascript/tree/main/packages/@arcticicestudio/eslint-config-base
@@ -1212,8 +1260,6 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-restricted-modules]: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-restricted-modules.md
 [gh-mysticatea/eslint-plugin-node-blob-docs-rule-no-sync]: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-sync.md
 [gh-okonet/lint-staged-comp-v9.2.3_v10.5.4]: https://github.com/typicode/husky/compare/v9.2.3...v10.5.4
-[gh-prettier/eslint-config-prettier-blob-chl#v8.0.0]: https://github.com/prettier/eslint-config-prettier/blob/main/CHANGELOG.md#version-800-2021-02-21
-[gh-prettier/eslint-config-prettier-comp-v6.0.0_v8.1.0]: https://github.com/prettier/eslint-config-prettier/compare/v6.0.0...v8.1.0
 [gh-prettier/eslint-config-prettier-comp-v6.1.0_v8.1.0]: https://github.com/prettier/eslint-config-prettier/compare/v6.1.0...v8.1.0
 [gh-prettier/eslint-plugin-prettier-comp-v3.1.0_v3.3.1]: https://github.com/prettier/eslint-plugin-prettier/compare/v3.1.0...v3.3.1
 [gh-prettier/prettier-comp-v1.18.2_v2.2.1]: https://github.com/typicode/husky/compare/v1.18.2...v2.2.1
@@ -1242,3 +1288,13 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-yannickcr/eslint-plugin-react-comp-v7.14.3_v7.23.1]: https://github.com/yannickcr/eslint-plugin-react/compare/v7.14....v7.23.1
 [svengreb/tmpl-rl-v0.9.0]: https://github.com/svengreb/tmpl/releases/tag/v0.9.0
 [svengreb/tmpl]: https://github.com/svengreb/tmpl
+
+<!-- v0.10.0 -->
+
+[eslint-rule-spaced-comment]: https://eslint.org/docs/rules/spaced-comment
+[gh-blob-pkgs-@ais-ts-index-ab59f71f#l31-36]: https://github.com/arcticicestudio/styleguide-javascript/blob/ab59f71f/packages/%40arcticicestudio/eslint-config-typescript/index.js#L31-L36
+[gh-compare-tag-v0.9.0_v0.10.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.9.0...v0.10.0
+[gh-tree-pkgs-@ais-remarl-preset-lint]: https://github.com/arcticicestudio/styleguide-markdown/tree/main/packages/%40arcticicestudio/remark-preset-lint
+[gh#10]: https://github.com/arcticicestudio/styleguide-markdown/issues/10
+[gh#28]: https://github.com/arcticicestudio/styleguide-markdown/issues/28
+[typescript-docs-triple_slash_directives]: https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html

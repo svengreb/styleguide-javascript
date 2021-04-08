@@ -1,6 +1,6 @@
 {
   "name": "styleguide-javascript",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "The Arctic Ice Studio JavaScript code style",
   "author": "Arctic Ice Studio <development@arcticicestudio.com> (https://www.arcticicestudio.com)",
   "contributors": [
@@ -37,7 +37,7 @@
     "format": "run-s format:pretty format:fix",
     "format:fix": "eslint --fix .",
     "format:pretty": "prettier --write .",
-    "lint": "npm-run-all lint:*",
+    "lint": "run-s lint:*",
     "lint:js": "eslint .",
     "lint:md": "remark --no-stdout . .github/**/*.md",
     "lint:pretty": "prettier --check .",
