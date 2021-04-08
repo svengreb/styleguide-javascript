@@ -13,7 +13,7 @@
  * @see https://prettier.io
  */
 module.exports = {
-  extends: ["prettier", "prettier/@typescript-eslint"],
+  extends: ["prettier"],
   plugins: ["prettier"],
   rules: {
     /**
