@@ -444,7 +444,12 @@ module.exports = {
      * Disallow `void` operators.
      * @see https://eslint.org/docs/rules/no-void
      */
-    "no-void": "error",
+    "no-void": [
+      "error",
+      {
+        allowAsStatement: true,
+      },
+    ],
     /**
      * Disallow specified warning terms in comments.
      * @see https://eslint.org/docs/rules/no-warning-comments
