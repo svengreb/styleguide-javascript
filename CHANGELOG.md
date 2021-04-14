@@ -8,6 +8,51 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.11.0
+
+![Release Date: 2021-04-14](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-04-14&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.11.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/projects/9) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.11.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/milestone/6)
+
+⇅ [Show all commits][gh-compare-tag-v0.10.0_v0.11.0]
+
+## Improvements
+
+<details>
+<summary><strong>Allow <code>void</code> operator as a statement for React Hooks</strong> — #55 ⇄ #56 (⊶ af9c38b8)</summary>
+
+↠ To run `async` code in a React [`useEffect` Hook][react-docs-hooks-ref] the [official React Hook FAQ section about how to fetch data][react-docs-hooks-faq#fetch_data] recommends and [shows in a demo][csb-jvvkoo8pq3] how to define a scoped fat arrow function and run it immediately. Unfortunately this collided with the [`@typescript/no-floating-promises`][gh-typescript-eslint/typescript-eslint-blob-rules-no-floating-promises] rule because the returned `Promise` of the called function must not be handled anymore.
+
+```tsx
+useEffect(() => {
+  const init = async () => {
+    try {
+      const data = await fetchData();
+      setInitialized(isInit);
+      if (data) initStores(data);
+    } catch (err) {
+      handleError(err);
+    }
+  };
+  // This will trigger the "@typescript/no-floating-promises" rule because the returned "Promise" is not handled.
+  init();
+}, [fetchData, handleError, initStores, setInitialized]);
+```
+
+Explicitly disabling the rule for these specific code lines would have been an option, but it is recommended to [use the `void` operator instead][mdn-js-ops-void].
+
+```tsx
+// ...
+// This will trigger the "no-void" rule because the "void" operator is currently not allowed as a statement.
+void init();
+// ...
+```
+
+However, the [`no-void`][eslint-docs-rules-no-void] rule did not allow the `void` operator to be used as statement which resulted in this rule to also throw an error.
+To resolve both problems, the [`allowAsStatement` option][eslint-docs-rules-no-void#allowasstatement] of the `no-void` rule has been enabled.
+
+Also see [typescript-eslint/typescript-eslint#1184][gh-typescript-eslint/typescript-eslint#1184] where this solution is also recommended by one of the `@typescript-eslint` package maintainers.
+
+</details>
+
 # 0.10.0
 
 ![Release Date: 2021-04-08](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-04-08&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.10.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/projects/8) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.10.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/styleguide-javascript/milestone/5)
@@ -1298,3 +1343,15 @@ otherwise Markdown elements are not parsed and rendered!
 [gh#10]: https://github.com/arcticicestudio/styleguide-markdown/issues/10
 [gh#28]: https://github.com/arcticicestudio/styleguide-markdown/issues/28
 [typescript-docs-triple_slash_directives]: https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html
+
+<!-- v0.11.0 -->
+
+[csb-jvvkoo8pq3]: https://codesandbox.io/s/jvvkoo8pq3
+[eslint-docs-rules-no-void]: https://eslint.org/docs/rules/no-void
+[eslint-docs-rules-no-void#allowasstatement]: https://eslint.org/docs/rules/no-void#allowasstatement
+[gh-compare-tag-v0.10.0_v0.11.0]: https://github.com/arcticicestudio/styleguide-javascript/compare/v0.10.0...v0.11.0
+[gh-typescript-eslint/typescript-eslint-blob-rules-no-floating-promises]: https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-floating-promises.md
+[gh-typescript-eslint/typescript-eslint#1184]: https://github.com/typescript-eslint/typescript-eslint/issues/1184
+[mdn-js-ops-void]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void
+[react-docs-hooks-faq#fetch_data]: https://reactjs.org/docs/hooks-faq.html#how-can-i-do-data-fetching-with-hooks
+[react-docs-hooks-ref]: https://reactjs.org/docs/hooks-reference.html#useeffect
