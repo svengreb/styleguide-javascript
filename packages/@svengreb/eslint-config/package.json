@@ -1,0 +1,64 @@
+{
+  "name": "@svengreb/eslint-config",
+  "version": "0.11.0",
+  "description": "The opinionated, yet universally applicable JavaScript code style guide rules with React support as an extensible shared ESLint configuration",
+  "author": {
+    "name": "Sven Greb",
+    "email": "development@svengreb.de",
+    "url": "https://www.svengreb.de"
+  },
+  "homepage": "https://github.com/svengreb/styleguide-javascript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svengreb/styleguide-javascript.git",
+    "directory": "packages/@svengreb/eslint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/svengreb/styleguide-javascript/issues"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "rules",
+    "index.js",
+    "react-hooks.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "a11y",
+    "ecmascript",
+    "eslint",
+    "eslint-config",
+    "guide",
+    "javascript",
+    "preset",
+    "react",
+    "rule",
+    "style",
+    "svengreb"
+  ],
+  "scripts": {
+    "test": "run-s test:unused-rules",
+    "test:unused-rules": "eslint-find-rules --unused --deprecated --no-error"
+  },
+  "dependencies": {
+    "@svengreb/eslint-config-base": ">=0.11.0 <1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-find-rules": "3.6.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "peerDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  }
+}

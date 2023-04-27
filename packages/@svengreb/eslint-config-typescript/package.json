@@ -1,0 +1,63 @@
+{
+  "name": "@svengreb/eslint-config-typescript",
+  "version": "0.11.0",
+  "description": "The opinionated, yet universally applicable JavaScript code style guide rules with TypeScript support as an extensible shared ESLint configuration",
+  "author": {
+    "name": "Sven Greb",
+    "email": "development@svengreb.de",
+    "url": "https://www.svengreb.de"
+  },
+  "homepage": "https://github.com/svengreb/styleguide-javascript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svengreb/styleguide-javascript.git",
+    "directory": "packages/@svengreb/eslint-config-typescript"
+  },
+  "bugs": {
+    "url": "https://github.com/svengreb/styleguide-javascript/issues"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "rules",
+    "index.js",
+    "prettier.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "ecmascript",
+    "eslint",
+    "eslint-config",
+    "guide",
+    "javascript",
+    "preset",
+    "react",
+    "rule",
+    "style",
+    "svengreb",
+    "typescript"
+  ],
+  "scripts": {
+    "test": "run-s test:unused-rules",
+    "test:unused-rules": "eslint-find-rules --unused --deprecated --no-error"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-find-rules": "3.6.1",
+    "eslint-plugin-prettier": "^3.4.1",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "typescript": "^4.9.5"
+  }
+}

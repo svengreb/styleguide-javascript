@@ -1,0 +1,65 @@
+{
+  "name": "@svengreb/eslint-config-base",
+  "version": "0.11.0",
+  "description": "The opinionated, yet universally applicable JavaScript code style guide base rules as an extensible shared ESLint configuration",
+  "author": {
+    "name": "Sven Greb",
+    "email": "development@svengreb.de",
+    "url": "https://www.svengreb.de"
+  },
+  "homepage": "https://github.com/svengreb/styleguide-javascript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svengreb/styleguide-javascript.git",
+    "directory": "packages/@svengreb/eslint-config-base"
+  },
+  "bugs": {
+    "url": "https://github.com/svengreb/styleguide-javascript/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=15.13",
+    "npm": ">=7.7"
+  },
+  "main": "index.js",
+  "files": [
+    "rules",
+    "index.js",
+    "prettier.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "ecmascript",
+    "eslint",
+    "eslint-config",
+    "guide",
+    "javascript",
+    "preset",
+    "prettier",
+    "rule",
+    "style",
+    "svengreb"
+  ],
+  "scripts": {
+    "test": "run-s test:unused-rules",
+    "test:unused-rules": "eslint-find-rules --unused --deprecated --no-error"
+  },
+  "dependencies": {
+    "confusing-browser-globals": "1.0.11"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-find-rules": "3.6.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^3.4.1"
+  },
+  "peerDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^3.4.1"
+  }
+}
