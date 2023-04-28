@@ -1,6 +1,6 @@
 {
   "name": "@svengreb/styleguide-javascript",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "An opinionated, yet universally applicable JavaScript code style guide",
   "author": {
     "name": "Sven Greb",

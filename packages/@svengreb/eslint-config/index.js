@@ -6,7 +6,7 @@
 /**
  * The opinionated, yet universally applicable JavaScript code style guide rules with React support as an extensible shared ESLint configuration.
  * Imports all rule definitions and sets the default parser options.
- * @version 0.11.0
+ * @version 0.12.0
  * @license MIT
  * @author Sven Greb <development@svengreb.de>
  * @copyright 2016-present Sven Greb <development@svengreb.de>

@@ -29,9 +29,84 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.12.0
+
+![Release Date: 2023-04-28](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2023-04-28&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.12.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/users/svengreb/projects/10/views/10) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.12.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/styleguide-javascript/milestone/7)
+
+⇅ [Show all commits][243]
+
+## Improvements
+
+<details>
+<summary><strong>Update to <code>tmpl</code> template repository version <code>0.11.0</code></strong> — #86 ⇄ #87 (⊶ cacc9fac)</summary>
+
+→ Updated to [`tmpl` version `0.11.0`][244], including the versions in between starting from [0.10.0][245]:
+
+1. [Optimized GitHub action workflow scope][246].
+2. [Updated Node.js packages & GitHub actions][247] [^1] [^2].
+3. [Opts-in the Dependabot version update configuration][248].
+4. [Migrated to Markdown style guide version 0.4.0][249].
+
+This also includes changes required for any linter matches.
+
+</details>
+
+<details>
+<summary><strong><code>svengreb</code> GitHub account and <code>@svengreb</code> npm package scope migration</strong> — #88 ⇄ #89 (⊶ 61b554e7)</summary>
+
+→ With [the retirement of the _Arctic Ice Studio_ personal & Nord project brand][250] this project also moved to the _real-in-person_ identity “Sven Greb“ both in the context of the repository to [the `svengreb` GitHub account][251] and the `@svengreb` npm package scope.
+During this migration the current npm packages [`@arcticicestudio/eslint-config-base`][253], [`@arcticicestudio/eslint-config`][253] and [`@arcticicestudio/eslint-config-typescript`][254] have been deprecated in favor of the new and upcoming [`@svengreb/eslint-config-base`][255], [`@svengreb/eslint-config`][256] and [`@svengreb/eslint-config-typescript`][257] packages that will be published afterwards.
+
+Also [the visual representation of this style guide][258] through the way too outdated and deprecated [GitBook][259] major version `2` has been unpublished and removed. The documentations and references have been updated to use the GitHub repository with the Markdown rendering instead for now until a custom website has been implemented using a modern _TechStack_ like [Next.js][260].
+
+</details>
+
+<details>
+<summary><strong>Migrate to <code>@svengreb/remark-preset-lint</code> npm package</strong> — #90 ⇄ #91 (⊶ 53538322)</summary>
+
+→ Before the used [`@arcticicestudio/remark-preset-lint` package][261] has been deprecated during [the `svengreb` GitHub account and `@svengreb` npm package scope migration][262] and replaced by the [new `@svengreb/remark-preset-lint` package][263].
+
+</details>
+
+<details>
+<summary><strong>Migrate to ESLint major version <code>8</code></strong> — #92 ⇄ #93 (⊶ 19588e57)</summary>
+
+<p align="center">
+  <a href="https://eslint.org">
+    <img src="https://user-images.githubusercontent.com/13448100/235197135-1f3a1bad-a32b-41a2-9c58-d87e7a356115.png" width="40%" />
+    <!--
+      Source URL: https://eslint.org
+      Source SVG: <svg fill="none" viewBox="0 0 203 58" xmlns="http://www.w3.org/2000/svg"><path d="m46.5572 21.1093-12.5405-7.2402c-.3138-.1812-.7006-.1812-1.0144 0l-12.5407 7.2402c-.3136.1812-.5073.516-.5073.8785v14.4803c0 .3623.1937.6973.5073.8789l12.5407 7.2401c.3138.1813.7006.1813 1.0144 0l12.5405-7.2401c.3138-.1813.5072-.5164.5072-.8789v-14.4803c-.0003-.3625-.1937-.6973-.5072-.8785z" fill="#8080f2"/><path d="m.904381 27.7046 14.983419-26.06688c.5443-.942497 1.5497-1.63772 2.638-1.63772h29.9673c1.0886 0 2.0942.695223 2.6385 1.63772l14.9834 26.00938c.5443.9428.5443 2.1325 0 3.0753l-14.9834 25.8532c-.5443.9425-1.5499 1.4244-2.6385 1.4244h-29.9671c-1.0883 0-2.0939-.4674-2.6379-1.4101l-14.98346-25.8955c-.544786-.9422-.544786-2.0473-.000259-2.9898zm12.407119 12.5347c0 .3832.2307.7377.5629.9296l19.0856 11.0114c.3319.1916.7478.1916 1.0797 0l19.1004-11.0114c.332-.1919.5642-.5461.5642-.9296v-22.0232c0-.3834-.2289-.7376-.5611-.9295l-19.0848-11.01147c-.332-.19186-.7473-.19186-1.0792 0l-19.1017 11.01147c-.3322.1919-.566.5461-.566.9295z" fill="#4b32c3"/><g fill="#101828"><path d="m86.6971 43.7102v-29.4203h18.7449v4.5811h-13.6594v7.7334h12.4824v4.5811h-12.4824v7.9435h13.8694v4.5812z"/><path d="m118.919 44.2986c-2.241 0-4.231-.3923-5.968-1.1768-1.709-.8126-3.054-1.9754-4.035-3.4884-.98-1.5131-1.471-3.3624-1.471-5.5479v-1.0927h5.002v1.0927c0 1.9334.588 3.3764 1.765 4.329 1.177.9527 2.746 1.429 4.707 1.429 1.99 0 3.489-.4063 4.497-1.2188 1.009-.8126 1.513-1.8633 1.513-3.1522 0-.8686-.238-1.5691-.714-2.1015-.476-.5603-1.177-1.0087-2.102-1.3449-.896-.3362-1.989-.6584-3.278-.9667l-1.261-.2521c-1.933-.4483-3.614-1.0087-5.043-1.6812-1.401-.7005-2.48-1.5971-3.236-2.6898-.757-1.0928-1.135-2.5218-1.135-4.287s.42-3.2783 1.261-4.5391c.84-1.2609 2.031-2.2276 3.572-2.9 1.541-.6725 3.348-1.0087 5.422-1.0087 2.073 0 3.923.3502 5.548 1.0507s2.9 1.7512 3.824 3.1522c.953 1.4009 1.429 3.1522 1.429 5.2536v1.387h-5.001v-1.387c0-1.2048-.238-2.1715-.715-2.9-.476-.7285-1.148-1.2609-2.017-1.5971s-1.891-.5043-3.068-.5043c-1.737 0-3.054.3362-3.951 1.0086-.896.6725-1.345 1.6252-1.345 2.858 0 .7846.196 1.457.589 2.0174.42.5324 1.022.9807 1.807 1.3449.812.3363 1.821.6305 3.026.8826l1.261.2942c2.017.4484 3.782 1.0228 5.296 1.7232 1.513.6725 2.689 1.5691 3.53 2.6899.869 1.1208 1.303 2.5778 1.303 4.371 0 1.7652-.462 3.3203-1.387 4.6652-.897 1.345-2.172 2.3957-3.825 3.1522-1.625.7565-3.558 1.1348-5.8 1.1348z"/><path d="m133.1 43.7102v-29.4203h5.085v24.8391h13.786v4.5812z"/><path d="m154.827 43.7102v-20.7623h4.834v20.7623zm2.396-23.4102c-.869 0-1.625-.2802-2.269-.8405-.617-.5885-.925-1.359-.925-2.3116 0-.9527.308-1.7092.925-2.2696.644-.5884 1.4-.8826 2.269-.8826.925 0 1.681.2942 2.27.8826.616.5604.924 1.3169.924 2.2696 0 .9526-.308 1.7231-.924 2.3116-.589.5603-1.345.8405-2.27.8405z"/><path d="m164.525 43.7102v-20.7623h4.75v2.9h.714c.364-.7846 1.023-1.5271 1.975-2.2276.953-.7005 2.396-1.0507 4.329-1.0507 1.598 0 3.012.3642 4.245 1.0927 1.233.7286 2.186 1.7372 2.858 3.0261.701 1.2889 1.051 2.816 1.051 4.5812v12.4406h-4.833v-12.0623c0-1.6812-.421-2.9281-1.261-3.7406-.813-.8406-1.976-1.2609-3.489-1.2609-1.709 0-3.054.5744-4.034 1.7232-.981 1.1208-1.471 2.7319-1.471 4.8333v10.5073z"/><path d="m196.449 43.7102c-1.345 0-2.424-.3923-3.236-1.1768-.785-.8126-1.177-1.9053-1.177-3.2783v-12.3145h-5.422v-3.9927h5.422v-6.6827h4.833v6.6827h5.968v3.9927h-5.968v11.516c0 .8405.393 1.2608 1.177 1.2608h4.161v3.9928z"/></g></svg>
+      -->
+  </a>
+</p>
+
+→ Before the supported ESLint major version for all npm packages of this styleguide was still `7` which has been [updated to `8`, released on 2021-10-09][264].
+To update all packages, [the official ESLint 8 migration guide][265] has been used to adapt [the breaking changes for users][266], but none of them affected this project so there were no further steps required other than updating the corresponding package (`dev`/`peer`)`dependencies`.
+
+The following plugins have been updated to their latest major & minor versions to match the supported ESLint version:
+
+- [`eslint`][267] — `^7.32.0` → [major version `8`][264] · currently latest version is [`^8.39.0`][279] which will be used as minimal requirement.
+- [`eslint-plugin-prettier`][20] — `^3.4.1` → [major version `4`][269] · currently latest version is [`4.2.1`][280] which will be used as minimal requirement.
+  - Dropped support for older versions of ESLint, Prettier and Node. It now requires at least ESLint `>=7.28.0 <8.0.0`, Prettier `>=2.0.0 <3.0.0` and Node `>=12.0.0`.
+- [`eslint-find-rules`][206] — `3.6.1` → [major version `4`][281] · currently latest version is [`4.1.0`][271] which will be used as minimal requirement.
+  - Comes with support for ESLint 8.
+- [`@typescript-eslint/eslint-plugin`][274] — `^4.33.0` → [major version `5`][273] · currently latest version is [`5.59.1`][272] which will be used as minimal requirement.
+  - Comes with support for ESLint 8.
+  - Dropped support for Node `<=10`.
+  - Dropped support for ESLint `<=5`.
+- [`@typescript-eslint/parser`][23] — `^4.33.0` → [major version `5`][273] · currently latest version is [`5.59.1`][272] which will be used as minimal requirement.
+  - Comes with support for ESLint 8.
+  - Dropped support for Node `<=10`.
+  - Dropped support for ESLint `<=5`.
+- [`typescript`][187] — `^4.9.5` → [major version `5`][277] · currently latest version is [`5.0.4`][278] which will be used as minimal requirement.
+  - Dropped support for Node `<=12`.
+
+</details>
+
 # 0.11.0
 
-![Release Date: 2021-04-14](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-04-14&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.11.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/users/svengreb/projects/10/views/109) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.11.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/styleguide-javascript/milestone/6)
+![Release Date: 2021-04-14](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-04-14&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.11.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/users/svengreb/projects/10/views/10) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.11.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/styleguide-javascript/milestone/6)
 
 ⇅ [Show all commits][237]
 
@@ -76,7 +151,7 @@ Also see [typescript-eslint/typescript-eslint#1184][239] where this solution is 
 
 # 0.10.0
 
-![Release Date: 2021-04-08](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-04-08&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.10.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/users/svengreb/projects/10/views/108) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.10.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/styleguide-javascript/milestone/5)
+![Release Date: 2021-04-08](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-04-08&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.10.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/users/svengreb/projects/10/views/10) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.10.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/styleguide-javascript/milestone/5)
 
 ⇅ [Show all commits][229]
 
@@ -122,7 +197,7 @@ To support triple-slash directives, the `/` marker has been added to the `line` 
 
 # 0.9.0
 
-![Release Date: 2021-04-04](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-04-04&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.9.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/users/svengreb/projects/10/views/107) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.9.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/styleguide-javascript/milestone/4)
+![Release Date: 2021-04-04](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-04-04&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.9.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/users/svengreb/projects/10/views/10) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.9.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/styleguide-javascript/milestone/4)
 
 ⇅ [Show all commits][178]
 
@@ -259,7 +334,7 @@ To allow to use Prettier without `@arcticicestudio/eslint-config`, the support h
 
 # 0.8.0
 
-![Release Date: 2019-08-22](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-22&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/users/svengreb/projects/10/views/106) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/styleguide-javascript/milestone/3)
+![Release Date: 2019-08-22](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-22&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/users/svengreb/projects/10/views/10) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/styleguide-javascript/milestone/3)
 
 ⇅ [Show all commits][139]
 
@@ -350,7 +425,7 @@ Since _GitHub Actions_ are still in closed/limited public beta, there is no supp
 
 # 0.7.0
 
-![Release Date: 2019-08-19](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-19&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/users/svengreb/projects/10/views/103) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/styleguide-javascript/milestone/2)
+![Release Date: 2019-08-19](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-19&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/users/svengreb/projects/10/views/10) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/styleguide-javascript/milestone/2)
 
 ⇅ [Show all commits][120]
 
@@ -948,7 +1023,7 @@ It was set up to run the `npx` command to install the peer dependencies that is 
 
 # 0.1.0
 
-![Release Date: 2018-01-27](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2018-01-27&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.1.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/users/svengreb/projects/10/views/102) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.1.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/styleguide-javascript/milestone/1)
+![Release Date: 2018-01-27](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2018-01-27&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.1.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/users/svengreb/projects/10/views/10) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.1.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/styleguide-javascript/milestone/1)
 
 ⇅ [Show all commits][39]
 
@@ -1299,3 +1374,49 @@ otherwise Markdown elements are not parsed and rendered!
 [240]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void
 [241]: https://react.dev/reference/react/useEffect#fetching-data-with-effects
 [242]: https://react.dev/reference/react/useEffect
+
+<!-- v0.12.0 -->
+
+[243]: https://github.com/svengreb/styleguide-javascript/compare/v0.11.0...v0.12.0
+[244]: https://github.com/svengreb/tmpl/releases/tag/v0.11.0
+[245]: https://github.com/svengreb/tmpl/releases/tag/v0.10.0
+[246]: https://github.com/svengreb/tmpl/issues/84
+[247]: https://github.com/svengreb/tmpl/issues/86
+[248]: https://github.com/svengreb/tmpl/issues/94
+[249]: https://github.com/svengreb/tmpl/issues/76
+[250]: https://github.com/orgs/nordtheme/discussions/183#retire-arctic-ice-studio-as-nord-brand
+[251]: https://github.com/svengreb
+[253]: https://www.npmjs.com/package/@arcticicestudio/eslint-config-base
+[254]: https://www.npmjs.com/package/@arcticicestudio/eslint-config-typescript
+[255]: https://www.npmjs.com/package/@svengreb/eslint-config-base
+[256]: https://www.npmjs.com/package/@svengreb/eslint-config
+[257]: https://www.npmjs.com/package/@svengreb/eslint-config-typescript
+[258]: https://arcticicestudio.github.io/styleguide-markdown
+[259]: https://www.gitbook.com
+[260]: https://nextjs.org
+[261]: https://github.com/arcticicestudio/styleguide-markdown/tree/main/packages/@arcticicestudio/remark-preset-lint
+[262]: https://github.com/svengreb/styleguide-markdown/issues/63
+[263]: https://github.com/svengreb/styleguide-markdown/tree/main/packages/%40svengreb/remark-preset-lint
+[264]: https://github.com/eslint/eslint/releases/tag/v8.0.0
+[265]: https://eslint.org/docs/latest/use/migrate-to-8.0.0
+[266]: https://eslint.org/docs/latest/use/migrate-to-8.0.0#breaking-changes-for-users
+[267]: https://github.com/eslint/eslint
+[269]: https://github.com/prettier/eslint-plugin-prettier/blob/master/CHANGELOG.md#v400-2021-08-30
+[271]: https://github.com/sarbbottam/eslint-find-rules/releases/tag/v4.1.0
+[272]: https://github.com/typescript-eslint/typescript-eslint/releases/tag/v5.59.1
+[273]: https://github.com/typescript-eslint/typescript-eslint/releases/tag/v5.0.0
+[274]: https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin
+[277]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-0
+[278]: https://github.com/microsoft/TypeScript/releases/tag/v5.0.4
+[279]: https://github.com/eslint/eslint/releases/tag/v8.39.0
+[280]: https://github.com/prettier/eslint-plugin-prettier/releases/tag/v4.2.1
+[281]: https://github.com/sarbbottam/eslint-find-rules/releases/tag/v4.0.0
+
+<!-- +--- Footnotes +--- -->
+
+<!--lint disable no-duplicate-definitions-->
+
+<!-- v0.12.0 -->
+
+[^1]: https://github.com/svengreb/tmpl/issues/78
+[^2]: https://github.com/svengreb/tmpl/issues/83

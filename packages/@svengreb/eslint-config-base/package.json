@@ -1,6 +1,6 @@
 {
   "name": "@svengreb/eslint-config-base",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "The opinionated, yet universally applicable JavaScript code style guide base rules as an extensible shared ESLint configuration",
   "author": {
     "name": "Sven Greb",
