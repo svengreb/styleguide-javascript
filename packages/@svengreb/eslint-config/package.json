@@ -47,15 +47,15 @@
     "@svengreb/eslint-config-base": ">=0.11.0 <1.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-find-rules": "3.6.1",
+    "eslint": "^8.39.0",
+    "eslint-find-rules": "4.1.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0"
   },
   "peerDependencies": {
-    "eslint": "^7.32.0",
+    "eslint": "^8.39.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
